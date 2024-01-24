@@ -1,0 +1,11 @@
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.csproj.AssemblyReference.cache
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.csproj.CoreCompileInputs.cache
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaControladora.dll
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaControladora.pdb
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaDatos.dll
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaEntidad.dll
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaDatos.pdb
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaEntidad.pdb
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.csproj.CopyComplete
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.dll
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.pdb
