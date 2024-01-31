@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion.Modales
 {
-    partial class mdDetalleUsuario
+    partial class mdDetalleCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdDetalleUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdDetalleCliente));
             this.paneTitulo = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.buttonVolver = new System.Windows.Forms.Button();
             this.panelInfoUsuario = new System.Windows.Forms.Panel();
+            this.buttonVolver = new System.Windows.Forms.Button();
+            this.buttonConfirmar = new System.Windows.Forms.Button();
+            this.labelLocalidad = new System.Windows.Forms.Label();
+            this.textBoxLocalidad = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.labelDireccion = new System.Windows.Forms.Label();
+            this.textBoxDireccion = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.labelTelefono = new System.Windows.Forms.Label();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.labelCorreo = new System.Windows.Forms.Label();
             this.textBoxCorreo = new System.Windows.Forms.TextBox();
             this.labelLineCorreo = new System.Windows.Forms.Label();
@@ -45,20 +55,8 @@
             this.labelEstado = new System.Windows.Forms.Label();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.labelInfo = new System.Windows.Forms.Label();
-            this.labelConfirmarClave = new System.Windows.Forms.Label();
-            this.textBoxConfirmarClave = new System.Windows.Forms.TextBox();
-            this.labelLineConfirmarClave = new System.Windows.Forms.Label();
-            this.labelClave = new System.Windows.Forms.Label();
-            this.textBoxClave = new System.Windows.Forms.TextBox();
-            this.labelLineClave = new System.Windows.Forms.Label();
-            this.buttonConfirmar = new System.Windows.Forms.Button();
-            this.panelClave = new System.Windows.Forms.Panel();
-            this.buttonVerClave = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.paneTitulo.SuspendLayout();
             this.panelInfoUsuario.SuspendLayout();
-            this.panelClave.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // paneTitulo
@@ -68,7 +66,7 @@
             this.paneTitulo.Location = new System.Drawing.Point(12, 12);
             this.paneTitulo.Name = "paneTitulo";
             this.paneTitulo.Size = new System.Drawing.Size(222, 50);
-            this.paneTitulo.TabIndex = 0;
+            this.paneTitulo.TabIndex = 1;
             // 
             // labelSubTitulo
             // 
@@ -76,29 +74,24 @@
             this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSubTitulo.Location = new System.Drawing.Point(4, 9);
             this.labelSubTitulo.Name = "labelSubTitulo";
-            this.labelSubTitulo.Size = new System.Drawing.Size(183, 33);
+            this.labelSubTitulo.Size = new System.Drawing.Size(178, 33);
             this.labelSubTitulo.TabIndex = 1;
-            this.labelSubTitulo.Text = "Detalle del usuario";
-            // 
-            // buttonVolver
-            // 
-            this.buttonVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.buttonVolver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVolver.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVolver.Location = new System.Drawing.Point(70, 49);
-            this.buttonVolver.Name = "buttonVolver";
-            this.buttonVolver.Size = new System.Drawing.Size(80, 30);
-            this.buttonVolver.TabIndex = 7;
-            this.buttonVolver.Text = "Volver";
-            this.buttonVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonVolver.UseVisualStyleBackColor = false;
-            this.buttonVolver.Click += new System.EventHandler(this.buttonVolver_Click);
+            this.labelSubTitulo.Text = "Detalle del cliente";
             // 
             // panelInfoUsuario
             // 
             this.panelInfoUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelInfoUsuario.Controls.Add(this.buttonVolver);
+            this.panelInfoUsuario.Controls.Add(this.buttonConfirmar);
+            this.panelInfoUsuario.Controls.Add(this.labelLocalidad);
+            this.panelInfoUsuario.Controls.Add(this.textBoxLocalidad);
+            this.panelInfoUsuario.Controls.Add(this.label6);
+            this.panelInfoUsuario.Controls.Add(this.labelDireccion);
+            this.panelInfoUsuario.Controls.Add(this.textBoxDireccion);
+            this.panelInfoUsuario.Controls.Add(this.label4);
+            this.panelInfoUsuario.Controls.Add(this.labelTelefono);
+            this.panelInfoUsuario.Controls.Add(this.textBoxTelefono);
+            this.panelInfoUsuario.Controls.Add(this.label2);
             this.panelInfoUsuario.Controls.Add(this.labelCorreo);
             this.panelInfoUsuario.Controls.Add(this.textBoxCorreo);
             this.panelInfoUsuario.Controls.Add(this.labelLineCorreo);
@@ -113,8 +106,135 @@
             this.panelInfoUsuario.Controls.Add(this.labelInfo);
             this.panelInfoUsuario.Location = new System.Drawing.Point(12, 68);
             this.panelInfoUsuario.Name = "panelInfoUsuario";
-            this.panelInfoUsuario.Size = new System.Drawing.Size(222, 303);
-            this.panelInfoUsuario.TabIndex = 1;
+            this.panelInfoUsuario.Size = new System.Drawing.Size(222, 573);
+            this.panelInfoUsuario.TabIndex = 2;
+            // 
+            // buttonVolver
+            // 
+            this.buttonVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVolver.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonVolver.Location = new System.Drawing.Point(70, 532);
+            this.buttonVolver.Name = "buttonVolver";
+            this.buttonVolver.Size = new System.Drawing.Size(80, 30);
+            this.buttonVolver.TabIndex = 57;
+            this.buttonVolver.Text = "Volver";
+            this.buttonVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonVolver.UseVisualStyleBackColor = false;
+            this.buttonVolver.Click += new System.EventHandler(this.buttonVolver_Click);
+            // 
+            // buttonConfirmar
+            // 
+            this.buttonConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.buttonConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonConfirmar.Location = new System.Drawing.Point(35, 496);
+            this.buttonConfirmar.Name = "buttonConfirmar";
+            this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
+            this.buttonConfirmar.TabIndex = 56;
+            this.buttonConfirmar.Text = "Confirmar";
+            this.buttonConfirmar.UseVisualStyleBackColor = false;
+            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
+            // 
+            // labelLocalidad
+            // 
+            this.labelLocalidad.AutoSize = true;
+            this.labelLocalidad.BackColor = System.Drawing.SystemColors.Window;
+            this.labelLocalidad.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelLocalidad.Location = new System.Drawing.Point(9, 431);
+            this.labelLocalidad.Name = "labelLocalidad";
+            this.labelLocalidad.Size = new System.Drawing.Size(63, 19);
+            this.labelLocalidad.TabIndex = 55;
+            this.labelLocalidad.Text = "Localidad:";
+            // 
+            // textBoxLocalidad
+            // 
+            this.textBoxLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLocalidad.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxLocalidad.Location = new System.Drawing.Point(9, 459);
+            this.textBoxLocalidad.Name = "textBoxLocalidad";
+            this.textBoxLocalidad.Size = new System.Drawing.Size(200, 20);
+            this.textBoxLocalidad.TabIndex = 53;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label6.Location = new System.Drawing.Point(9, 482);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(200, 1);
+            this.label6.TabIndex = 54;
+            this.label6.Text = "label2";
+            // 
+            // labelDireccion
+            // 
+            this.labelDireccion.AutoSize = true;
+            this.labelDireccion.BackColor = System.Drawing.SystemColors.Window;
+            this.labelDireccion.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelDireccion.Location = new System.Drawing.Point(9, 366);
+            this.labelDireccion.Name = "labelDireccion";
+            this.labelDireccion.Size = new System.Drawing.Size(61, 19);
+            this.labelDireccion.TabIndex = 52;
+            this.labelDireccion.Text = "Dirección:";
+            // 
+            // textBoxDireccion
+            // 
+            this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxDireccion.Location = new System.Drawing.Point(9, 394);
+            this.textBoxDireccion.Name = "textBoxDireccion";
+            this.textBoxDireccion.Size = new System.Drawing.Size(200, 20);
+            this.textBoxDireccion.TabIndex = 50;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label4.Location = new System.Drawing.Point(9, 417);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 1);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "label2";
+            // 
+            // labelTelefono
+            // 
+            this.labelTelefono.AutoSize = true;
+            this.labelTelefono.BackColor = System.Drawing.SystemColors.Window;
+            this.labelTelefono.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelTelefono.Location = new System.Drawing.Point(9, 302);
+            this.labelTelefono.Name = "labelTelefono";
+            this.labelTelefono.Size = new System.Drawing.Size(56, 19);
+            this.labelTelefono.TabIndex = 49;
+            this.labelTelefono.Text = "Telefono:";
+            // 
+            // textBoxTelefono
+            // 
+            this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTelefono.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxTelefono.Location = new System.Drawing.Point(9, 330);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
+            this.textBoxTelefono.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label2.Location = new System.Drawing.Point(9, 353);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(200, 1);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "label2";
             // 
             // labelCorreo
             // 
@@ -242,154 +362,26 @@
             this.labelInfo.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInfo.Location = new System.Drawing.Point(5, 10);
             this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(161, 23);
+            this.labelInfo.Size = new System.Drawing.Size(155, 23);
             this.labelInfo.TabIndex = 0;
-            this.labelInfo.Text = "Informacion del usuario";
+            this.labelInfo.Text = "Informacion del cliente";
             // 
-            // labelConfirmarClave
-            // 
-            this.labelConfirmarClave.AutoSize = true;
-            this.labelConfirmarClave.BackColor = System.Drawing.SystemColors.Window;
-            this.labelConfirmarClave.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelConfirmarClave.Location = new System.Drawing.Point(9, 74);
-            this.labelConfirmarClave.Name = "labelConfirmarClave";
-            this.labelConfirmarClave.Size = new System.Drawing.Size(130, 19);
-            this.labelConfirmarClave.TabIndex = 50;
-            this.labelConfirmarClave.Text = "Confirmar contraseña:";
-            // 
-            // textBoxConfirmarClave
-            // 
-            this.textBoxConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxConfirmarClave.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxConfirmarClave.Location = new System.Drawing.Point(9, 102);
-            this.textBoxConfirmarClave.Name = "textBoxConfirmarClave";
-            this.textBoxConfirmarClave.PasswordChar = '*';
-            this.textBoxConfirmarClave.Size = new System.Drawing.Size(168, 20);
-            this.textBoxConfirmarClave.TabIndex = 5;
-            // 
-            // labelLineConfirmarClave
-            // 
-            this.labelLineConfirmarClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineConfirmarClave.Location = new System.Drawing.Point(9, 125);
-            this.labelLineConfirmarClave.Name = "labelLineConfirmarClave";
-            this.labelLineConfirmarClave.Size = new System.Drawing.Size(200, 1);
-            this.labelLineConfirmarClave.TabIndex = 49;
-            this.labelLineConfirmarClave.Text = "label2";
-            // 
-            // labelClave
-            // 
-            this.labelClave.AutoSize = true;
-            this.labelClave.BackColor = System.Drawing.SystemColors.Window;
-            this.labelClave.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelClave.Location = new System.Drawing.Point(9, 9);
-            this.labelClave.Name = "labelClave";
-            this.labelClave.Size = new System.Drawing.Size(74, 19);
-            this.labelClave.TabIndex = 48;
-            this.labelClave.Text = "Contraseña:";
-            // 
-            // textBoxClave
-            // 
-            this.textBoxClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxClave.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxClave.Location = new System.Drawing.Point(9, 37);
-            this.textBoxClave.Name = "textBoxClave";
-            this.textBoxClave.PasswordChar = '*';
-            this.textBoxClave.Size = new System.Drawing.Size(200, 20);
-            this.textBoxClave.TabIndex = 4;
-            // 
-            // labelLineClave
-            // 
-            this.labelLineClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineClave.Location = new System.Drawing.Point(9, 60);
-            this.labelLineClave.Name = "labelLineClave";
-            this.labelLineClave.Size = new System.Drawing.Size(200, 1);
-            this.labelLineClave.TabIndex = 47;
-            this.labelLineClave.Text = "label2";
-            // 
-            // buttonConfirmar
-            // 
-            this.buttonConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
-            this.buttonConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonConfirmar.Location = new System.Drawing.Point(35, 13);
-            this.buttonConfirmar.Name = "buttonConfirmar";
-            this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
-            this.buttonConfirmar.TabIndex = 6;
-            this.buttonConfirmar.Text = "Confirmar";
-            this.buttonConfirmar.UseVisualStyleBackColor = false;
-            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
-            // 
-            // panelClave
-            // 
-            this.panelClave.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelClave.Controls.Add(this.buttonVerClave);
-            this.panelClave.Controls.Add(this.textBoxConfirmarClave);
-            this.panelClave.Controls.Add(this.textBoxClave);
-            this.panelClave.Controls.Add(this.labelClave);
-            this.panelClave.Controls.Add(this.labelConfirmarClave);
-            this.panelClave.Controls.Add(this.labelLineClave);
-            this.panelClave.Controls.Add(this.labelLineConfirmarClave);
-            this.panelClave.Location = new System.Drawing.Point(12, 377);
-            this.panelClave.Name = "panelClave";
-            this.panelClave.Size = new System.Drawing.Size(222, 137);
-            this.panelClave.TabIndex = 47;
-            this.panelClave.Visible = false;
-            // 
-            // buttonVerClave
-            // 
-            this.buttonVerClave.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVerClave.FlatAppearance.BorderSize = 0;
-            this.buttonVerClave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVerClave.Image = global::CapaPresentacion.Properties.Resources.OjoContrasena1;
-            this.buttonVerClave.Location = new System.Drawing.Point(183, 99);
-            this.buttonVerClave.Name = "buttonVerClave";
-            this.buttonVerClave.Size = new System.Drawing.Size(26, 23);
-            this.buttonVerClave.TabIndex = 49;
-            this.buttonVerClave.UseVisualStyleBackColor = false;
-            this.buttonVerClave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonVerClave_MouseDown);
-            this.buttonVerClave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonVerClave_MouseUp);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Controls.Add(this.buttonConfirmar);
-            this.panel1.Controls.Add(this.buttonVolver);
-            this.panel1.Location = new System.Drawing.Point(12, 520);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 92);
-            this.panel1.TabIndex = 48;
-            // 
-            // mdDetalleUsuario
+            // mdDetalleCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(246, 625);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelClave);
+            this.ClientSize = new System.Drawing.Size(246, 652);
             this.Controls.Add(this.panelInfoUsuario);
             this.Controls.Add(this.paneTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "mdDetalleUsuario";
+            this.Name = "mdDetalleCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detalle del usuario";
-            this.Load += new System.EventHandler(this.mdDetalleUsuario_Load);
+            this.Text = "mdDetalleCliente";
+            this.Load += new System.EventHandler(this.mdDetalleCliente_Load);
             this.paneTitulo.ResumeLayout(false);
             this.paneTitulo.PerformLayout();
             this.panelInfoUsuario.ResumeLayout(false);
             this.panelInfoUsuario.PerformLayout();
-            this.panelClave.ResumeLayout(false);
-            this.panelClave.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -398,15 +390,7 @@
 
         private System.Windows.Forms.Panel paneTitulo;
         private System.Windows.Forms.Label labelSubTitulo;
-        private System.Windows.Forms.Button buttonVolver;
         private System.Windows.Forms.Panel panelInfoUsuario;
-        private System.Windows.Forms.Label labelInfo;
-        private System.Windows.Forms.Label labelConfirmarClave;
-        private System.Windows.Forms.TextBox textBoxConfirmarClave;
-        private System.Windows.Forms.Label labelLineConfirmarClave;
-        private System.Windows.Forms.Label labelClave;
-        private System.Windows.Forms.TextBox textBoxClave;
-        private System.Windows.Forms.Label labelLineClave;
         private System.Windows.Forms.Label labelCorreo;
         private System.Windows.Forms.TextBox textBoxCorreo;
         private System.Windows.Forms.Label labelLineCorreo;
@@ -416,11 +400,19 @@
         private System.Windows.Forms.Label labelDocumento;
         private System.Windows.Forms.TextBox textBoxDocumento;
         private System.Windows.Forms.Label labelLineDocumento;
-        private System.Windows.Forms.Button buttonConfirmar;
         private System.Windows.Forms.Label labelEstado;
         private System.Windows.Forms.ComboBox comboBoxEstado;
-        private System.Windows.Forms.Panel panelClave;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonVerClave;
+        private System.Windows.Forms.Label labelInfo;
+        private System.Windows.Forms.Label labelLocalidad;
+        private System.Windows.Forms.TextBox textBoxLocalidad;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelDireccion;
+        private System.Windows.Forms.TextBox textBoxDireccion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelTelefono;
+        private System.Windows.Forms.TextBox textBoxTelefono;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button buttonConfirmar;
+        private System.Windows.Forms.Button buttonVolver;
     }
 }

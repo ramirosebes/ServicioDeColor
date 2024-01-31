@@ -20,7 +20,6 @@ namespace CapaControladora
             }
             catch (Exception ex)
             {
-
                 throw new Exception(ex.Message);
             }
         }

@@ -37,6 +37,7 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
+            /* Modulo de seguridad
             //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
             List<Permiso> listaPermisos = _usuarioActual.GetPermisos();
 
@@ -86,6 +87,7 @@ namespace CapaPresentacion
                     menu.Visible = false;
                 }
             }
+            */
 
             labelUsuario.Text = _usuarioActual.NombreCompleto;
         }
@@ -124,22 +126,27 @@ namespace CapaPresentacion
 
         private void menuUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuUsuarios, new frmUsuario(_usuarioActual));
+            abrirFormulario(menuSeguridad, new frmUsuario(_usuarioActual));
         }
 
         private void menuPermisosSimples_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuUsuarios, new frmPermisoSimple(_usuarioActual));
+            abrirFormulario(menuSeguridad, new frmPermisoSimple(_usuarioActual));
         }
 
         private void menuGrupos_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuUsuarios, new frmGrupoPermisos(_usuarioActual));
+            abrirFormulario(menuSeguridad, new frmGrupoPermisos(_usuarioActual));
         }
 
         private void menuPermisosUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuUsuarios, new frmPermisoUsuario());
+            abrirFormulario(menuSeguridad, new frmPermisoUsuario());
+        }
+
+        private void menuClientes_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuVentas, new frmCliente(_usuarioActual));
         }
     }
 }

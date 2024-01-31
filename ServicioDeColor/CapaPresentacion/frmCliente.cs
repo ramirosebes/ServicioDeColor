@@ -1,4 +1,8 @@
-﻿using System;
+﻿using CapaControladora;
+using CapaEntidad;
+using CapaPresentacion.Modales;
+using CapaPresentacion.Utilidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,26 +11,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaControladora;
-using CapaEntidad;
-using CapaPresentacion.Utilidades;
-using CapaPresentacion.Modales;
 
 namespace CapaPresentacion
 {
-    public partial class frmUsuario : Form
+    public partial class frmCliente : Form
     {
-        private CC_Usuario oCC_Usuario = new CC_Usuario();
-        private Usuario usuarioActual;
+        private CC_Cliente oCC_Cliente = new CC_Cliente();
+        private Usuario _usuarioActual;
 
-        public frmUsuario(Usuario oUsuario)
+        public frmCliente(Usuario oUsuario)
         {
-            usuarioActual = oUsuario;
+            _usuarioActual = oUsuario;
             InitializeComponent();
         }
 
-        private void frmUsuario_Load(object sender, EventArgs e)
+        private void frmCliente_Load(object sender, EventArgs e)
         {
+            //CONFIGURACION DEL OPCION COMBO SELECCIONAR
             foreach (DataGridViewColumn columna in dataGridView.Columns)
             {
                 if (columna.Visible && columna.Name != "buttonSeleccionar")
@@ -39,34 +40,38 @@ namespace CapaPresentacion
             comboBoxBusqueda.ValueMember = "Valor";
 
             //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
-            foreach (ToolStripMenuItem menu in menu.Items)
-            {
-                bool encontrado = usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
+            //foreach (ToolStripMenuItem menu in menu.Items)
+            //{
+            //    bool encontrado = _usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
 
-                if (encontrado)
-                {
-                    menu.Visible = true;
-                }
-                else
-                {
-                    menu.Visible = false;
-                }
-            }
-            menuVerDetalleUsuario.Visible = true;
+            //    if (encontrado)
+            //    {
+            //        menu.Visible = true;
+            //    }
+            //    else
+            //    {
+            //        menu.Visible = false;
+            //    }
+            //}
+            //menuVerDetalleCliente.Visible = true;
 
             buttonActualizar_Click(sender, e);
         }
 
-        private void AbrirModal(string tipoModal, int idUsuario)
+        private void AbrirModal(string tipoModal, int idCliente)
         {
-            using (var modal = new mdDetalleUsuario(tipoModal, idUsuario))
+            using (var modal = new mdDetalleCliente(tipoModal, idCliente))
             {
                 var resultado = modal.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    buttonActualizar_Click(null, null);
+                }
             }
-            buttonActualizar_Click(null, null);
         }
 
-        private void menuVerDetalleUsuario_Click(object sender, EventArgs e)
+        private void menuVerDetalleCliente_Click(object sender, EventArgs e)
         {
             if (textBoxId.Text != "")
             {
@@ -74,52 +79,40 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione un cliente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
-        private void menuAgregarUsuario_Click(object sender, EventArgs e)
+        private void menuAgregarCliente_Click(object sender, EventArgs e)
         {
             AbrirModal("Agregar", 0);
         }
 
-        private void menuModificarUsuario_Click(object sender, EventArgs e)
+        private void menuEditarCliente_Click(object sender, EventArgs e)
         {
-            if (textBoxId.Text.Trim() != "")
+            if (textBoxId.Text != "")
             {
                 AbrirModal("Editar", Convert.ToInt32(textBoxId.Text));
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Seleccione un cliente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
-        private void menuRestablecerClave_Click(object sender, EventArgs e)
+        private void menuEliminarCliente_Click(object sender, EventArgs e)
         {
-            if (textBoxId.Text.Trim() != "")
+            if (textBoxId.Text != "")
             {
-                AbrirModal("RestablacerClave", Convert.ToInt32(textBoxId.Text));
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void menuEliminarUsuario_Click(object sender, EventArgs e)
-        {
-            if (textBoxId.Text.Trim() != "")
-            {
-                if (MessageBox.Show("¿Está seguro de eliminar el usuario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("¿Está seguro de eliminar el cliente?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string mensaje = string.Empty;
 
-                    bool eliminado = oCC_Usuario.EliminarUsuario(Convert.ToInt32(textBoxId.Text), Convert.ToInt32(textBoxIdPersona.Text), out mensaje);
+                    bool eliminado = oCC_Cliente.EliminarCliente(Convert.ToInt32(textBoxId.Text), Convert.ToInt32(textBoxIdPersona.Text), out mensaje);
 
                     if (eliminado)
                     {
-                        MessageBox.Show("Usuario eliminado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Cliente eliminado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         buttonActualizar_Click(sender, e);
                     }
                     else
@@ -130,7 +123,7 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar un cliente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -138,21 +131,23 @@ namespace CapaPresentacion
         {
             dataGridView.Rows.Clear();
 
-            //MOSTRAR LOS USUARIOS
-            List<Usuario> listaUsuarios = oCC_Usuario.ListarUsuarios();
-            listaUsuarios = listaUsuarios.OrderBy(p => p.NombreCompleto).ToList();
+            //MOSTRAR LOS CLIENTES
+            List<Cliente> listaClientes = oCC_Cliente.ListarClientes();
 
-            foreach (Usuario oUsuario in listaUsuarios)
+            foreach (Cliente oCliente in listaClientes)
             {
                 dataGridView.Rows.Add(
                     "",
-                    oUsuario.IdUsuario,
-                    oUsuario.IdPersona,
-                    oUsuario.NombreCompleto,
-                    oUsuario.Correo,
-                    oUsuario.Documento,
-                    oUsuario.Estado == true ? 1 : 0,
-                    oUsuario.Estado == true ? "Activo" : "Inactivo"
+                    oCliente.IdCliente,
+                    oCliente.IdPersona,
+                    oCliente.NombreCompleto,
+                    oCliente.Correo,
+                    oCliente.Documento,
+                    oCliente.Telefono,
+                    oCliente.Direccion,
+                    oCliente.Localidad,
+                    oCliente.Estado == true ? 1 : 0,
+                    oCliente.Estado == true ? "Activo" : "Inactivo"
                     );
             }
 
@@ -160,7 +155,6 @@ namespace CapaPresentacion
             dataGridView.ClearSelection();
 
             textBoxId.Text = "";
-            textBoxIdPersona.Text = "";
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
@@ -182,6 +176,7 @@ namespace CapaPresentacion
                 }
             }
         }
+
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
             textBoxBusqueda.Text = "";
@@ -190,10 +185,6 @@ namespace CapaPresentacion
             {
                 fila.Visible = true;
             }
-
-            dataGridView.ClearSelection();
-            textBoxId.Text = "";
-            textBoxIdPersona.Text = "";
         }
 
         private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
@@ -243,7 +234,7 @@ namespace CapaPresentacion
 
             if (indice >= 0)
             {
-                textBoxId.Text = dataGridView.Rows[indice].Cells["idUsuario"].Value.ToString();
+                textBoxId.Text = dataGridView.Rows[indice].Cells["idCliente"].Value.ToString();
                 textBoxIdPersona.Text = dataGridView.Rows[indice].Cells["idPersona"].Value.ToString();
             }
         }
@@ -255,7 +246,7 @@ namespace CapaPresentacion
 
             if (indiceFila >= 0 && indiceColumna >= 0)
             {
-                menuVerDetalleUsuario_Click(sender, e);
+                menuVerDetalleCliente_Click(sender, e);
             }
         }
     }

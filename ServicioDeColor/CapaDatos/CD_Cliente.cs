@@ -22,7 +22,7 @@ namespace CapaDatos
                 {
                     StringBuilder query = new StringBuilder();
                     query.AppendLine("select Persona.IdPersona, NombreCompleto, Correo, Documento,");
-                    query.AppendLine("IdCliente, Telefono, Direccion, Estado ");
+                    query.AppendLine("IdCliente, Telefono, Direccion, Estado, Localidad ");
                     query.AppendLine("from Persona ");
                     query.AppendLine("inner join Cliente on Persona.IdPersona = Cliente.IdPersona");
 
@@ -40,6 +40,7 @@ namespace CapaDatos
                         cliente.Documento = dr["Documento"].ToString();
                         cliente.Telefono = dr["Telefono"].ToString();
                         cliente.Direccion = dr["Direccion"].ToString();
+                        cliente.Localidad = dr["Localidad"].ToString();
                         cliente.Estado = Convert.ToBoolean(dr["Estado"]);
 
                         listaClientes.Add(cliente);
@@ -71,6 +72,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Documento", oCliente.Documento);
                     cmd.Parameters.AddWithValue("Telefono", oCliente.Telefono);
                     cmd.Parameters.AddWithValue("Direccion", oCliente.Direccion);
+                    cmd.Parameters.AddWithValue("Localidad", oCliente.Localidad);
                     cmd.Parameters.AddWithValue("Estado", oCliente.Estado);
                     //PARAMETRO DE SALIDA
                     cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.VarChar, 400).Direction = System.Data.ParameterDirection.Output;
@@ -112,6 +114,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Documento", oCliente.Documento);
                     cmd.Parameters.AddWithValue("Telefono", oCliente.Telefono);
                     cmd.Parameters.AddWithValue("Direccion", oCliente.Direccion);
+                    cmd.Parameters.AddWithValue("Localidad", oCliente.Localidad);
                     cmd.Parameters.AddWithValue("Estado", oCliente.Estado);
                     //PARAMETRO DE SALIDA
                     cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.VarChar, 400).Direction = System.Data.ParameterDirection.Output;
@@ -149,7 +152,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdCliente", idCliente);
                     cmd.Parameters.AddWithValue("IdPersona", idPersona);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.VarChar, 400).Direction = System.Data.ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 400).Direction = System.Data.ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
