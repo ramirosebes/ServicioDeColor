@@ -33,13 +33,6 @@
             this.labelSubTitulo = new System.Windows.Forms.Label();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.panelInfoUsuario = new System.Windows.Forms.Panel();
-            this.labelInfoUsuario = new System.Windows.Forms.Label();
-            this.labelConfirmarClave = new System.Windows.Forms.Label();
-            this.textBoxConfirmarClave = new System.Windows.Forms.TextBox();
-            this.labelLineConfirmarClave = new System.Windows.Forms.Label();
-            this.labelClave = new System.Windows.Forms.Label();
-            this.textBoxClave = new System.Windows.Forms.TextBox();
-            this.labelLineClave = new System.Windows.Forms.Label();
             this.labelCorreo = new System.Windows.Forms.Label();
             this.textBoxCorreo = new System.Windows.Forms.TextBox();
             this.labelLineCorreo = new System.Windows.Forms.Label();
@@ -49,12 +42,19 @@
             this.labelDocumento = new System.Windows.Forms.Label();
             this.textBoxDocumento = new System.Windows.Forms.TextBox();
             this.labelLineDocumento = new System.Windows.Forms.Label();
-            this.buttonConfirmar = new System.Windows.Forms.Button();
             this.labelEstado = new System.Windows.Forms.Label();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
+            this.labelInfoUsuario = new System.Windows.Forms.Label();
+            this.labelConfirmarClave = new System.Windows.Forms.Label();
+            this.textBoxConfirmarClave = new System.Windows.Forms.TextBox();
+            this.labelLineConfirmarClave = new System.Windows.Forms.Label();
+            this.labelClave = new System.Windows.Forms.Label();
+            this.textBoxClave = new System.Windows.Forms.TextBox();
+            this.labelLineClave = new System.Windows.Forms.Label();
+            this.buttonConfirmar = new System.Windows.Forms.Button();
             this.panelClave = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.buttonVerClave = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.paneTitulo.SuspendLayout();
             this.panelInfoUsuario.SuspendLayout();
             this.panelClave.SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             this.labelSubTitulo.AutoSize = true;
             this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubTitulo.Location = new System.Drawing.Point(2, 8);
+            this.labelSubTitulo.Location = new System.Drawing.Point(19, 8);
             this.labelSubTitulo.Name = "labelSubTitulo";
             this.labelSubTitulo.Size = new System.Drawing.Size(183, 33);
             this.labelSubTitulo.TabIndex = 1;
@@ -115,82 +115,6 @@
             this.panelInfoUsuario.Name = "panelInfoUsuario";
             this.panelInfoUsuario.Size = new System.Drawing.Size(222, 303);
             this.panelInfoUsuario.TabIndex = 1;
-            // 
-            // labelInfoUsuario
-            // 
-            this.labelInfoUsuario.AutoSize = true;
-            this.labelInfoUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInfoUsuario.Location = new System.Drawing.Point(5, 10);
-            this.labelInfoUsuario.Name = "labelInfoUsuario";
-            this.labelInfoUsuario.Size = new System.Drawing.Size(161, 23);
-            this.labelInfoUsuario.TabIndex = 0;
-            this.labelInfoUsuario.Text = "Informacion del usuario";
-            // 
-            // labelConfirmarClave
-            // 
-            this.labelConfirmarClave.AutoSize = true;
-            this.labelConfirmarClave.BackColor = System.Drawing.SystemColors.Window;
-            this.labelConfirmarClave.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelConfirmarClave.Location = new System.Drawing.Point(9, 74);
-            this.labelConfirmarClave.Name = "labelConfirmarClave";
-            this.labelConfirmarClave.Size = new System.Drawing.Size(130, 19);
-            this.labelConfirmarClave.TabIndex = 50;
-            this.labelConfirmarClave.Text = "Confirmar contraseña:";
-            // 
-            // textBoxConfirmarClave
-            // 
-            this.textBoxConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxConfirmarClave.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxConfirmarClave.Location = new System.Drawing.Point(9, 102);
-            this.textBoxConfirmarClave.Name = "textBoxConfirmarClave";
-            this.textBoxConfirmarClave.PasswordChar = '*';
-            this.textBoxConfirmarClave.Size = new System.Drawing.Size(168, 20);
-            this.textBoxConfirmarClave.TabIndex = 5;
-            // 
-            // labelLineConfirmarClave
-            // 
-            this.labelLineConfirmarClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineConfirmarClave.Location = new System.Drawing.Point(9, 125);
-            this.labelLineConfirmarClave.Name = "labelLineConfirmarClave";
-            this.labelLineConfirmarClave.Size = new System.Drawing.Size(200, 1);
-            this.labelLineConfirmarClave.TabIndex = 49;
-            this.labelLineConfirmarClave.Text = "label2";
-            // 
-            // labelClave
-            // 
-            this.labelClave.AutoSize = true;
-            this.labelClave.BackColor = System.Drawing.SystemColors.Window;
-            this.labelClave.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelClave.Location = new System.Drawing.Point(9, 9);
-            this.labelClave.Name = "labelClave";
-            this.labelClave.Size = new System.Drawing.Size(74, 19);
-            this.labelClave.TabIndex = 48;
-            this.labelClave.Text = "Contraseña:";
-            // 
-            // textBoxClave
-            // 
-            this.textBoxClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxClave.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxClave.Location = new System.Drawing.Point(9, 37);
-            this.textBoxClave.Name = "textBoxClave";
-            this.textBoxClave.PasswordChar = '*';
-            this.textBoxClave.Size = new System.Drawing.Size(200, 20);
-            this.textBoxClave.TabIndex = 4;
-            // 
-            // labelLineClave
-            // 
-            this.labelLineClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineClave.Location = new System.Drawing.Point(9, 60);
-            this.labelLineClave.Name = "labelLineClave";
-            this.labelLineClave.Size = new System.Drawing.Size(200, 1);
-            this.labelLineClave.TabIndex = 47;
-            this.labelLineClave.Text = "label2";
             // 
             // labelCorreo
             // 
@@ -289,21 +213,6 @@
             this.labelLineDocumento.TabIndex = 41;
             this.labelLineDocumento.Text = "label2";
             // 
-            // buttonConfirmar
-            // 
-            this.buttonConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
-            this.buttonConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonConfirmar.Location = new System.Drawing.Point(35, 13);
-            this.buttonConfirmar.Name = "buttonConfirmar";
-            this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
-            this.buttonConfirmar.TabIndex = 6;
-            this.buttonConfirmar.Text = "Confirmar";
-            this.buttonConfirmar.UseVisualStyleBackColor = false;
-            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
-            // 
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
@@ -327,6 +236,97 @@
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
             this.comboBoxEstado.TabIndex = 39;
             // 
+            // labelInfoUsuario
+            // 
+            this.labelInfoUsuario.AutoSize = true;
+            this.labelInfoUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInfoUsuario.Location = new System.Drawing.Point(5, 10);
+            this.labelInfoUsuario.Name = "labelInfoUsuario";
+            this.labelInfoUsuario.Size = new System.Drawing.Size(161, 23);
+            this.labelInfoUsuario.TabIndex = 0;
+            this.labelInfoUsuario.Text = "Informacion del usuario";
+            // 
+            // labelConfirmarClave
+            // 
+            this.labelConfirmarClave.AutoSize = true;
+            this.labelConfirmarClave.BackColor = System.Drawing.SystemColors.Window;
+            this.labelConfirmarClave.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelConfirmarClave.Location = new System.Drawing.Point(9, 74);
+            this.labelConfirmarClave.Name = "labelConfirmarClave";
+            this.labelConfirmarClave.Size = new System.Drawing.Size(130, 19);
+            this.labelConfirmarClave.TabIndex = 50;
+            this.labelConfirmarClave.Text = "Confirmar contraseña:";
+            // 
+            // textBoxConfirmarClave
+            // 
+            this.textBoxConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxConfirmarClave.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxConfirmarClave.Location = new System.Drawing.Point(9, 102);
+            this.textBoxConfirmarClave.Name = "textBoxConfirmarClave";
+            this.textBoxConfirmarClave.PasswordChar = '*';
+            this.textBoxConfirmarClave.Size = new System.Drawing.Size(168, 20);
+            this.textBoxConfirmarClave.TabIndex = 5;
+            // 
+            // labelLineConfirmarClave
+            // 
+            this.labelLineConfirmarClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelLineConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelLineConfirmarClave.Location = new System.Drawing.Point(9, 125);
+            this.labelLineConfirmarClave.Name = "labelLineConfirmarClave";
+            this.labelLineConfirmarClave.Size = new System.Drawing.Size(200, 1);
+            this.labelLineConfirmarClave.TabIndex = 49;
+            this.labelLineConfirmarClave.Text = "label2";
+            // 
+            // labelClave
+            // 
+            this.labelClave.AutoSize = true;
+            this.labelClave.BackColor = System.Drawing.SystemColors.Window;
+            this.labelClave.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelClave.Location = new System.Drawing.Point(9, 9);
+            this.labelClave.Name = "labelClave";
+            this.labelClave.Size = new System.Drawing.Size(74, 19);
+            this.labelClave.TabIndex = 48;
+            this.labelClave.Text = "Contraseña:";
+            // 
+            // textBoxClave
+            // 
+            this.textBoxClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxClave.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxClave.Location = new System.Drawing.Point(9, 37);
+            this.textBoxClave.Name = "textBoxClave";
+            this.textBoxClave.PasswordChar = '*';
+            this.textBoxClave.Size = new System.Drawing.Size(200, 20);
+            this.textBoxClave.TabIndex = 4;
+            // 
+            // labelLineClave
+            // 
+            this.labelLineClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelLineClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelLineClave.Location = new System.Drawing.Point(9, 60);
+            this.labelLineClave.Name = "labelLineClave";
+            this.labelLineClave.Size = new System.Drawing.Size(200, 1);
+            this.labelLineClave.TabIndex = 47;
+            this.labelLineClave.Text = "label2";
+            // 
+            // buttonConfirmar
+            // 
+            this.buttonConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
+            this.buttonConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonConfirmar.Location = new System.Drawing.Point(35, 13);
+            this.buttonConfirmar.Name = "buttonConfirmar";
+            this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
+            this.buttonConfirmar.TabIndex = 6;
+            this.buttonConfirmar.Text = "Confirmar";
+            this.buttonConfirmar.UseVisualStyleBackColor = false;
+            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
+            // 
             // panelClave
             // 
             this.panelClave.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -343,16 +343,6 @@
             this.panelClave.TabIndex = 47;
             this.panelClave.Visible = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel1.Controls.Add(this.buttonConfirmar);
-            this.panel1.Controls.Add(this.buttonVolver);
-            this.panel1.Location = new System.Drawing.Point(12, 520);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(222, 92);
-            this.panel1.TabIndex = 48;
-            // 
             // buttonVerClave
             // 
             this.buttonVerClave.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -366,6 +356,16 @@
             this.buttonVerClave.UseVisualStyleBackColor = false;
             this.buttonVerClave.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonVerClave_MouseDown);
             this.buttonVerClave.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonVerClave_MouseUp);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.buttonConfirmar);
+            this.panel1.Controls.Add(this.buttonVolver);
+            this.panel1.Location = new System.Drawing.Point(12, 520);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(222, 92);
+            this.panel1.TabIndex = 48;
             // 
             // mdDetalleUsuario
             // 

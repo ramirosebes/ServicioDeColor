@@ -1,6 +1,5 @@
 ﻿using CapaControladora;
 using CapaEntidad;
-using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 using System;
 using System.Collections.Generic;
@@ -12,17 +11,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacion.Modales
 {
-    public partial class frmPermisoUsuario : Form
+    public partial class mdAgregarComponenteAGrupo : Form
     {
-        private CC_Usuario oCC_Usuario = new CC_Usuario();
-        public frmPermisoUsuario()
+        private CC_GrupoPermiso oCC_GrupoPermiso = new CC_GrupoPermiso();
+        public Componente oComponente { get; set; }
+
+        public mdAgregarComponenteAGrupo()
         {
             InitializeComponent();
         }
 
-        private void frmPermisoUsuario_Load(object sender, EventArgs e)
+        private void mdAgregarComponenteAGrupo_Load(object sender, EventArgs e)
         {
             //CONFIGURACION DEL OPCION COMBO SELECCIONAR
             foreach (DataGridViewColumn columna in dataGridView.Columns)
@@ -36,61 +37,20 @@ namespace CapaPresentacion
             comboBoxBusqueda.DisplayMember = "Texto";
             comboBoxBusqueda.ValueMember = "Valor";
 
-            buttonActualizar_Click(sender, e);
-        }
-
-        private void AbrirModal(string tipoModal, int idUsuario)
-        {
-            using (var modal = new mdDetallePermisoUsuario(tipoModal, idUsuario))
-            {
-                var resultado = modal.ShowDialog();
-            }
-            buttonActualizar_Click(null, null);
-        }
-
-        private void menuVerPermisosUsuario_Click(object sender, EventArgs e)
-        {
-            if (textBoxId.Text.Trim() != "")
-            {
-                AbrirModal("VerDetalle", Convert.ToInt32(textBoxId.Text));
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void menuEditarPermisosUsuario_Click(object sender, EventArgs e)
-        {
-            if (textBoxId.Text.Trim() != "")
-            {
-                AbrirModal("Editar", Convert.ToInt32(textBoxId.Text));
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void buttonActualizar_Click(object sender, EventArgs e)
-        {
             dataGridView.Rows.Clear();
 
-            //MOSTRAR LOS USUARIOS
-            List<Usuario> listaUsuarios = oCC_Usuario.ListarUsuarios();
-            listaUsuarios = listaUsuarios.OrderBy(p => p.NombreCompleto).ToList();
+            //MOSTRAR LOS COMPONENTES
+            List<Componente> listaComponentes = oCC_GrupoPermiso.ListarComponentes(0);
 
-            foreach (Usuario oUsuario in listaUsuarios)
+            foreach (Componente oComponente in listaComponentes)
             {
                 dataGridView.Rows.Add(
                     "",
-                    oUsuario.IdUsuario,
-                    oUsuario.IdPersona,
-                    oUsuario.NombreCompleto,
-                    oUsuario.Correo,
-                    oUsuario.Documento,
-                    oUsuario.Estado == true ? 1 : 0,
-                    oUsuario.Estado == true ? "Activo" : "Inactivo"
+                    oComponente.IdComponente,
+                    oComponente.Nombre,
+                    oComponente.TipoComponente,
+                    oComponente.Estado == true ? 1 : 0,
+                    oComponente.Estado == true ? "Activo" : "Inactivo"
                     );
             }
 
@@ -98,7 +58,6 @@ namespace CapaPresentacion
             dataGridView.ClearSelection();
 
             textBoxId.Text = "";
-            textBoxIdPersona.Text = "";
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
@@ -129,28 +88,11 @@ namespace CapaPresentacion
             {
                 fila.Visible = true;
             }
-
-            dataGridView.ClearSelection();
-            textBoxId.Text = "";
-            textBoxIdPersona.Text = "";
         }
 
-        private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
+        private void buttonVolver_Click(object sender, EventArgs e)
         {
-            buttonBuscar_Click(sender, e);
-            if (textBoxBusqueda.Text.Trim() == "")
-            {
-                buttonLimpiar_Click(sender, e);
-            }
-        }
-
-        private void comboBoxBusqueda_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            buttonBuscar_Click(sender, e);
-            if (textBoxBusqueda.Text.Trim() == "")
-            {
-                buttonLimpiar_Click(sender, e);
-            }
+            this.Close();
         }
 
         private void dataGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -182,8 +124,7 @@ namespace CapaPresentacion
 
             if (indice >= 0)
             {
-                textBoxId.Text = dataGridView.Rows[indice].Cells["idUsuario"].Value.ToString();
-                textBoxIdPersona.Text = dataGridView.Rows[indice].Cells["idPersona"].Value.ToString();
+                textBoxId.Text = dataGridView.Rows[indice].Cells["IdComponente"].Value.ToString();
             }
         }
 
@@ -194,7 +135,31 @@ namespace CapaPresentacion
 
             if (indiceFila >= 0 && indiceColumna >= 0)
             {
-                menuVerPermisosUsuario_Click(sender, e);
+                oComponente = new Componente();
+                oComponente.IdComponente = Convert.ToInt32(dataGridView.Rows[indiceFila].Cells["IdComponente"].Value.ToString());
+                oComponente.Nombre = dataGridView.Rows[indiceFila].Cells["nombre"].Value.ToString();
+                oComponente.TipoComponente = dataGridView.Rows[indiceFila].Cells["tipoComponente"].Value.ToString();
+                oComponente.Estado = Convert.ToInt32(dataGridView.Rows[indiceFila].Cells["estado"].Value.ToString()) == 1 ? true : false;
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+        private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            buttonBuscar_Click(sender, e);
+            if (textBoxBusqueda.Text.Trim() == "")
+            {
+                buttonLimpiar_Click(sender, e);
+            }
+        }
+
+        private void comboBoxBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonBuscar_Click(sender, e);
+            if (textBoxBusqueda.Text.Trim() == "")
+            {
+                buttonLimpiar_Click(sender, e);
             }
         }
     }

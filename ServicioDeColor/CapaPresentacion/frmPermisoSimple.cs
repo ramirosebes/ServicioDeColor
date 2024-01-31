@@ -14,18 +14,18 @@ using CapaPresentacion.Modales;
 
 namespace CapaPresentacion
 {
-    public partial class frmUsuario : Form
+    public partial class frmPermisoSimple : Form
     {
-        private CC_Usuario oCC_Usuario = new CC_Usuario();
-        private Usuario usuarioActual;
+        private CC_Permiso oCCPermiso = new CC_Permiso();
+        private Usuario _usuarioActual;
 
-        public frmUsuario(Usuario oUsuario)
+        public frmPermisoSimple(Usuario oUsuario)
         {
-            usuarioActual = oUsuario;
+            _usuarioActual = oUsuario;
             InitializeComponent();
         }
 
-        private void frmUsuario_Load(object sender, EventArgs e)
+        private void frmPermiso_Load(object sender, EventArgs e)
         {
             foreach (DataGridViewColumn columna in dataGridView.Columns)
             {
@@ -39,87 +39,74 @@ namespace CapaPresentacion
             comboBoxBusqueda.ValueMember = "Valor";
 
             //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
-            //foreach (ToolStripMenuItem menu in menu.Items)
-            //{
-            //    bool encontrado = usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
+            foreach (ToolStripMenuItem menu in menu.Items)
+            {
+                bool encontrado = _usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
 
-            //    if (encontrado)
-            //    {
-            //        menu.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menu.Visible = false;
-            //    }
-            //}
-            //menuVerUsuario.Visible = true;
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+            menuVerDetallePermisoSimple.Visible = true;
 
             buttonActualizar_Click(sender, e);
         }
 
-        private void AbrirModal(string tipoModal, int idUsuario)
-        {
-            using (var modal = new mdDetalleUsuario(tipoModal, idUsuario))
-            {
-                var resultado = modal.ShowDialog();
-            }
-            buttonActualizar_Click(null, null);
-        }
-
-        private void menuVerUsuario_Click(object sender, EventArgs e)
-        {
-            if (textBoxId.Text != "")
-            {
-                AbrirModal("VerDetalle", Convert.ToInt32(textBoxId.Text));
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
-
-        private void menuAgregarUsuario_Click(object sender, EventArgs e)
-        {
-            AbrirModal("Agregar", 0);
-        }
-
-        private void menuModificarUsuario_Click(object sender, EventArgs e)
+        private void AbrirModal()
         {
             if (textBoxId.Text.Trim() != "")
             {
-                AbrirModal("Editar", Convert.ToInt32(textBoxId.Text));
+                int idPermiso = Convert.ToInt32(textBoxId.Text);
+
+                using (var modal = new mdDetallePermisoSimple(idPermiso))
+                {
+                    var resultado = modal.ShowDialog();
+                }
+                buttonActualizar_Click(null, null);
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar un permiso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
-        private void menuRestablecerClave_Click(object sender, EventArgs e)
+        private void menuVerDetallePermisoSimple_Click(object sender, EventArgs e)
         {
-            if (textBoxId.Text.Trim() != "")
-            {
-                AbrirModal("RestablacerClave", Convert.ToInt32(textBoxId.Text));
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+            AbrirModal();
         }
 
-        private void menuEliminarUsuario_Click(object sender, EventArgs e)
+        private void menuModificarEstadoPermiso_Click(object sender, EventArgs e)
         {
             if (textBoxId.Text.Trim() != "")
             {
-                if (MessageBox.Show("¿Está seguro de eliminar el usuario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                string estado = dataGridView.Rows[dataGridView.CurrentRow.Index].Cells["estadoValor"].Value.ToString();
+                string nuevoEstado = string.Empty;
+                bool valorEstado = true;
+                if (estado == "Activo")
+                {
+                    nuevoEstado = "Inactivo";
+                    valorEstado = false;
+                }
+                else
+                {
+                    nuevoEstado = "Activo";
+                    valorEstado = true;
+                }
+
+                if (MessageBox.Show("¿Está seguro de cambiar el estado de permiso a " + nuevoEstado + "?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string mensaje = string.Empty;
 
-                    bool eliminado = oCC_Usuario.EliminarUsuario(Convert.ToInt32(textBoxId.Text), Convert.ToInt32(textBoxIdPersona.Text), out mensaje);
+                    bool editado = oCCPermiso.EditarEstado(Convert.ToInt32(textBoxIdComponente.Text), valorEstado, out mensaje);
 
-                    if (eliminado)
+                    if (editado)
                     {
-                        MessageBox.Show("Usuario eliminado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Estado editado correctamente.\nSe recomienda reiniciar el sistema", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         buttonActualizar_Click(sender, e);
                     }
                     else
@@ -130,7 +117,7 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar un permiso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -138,21 +125,20 @@ namespace CapaPresentacion
         {
             dataGridView.Rows.Clear();
 
-            //MOSTRAR LOS USUARIOS
-            List<Usuario> listaUsuarios = oCC_Usuario.ListarUsuarios();
-            listaUsuarios = listaUsuarios.OrderBy(p => p.NombreCompleto).ToList();
+            //MOSTRAR LOS PERMISOS
+            List<Permiso> listaPermisos = oCCPermiso.ListarPermisos();
+            listaPermisos = listaPermisos.OrderBy(p => p.Nombre).ToList();
 
-            foreach (Usuario oUsuario in listaUsuarios)
+            foreach (Permiso oPermiso in listaPermisos)
             {
                 dataGridView.Rows.Add(
                     "",
-                    oUsuario.IdUsuario,
-                    oUsuario.IdPersona,
-                    oUsuario.NombreCompleto,
-                    oUsuario.Correo,
-                    oUsuario.Documento,
-                    oUsuario.Estado == true ? 1 : 0,
-                    oUsuario.Estado == true ? "Activo" : "Inactivo"
+                    oPermiso.IdPermiso,
+                    oPermiso.IdComponente,
+                    oPermiso.Nombre,
+                    oPermiso.NombreMenu,
+                    oPermiso.Estado == true ? 1 : 0,
+                    oPermiso.Estado == true ? "Activo" : "Inactivo"
                     );
             }
 
@@ -160,7 +146,7 @@ namespace CapaPresentacion
             dataGridView.ClearSelection();
 
             textBoxId.Text = "";
-            textBoxIdPersona.Text = "";
+            textBoxIdComponente.Text = "";
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)
@@ -182,6 +168,7 @@ namespace CapaPresentacion
                 }
             }
         }
+
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
             textBoxBusqueda.Text = "";
@@ -193,7 +180,6 @@ namespace CapaPresentacion
 
             dataGridView.ClearSelection();
             textBoxId.Text = "";
-            textBoxIdPersona.Text = "";
         }
 
         private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
@@ -243,8 +229,8 @@ namespace CapaPresentacion
 
             if (indice >= 0)
             {
-                textBoxId.Text = dataGridView.Rows[indice].Cells["idUsuario"].Value.ToString();
-                textBoxIdPersona.Text = dataGridView.Rows[indice].Cells["idPersona"].Value.ToString();
+                textBoxId.Text = dataGridView.Rows[indice].Cells["idPermiso"].Value.ToString();
+                textBoxIdComponente.Text = dataGridView.Rows[indice].Cells["idComponente"].Value.ToString();
             }
         }
 
@@ -255,7 +241,7 @@ namespace CapaPresentacion
 
             if (indiceFila >= 0 && indiceColumna >= 0)
             {
-                menuVerUsuario_Click(sender, e);
+                AbrirModal();
             }
         }
     }

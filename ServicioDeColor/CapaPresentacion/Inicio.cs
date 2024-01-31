@@ -14,79 +14,97 @@ namespace CapaPresentacion
 {
     public partial class Inicio : Form
     {
-        private static Usuario usuarioActual;
-        private static ToolStripMenuItem menuActivo = null;
-        private static Form formularioActivo = null;
+        private static Usuario _usuarioActual;
+        private static ToolStripMenuItem _menuActivo = null;
+        private static Form _formularioActivo = null;
 
         public Inicio(Usuario oUsuario = null)
         {
             if (oUsuario == null)
             {
-                usuarioActual = new Usuario() { NombreCompleto = "Admin", IdUsuario = 1 };
-                usuarioActual.SetPermisos(new CC_Permiso().ListarPermisosPorId(usuarioActual.IdUsuario));
+                _usuarioActual = new Usuario() { NombreCompleto = "Admin", IdUsuario = 1 };
+                _usuarioActual.SetPermisos(new CC_Permiso().ListarPermisosPorId(_usuarioActual.IdUsuario));
             }
             else
             {
-                usuarioActual = oUsuario;
+                _usuarioActual = oUsuario;
             }
-            //usuarioActual = oUsuario;
-            //usuarioActual.SetPermisos(new CC_Permiso().ListarPermisos(usuarioActual.IdUsuario));
+            //_usuarioActual = oUsuario;
+            //_usuarioActual.SetPermisos(new CC_Permiso().ListarPermisos(_usuarioActual.IdUsuario));
 
             InitializeComponent();
         }
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            List<Permiso> listaPermisos = usuarioActual.GetPermisos();
+            //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
+            List<Permiso> listaPermisos = _usuarioActual.GetPermisos();
 
-            //List<Permiso> listaPermisos = new CC_Permiso().ListarPermisos(_usuarioActual.IdUsuario);
+            //List<Permiso> listaPermisos = new CC_Permiso().ListarPermisos(__usuarioActual.IdUsuario);
 
-            //foreach (ToolStripMenuItem menuItem in menu.Items)
-            //{
-            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menuItem.Name);
+            //Recorre todo el menu pricipal ocultado o mostrando los menues dependiendo los permisos que tenga
+            foreach (ToolStripMenuItem menuItem in menu.Items)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menuItem.Name);
 
-            //    if (encontrado)
-            //    {
-            //        menuItem.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menuItem.Visible = false;
-            //    }
-            //}
+                if (encontrado)
+                {
+                    menuItem.Visible = true;
+                }
+                else
+                {
+                    menuItem.Visible = false;
+                }
+            }
 
-            //foreach (ToolStripMenuItem menu in menupermiso.DropDownItems)
-            //{
-            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+            //Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
+            foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
 
-            //    if (encontrado)
-            //    {
-            //        menu.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menu.Visible = false;
-            //    }
-            //}
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
 
-            labelUsuario.Text = usuarioActual.NombreCompleto;
+            //Recorre todo el menu Permisos ocultado o mostrando los menues dependiendo los permisos que tenga
+            foreach (ToolStripMenuItem menu in menuPermisos.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+
+            labelUsuario.Text = _usuarioActual.NombreCompleto;
         }
 
         private void abrirFormulario(ToolStripMenuItem menu, Form formulario)
         {
-            if (menuActivo != null)
+            if (_menuActivo != null)
             {
-                menuActivo.BackColor = Color.White;
+                _menuActivo.BackColor = Color.White;
             }
             menu.BackColor = Color.Silver;
-            menuActivo = menu;
+            _menuActivo = menu;
 
-            if (formularioActivo != null)
+            if (_formularioActivo != null)
             {
-                formularioActivo.Close();
+                _formularioActivo.Close();
             }
 
-            formularioActivo = formulario;
+            _formularioActivo = formulario;
             formulario.TopLevel = false;
             formulario.FormBorderStyle = FormBorderStyle.None;
             formulario.Dock = DockStyle.Fill;
@@ -106,17 +124,17 @@ namespace CapaPresentacion
 
         private void menuUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuUsuarios, new frmUsuario(usuarioActual));
+            abrirFormulario(menuUsuarios, new frmUsuario(_usuarioActual));
         }
 
         private void menuPermisosSimples_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuUsuarios, new frmPermiso(usuarioActual));
+            abrirFormulario(menuUsuarios, new frmPermisoSimple(_usuarioActual));
         }
 
         private void menuGrupos_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuUsuarios, new frmGrupo(usuarioActual));
+            abrirFormulario(menuUsuarios, new frmGrupoPermisos(_usuarioActual));
         }
 
         private void menuPermisosUsuarios_Click(object sender, EventArgs e)

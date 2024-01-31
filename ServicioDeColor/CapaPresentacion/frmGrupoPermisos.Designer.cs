@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class frmUsuario
+    partial class frmGrupoPermisos
     {
         /// <summary>
         /// Required designer variable.
@@ -31,12 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menu = new System.Windows.Forms.MenuStrip();
-            this.menuVerDetalleUsuario = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAgregarUsuario = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuEditarUsuario = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuRestablecerClave = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuEliminarUsuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxIdComponente = new System.Windows.Forms.TextBox();
             this.panelLista = new System.Windows.Forms.Panel();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.labelSubTitulo = new System.Windows.Forms.Label();
@@ -45,96 +40,31 @@
             this.buttonLimpiar = new System.Windows.Forms.Button();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.buttonBuscar = new System.Windows.Forms.Button();
+            this.menuVerDetalleGrupoPermisos = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.menuAgregarGrupoPermisos = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdGrupoPermiso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idComponente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.textBoxIdPersona = new System.Windows.Forms.TextBox();
-            this.menu.SuspendLayout();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.menuEditarGrupoPermisos = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEliminarGrupoPermisos = new System.Windows.Forms.ToolStripMenuItem();
             this.panelLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menu
+            // textBoxIdComponente
             // 
-            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuVerDetalleUsuario,
-            this.menuAgregarUsuario,
-            this.menuEditarUsuario,
-            this.menuRestablecerClave,
-            this.menuEliminarUsuario});
-            this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1484, 34);
-            this.menu.TabIndex = 87;
-            this.menu.Text = "menuStrip1";
-            // 
-            // menuVerDetalleUsuario
-            // 
-            this.menuVerDetalleUsuario.AutoSize = false;
-            this.menuVerDetalleUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuVerDetalleUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuVerDetalleUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuVerDetalleUsuario.Name = "menuVerDetalleUsuario";
-            this.menuVerDetalleUsuario.Size = new System.Drawing.Size(88, 30);
-            this.menuVerDetalleUsuario.Text = "Ver detalle";
-            this.menuVerDetalleUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuVerDetalleUsuario.Click += new System.EventHandler(this.menuVerUsuario_Click);
-            // 
-            // menuAgregarUsuario
-            // 
-            this.menuAgregarUsuario.AutoSize = false;
-            this.menuAgregarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuAgregarUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuAgregarUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuAgregarUsuario.Name = "menuAgregarUsuario";
-            this.menuAgregarUsuario.Size = new System.Drawing.Size(73, 30);
-            this.menuAgregarUsuario.Text = "Agregar";
-            this.menuAgregarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuAgregarUsuario.Click += new System.EventHandler(this.menuAgregarUsuario_Click);
-            // 
-            // menuEditarUsuario
-            // 
-            this.menuEditarUsuario.AutoSize = false;
-            this.menuEditarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuEditarUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuEditarUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuEditarUsuario.Name = "menuEditarUsuario";
-            this.menuEditarUsuario.Size = new System.Drawing.Size(60, 30);
-            this.menuEditarUsuario.Text = "Editar";
-            this.menuEditarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuEditarUsuario.Click += new System.EventHandler(this.menuModificarUsuario_Click);
-            // 
-            // menuRestablecerClave
-            // 
-            this.menuRestablecerClave.AutoSize = false;
-            this.menuRestablecerClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuRestablecerClave.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuRestablecerClave.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuRestablecerClave.Name = "menuRestablecerClave";
-            this.menuRestablecerClave.Size = new System.Drawing.Size(134, 30);
-            this.menuRestablecerClave.Text = "Restablecer clave";
-            this.menuRestablecerClave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuRestablecerClave.Click += new System.EventHandler(this.menuRestablecerClave_Click);
-            // 
-            // menuEliminarUsuario
-            // 
-            this.menuEliminarUsuario.AutoSize = false;
-            this.menuEliminarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuEliminarUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuEliminarUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuEliminarUsuario.Name = "menuEliminarUsuario";
-            this.menuEliminarUsuario.Size = new System.Drawing.Size(75, 30);
-            this.menuEliminarUsuario.Text = "Eliminar";
-            this.menuEliminarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuEliminarUsuario.Click += new System.EventHandler(this.menuEliminarUsuario_Click);
+            this.textBoxIdComponente.Location = new System.Drawing.Point(1372, 12);
+            this.textBoxIdComponente.Name = "textBoxIdComponente";
+            this.textBoxIdComponente.Size = new System.Drawing.Size(100, 20);
+            this.textBoxIdComponente.TabIndex = 101;
+            this.textBoxIdComponente.Visible = false;
             // 
             // panelLista
             // 
@@ -149,7 +79,7 @@
             this.panelLista.Location = new System.Drawing.Point(12, 37);
             this.panelLista.Name = "panelLista";
             this.panelLista.Size = new System.Drawing.Size(1460, 80);
-            this.panelLista.TabIndex = 88;
+            this.panelLista.TabIndex = 98;
             // 
             // buttonActualizar
             // 
@@ -174,9 +104,9 @@
             this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSubTitulo.Location = new System.Drawing.Point(10, 20);
             this.labelSubTitulo.Name = "labelSubTitulo";
-            this.labelSubTitulo.Size = new System.Drawing.Size(197, 39);
+            this.labelSubTitulo.Size = new System.Drawing.Size(179, 39);
             this.labelSubTitulo.TabIndex = 50;
-            this.labelSubTitulo.Text = "Lista de usuarios";
+            this.labelSubTitulo.Text = "Lista de grupos";
             // 
             // comboBoxBusqueda
             // 
@@ -247,6 +177,38 @@
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
+            // menuVerDetalleGrupoPermisos
+            // 
+            this.menuVerDetalleGrupoPermisos.AutoSize = false;
+            this.menuVerDetalleGrupoPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuVerDetalleGrupoPermisos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuVerDetalleGrupoPermisos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuVerDetalleGrupoPermisos.Name = "menuVerDetalleGrupoPermisos";
+            this.menuVerDetalleGrupoPermisos.Size = new System.Drawing.Size(88, 30);
+            this.menuVerDetalleGrupoPermisos.Text = "Ver detalle";
+            this.menuVerDetalleGrupoPermisos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuVerDetalleGrupoPermisos.Click += new System.EventHandler(this.menuVerGrupo_Click);
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Location = new System.Drawing.Point(1266, 12);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(100, 20);
+            this.textBoxId.TabIndex = 100;
+            this.textBoxId.Visible = false;
+            // 
+            // menuAgregarGrupoPermisos
+            // 
+            this.menuAgregarGrupoPermisos.AutoSize = false;
+            this.menuAgregarGrupoPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuAgregarGrupoPermisos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuAgregarGrupoPermisos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuAgregarGrupoPermisos.Name = "menuAgregarGrupoPermisos";
+            this.menuAgregarGrupoPermisos.Size = new System.Drawing.Size(73, 30);
+            this.menuAgregarGrupoPermisos.Text = "Agregar";
+            this.menuAgregarGrupoPermisos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuAgregarGrupoPermisos.Click += new System.EventHandler(this.menuAgregarGrupo_Click);
+            // 
             // dataGridView
             // 
             this.dataGridView.AllowUserToAddRows = false;
@@ -263,12 +225,10 @@
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buttonSeleccionar,
-            this.idUsuario,
-            this.IdPersona,
-            this.nombreCompleto,
-            this.correo,
-            this.documento,
-            this.Estado,
+            this.IdGrupoPermiso,
+            this.idComponente,
+            this.nombre,
+            this.estado,
             this.estadoValor});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
@@ -292,7 +252,7 @@
             this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView.RowTemplate.Height = 28;
             this.dataGridView.Size = new System.Drawing.Size(1460, 526);
-            this.dataGridView.TabIndex = 89;
+            this.dataGridView.TabIndex = 99;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView_CellPainting);
@@ -304,47 +264,33 @@
             this.buttonSeleccionar.ReadOnly = true;
             this.buttonSeleccionar.Width = 30;
             // 
-            // idUsuario
+            // IdGrupoPermiso
             // 
-            this.idUsuario.HeaderText = "IdUsuario";
-            this.idUsuario.Name = "idUsuario";
-            this.idUsuario.ReadOnly = true;
-            this.idUsuario.Visible = false;
+            this.IdGrupoPermiso.HeaderText = "IdGrupoPermiso";
+            this.IdGrupoPermiso.Name = "IdGrupoPermiso";
+            this.IdGrupoPermiso.ReadOnly = true;
+            this.IdGrupoPermiso.Visible = false;
             // 
-            // IdPersona
+            // idComponente
             // 
-            this.IdPersona.HeaderText = "IdPersona";
-            this.IdPersona.Name = "IdPersona";
-            this.IdPersona.ReadOnly = true;
-            this.IdPersona.Visible = false;
+            this.idComponente.HeaderText = "IdComponente";
+            this.idComponente.Name = "idComponente";
+            this.idComponente.ReadOnly = true;
+            this.idComponente.Visible = false;
             // 
-            // nombreCompleto
+            // nombre
             // 
-            this.nombreCompleto.HeaderText = "Nombre completo";
-            this.nombreCompleto.Name = "nombreCompleto";
-            this.nombreCompleto.ReadOnly = true;
-            this.nombreCompleto.Width = 250;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 200;
             // 
-            // correo
+            // estado
             // 
-            this.correo.HeaderText = "Correo";
-            this.correo.Name = "correo";
-            this.correo.ReadOnly = true;
-            this.correo.Width = 250;
-            // 
-            // documento
-            // 
-            this.documento.HeaderText = "Documento";
-            this.documento.Name = "documento";
-            this.documento.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            this.Estado.Width = 150;
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Visible = false;
             // 
             // estadoValor
             // 
@@ -352,41 +298,62 @@
             this.estadoValor.Name = "estadoValor";
             this.estadoValor.ReadOnly = true;
             // 
-            // textBoxId
+            // menu
             // 
-            this.textBoxId.Location = new System.Drawing.Point(1266, 11);
-            this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(100, 20);
-            this.textBoxId.TabIndex = 90;
-            this.textBoxId.Visible = false;
+            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuVerDetalleGrupoPermisos,
+            this.menuAgregarGrupoPermisos,
+            this.menuEditarGrupoPermisos,
+            this.menuEliminarGrupoPermisos});
+            this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(1484, 34);
+            this.menu.TabIndex = 97;
+            this.menu.Text = "menuStrip1";
             // 
-            // textBoxIdPersona
+            // menuEditarGrupoPermisos
             // 
-            this.textBoxIdPersona.Location = new System.Drawing.Point(1372, 11);
-            this.textBoxIdPersona.Name = "textBoxIdPersona";
-            this.textBoxIdPersona.Size = new System.Drawing.Size(100, 20);
-            this.textBoxIdPersona.TabIndex = 91;
-            this.textBoxIdPersona.Visible = false;
+            this.menuEditarGrupoPermisos.AutoSize = false;
+            this.menuEditarGrupoPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuEditarGrupoPermisos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuEditarGrupoPermisos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuEditarGrupoPermisos.Name = "menuEditarGrupoPermisos";
+            this.menuEditarGrupoPermisos.Size = new System.Drawing.Size(60, 30);
+            this.menuEditarGrupoPermisos.Text = "Editar";
+            this.menuEditarGrupoPermisos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuEditarGrupoPermisos.Click += new System.EventHandler(this.menuModificarGrupo_Click);
             // 
-            // frmUsuario
+            // menuEliminarGrupoPermisos
+            // 
+            this.menuEliminarGrupoPermisos.AutoSize = false;
+            this.menuEliminarGrupoPermisos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuEliminarGrupoPermisos.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuEliminarGrupoPermisos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuEliminarGrupoPermisos.Name = "menuEliminarGrupoPermisos";
+            this.menuEliminarGrupoPermisos.Size = new System.Drawing.Size(75, 30);
+            this.menuEliminarGrupoPermisos.Text = "Eliminar";
+            this.menuEliminarGrupoPermisos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuEliminarGrupoPermisos.Click += new System.EventHandler(this.menuEliminarGrupo_Click);
+            // 
+            // frmGrupoPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1484, 661);
-            this.Controls.Add(this.textBoxIdPersona);
+            this.Controls.Add(this.textBoxIdComponente);
+            this.Controls.Add(this.panelLista);
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.panelLista);
             this.Controls.Add(this.menu);
-            this.Name = "frmUsuario";
-            this.Text = "frmUsuario";
-            this.Load += new System.EventHandler(this.frmUsuario_Load);
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
+            this.Name = "frmGrupoPermisos";
+            this.Text = " frmGrupo";
+            this.Load += new System.EventHandler(this.frmGrupo_Load);
             this.panelLista.ResumeLayout(false);
             this.panelLista.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,30 +361,27 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.ToolStripMenuItem menuVerDetalleUsuario;
-        private System.Windows.Forms.ToolStripMenuItem menuAgregarUsuario;
-        private System.Windows.Forms.ToolStripMenuItem menuEditarUsuario;
-        private System.Windows.Forms.ToolStripMenuItem menuRestablecerClave;
-        private System.Windows.Forms.ToolStripMenuItem menuEliminarUsuario;
+        private System.Windows.Forms.TextBox textBoxIdComponente;
         private System.Windows.Forms.Panel panelLista;
+        private System.Windows.Forms.Button buttonActualizar;
         private System.Windows.Forms.Label labelSubTitulo;
         private System.Windows.Forms.ComboBox comboBoxBusqueda;
         private System.Windows.Forms.Label labelBuscarPor;
         private System.Windows.Forms.Button buttonLimpiar;
         private System.Windows.Forms.TextBox textBoxBusqueda;
         private System.Windows.Forms.Button buttonBuscar;
-        private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.Button buttonActualizar;
-        private System.Windows.Forms.DataGridViewButtonColumn buttonSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdPersona;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn documento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoValor;
+        private System.Windows.Forms.ToolStripMenuItem menuVerDetalleGrupoPermisos;
         private System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.TextBox textBoxIdPersona;
+        private System.Windows.Forms.ToolStripMenuItem menuAgregarGrupoPermisos;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.MenuStrip menu;
+        private System.Windows.Forms.DataGridViewButtonColumn buttonSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdGrupoPermiso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idComponente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoValor;
+        private System.Windows.Forms.ToolStripMenuItem menuEditarGrupoPermisos;
+        private System.Windows.Forms.ToolStripMenuItem menuEliminarGrupoPermisos;
     }
 }

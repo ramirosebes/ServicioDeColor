@@ -18,6 +18,10 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuario.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleUsuario.resources
-C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmGrupo.resources
-C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmPermiso.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmPermisoUsuario.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdAgregarComponenteAGrupo.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleGrupoPermiso.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetallePermisoSimple.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetallePermisoUsuario.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmGrupoPermisos.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmPermisoSimple.resources

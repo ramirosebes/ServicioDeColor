@@ -21,12 +21,38 @@ begin
 
 		begin transaction registro
 		
-			if not exists(
+			if exists(
 				select * 
-				from Usuario
-				inner join Persona on Usuario.IdPersona = Persona.IdPersona
-				where Persona.Documento = @Documento
+				from Persona
+				where Documento = @Documento
 			)
+			begin
+				select @IdPersona = IdPersona
+				from Persona
+				where Documento = @Documento
+
+				if not exists(
+					select *
+					from Usuario
+					where IdPersona = @IdPersona
+				)
+				begin
+					update Persona
+					set NombreCompleto = @NombreCompleto,
+						Correo = @Correo
+					where Documento = @Documento
+				
+					insert into Usuario(IdPersona,Clave,Estado) values
+					(@IdPersona,@Clave,@Estado)				
+
+					set @IdUsuarioRegistrado = SCOPE_IDENTITY()
+				end
+				else
+				begin
+					set @Mensaje = 'Ya existe un usuario con ese número de documento'
+				end
+			end
+			else
 			begin
 				insert into Persona(NombreCompleto,Correo,Documento) values
 				(@NombreCompleto,@Correo,@Documento)
@@ -474,14 +500,15 @@ go
 
 --PROCEDURE REGISTRAR CLIENTE--
 create procedure SP_RegistrarCliente(
-@NombreCompleto nvarchar(100),
-@Correo nvarchar(100),
-@Documento nvarchar(100),
-@Telefono nvarchar(60),
-@Direccion nvarchar(100),
-@Estado bit,
-@Mensaje nvarchar(400) output,
-@IdClienteRegistrado int output
+	@NombreCompleto nvarchar(100),
+	@Correo nvarchar(100),
+	@Documento nvarchar(100),
+	@Telefono nvarchar(60),
+	@Direccion nvarchar(100),
+	@Localidad nvarchar(60),
+	@Estado bit,
+	@Mensaje nvarchar(400) output,
+	@IdClienteRegistrado int output
 )
 as
 begin
@@ -491,13 +518,38 @@ begin
 		declare @IdPersona int = 0
 
 		begin transaction registro
-		
-			if not exists(
+			if exists(
 				select * 
-				from Cliente
-				inner join Persona on Cliente.IdPersona = Persona.IdPersona
-				where Persona.Documento = @Documento
+				from Persona
+				where Documento = @Documento
 			)
+			begin
+				select @IdPersona = IdPersona
+				from Persona
+				where Documento = @Documento
+
+				if not exists(
+					select *
+					from Cliente
+					where IdPersona = @IdPersona
+				)
+				begin
+					update Persona
+					set NombreCompleto = @NombreCompleto,
+						Correo = @Correo
+					where Documento = @Documento
+
+					insert into Cliente(Direccion,Localidad,Telefono,Estado) values
+					(@Direccion,@Localidad,@Telefono,@Estado)
+
+					set @IdClienteRegistrado = SCOPE_IDENTITY()
+				end
+				else
+				begin
+					set @Mensaje = 'Ya existe un cliente con ese numero de documento'
+				end
+			end
+			else
 			begin
 				insert into Persona(NombreCompleto,Correo,Documento) values
 				(@NombreCompleto,@Correo,@Documento)
@@ -506,15 +558,11 @@ begin
 
 				if (@IdPersona != 0)
 				begin
-					insert into Cliente(IdPersona,Telefono,Direccion,Estado) values
-					(@IdPersona,@Telefono,@Direccion,@Estado)
+					insert into Cliente(IdPersona,Telefono,Direccion,Estado,Localidad) values
+					(@IdPersona,@Telefono,@Direccion,@Estado,@Localidad)
 
 					set @IdClienteRegistrado = SCOPE_IDENTITY()
 				end
-			end
-			else
-			begin
-				set @Mensaje = 'Ya existe un cliente con este documento'
 			end
 		commit transaction registro
 	end try
@@ -584,7 +632,6 @@ go
 --PROCEDURE ELIMINAR CLIENTE--
 create procedure SP_EliminarCliente(
 @IdCliente int,
-@IdPersona int,
 @Mensaje nvarchar(400) output,
 @Resultado bit output
 )
@@ -592,17 +639,23 @@ as
 begin
 	set @Resultado = 0;
     set @Mensaje = '';
+	declare @pasoreglas bit = 1
 
-	begin try
-		begin transaction editar
-			delete from Cliente where IdCliente = @IdCliente;
-			delete from Persona where IdPersona = @IdPersona;
-		commit transaction editar
-			set @Resultado = 1
-	end try
-	begin catch
-		rollback transaction editar
-        set @Mensaje = 'Error: ' + ERROR_MESSAGE() + ' (' + CAST(ERROR_NUMBER() AS NVARCHAR) + ')';
-	end catch
+	if exists(
+		select *
+		from Venta
+		where IdCliente = @IdCliente
+	)
+	begin
+		set @Resultado = 0
+		set @Mensaje = @Mensaje + 'No se puede eliminar. El cliente se encuentra ligado a una venta.\n'
+		set @pasoreglas = 0
+	end
+
+	if (@pasoreglas = 1)
+	begin
+		delete from Cliente where IdCliente = @IdCliente
+		set @Resultado = 1
+	end
 end;
 go
