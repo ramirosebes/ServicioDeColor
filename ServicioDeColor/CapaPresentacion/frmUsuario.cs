@@ -17,11 +17,11 @@ namespace CapaPresentacion
     public partial class frmUsuario : Form
     {
         private CC_Usuario oCC_Usuario = new CC_Usuario();
-        private Usuario usuarioActual;
+        private Usuario _usuarioActual;
 
         public frmUsuario(Usuario oUsuario)
         {
-            usuarioActual = oUsuario;
+            _usuarioActual = oUsuario;
             InitializeComponent();
         }
 
@@ -41,7 +41,7 @@ namespace CapaPresentacion
             //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
             foreach (ToolStripMenuItem menu in menu.Items)
             {
-                bool encontrado = usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
+                bool encontrado = _usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
 
                 if (encontrado)
                 {

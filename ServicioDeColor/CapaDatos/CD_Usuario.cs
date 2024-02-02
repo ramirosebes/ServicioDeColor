@@ -54,7 +54,7 @@ namespace CapaDatos
         }
         public int AgregarUsuario(Usuario oUsuario, string clave, out string mensaje)
         {
-            int idUsuarioRegistrado = 0;
+            int usuarioRegistrado = 0;
             mensaje = string.Empty;
 
             using (SqlConnection conexion = CD_Conexion.ObtenerConexion())
@@ -78,17 +78,17 @@ namespace CapaDatos
 
                     cmd.ExecuteNonQuery();
 
-                    idUsuarioRegistrado = Convert.ToInt32(cmd.Parameters["IdUsuarioRegistrado"].Value);
+                    usuarioRegistrado = Convert.ToInt32(cmd.Parameters["IdUsuarioRegistrado"].Value);
                     mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
                 catch (Exception ex)
                 {
-                    idUsuarioRegistrado = 0;
+                    usuarioRegistrado = 0;
                     mensaje = ex.Message;
                 }
             }
             CD_Conexion.CerrarConexion();
-            return idUsuarioRegistrado;
+            return usuarioRegistrado;
         }
         public bool EditarUsuario(Usuario oUsuario, out string mensaje)
         {

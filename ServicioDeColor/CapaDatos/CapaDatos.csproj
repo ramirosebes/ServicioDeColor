@@ -42,12 +42,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CD_Categoria.cs" />
     <Compile Include="CD_Cliente.cs" />
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_GrupoPermiso.cs" />
     <Compile Include="CD_Permiso.cs" />
+    <Compile Include="CD_Proveedor.cs" />
     <Compile Include="CD_Usuario.cs" />
     <Compile Include="CD_UsuarioPermiso.cs" />
+    <Compile Include="CD_Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -254,6 +254,7 @@ begin
 		rollback transaction registro
 	end catch
 end
+
 go
 
 --PROCEDURE EDITAR GRUPO PERMISO--
@@ -302,6 +303,7 @@ begin
         rollback transaction edicion
     end catch
 end
+
 go
 
 --PROCEDURE ELIMINAR GRUPO PERMISO--
@@ -342,6 +344,7 @@ begin
         rollback transaction eliminacion
     end catch
 end
+
 go
 
 --PROCEDURE EDITAR ESTADO DE PERMISO--
@@ -372,6 +375,7 @@ begin
         rollback transaction edicion
     end catch
 end
+
 go
 
 --PROCEDURE EDITAR PERMISOS DEL USUARIO--
@@ -571,6 +575,7 @@ begin
 		rollback transaction registro
 	end catch
 end
+
 go
 
 --PROCEDURE EDITAR CLIENTE--
@@ -627,6 +632,7 @@ begin
         rollback transaction editar;
     end catch
 end;
+
 go
 
 --PROCEDURE ELIMINAR CLIENTE--
@@ -658,4 +664,275 @@ begin
 		set @Resultado = 1
 	end
 end;
+
+go
+
+--PROCEDURE AGREGAR CATEGORIA--
+create proc SP_RegistrarCategoria (
+	@Descripcion nvarchar(50),
+	@Estado bit,
+	@Resultado int output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 0
+	--set @Mensaje = ''
+	if not exists (select * from Categoria where Descripcion = @Descripcion)
+	begin
+		insert into Categoria(Descripcion, Estado) values (@Descripcion, @Estado)
+		set @Resultado = SCOPE_IDENTITY()
+	end
+	else
+		set	@Mensaje = 'Ya existe una categoria con esa descipcion' --'No se puede repetir la descripcion de una caterogria'
+end
+
+go
+
+--PROCEDURE EDITAR CATEGORIA--
+create procedure SP_EditarCategoria (
+	@IdCategoria int,
+	@Descripcion nvarchar(50),
+	@Estado bit,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	--set @Mensaje = ''
+	if not exists (select * from Categoria where Descripcion = @Descripcion and IdCategoria != @IdCategoria)
+		update Categoria set
+		Descripcion = @Descripcion,
+		Estado = @Estado
+		where IdCategoria = @IdCategoria
+	else
+	begin
+		set @Resultado = 0
+		set	@Mensaje = 'Ya existe una categoria con esa descipcion' --'No se puede repetir la descripcion de una caterogria'
+	end
+end
+
+go
+
+--PROCEDURE ELIMINAR CATEGORIA--
+create procedure SP_EliminarCategoria (
+	@IdCategoria int,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	if not exists (
+		select * from Categoria c
+		inner join PRODUCTO p on p.IdCategoria = c.IdCategoria
+		where c.IdCategoria = @IdCategoria
+	)
+	begin
+		delete top(1) from Categoria where IdCategoria = @IdCategoria
+	end
+	else
+	begin
+		set @Resultado = 0
+		set @Mensaje = 'La categoria se encuentra relacionada a un producto'
+	end
+end
+
+go
+
+--PROCEDURE AGREGAR PRODUCTO--
+create proc SP_RegistrarProducto (
+	@Codigo nvarchar(20),
+	@Nombre nvarchar(30),
+	@Descripcion nvarchar(30),
+	@IdCategoria int,
+	@Stock int,
+	@PrecioCompra decimal(10,2),
+	@PrecioVenta decimal(10,2),
+	@Estado bit,
+	@Resultado int output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 0
+	if not exists (select * from Producto where Codigo = @Codigo)
+	begin
+		insert into Producto(Codigo, Nombre, Descripcion, IdCategoria, Stock, PrecioCompra, PrecioVenta, Estado) 
+			values (@Codigo, @Nombre, @Descripcion, @IdCategoria, @Stock, @PrecioCompra, @PrecioVenta, @Estado)
+		set @Resultado = SCOPE_IDENTITY()
+	end
+	else
+		set @Mensaje = 'Ya existe un producto con el mismo codigo'
+end
+
+go
+
+--PROCEDURE EDITAR PRODUCTO--
+create procedure SP_EditarProducto (
+	@IdProducto int,
+	@Codigo nvarchar(20),
+	@Nombre nvarchar(30),
+	@Descripcion nvarchar(30),
+	@IdCategoria int,
+	@Stock int,
+	@PrecioCompra decimal(10,2),
+	@PrecioVenta decimal(10,2),
+	@Estado bit,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	if not exists (select * from Producto where Codigo = @Codigo and IdProducto != @IdProducto)
+		update Producto set
+		Codigo = @Codigo,
+		Nombre = @Nombre,
+		Descripcion = @Descripcion,
+		IdCategoria = @IdCategoria,
+		Stock = @Stock,
+		PrecioCompra = @PrecioCompra,
+		PrecioVenta = @PrecioVenta,
+		Estado = @Estado
+		where IdProducto = @IdProducto
+	else
+	begin
+		set @Resultado = 0
+		set @Mensaje = 'Ya existe un producto con el mismo codigo'
+	end
+end
+
+go
+
+--PROCEDURE ELIMINAR PRODUCTO--
+create proc SP_EliminarProducto (
+	@IdProducto int,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 0
+	set @Mensaje = ''
+	declare @pasoreglas bit = 1
+
+	if exists (select * from DetalleCompra dc
+	inner join Producto p on p.IdProducto = dc.IdProducto
+	where p.IdProducto = @IdProducto
+	)
+	begin
+		set @pasoreglas = 0
+		set @Resultado = 0
+		set @Mensaje = @Mensaje + 'No se puede eliminar el producto porque se encuentra relacionado a una compra\n'
+	end
+
+	if exists (select * from DetalleVenta dv
+	inner join Producto p on p.IdProducto = dv.IdProducto
+	where p.IdProducto = @IdProducto
+	)
+	begin
+		set @pasoreglas = 0
+		set @Resultado = 0
+		set @Mensaje = @Mensaje + 'No se puede eliminar el producto porque se encuentra relacioado a una venta\n'
+	end
+
+	if (@pasoreglas = 1)
+	begin
+		delete from PRODUCTO where IdProducto = @IdProducto
+		set @Resultado = 1
+	end
+end
+
+go
+
+--PROCEDURE AGREGAR PROVEEDOR--
+create proc SP_RegistrarProveedor (
+	@NombreCompleto nvarchar(50),
+	@CUIT nvarchar(50),
+	@RazonSocial nvarchar(50),
+	@Correo nvarchar(50),
+	@Telefono nvarchar(50),
+	@Estado bit,
+	@Resultado int output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 0
+	declare @IdPersona int
+	if not exists (select * from Proveedor where CUIT = CUIT)
+	begin
+		insert into Proveedor(NombreCompleto, CUIT, RazonSocial, Correo, Telefono, Estado)
+		values (@NombreCompleto, @CUIT, @RazonSocial, @Correo, @Telefono, @Estado)
+
+		set @Resultado = SCOPE_IDENTITY()
+	end
+	else
+		set @Mensaje = 'Ya existe un proveedor registrado con ese CUIT'
+end
+
+go
+
+--PROCEDURE EDITAR PROVEEDOR--
+create proc SP_EditarProveedor (
+	@IdProveedor int,
+	@NombreCompleto nvarchar(50),
+	@CUIT nvarchar(50),
+	@RazonSocial nvarchar(50),
+	@Correo nvarchar(50),
+	@Telefono nvarchar(50),
+	@Estado bit,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	declare @IdPersona int
+	if not exists (select * from Proveedor where CUIT = @CUIT and IdProveedor != @IdProveedor)
+	begin
+		update Proveedor set
+		NombreCompleto = @NombreCompleto,
+		CUIT = @CUIT,
+		RazonSocial = @RazonSocial,
+		Correo = @Correo,
+		Telefono = @Telefono,
+		Estado = @Estado
+		where IdProveedor = @IdProveedor
+	end
+	else
+	begin
+		set @Resultado = 0
+		set @Mensaje = 'Ya existe un proveedor registrado con ese CUIT'
+	end
+end
+
+go
+
+--PROCEDURE ELIMINAR PROVEEDOR--
+create proc SP_EliminarProveedor (
+	@IdProveedor int,
+	@Resultado bit output,
+	@Mensaje nvarchar(500) output
+)
+as
+begin
+	set @Resultado = 1
+	if not exists (
+	select * from Proveedor p
+	inner join Compra c on p.IdProveedor = c.IdProveedor
+	where p.IdProveedor = @IdProveedor
+	)
+	begin
+		delete top(1) from Proveedor where IdProveedor = @IdProveedor
+	end
+	else
+	begin
+		set @Resultado = 0
+		set @Mensaje = 'El proveedor se encuentra relacionado a una compra'
+	end
+end
+
 go

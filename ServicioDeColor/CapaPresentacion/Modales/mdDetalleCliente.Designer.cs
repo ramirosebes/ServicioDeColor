@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdDetalleCliente));
             this.paneTitulo = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.panelInfoUsuario = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.labelLocalidad = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.labelInfo = new System.Windows.Forms.Label();
             this.paneTitulo.SuspendLayout();
-            this.panelInfoUsuario.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // paneTitulo
@@ -65,7 +65,7 @@
             this.paneTitulo.Controls.Add(this.labelSubTitulo);
             this.paneTitulo.Location = new System.Drawing.Point(12, 12);
             this.paneTitulo.Name = "paneTitulo";
-            this.paneTitulo.Size = new System.Drawing.Size(222, 50);
+            this.paneTitulo.Size = new System.Drawing.Size(460, 50);
             this.paneTitulo.TabIndex = 1;
             // 
             // labelSubTitulo
@@ -78,36 +78,36 @@
             this.labelSubTitulo.TabIndex = 1;
             this.labelSubTitulo.Text = "Detalle del cliente";
             // 
-            // panelInfoUsuario
+            // panelContenedor
             // 
-            this.panelInfoUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelInfoUsuario.Controls.Add(this.buttonVolver);
-            this.panelInfoUsuario.Controls.Add(this.buttonConfirmar);
-            this.panelInfoUsuario.Controls.Add(this.labelLocalidad);
-            this.panelInfoUsuario.Controls.Add(this.textBoxLocalidad);
-            this.panelInfoUsuario.Controls.Add(this.label6);
-            this.panelInfoUsuario.Controls.Add(this.labelDireccion);
-            this.panelInfoUsuario.Controls.Add(this.textBoxDireccion);
-            this.panelInfoUsuario.Controls.Add(this.label4);
-            this.panelInfoUsuario.Controls.Add(this.labelTelefono);
-            this.panelInfoUsuario.Controls.Add(this.textBoxTelefono);
-            this.panelInfoUsuario.Controls.Add(this.label2);
-            this.panelInfoUsuario.Controls.Add(this.labelCorreo);
-            this.panelInfoUsuario.Controls.Add(this.textBoxCorreo);
-            this.panelInfoUsuario.Controls.Add(this.labelLineCorreo);
-            this.panelInfoUsuario.Controls.Add(this.labelNombreCompleto);
-            this.panelInfoUsuario.Controls.Add(this.textBoxNombreCompleto);
-            this.panelInfoUsuario.Controls.Add(this.labelLineNombreCompleto);
-            this.panelInfoUsuario.Controls.Add(this.labelDocumento);
-            this.panelInfoUsuario.Controls.Add(this.textBoxDocumento);
-            this.panelInfoUsuario.Controls.Add(this.labelLineDocumento);
-            this.panelInfoUsuario.Controls.Add(this.labelEstado);
-            this.panelInfoUsuario.Controls.Add(this.comboBoxEstado);
-            this.panelInfoUsuario.Controls.Add(this.labelInfo);
-            this.panelInfoUsuario.Location = new System.Drawing.Point(12, 68);
-            this.panelInfoUsuario.Name = "panelInfoUsuario";
-            this.panelInfoUsuario.Size = new System.Drawing.Size(222, 573);
-            this.panelInfoUsuario.TabIndex = 2;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelContenedor.Controls.Add(this.buttonVolver);
+            this.panelContenedor.Controls.Add(this.buttonConfirmar);
+            this.panelContenedor.Controls.Add(this.labelLocalidad);
+            this.panelContenedor.Controls.Add(this.textBoxLocalidad);
+            this.panelContenedor.Controls.Add(this.label6);
+            this.panelContenedor.Controls.Add(this.labelDireccion);
+            this.panelContenedor.Controls.Add(this.textBoxDireccion);
+            this.panelContenedor.Controls.Add(this.label4);
+            this.panelContenedor.Controls.Add(this.labelTelefono);
+            this.panelContenedor.Controls.Add(this.textBoxTelefono);
+            this.panelContenedor.Controls.Add(this.label2);
+            this.panelContenedor.Controls.Add(this.labelCorreo);
+            this.panelContenedor.Controls.Add(this.textBoxCorreo);
+            this.panelContenedor.Controls.Add(this.labelLineCorreo);
+            this.panelContenedor.Controls.Add(this.labelNombreCompleto);
+            this.panelContenedor.Controls.Add(this.textBoxNombreCompleto);
+            this.panelContenedor.Controls.Add(this.labelLineNombreCompleto);
+            this.panelContenedor.Controls.Add(this.labelDocumento);
+            this.panelContenedor.Controls.Add(this.textBoxDocumento);
+            this.panelContenedor.Controls.Add(this.labelLineDocumento);
+            this.panelContenedor.Controls.Add(this.labelEstado);
+            this.panelContenedor.Controls.Add(this.comboBoxEstado);
+            this.panelContenedor.Controls.Add(this.labelInfo);
+            this.panelContenedor.Location = new System.Drawing.Point(12, 68);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(460, 378);
+            this.panelContenedor.TabIndex = 2;
             // 
             // buttonVolver
             // 
@@ -116,7 +116,7 @@
             this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolver.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVolver.Location = new System.Drawing.Point(70, 532);
+            this.buttonVolver.Location = new System.Drawing.Point(190, 337);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
             this.buttonVolver.TabIndex = 57;
@@ -132,7 +132,7 @@
             this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonConfirmar.Location = new System.Drawing.Point(35, 496);
+            this.buttonConfirmar.Location = new System.Drawing.Point(155, 301);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
             this.buttonConfirmar.TabIndex = 56;
@@ -146,7 +146,7 @@
             this.labelLocalidad.BackColor = System.Drawing.SystemColors.Window;
             this.labelLocalidad.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLocalidad.Location = new System.Drawing.Point(9, 431);
+            this.labelLocalidad.Location = new System.Drawing.Point(249, 176);
             this.labelLocalidad.Name = "labelLocalidad";
             this.labelLocalidad.Size = new System.Drawing.Size(63, 19);
             this.labelLocalidad.TabIndex = 55;
@@ -157,7 +157,7 @@
             this.textBoxLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLocalidad.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxLocalidad.Location = new System.Drawing.Point(9, 459);
+            this.textBoxLocalidad.Location = new System.Drawing.Point(249, 204);
             this.textBoxLocalidad.Name = "textBoxLocalidad";
             this.textBoxLocalidad.Size = new System.Drawing.Size(200, 20);
             this.textBoxLocalidad.TabIndex = 53;
@@ -166,7 +166,7 @@
             // 
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label6.Location = new System.Drawing.Point(9, 482);
+            this.label6.Location = new System.Drawing.Point(249, 227);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(200, 1);
             this.label6.TabIndex = 54;
@@ -178,7 +178,7 @@
             this.labelDireccion.BackColor = System.Drawing.SystemColors.Window;
             this.labelDireccion.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelDireccion.Location = new System.Drawing.Point(9, 366);
+            this.labelDireccion.Location = new System.Drawing.Point(249, 111);
             this.labelDireccion.Name = "labelDireccion";
             this.labelDireccion.Size = new System.Drawing.Size(61, 19);
             this.labelDireccion.TabIndex = 52;
@@ -189,7 +189,7 @@
             this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxDireccion.Location = new System.Drawing.Point(9, 394);
+            this.textBoxDireccion.Location = new System.Drawing.Point(249, 139);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(200, 20);
             this.textBoxDireccion.TabIndex = 50;
@@ -198,7 +198,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label4.Location = new System.Drawing.Point(9, 417);
+            this.label4.Location = new System.Drawing.Point(249, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(200, 1);
             this.label4.TabIndex = 51;
@@ -210,7 +210,7 @@
             this.labelTelefono.BackColor = System.Drawing.SystemColors.Window;
             this.labelTelefono.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelTelefono.Location = new System.Drawing.Point(9, 302);
+            this.labelTelefono.Location = new System.Drawing.Point(249, 47);
             this.labelTelefono.Name = "labelTelefono";
             this.labelTelefono.Size = new System.Drawing.Size(56, 19);
             this.labelTelefono.TabIndex = 49;
@@ -221,7 +221,7 @@
             this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxTelefono.Location = new System.Drawing.Point(9, 330);
+            this.textBoxTelefono.Location = new System.Drawing.Point(249, 75);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefono.TabIndex = 47;
@@ -230,7 +230,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label2.Location = new System.Drawing.Point(9, 353);
+            this.label2.Location = new System.Drawing.Point(249, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 1);
             this.label2.TabIndex = 48;
@@ -370,8 +370,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(246, 652);
-            this.Controls.Add(this.panelInfoUsuario);
+            this.ClientSize = new System.Drawing.Size(484, 458);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.paneTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mdDetalleCliente";
@@ -380,8 +380,8 @@
             this.Load += new System.EventHandler(this.mdDetalleCliente_Load);
             this.paneTitulo.ResumeLayout(false);
             this.paneTitulo.PerformLayout();
-            this.panelInfoUsuario.ResumeLayout(false);
-            this.panelInfoUsuario.PerformLayout();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelContenedor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -390,7 +390,7 @@
 
         private System.Windows.Forms.Panel paneTitulo;
         private System.Windows.Forms.Label labelSubTitulo;
-        private System.Windows.Forms.Panel panelInfoUsuario;
+        private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Label labelCorreo;
         private System.Windows.Forms.TextBox textBoxCorreo;
         private System.Windows.Forms.Label labelLineCorreo;

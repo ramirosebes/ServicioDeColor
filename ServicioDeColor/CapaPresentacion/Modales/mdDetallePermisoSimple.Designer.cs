@@ -30,7 +30,7 @@
         {
             this.paneTitulo = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.panelInfoUsuario = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.labelNombreMenu = new System.Windows.Forms.Label();
             this.textBoxNombreMenu = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.labelInfoPermiso = new System.Windows.Forms.Label();
             this.paneTitulo.SuspendLayout();
-            this.panelInfoUsuario.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // paneTitulo
@@ -51,36 +51,36 @@
             this.paneTitulo.Controls.Add(this.labelSubTitulo);
             this.paneTitulo.Location = new System.Drawing.Point(12, 12);
             this.paneTitulo.Name = "paneTitulo";
-            this.paneTitulo.Size = new System.Drawing.Size(222, 50);
+            this.paneTitulo.Size = new System.Drawing.Size(460, 50);
             this.paneTitulo.TabIndex = 1;
             // 
             // labelSubTitulo
             // 
             this.labelSubTitulo.AutoSize = true;
             this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubTitulo.Location = new System.Drawing.Point(17, 8);
+            this.labelSubTitulo.Location = new System.Drawing.Point(4, 9);
             this.labelSubTitulo.Name = "labelSubTitulo";
             this.labelSubTitulo.Size = new System.Drawing.Size(189, 33);
             this.labelSubTitulo.TabIndex = 1;
             this.labelSubTitulo.Text = "Detalle del permiso";
             // 
-            // panelInfoUsuario
+            // panelContenedor
             // 
-            this.panelInfoUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelInfoUsuario.Controls.Add(this.buttonVolver);
-            this.panelInfoUsuario.Controls.Add(this.labelNombreMenu);
-            this.panelInfoUsuario.Controls.Add(this.textBoxNombreMenu);
-            this.panelInfoUsuario.Controls.Add(this.labelLineNombreMenu);
-            this.panelInfoUsuario.Controls.Add(this.labelNombrePermiso);
-            this.panelInfoUsuario.Controls.Add(this.textBoxNombrePermiso);
-            this.panelInfoUsuario.Controls.Add(this.labelLineNombre);
-            this.panelInfoUsuario.Controls.Add(this.labelEstado);
-            this.panelInfoUsuario.Controls.Add(this.comboBoxEstado);
-            this.panelInfoUsuario.Controls.Add(this.labelInfoPermiso);
-            this.panelInfoUsuario.Location = new System.Drawing.Point(12, 68);
-            this.panelInfoUsuario.Name = "panelInfoUsuario";
-            this.panelInfoUsuario.Size = new System.Drawing.Size(222, 274);
-            this.panelInfoUsuario.TabIndex = 8;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelContenedor.Controls.Add(this.buttonVolver);
+            this.panelContenedor.Controls.Add(this.labelNombreMenu);
+            this.panelContenedor.Controls.Add(this.textBoxNombreMenu);
+            this.panelContenedor.Controls.Add(this.labelLineNombreMenu);
+            this.panelContenedor.Controls.Add(this.labelNombrePermiso);
+            this.panelContenedor.Controls.Add(this.textBoxNombrePermiso);
+            this.panelContenedor.Controls.Add(this.labelLineNombre);
+            this.panelContenedor.Controls.Add(this.labelEstado);
+            this.panelContenedor.Controls.Add(this.comboBoxEstado);
+            this.panelContenedor.Controls.Add(this.labelInfoPermiso);
+            this.panelContenedor.Location = new System.Drawing.Point(12, 68);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(460, 210);
+            this.panelContenedor.TabIndex = 8;
             // 
             // buttonVolver
             // 
@@ -89,7 +89,7 @@
             this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolver.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVolver.Location = new System.Drawing.Point(71, 231);
+            this.buttonVolver.Location = new System.Drawing.Point(190, 169);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
             this.buttonVolver.TabIndex = 9;
@@ -103,7 +103,7 @@
             this.labelNombreMenu.BackColor = System.Drawing.SystemColors.Window;
             this.labelNombreMenu.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombreMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelNombreMenu.Location = new System.Drawing.Point(9, 111);
+            this.labelNombreMenu.Location = new System.Drawing.Point(249, 46);
             this.labelNombreMenu.Name = "labelNombreMenu";
             this.labelNombreMenu.Size = new System.Drawing.Size(104, 19);
             this.labelNombreMenu.TabIndex = 44;
@@ -114,7 +114,7 @@
             this.textBoxNombreMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombreMenu.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombreMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxNombreMenu.Location = new System.Drawing.Point(9, 139);
+            this.textBoxNombreMenu.Location = new System.Drawing.Point(249, 74);
             this.textBoxNombreMenu.Name = "textBoxNombreMenu";
             this.textBoxNombreMenu.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombreMenu.TabIndex = 2;
@@ -123,7 +123,7 @@
             // 
             this.labelLineNombreMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineNombreMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineNombreMenu.Location = new System.Drawing.Point(9, 162);
+            this.labelLineNombreMenu.Location = new System.Drawing.Point(249, 97);
             this.labelLineNombreMenu.Name = "labelLineNombreMenu";
             this.labelLineNombreMenu.Size = new System.Drawing.Size(200, 1);
             this.labelLineNombreMenu.TabIndex = 43;
@@ -166,7 +166,7 @@
             this.labelEstado.AutoSize = true;
             this.labelEstado.BackColor = System.Drawing.SystemColors.Window;
             this.labelEstado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEstado.Location = new System.Drawing.Point(9, 176);
+            this.labelEstado.Location = new System.Drawing.Point(9, 109);
             this.labelEstado.Name = "labelEstado";
             this.labelEstado.Size = new System.Drawing.Size(47, 19);
             this.labelEstado.TabIndex = 40;
@@ -179,7 +179,7 @@
             this.comboBoxEstado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEstado.FormattingEnabled = true;
             this.comboBoxEstado.ItemHeight = 19;
-            this.comboBoxEstado.Location = new System.Drawing.Point(9, 198);
+            this.comboBoxEstado.Location = new System.Drawing.Point(9, 131);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
             this.comboBoxEstado.TabIndex = 39;
@@ -199,8 +199,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(246, 356);
-            this.Controls.Add(this.panelInfoUsuario);
+            this.ClientSize = new System.Drawing.Size(484, 291);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.paneTitulo);
             this.MaximizeBox = false;
             this.Name = "mdDetallePermisoSimple";
@@ -209,8 +209,8 @@
             this.Load += new System.EventHandler(this.mdDetallePermisoSimple_Load);
             this.paneTitulo.ResumeLayout(false);
             this.paneTitulo.PerformLayout();
-            this.panelInfoUsuario.ResumeLayout(false);
-            this.panelInfoUsuario.PerformLayout();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelContenedor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -219,7 +219,7 @@
 
         private System.Windows.Forms.Panel paneTitulo;
         private System.Windows.Forms.Label labelSubTitulo;
-        private System.Windows.Forms.Panel panelInfoUsuario;
+        private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Label labelNombreMenu;
         private System.Windows.Forms.TextBox textBoxNombreMenu;
         private System.Windows.Forms.Label labelLineNombreMenu;

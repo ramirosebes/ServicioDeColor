@@ -37,7 +37,7 @@ namespace CapaPresentacion.Modales
         {
             if (_tipoModal != "RestablacerClave")
             {
-                if (!Validaciones.ValidarCamposVacios(Controls))
+                if (!Validaciones.ValidarCamposVacios(panelContenedor.Controls))
                 {
                     MessageBox.Show("Debe completar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;

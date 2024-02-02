@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategoria.Designer.cs">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,18 @@
     </Compile>
     <Compile Include="frmPermisoUsuario.Designer.cs">
       <DependentUpon>frmPermisoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProveedor.Designer.cs">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUsuario.cs">
       <SubType>Form</SubType>
@@ -109,6 +127,12 @@
     <Compile Include="Modales\mdAgregarComponenteAGrupo.Designer.cs">
       <DependentUpon>mdAgregarComponenteAGrupo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modales\mdDetalleCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdDetalleCategoria.Designer.cs">
+      <DependentUpon>mdDetalleCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modales\mdDetalleCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +157,18 @@
     <Compile Include="Modales\mdDetallePermisoUsuario.Designer.cs">
       <DependentUpon>mdDetallePermisoUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modales\mdDetalleProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdDetalleProducto.Designer.cs">
+      <DependentUpon>mdDetalleProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modales\mdDetalleProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdDetalleProveedor.Designer.cs">
+      <DependentUpon>mdDetalleProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modales\mdDetalleUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +179,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\OpcionCombo.cs" />
     <Compile Include="Utilidades\Validaciones.cs" />
+    <EmbeddedResource Include="frmCategoria.resx">
+      <DependentUpon>frmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +193,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPermisoUsuario.resx">
       <DependentUpon>frmPermisoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProveedor.resx">
+      <DependentUpon>frmProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
@@ -167,6 +212,9 @@
     <EmbeddedResource Include="Modales\mdAgregarComponenteAGrupo.resx">
       <DependentUpon>mdAgregarComponenteAGrupo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdDetalleCategoria.resx">
+      <DependentUpon>mdDetalleCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetalleCliente.resx">
       <DependentUpon>mdDetalleCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetallePermisoUsuario.resx">
       <DependentUpon>mdDetallePermisoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdDetalleProducto.resx">
+      <DependentUpon>mdDetalleProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdDetalleProveedor.resx">
+      <DependentUpon>mdDetalleProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetalleUsuario.resx">
       <DependentUpon>mdDetalleUsuario.cs</DependentUpon>

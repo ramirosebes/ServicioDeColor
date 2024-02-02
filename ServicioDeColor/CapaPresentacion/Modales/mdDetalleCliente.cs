@@ -36,7 +36,7 @@ namespace CapaPresentacion.Modales
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if (!Validaciones.ValidarCamposVacios(Controls))
+            if (!Validaciones.ValidarCamposVacios(panelContenedor.Controls))
             {
                 MessageBox.Show("Debe completar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -161,14 +161,14 @@ namespace CapaPresentacion.Modales
 
         private void ConfigurarAgregar()
         {
-            this.Text = "Agregar Cliente";
-            labelSubTitulo.Text = "Agregar Cliente";
+            this.Text = "Agregar cliente";
+            labelSubTitulo.Text = "Agregar cliente";
             buttonConfirmar.Text = "Agregar";
         }
         private void ConfigurarEditar()
         {
-            this.Text = "Editar Cliente";
-            labelSubTitulo.Text = "Editar Cliente";
+            this.Text = "Editar cliente";
+            labelSubTitulo.Text = "Editar cliente";
             buttonConfirmar.Text = "Editar";
 
             textBoxNombreCompleto.Text = _oCliente.NombreCompleto.ToString();

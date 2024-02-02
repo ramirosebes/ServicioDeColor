@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Claims;
@@ -15,9 +16,10 @@ namespace CapaDatos
         {
             List<Cliente> listaClientes = new List<Cliente>();
 
-            using (SqlConnection connexion = CD_Conexion.ObtenerConexion())
+            using (SqlConnection conexion = CD_Conexion.ObtenerConexion())
             {
                 CD_Conexion.ObtenerConexion();
+
                 try
                 {
                     StringBuilder query = new StringBuilder();
@@ -26,7 +28,7 @@ namespace CapaDatos
                     query.AppendLine("from Persona ");
                     query.AppendLine("inner join Cliente on Persona.IdPersona = Cliente.IdPersona");
 
-                    SqlCommand cmd = new SqlCommand(query.ToString(), connexion);
+                    SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
                     cmd.CommandType = System.Data.CommandType.Text;
 
                     SqlDataReader dr = cmd.ExecuteReader();
@@ -51,12 +53,13 @@ namespace CapaDatos
                     throw new Exception(ex.Message);
                 }
             }
+
             CD_Conexion.CerrarConexion();
             return listaClientes;
         }
         public int AgregarCliente(Cliente oCliente, out string mensaje)
         {
-            int idClienteRegistrado = 0;
+            int clienteRegistrado = 0;
             mensaje = string.Empty;
 
             using (SqlConnection conexion = CD_Conexion.ObtenerConexion())
@@ -78,30 +81,32 @@ namespace CapaDatos
                     cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.VarChar, 400).Direction = System.Data.ParameterDirection.Output;
                     cmd.Parameters.Add("IdClienteRegistrado", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
                     //TIPO DE COMANDO
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.ExecuteNonQuery();
 
-                    idClienteRegistrado = Convert.ToInt32(cmd.Parameters["IdClienteRegistrado"].Value);
+                    clienteRegistrado = Convert.ToInt32(cmd.Parameters["IdClienteRegistrado"].Value);
                     mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
                 catch (Exception ex)
                 {
-                    idClienteRegistrado = 0;
+                    clienteRegistrado = 0;
                     mensaje = ex.Message;
                 }
             }
+
             CD_Conexion.CerrarConexion();
-            return idClienteRegistrado;
+            return clienteRegistrado;
         }
         public bool EditarCliente(Cliente oCliente, out string mensaje)
         {
-            bool usuarioEditado = false;
+            bool clienteEditado = false;
             mensaje = string.Empty;
 
             using (SqlConnection conexion = CD_Conexion.ObtenerConexion())
             {
                 CD_Conexion.ObtenerConexion();
+
                 try
                 {
                     SqlCommand cmd = new SqlCommand("SP_EditarCliente", conexion);
@@ -120,21 +125,22 @@ namespace CapaDatos
                     cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.VarChar, 400).Direction = System.Data.ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
                     //TIPO DE COMANDO
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.ExecuteNonQuery();
 
-                    usuarioEditado = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
+                    clienteEditado = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
                     mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
                 catch (Exception ex)
                 {
-                    usuarioEditado = false;
+                    clienteEditado = false;
                     mensaje = ex.Message;
                 }
             }
+
             CD_Conexion.CerrarConexion();
-            return usuarioEditado;
+            return clienteEditado;
         }
         public bool EliminarCliente(int idCliente, int idPersona, out string mensaje)
         {
@@ -152,10 +158,10 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdCliente", idCliente);
                     cmd.Parameters.AddWithValue("IdPersona", idPersona);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 400).Direction = System.Data.ParameterDirection.Output;
-                    cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.ExecuteNonQuery();
 
@@ -168,6 +174,7 @@ namespace CapaDatos
                     mensaje = ex.Message;
                 }
             }
+
             CD_Conexion.CerrarConexion();
             return clienteEliminado;
         }

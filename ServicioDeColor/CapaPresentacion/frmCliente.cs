@@ -53,7 +53,8 @@ namespace CapaPresentacion
             //        menu.Visible = false;
             //    }
             //}
-            //menuVerDetalleCliente.Visible = true;
+
+            menuVerDetalleCliente.Visible = true;
 
             buttonActualizar_Click(sender, e);
         }

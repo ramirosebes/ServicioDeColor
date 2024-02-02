@@ -44,11 +44,12 @@
             this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuCategorias = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.menuCategorias = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,7 +195,7 @@
             // menuClientes
             // 
             this.menuClientes.Name = "menuClientes";
-            this.menuClientes.Size = new System.Drawing.Size(180, 28);
+            this.menuClientes.Size = new System.Drawing.Size(130, 28);
             this.menuClientes.Text = "Clientes";
             this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
             // 
@@ -203,13 +204,28 @@
             this.menuCompras.BackColor = System.Drawing.SystemColors.Window;
             this.menuCompras.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCategorias,
-            this.menuProductos});
+            this.menuProductos,
+            this.proveedoresToolStripMenuItem});
             this.menuCompras.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuCompras.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuCompras.Name = "menuCompras";
             this.menuCompras.Size = new System.Drawing.Size(78, 30);
             this.menuCompras.Text = "Compras";
             this.menuCompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // menuCategorias
+            // 
+            this.menuCategorias.Name = "menuCategorias";
+            this.menuCategorias.Size = new System.Drawing.Size(180, 28);
+            this.menuCategorias.Text = "Categorias";
+            this.menuCategorias.Click += new System.EventHandler(this.menuCategorias_Click);
+            // 
+            // menuProductos
+            // 
+            this.menuProductos.Name = "menuProductos";
+            this.menuProductos.Size = new System.Drawing.Size(180, 28);
+            this.menuProductos.Text = "Productos";
+            this.menuProductos.Click += new System.EventHandler(this.menuProductos_Click);
             // 
             // menuReportes
             // 
@@ -242,17 +258,12 @@
             this.menuTitulo.TabIndex = 85;
             this.menuTitulo.Text = "menuStrip2";
             // 
-            // menuCategorias
+            // proveedoresToolStripMenuItem
             // 
-            this.menuCategorias.Name = "menuCategorias";
-            this.menuCategorias.Size = new System.Drawing.Size(180, 28);
-            this.menuCategorias.Text = "Categorias";
-            // 
-            // menuProductos
-            // 
-            this.menuProductos.Name = "menuProductos";
-            this.menuProductos.Size = new System.Drawing.Size(180, 28);
-            this.menuProductos.Text = "Productos";
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
+            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // Inicio
             // 
@@ -300,6 +311,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuClientes;
         private System.Windows.Forms.ToolStripMenuItem menuCategorias;
         private System.Windows.Forms.ToolStripMenuItem menuProductos;
+        private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
     }
 }
 
