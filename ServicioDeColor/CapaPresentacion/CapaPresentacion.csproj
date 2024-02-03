@@ -79,6 +79,12 @@
     <Compile Include="frmGrupoPermisos.Designer.cs">
       <DependentUpon>frmGrupoPermisos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNegocio.Designer.cs">
+      <DependentUpon>frmNegocio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPermisoSimple.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,12 @@
     <Compile Include="Modales\mdDetalleGrupoPermiso.Designer.cs">
       <DependentUpon>mdDetalleGrupoPermiso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modales\mdDetalleNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdDetalleNegocio.Designer.cs">
+      <DependentUpon>mdDetalleNegocio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modales\mdDetallePermisoSimple.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +200,9 @@
     <EmbeddedResource Include="frmGrupoPermisos.resx">
       <DependentUpon>frmGrupoPermisos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNegocio.resx">
+      <DependentUpon>frmNegocio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPermisoSimple.resx">
       <DependentUpon>frmPermisoSimple.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetalleGrupoPermiso.resx">
       <DependentUpon>mdDetalleGrupoPermiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdDetalleNegocio.resx">
+      <DependentUpon>mdDetalleNegocio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetallePermisoSimple.resx">
       <DependentUpon>mdDetallePermisoSimple.cs</DependentUpon>

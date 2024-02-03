@@ -135,3 +135,6 @@ insert into GrupoPermisoComponente(IdGrupoPermiso,IdComponente)
 			(4,1),
 			(3,1),
 			(2,1)
+
+insert into Negocio (IdNegocio, Nombre, CUIT, Direccion)
+	values (1, 'Servicio De Color', '20-12345678-9')

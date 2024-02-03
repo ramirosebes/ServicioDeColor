@@ -33,3 +33,5 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleProducto.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmProveedor.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleProveedor.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmNegocio.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleNegocio.resources

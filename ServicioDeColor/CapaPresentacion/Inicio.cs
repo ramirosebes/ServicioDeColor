@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaEntidad;
 using CapaControladora;
+using CapaPresentacion.Modales;
 
 namespace CapaPresentacion
 {
@@ -42,55 +43,55 @@ namespace CapaPresentacion
         private void Inicio_Load(object sender, EventArgs e)
         {
             
-            //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
-            List<Permiso> listaPermisos = _usuarioActual.GetPermisos();
+            ////MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
+            //List<Permiso> listaPermisos = _usuarioActual.GetPermisos();
 
-            //List<Permiso> listaPermisos = new CC_Permiso().ListarPermisos(__usuarioActual.IdUsuario);
+            ////List<Permiso> listaPermisos = new CC_Permiso().ListarPermisos(__usuarioActual.IdUsuario);
 
-            //Recorre todo el menu pricipal ocultado o mostrando los menues dependiendo los permisos que tenga
-            foreach (ToolStripMenuItem menuItem in menu.Items)
-            {
-                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menuItem.Name);
+            ////Recorre todo el menu pricipal ocultado o mostrando los menues dependiendo los permisos que tenga
+            //foreach (ToolStripMenuItem menuItem in menu.Items)
+            //{
+            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menuItem.Name);
 
-                if (encontrado)
-                {
-                    menuItem.Visible = true;
-                }
-                else
-                {
-                    menuItem.Visible = false;
-                }
-            }
+            //    if (encontrado)
+            //    {
+            //        menuItem.Visible = true;
+            //    }
+            //    else
+            //    {
+            //        menuItem.Visible = false;
+            //    }
+            //}
 
-            //Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
-            foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
-            {
-                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+            ////Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
+            //foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
+            //{
+            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
 
-                if (encontrado)
-                {
-                    menu.Visible = true;
-                }
-                else
-                {
-                    menu.Visible = false;
-                }
-            }
+            //    if (encontrado)
+            //    {
+            //        menu.Visible = true;
+            //    }
+            //    else
+            //    {
+            //        menu.Visible = false;
+            //    }
+            //}
 
-            //Recorre todo el menu Permisos ocultado o mostrando los menues dependiendo los permisos que tenga
-            foreach (ToolStripMenuItem menu in menuPermisos.DropDownItems)
-            {
-                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+            ////Recorre todo el menu Permisos ocultado o mostrando los menues dependiendo los permisos que tenga
+            //foreach (ToolStripMenuItem menu in menuPermisos.DropDownItems)
+            //{
+            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
 
-                if (encontrado)
-                {
-                    menu.Visible = true;
-                }
-                else
-                {
-                    menu.Visible = false;
-                }
-            }
+            //    if (encontrado)
+            //    {
+            //        menu.Visible = true;
+            //    }
+            //    else
+            //    {
+            //        menu.Visible = false;
+            //    }
+            //}
             
 
             labelUsuario.Text = _usuarioActual.NombreCompleto;
@@ -166,6 +167,13 @@ namespace CapaPresentacion
         private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuCompras, new frmProveedor(_usuarioActual));
+        }
+
+        private void menuDatosNegocio_Click(object sender, EventArgs e)
+        {
+            //mdDetalleNegocio frm = new mdDetalleNegocio();
+            //frm.ShowDialog();
+            abrirFormulario(menuConfiguracion, new frmNegocio(_usuarioActual));
         }
     }
 }

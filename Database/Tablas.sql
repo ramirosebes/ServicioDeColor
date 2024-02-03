@@ -166,3 +166,12 @@ create table DetalleVenta (
 	SubTotal decimal(10,2),
 	FechaRegistro datetime default getdate(),
 );
+
+--TABLA NEGOCIO--
+create table Negocio (
+	IdNegocio int primary key,
+	Nombre nvarchar(50),
+	RUC nvarchar(50),
+	Direccion nvarchar(50),
+	Logo varbinary(max) NULL,
+);

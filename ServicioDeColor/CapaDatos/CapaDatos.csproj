@@ -46,6 +46,7 @@
     <Compile Include="CD_Cliente.cs" />
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_GrupoPermiso.cs" />
+    <Compile Include="CD_Negocio.cs" />
     <Compile Include="CD_Permiso.cs" />
     <Compile Include="CD_Proveedor.cs" />
     <Compile Include="CD_Usuario.cs" />
