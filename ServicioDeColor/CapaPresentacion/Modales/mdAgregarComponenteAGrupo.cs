@@ -28,7 +28,7 @@ namespace CapaPresentacion.Modales
             //CONFIGURACION DEL OPCION COMBO SELECCIONAR
             foreach (DataGridViewColumn columna in dataGridView.Columns)
             {
-                if (columna.Visible && columna.Name != "btnseleccionar")
+                if (columna.Visible && columna.Name != "buttonSeleccionar")
                 {
                     comboBoxBusqueda.Items.Add(new OpcionCombo(columna.Name, columna.HeaderText));
                 }

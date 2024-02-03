@@ -374,6 +374,7 @@
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.paneTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "mdDetalleCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdDetalleCliente";

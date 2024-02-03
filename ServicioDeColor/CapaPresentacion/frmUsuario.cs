@@ -52,6 +52,7 @@ namespace CapaPresentacion
                     menu.Visible = false;
                 }
             }
+
             menuVerDetalleUsuario.Visible = true;
 
             buttonActualizar_Click(sender, e);

@@ -107,6 +107,7 @@
             this.labelRecuperarContrasena.Size = new System.Drawing.Size(128, 19);
             this.labelRecuperarContrasena.TabIndex = 32;
             this.labelRecuperarContrasena.Text = "Recuperar contraseña";
+            this.labelRecuperarContrasena.Visible = false;
             // 
             // labelContrasena
             // 
@@ -205,6 +206,7 @@
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.LogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

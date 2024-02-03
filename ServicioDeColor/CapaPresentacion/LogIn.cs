@@ -65,5 +65,10 @@ namespace CapaPresentacion
             textBoxDocumento.Select();
             this.Show();
         }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

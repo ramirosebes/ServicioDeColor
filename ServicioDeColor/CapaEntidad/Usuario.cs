@@ -97,17 +97,37 @@ namespace CapaEntidad
             }
         }
 
+        //ANTIGUO METODO PARA GENERAR UN SALTO ALEATORIO
+        //private static string GenerarSaltoAleatorio()
+        //{
+        //    string salto = string.Empty;
+        //    //RANDOM GENERA NUMEROS ALEATORIOS
+        //    Random r = new Random();
+        //    //GENERA ALEATORIAMENTE ENTRE 10 Y 19 CARACTERES
+        //    int longitud = r.Next(10, 20);
+        //    //GENERA ALEATORIAMENTE ENTRE 33 Y 126 CARACTERES CARACTERES IMPRIMIBLES ASCII
+        //    for (int i = 0; i < longitud; i++)
+        //    {
+        //        salto += (char)r.Next(33, 126);
+        //    }
+        //    return salto;
+        //}
+
         private static string GenerarSaltoAleatorio()
         {
             string salto = string.Empty;
-            //RANDOM GENERA NUMEROS ALEATORIOS
             Random r = new Random();
-            //GENERA ALEATORIAMENTE ENTRE 10 Y 19 CARACTERES
             int longitud = r.Next(10, 20);
-            //GENERA ALEATORIAMENTE ENTRE 33 Y 126 CARACTERES CARACTERES IMPRIMIBLES ASCII
+            char caracterAleatorio;
+
             for (int i = 0; i < longitud; i++)
             {
-                salto += (char)r.Next(33, 126);
+                do
+                {
+                    caracterAleatorio = (char)r.Next(33, 126);
+                } while (caracterAleatorio == '|'); // Verifica si el caracter generado es '|'
+
+                salto += caracterAleatorio;
             }
             return salto;
         }

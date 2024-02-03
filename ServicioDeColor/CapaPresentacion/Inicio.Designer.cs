@@ -46,10 +46,10 @@
             this.menuCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCategorias = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProductos = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -216,16 +216,23 @@
             // menuCategorias
             // 
             this.menuCategorias.Name = "menuCategorias";
-            this.menuCategorias.Size = new System.Drawing.Size(180, 28);
+            this.menuCategorias.Size = new System.Drawing.Size(157, 28);
             this.menuCategorias.Text = "Categorias";
             this.menuCategorias.Click += new System.EventHandler(this.menuCategorias_Click);
             // 
             // menuProductos
             // 
             this.menuProductos.Name = "menuProductos";
-            this.menuProductos.Size = new System.Drawing.Size(180, 28);
+            this.menuProductos.Size = new System.Drawing.Size(157, 28);
             this.menuProductos.Text = "Productos";
             this.menuProductos.Click += new System.EventHandler(this.menuProductos_Click);
+            // 
+            // proveedoresToolStripMenuItem
+            // 
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // menuReportes
             // 
@@ -258,13 +265,6 @@
             this.menuTitulo.TabIndex = 85;
             this.menuTitulo.Text = "menuStrip2";
             // 
-            // proveedoresToolStripMenuItem
-            // 
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 28);
-            this.proveedoresToolStripMenuItem.Text = "Proveedores";
-            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +278,7 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
