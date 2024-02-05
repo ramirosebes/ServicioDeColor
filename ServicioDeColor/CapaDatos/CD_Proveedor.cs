@@ -22,7 +22,7 @@ namespace CapaDatos
                 try
                 {
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select IdProveedor, NombreCompleto, CUIT, RazonSocial, Correo, Telefono, Estado from Proveedor");
+                    query.AppendLine("select IdProveedor, CUIT, RazonSocial, Correo, Telefono, Estado from Proveedor");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
                     cmd.CommandType = CommandType.Text;
@@ -33,7 +33,6 @@ namespace CapaDatos
                         listaProveedores.Add(new Proveedor()
                         {
                             IdProveedor = Convert.ToInt32(dr["IdProveedor"]),
-                            NombreCompleto = dr["NombreCompleto"].ToString(),
                             CUIT = dr["CUIT"].ToString(),
                             RazonSocial = dr["RazonSocial"].ToString(),
                             Correo = dr["Correo"].ToString(),
@@ -66,7 +65,6 @@ namespace CapaDatos
                     SqlCommand cmd = new SqlCommand("SP_RegistrarProveedor", conexion);
 
                     //PARAMETROS DE ENTRADA
-                    cmd.Parameters.AddWithValue("NombreCompleto", oProveedor.NombreCompleto);
                     cmd.Parameters.AddWithValue("CUIT", oProveedor.CUIT);
                     cmd.Parameters.AddWithValue("RazonSocial", oProveedor.RazonSocial);
                     cmd.Parameters.AddWithValue("Correo", oProveedor.Correo);
@@ -109,7 +107,6 @@ namespace CapaDatos
 
                     //PARAMETROS DE ENTRADA
                     cmd.Parameters.AddWithValue("IdProveedor", oProveedor.IdProveedor);
-                    cmd.Parameters.AddWithValue("NombreCompleto", oProveedor.NombreCompleto);
                     cmd.Parameters.AddWithValue("CUIT", oProveedor.CUIT);
                     cmd.Parameters.AddWithValue("RazonSocial", oProveedor.RazonSocial);
                     cmd.Parameters.AddWithValue("Correo", oProveedor.Correo);

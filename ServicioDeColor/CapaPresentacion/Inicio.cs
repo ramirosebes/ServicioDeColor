@@ -175,5 +175,10 @@ namespace CapaPresentacion
             //frm.ShowDialog();
             abrirFormulario(menuConfiguracion, new frmNegocio(_usuarioActual));
         }
+
+        private void ordenesDeComprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuCompras, new frmCompra(_usuarioActual));
+        }
     }
 }

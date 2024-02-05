@@ -16,5 +16,9 @@ namespace CapaPresentacion.Utilidades
             Valor = valor;
             Texto = texto;
         }
+
+        public OpcionCombo()
+        {
+        }
     }
 }

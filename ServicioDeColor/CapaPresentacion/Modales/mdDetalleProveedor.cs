@@ -57,7 +57,6 @@ namespace CapaPresentacion.Modales
         {
             Proveedor proveedor = new Proveedor()
             {
-                NombreCompleto = textBoxNombreCompleto.Text.Trim(),
                 CUIT = textBoxCUIT.Text.Trim(),
                 RazonSocial = textBoxRazonSocial.Text.Trim(),
                 Correo = textBoxCorreo.Text.Trim(),
@@ -85,7 +84,6 @@ namespace CapaPresentacion.Modales
             bool proveedorEditado = oCC_Proveedor.EditarProveedor(new Proveedor()
             {
                 IdProveedor = _idProveedor,
-                NombreCompleto = textBoxNombreCompleto.Text.Trim(),
                 CUIT = textBoxCUIT.Text.Trim(),
                 RazonSocial = textBoxRazonSocial.Text.Trim(),
                 Correo = textBoxCorreo.Text.Trim(),
@@ -130,7 +128,6 @@ namespace CapaPresentacion.Modales
         private void ConfigurarVerDetalle()
         {
             this.Text = "Ver Detalle";
-            textBoxNombreCompleto.Enabled = false;
             textBoxCUIT.Enabled = false;
             textBoxRazonSocial.Enabled = false;
             textBoxCorreo.Enabled = false;
@@ -138,7 +135,6 @@ namespace CapaPresentacion.Modales
             textBoxTelefono.Enabled = false;
             buttonConfirmar.Visible = false;
 
-            textBoxNombreCompleto.Text = _oProveedor.NombreCompleto.ToString();
             textBoxCUIT.Text = _oProveedor.CUIT.ToString();
             textBoxRazonSocial.Text = _oProveedor.RazonSocial.ToString();
             textBoxCorreo.Text = _oProveedor.Correo.ToString();
@@ -167,7 +163,6 @@ namespace CapaPresentacion.Modales
             labelSubTitulo.Text = "Editar proveedor";
             buttonConfirmar.Text = "Editar";
 
-            textBoxNombreCompleto.Text = _oProveedor.NombreCompleto.ToString();
             textBoxCUIT.Text = _oProveedor.CUIT.ToString();
             textBoxRazonSocial.Text = _oProveedor.RazonSocial.ToString();
             textBoxCorreo.Text = _oProveedor.Correo.ToString();

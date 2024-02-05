@@ -20,7 +20,6 @@ namespace CapaEntidad
 
         #region Propiedades
         public int IdProveedor { get { return idProveedor; } set { idProveedor = value; } }
-        public string NombreCompleto { get { return nombreCompleto; } set { nombreCompleto = value; } }
         public string CUIT { get { return cuit; } set { cuit = value; } }
         public string RazonSocial { get { return razonSocial; } set { razonSocial = value; } }
         public string Correo { get { return correo; } set { correo = value; } }

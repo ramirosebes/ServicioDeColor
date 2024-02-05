@@ -48,9 +48,8 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -258,9 +257,8 @@
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buttonSeleccionar,
             this.idProveedor,
-            this.nombreCompleto,
-            this.cuit,
             this.razonSocial,
+            this.cuit,
             this.correo,
             this.telefono,
             this.estado,
@@ -306,12 +304,12 @@
             this.idProveedor.ReadOnly = true;
             this.idProveedor.Visible = false;
             // 
-            // nombreCompleto
+            // razonSocial
             // 
-            this.nombreCompleto.HeaderText = "Nombre completo";
-            this.nombreCompleto.Name = "nombreCompleto";
-            this.nombreCompleto.ReadOnly = true;
-            this.nombreCompleto.Width = 200;
+            this.razonSocial.HeaderText = "Razon social";
+            this.razonSocial.Name = "razonSocial";
+            this.razonSocial.ReadOnly = true;
+            this.razonSocial.Width = 250;
             // 
             // cuit
             // 
@@ -319,13 +317,6 @@
             this.cuit.Name = "cuit";
             this.cuit.ReadOnly = true;
             this.cuit.Width = 150;
-            // 
-            // razonSocial
-            // 
-            this.razonSocial.HeaderText = "Razon social";
-            this.razonSocial.Name = "razonSocial";
-            this.razonSocial.ReadOnly = true;
-            this.razonSocial.Width = 250;
             // 
             // correo
             // 
@@ -395,9 +386,8 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewButtonColumn buttonSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idProveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cuit;
         private System.Windows.Forms.DataGridViewTextBoxColumn razonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuit;
         private System.Windows.Forms.DataGridViewTextBoxColumn correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;

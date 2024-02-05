@@ -47,10 +47,11 @@
             this.menuCategorias = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenesDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.menuDatosNegocio = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,14 +140,14 @@
             this.menuSeguridad.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuSeguridad.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuSeguridad.Name = "menuSeguridad";
-            this.menuSeguridad.Size = new System.Drawing.Size(122, 30);
+            this.menuSeguridad.Size = new System.Drawing.Size(87, 30);
             this.menuSeguridad.Text = "Seguridad";
             this.menuSeguridad.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // menuUsuarios
             // 
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(137, 28);
+            this.menuUsuarios.Size = new System.Drawing.Size(180, 28);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -157,7 +158,7 @@
             this.menuGruposPermisos,
             this.menuPermisosUsuarios});
             this.menuPermisos.Name = "menuPermisos";
-            this.menuPermisos.Size = new System.Drawing.Size(137, 28);
+            this.menuPermisos.Size = new System.Drawing.Size(180, 28);
             this.menuPermisos.Text = "Permisos";
             // 
             // menuPermisosSimples
@@ -196,7 +197,7 @@
             // menuClientes
             // 
             this.menuClientes.Name = "menuClientes";
-            this.menuClientes.Size = new System.Drawing.Size(130, 28);
+            this.menuClientes.Size = new System.Drawing.Size(180, 28);
             this.menuClientes.Text = "Clientes";
             this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
             // 
@@ -206,7 +207,8 @@
             this.menuCompras.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuCategorias,
             this.menuProductos,
-            this.proveedoresToolStripMenuItem});
+            this.proveedoresToolStripMenuItem,
+            this.ordenesDeComprasToolStripMenuItem});
             this.menuCompras.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuCompras.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuCompras.Name = "menuCompras";
@@ -217,23 +219,30 @@
             // menuCategorias
             // 
             this.menuCategorias.Name = "menuCategorias";
-            this.menuCategorias.Size = new System.Drawing.Size(157, 28);
+            this.menuCategorias.Size = new System.Drawing.Size(210, 28);
             this.menuCategorias.Text = "Categorias";
             this.menuCategorias.Click += new System.EventHandler(this.menuCategorias_Click);
             // 
             // menuProductos
             // 
             this.menuProductos.Name = "menuProductos";
-            this.menuProductos.Size = new System.Drawing.Size(157, 28);
+            this.menuProductos.Size = new System.Drawing.Size(210, 28);
             this.menuProductos.Text = "Productos";
             this.menuProductos.Click += new System.EventHandler(this.menuProductos_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(157, 28);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
+            // 
+            // ordenesDeComprasToolStripMenuItem
+            // 
+            this.ordenesDeComprasToolStripMenuItem.Name = "ordenesDeComprasToolStripMenuItem";
+            this.ordenesDeComprasToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
+            this.ordenesDeComprasToolStripMenuItem.Text = "Ordenes de compras";
+            this.ordenesDeComprasToolStripMenuItem.Click += new System.EventHandler(this.ordenesDeComprasToolStripMenuItem_Click);
             // 
             // menuReportes
             // 
@@ -257,6 +266,13 @@
             this.menuConfiguracion.Text = "Configuración";
             this.menuConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // menuDatosNegocio
+            // 
+            this.menuDatosNegocio.Name = "menuDatosNegocio";
+            this.menuDatosNegocio.Size = new System.Drawing.Size(190, 28);
+            this.menuDatosNegocio.Text = "Datos del negocio";
+            this.menuDatosNegocio.Click += new System.EventHandler(this.menuDatosNegocio_Click);
+            // 
             // menuTitulo
             // 
             this.menuTitulo.AutoSize = false;
@@ -267,13 +283,6 @@
             this.menuTitulo.Size = new System.Drawing.Size(1484, 60);
             this.menuTitulo.TabIndex = 85;
             this.menuTitulo.Text = "menuStrip2";
-            // 
-            // menuDatosNegocio
-            // 
-            this.menuDatosNegocio.Name = "menuDatosNegocio";
-            this.menuDatosNegocio.Size = new System.Drawing.Size(190, 28);
-            this.menuDatosNegocio.Text = "Datos del negocio";
-            this.menuDatosNegocio.Click += new System.EventHandler(this.menuDatosNegocio_Click);
             // 
             // Inicio
             // 
@@ -324,6 +333,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuProductos;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuDatosNegocio;
+        private System.Windows.Forms.ToolStripMenuItem ordenesDeComprasToolStripMenuItem;
     }
 }
 

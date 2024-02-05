@@ -57,6 +57,7 @@ namespace CapaDatos
             CD_Conexion.CerrarConexion();
             return listaClientes;
         }
+
         public int AgregarCliente(Cliente oCliente, out string mensaje)
         {
             int clienteRegistrado = 0;
@@ -150,6 +151,7 @@ namespace CapaDatos
             using (SqlConnection conexion = CD_Conexion.ObtenerConexion())
             {
                 CD_Conexion.ObtenerConexion();
+
                 try
                 {
                     SqlCommand cmd = new SqlCommand("SP_EliminarCliente", conexion);

@@ -32,9 +32,6 @@
             this.paneTitulo = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.labelNombreCompleto = new System.Windows.Forms.Label();
-            this.textBoxNombreCompleto = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.labelCorreo = new System.Windows.Forms.Label();
@@ -78,9 +75,6 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelContenedor.Controls.Add(this.labelNombreCompleto);
-            this.panelContenedor.Controls.Add(this.textBoxNombreCompleto);
-            this.panelContenedor.Controls.Add(this.label3);
             this.panelContenedor.Controls.Add(this.buttonVolver);
             this.panelContenedor.Controls.Add(this.buttonConfirmar);
             this.panelContenedor.Controls.Add(this.labelCorreo);
@@ -102,38 +96,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(460, 312);
             this.panelContenedor.TabIndex = 3;
-            // 
-            // labelNombreCompleto
-            // 
-            this.labelNombreCompleto.AutoSize = true;
-            this.labelNombreCompleto.BackColor = System.Drawing.SystemColors.Window;
-            this.labelNombreCompleto.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelNombreCompleto.Location = new System.Drawing.Point(249, 46);
-            this.labelNombreCompleto.Name = "labelNombreCompleto";
-            this.labelNombreCompleto.Size = new System.Drawing.Size(103, 19);
-            this.labelNombreCompleto.TabIndex = 60;
-            this.labelNombreCompleto.Text = "Nombre completo:";
-            // 
-            // textBoxNombreCompleto
-            // 
-            this.textBoxNombreCompleto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNombreCompleto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxNombreCompleto.Location = new System.Drawing.Point(249, 74);
-            this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
-            this.textBoxNombreCompleto.Size = new System.Drawing.Size(200, 20);
-            this.textBoxNombreCompleto.TabIndex = 58;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label3.Location = new System.Drawing.Point(249, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 1);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "label2";
             // 
             // buttonVolver
             // 
@@ -172,7 +134,7 @@
             this.labelCorreo.BackColor = System.Drawing.SystemColors.Window;
             this.labelCorreo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelCorreo.Location = new System.Drawing.Point(249, 107);
+            this.labelCorreo.Location = new System.Drawing.Point(249, 46);
             this.labelCorreo.Name = "labelCorreo";
             this.labelCorreo.Size = new System.Drawing.Size(47, 19);
             this.labelCorreo.TabIndex = 49;
@@ -183,7 +145,7 @@
             this.textBoxCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCorreo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxCorreo.Location = new System.Drawing.Point(249, 135);
+            this.textBoxCorreo.Location = new System.Drawing.Point(249, 74);
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
             this.textBoxCorreo.TabIndex = 47;
@@ -192,7 +154,7 @@
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label2.Location = new System.Drawing.Point(249, 158);
+            this.label2.Location = new System.Drawing.Point(249, 97);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 1);
             this.label2.TabIndex = 48;
@@ -204,7 +166,7 @@
             this.labelTelefono.BackColor = System.Drawing.SystemColors.Window;
             this.labelTelefono.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelTelefono.Location = new System.Drawing.Point(249, 172);
+            this.labelTelefono.Location = new System.Drawing.Point(249, 111);
             this.labelTelefono.Name = "labelTelefono";
             this.labelTelefono.Size = new System.Drawing.Size(56, 19);
             this.labelTelefono.TabIndex = 46;
@@ -215,7 +177,7 @@
             this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxTelefono.Location = new System.Drawing.Point(249, 200);
+            this.textBoxTelefono.Location = new System.Drawing.Point(249, 139);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefono.TabIndex = 3;
@@ -224,7 +186,7 @@
             // 
             this.labelLineCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineCorreo.Location = new System.Drawing.Point(249, 223);
+            this.labelLineCorreo.Location = new System.Drawing.Point(249, 162);
             this.labelLineCorreo.Name = "labelLineCorreo";
             this.labelLineCorreo.Size = new System.Drawing.Size(200, 1);
             this.labelLineCorreo.TabIndex = 45;
@@ -370,8 +332,5 @@
         private System.Windows.Forms.Label labelEstado;
         private System.Windows.Forms.ComboBox comboBoxEstado;
         private System.Windows.Forms.Label labelInfo;
-        private System.Windows.Forms.Label labelNombreCompleto;
-        private System.Windows.Forms.TextBox textBoxNombreCompleto;
-        private System.Windows.Forms.Label label3;
     }
 }

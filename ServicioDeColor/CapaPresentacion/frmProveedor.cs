@@ -140,9 +140,8 @@ namespace CapaPresentacion
                 dataGridView.Rows.Add(
                     "",
                     oProveedor.IdProveedor,
-                    oProveedor.NombreCompleto,
-                    oProveedor.CUIT,
                     oProveedor.RazonSocial,
+                    oProveedor.CUIT,
                     oProveedor.Correo,
                     oProveedor.Telefono,
                     oProveedor.Estado == true ? 1 : 0,
