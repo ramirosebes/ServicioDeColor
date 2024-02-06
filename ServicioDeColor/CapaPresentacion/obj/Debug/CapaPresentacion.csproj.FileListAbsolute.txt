@@ -67,3 +67,7 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debug\CapaDatos.dll.config
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdListaProductos.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdListaProveedores.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmVenta.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdAgregarVenta.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleVenta.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdListaClientes.resources

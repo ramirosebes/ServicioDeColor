@@ -27,24 +27,45 @@ namespace CapaControladora
 
         public int ObtenerCorrelativo()
         {
-            return oCD_Compra.ObtenerCorrelativo();
+            try
+            {
+                return oCD_Compra.ObtenerCorrelativo();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
-        public bool Registrar(Compra oCompra, DataTable oDetalleCompra, out string Mensaje)
+        public bool AgregarCompra(Compra oCompra, DataTable oDetalleCompra, out string Mensaje)
         {
-            return oCD_Compra.AgregarCompra(oCompra, oDetalleCompra, out Mensaje);
+            try
+            {
+                return oCD_Compra.AgregarCompra(oCompra, oDetalleCompra, out Mensaje);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public Compra ObtenerCompra(string numero)
         {
-            Compra oCompra = oCD_Compra.ObtenerCompra(numero);
-
-            if (oCompra.IdCompra != 0)
+            try
             {
-                List<DetalleCompra> oDetalleCompra = oCD_Compra.ObtenerDetalleCompra(oCompra.IdCompra);
-                oCompra.oDetalleCompra = oDetalleCompra;
+                Compra oCompra = oCD_Compra.ObtenerCompra(numero);
+
+                if (oCompra.IdCompra != 0)
+                {
+                    List<DetalleCompra> oDetalleCompra = oCD_Compra.ObtenerDetalleCompra(oCompra.IdCompra);
+                    oCompra.oDetalleCompra = oDetalleCompra;
+                }
+                return oCompra;
             }
-            return oCompra;
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
         public bool EliminarCompra(int idCompra, out string mensaje)

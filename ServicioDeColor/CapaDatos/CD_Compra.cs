@@ -14,7 +14,7 @@ namespace CapaDatos
         #region ListarCompras
         public List<Compra> ListarCompras()
         {
-            List<Compra> listaCompras = new List<Compra>();
+            List<Compra> oListaCompras = new List<Compra>();
 
             using (SqlConnection conexion = CD_Conexion.ObtenerConexion())
             {
@@ -34,20 +34,20 @@ namespace CapaDatos
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        Compra compra = new Compra();
-                        compra.IdCompra = Convert.ToInt32(dr["IdCompra"]);
-                        compra.oUsuario = new Usuario() { IdUsuario = Convert.ToInt32(dr["IdUsuario"]) };
-                        compra.oPersona = new Persona() { IdPersona = Convert.ToInt32(dr["IdPersona"]), NombreCompleto = dr["NombreCompleto"].ToString() };
-                        compra.oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(dr["IdProveedor"]), RazonSocial = dr["RazonSocial"].ToString() };
-                        compra.TipoDocumento = dr["TipoDocumento"].ToString();
-                        compra.NumeroDocumento = dr["NumeroDocumento"].ToString();
-                        compra.MontoTotal = Convert.ToDecimal(dr["MontoTotal"]);
-                        compra.FechaRegistro = dr["FechaRegistro"].ToString();
+                        Compra oCompra = new Compra();
+                        oCompra.IdCompra = Convert.ToInt32(dr["IdCompra"]);
+                        oCompra.oUsuario = new Usuario() { IdUsuario = Convert.ToInt32(dr["IdUsuario"]), IdPersona = Convert.ToInt32(dr["IdPersona"]), NombreCompleto = dr["NombreCompleto"].ToString() };
+                        //oCompra.oPersona = new Persona() { IdPersona = Convert.ToInt32(dr["IdPersona"]), NombreCompleto = dr["NombreCompleto"].ToString() };
+                        oCompra.oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(dr["IdProveedor"]), RazonSocial = dr["RazonSocial"].ToString() };
+                        oCompra.TipoDocumento = dr["TipoDocumento"].ToString();
+                        oCompra.NumeroDocumento = dr["NumeroDocumento"].ToString();
+                        oCompra.MontoTotal = Convert.ToDecimal(dr["MontoTotal"]);
+                        oCompra.FechaRegistro = dr["FechaRegistro"].ToString();
 
                         // Ahora obtenemos los detalles de la compra
                         //compra.oDetalleCompra = ListarDetallesCompras(conexion, compra.IdCompra);
 
-                        listaCompras.Add(compra);
+                        oListaCompras.Add(oCompra);
                     }
                 }
                 catch (Exception ex)
@@ -57,7 +57,7 @@ namespace CapaDatos
             }
 
             CD_Conexion.CerrarConexion();
-            return listaCompras;
+            return oListaCompras;
         }
 
         private List<DetalleCompra> ListarDetallesCompras(SqlConnection conexion, int idCompra) //ObtenerDetalleCompra
@@ -201,8 +201,8 @@ namespace CapaDatos
                             oCompra = new Compra()
                             {
                                 IdCompra = Convert.ToInt32(dr["IdCompra"]),
-                                oUsuario = new Usuario() { IdUsuario = Convert.ToInt32(dr["IdUsuario"]) },
-                                oPersona = new Persona() { NombreCompleto = dr["NombreCompleto"].ToString() },
+                                oUsuario = new Usuario() { IdUsuario = Convert.ToInt32(dr["IdUsuario"]), NombreCompleto = dr["NombreCompleto"].ToString() },
+                                //oPersona = new Persona() { NombreCompleto = dr["NombreCompleto"].ToString() },
                                 oProveedor = new Proveedor() { CUIT = dr["CUIT"].ToString(), RazonSocial = dr["RazonSocial"].ToString() },
                                 TipoDocumento = dr["TipoDocumento"].ToString(),
                                 NumeroDocumento = dr["NumeroDocumento"].ToString(),

@@ -300,7 +300,7 @@
             this.MaximizeBox = false;
             this.Name = "mdDetalleProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdDetalleProveedor";
+            this.Text = "Detalle proveedor";
             this.Load += new System.EventHandler(this.mdDetalleProveedor_Load);
             this.paneTitulo.ResumeLayout(false);
             this.paneTitulo.PerformLayout();

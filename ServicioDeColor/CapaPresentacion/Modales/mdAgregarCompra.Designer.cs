@@ -516,7 +516,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mdAgregarCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdDetalleCompra";
+            this.Text = "Agregar compra";
             this.Load += new System.EventHandler(this.mdDetalleCompra_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

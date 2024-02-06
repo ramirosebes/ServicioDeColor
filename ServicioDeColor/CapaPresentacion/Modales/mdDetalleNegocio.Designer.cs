@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelContenido = new System.Windows.Forms.Panel();
+            this.buttonConfirmar = new System.Windows.Forms.Button();
+            this.buttonSubirImagen = new System.Windows.Forms.Button();
             this.labelDireccion = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.labelLineDireccion = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.labelLogo = new System.Windows.Forms.Label();
             this.paneTitulo = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.buttonSubirImagen = new System.Windows.Forms.Button();
-            this.buttonConfirmar = new System.Windows.Forms.Button();
             this.panelContenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.paneTitulo.SuspendLayout();
@@ -69,6 +69,35 @@
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Size = new System.Drawing.Size(460, 522);
             this.panelContenido.TabIndex = 96;
+            // 
+            // buttonConfirmar
+            // 
+            this.buttonConfirmar.AutoSize = true;
+            this.buttonConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonConfirmar.Location = new System.Drawing.Point(180, 479);
+            this.buttonConfirmar.Name = "buttonConfirmar";
+            this.buttonConfirmar.Size = new System.Drawing.Size(100, 31);
+            this.buttonConfirmar.TabIndex = 46;
+            this.buttonConfirmar.Text = "Confirmar";
+            this.buttonConfirmar.UseVisualStyleBackColor = false;
+            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
+            // 
+            // buttonSubirImagen
+            // 
+            this.buttonSubirImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.buttonSubirImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSubirImagen.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubirImagen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSubirImagen.Location = new System.Drawing.Point(18, 201);
+            this.buttonSubirImagen.Name = "buttonSubirImagen";
+            this.buttonSubirImagen.Size = new System.Drawing.Size(150, 29);
+            this.buttonSubirImagen.TabIndex = 45;
+            this.buttonSubirImagen.Text = "Subir";
+            this.buttonSubirImagen.UseVisualStyleBackColor = false;
+            this.buttonSubirImagen.Click += new System.EventHandler(this.buttonSubirImagen_Click);
             // 
             // labelDireccion
             // 
@@ -206,35 +235,6 @@
             this.labelSubTitulo.TabIndex = 1;
             this.labelSubTitulo.Text = "Editar negocio";
             // 
-            // buttonSubirImagen
-            // 
-            this.buttonSubirImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.buttonSubirImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSubirImagen.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubirImagen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonSubirImagen.Location = new System.Drawing.Point(18, 201);
-            this.buttonSubirImagen.Name = "buttonSubirImagen";
-            this.buttonSubirImagen.Size = new System.Drawing.Size(150, 29);
-            this.buttonSubirImagen.TabIndex = 45;
-            this.buttonSubirImagen.Text = "Subir";
-            this.buttonSubirImagen.UseVisualStyleBackColor = false;
-            this.buttonSubirImagen.Click += new System.EventHandler(this.buttonSubirImagen_Click);
-            // 
-            // buttonConfirmar
-            // 
-            this.buttonConfirmar.AutoSize = true;
-            this.buttonConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonConfirmar.Location = new System.Drawing.Point(180, 479);
-            this.buttonConfirmar.Name = "buttonConfirmar";
-            this.buttonConfirmar.Size = new System.Drawing.Size(100, 31);
-            this.buttonConfirmar.TabIndex = 46;
-            this.buttonConfirmar.Text = "Confirmar";
-            this.buttonConfirmar.UseVisualStyleBackColor = false;
-            this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
-            // 
             // mdDetalleNegocio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,7 +245,7 @@
             this.MaximizeBox = false;
             this.Name = "mdDetalleNegocio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdDetalleNegocio";
+            this.Text = "Detalle negocio";
             this.Load += new System.EventHandler(this.mdDetalleNegocio_Load);
             this.panelContenido.ResumeLayout(false);
             this.panelContenido.PerformLayout();

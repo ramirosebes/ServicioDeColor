@@ -180,5 +180,10 @@ namespace CapaPresentacion
         {
             abrirFormulario(menuCompras, new frmCompra(_usuarioActual));
         }
+
+        private void pedidosDeVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuVentas, new frmVenta(_usuarioActual));
+        }
     }
 }

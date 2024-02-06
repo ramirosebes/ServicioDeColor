@@ -123,6 +123,7 @@
     <Compile Include="CC_Usuario.cs" />
     <Compile Include="CC_UsuarioPermiso.cs" />
     <Compile Include="CC_Permiso.cs" />
+    <Compile Include="CC_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

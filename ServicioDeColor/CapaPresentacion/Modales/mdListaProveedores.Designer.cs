@@ -209,7 +209,8 @@
             this.Controls.Add(this.panelProveedor);
             this.Controls.Add(this.dataGridViewData);
             this.Name = "mdListaProveedores";
-            this.Text = "mdListaProveedores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Lista proveedores";
             this.Load += new System.EventHandler(this.mdListaProveedores_Load);
             this.panelProveedor.ResumeLayout(false);
             this.panelProveedor.PerformLayout();

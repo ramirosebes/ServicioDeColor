@@ -272,7 +272,7 @@
             this.MaximizeBox = false;
             this.Name = "mdAgregarComponenteAGrupo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdAgregarComponenteAGrupo";
+            this.Text = "Agregar componente a grupo";
             this.Load += new System.EventHandler(this.mdAgregarComponenteAGrupo_Load);
             this.panelLista.ResumeLayout(false);
             this.panelLista.PerformLayout();

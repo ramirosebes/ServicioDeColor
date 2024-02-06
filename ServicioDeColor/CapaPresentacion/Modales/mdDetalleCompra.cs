@@ -27,7 +27,6 @@ namespace CapaPresentacion.Modales
         public mdDetalleCompra(string numeroDocumento)
         {
             _numeroDocumento = numeroDocumento;
-            
             InitializeComponent();
         }
 
@@ -41,7 +40,7 @@ namespace CapaPresentacion.Modales
                 textBoxNumeroDocumento.Text = oCompra.NumeroDocumento;
                 textBoxFecha.Text = oCompra.FechaRegistro;
                 textBoxTipoDocumento.Text = oCompra.TipoDocumento;
-                textBoxUsuario.Text = oCompra.oPersona.NombreCompleto;
+                textBoxUsuario.Text = oCompra.oUsuario.NombreCompleto;
                 textBoxCUIT.Text = oCompra.oProveedor.CUIT;
                 textBoxRazonSocial.Text = oCompra.oProveedor.RazonSocial; //textBoxNombreProveedor
 

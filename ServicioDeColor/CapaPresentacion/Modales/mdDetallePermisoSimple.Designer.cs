@@ -205,7 +205,7 @@
             this.MaximizeBox = false;
             this.Name = "mdDetallePermisoSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detalle del permiso";
+            this.Text = "Detalle permiso";
             this.Load += new System.EventHandler(this.mdDetallePermisoSimple_Load);
             this.paneTitulo.ResumeLayout(false);
             this.paneTitulo.PerformLayout();

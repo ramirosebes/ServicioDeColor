@@ -1059,8 +1059,6 @@ create procedure SP_RegistrarVenta (
 	@IdCliente int,
 	@TipoDocumento nvarchar(500),
 	@NumeroDocumento nvarchar(500),
-	@DocumentoCliente nvarchar(500),
-	@NombreCliente nvarchar(500),
 	@MontoPago decimal(18,2),
 	@MontoCambio decimal(18,2),
 	@MontoTotal decimal(18,2),
@@ -1077,8 +1075,8 @@ begin
 
 		begin transaction registro
 
-			insert into Venta(IdUsuario, IdCliente,TipoDocumento, NumeroDocumento, DocumentoCliente, NombreCliente, MontoPago, MontoCambio, MontoTotal)
-			values (@IdUsuario, @IdCliente, @TipoDocumento, @NumeroDocumento, @DocumentoCliente, @NombreCliente, @MontoPago, @MontoCambio, @MontoTotal)
+			insert into Venta(IdUsuario, IdCliente,TipoDocumento, NumeroDocumento, MontoPago, MontoCambio, MontoTotal)
+			values (@IdUsuario, @IdCliente, @TipoDocumento, @NumeroDocumento, @MontoPago, @MontoCambio, @MontoTotal)
 
 			set @IdVenta = SCOPE_IDENTITY()
 
@@ -1127,3 +1125,50 @@ BEGIN
 end;
 
 go
+
+--PROCEDURE ELIMINAR VENTA v2--
+create procedure SP_EliminarVenta (
+@IdVenta int,
+    @Resultado bit output,
+    @Mensaje nvarchar(500) output
+)
+as
+begin
+    begin try
+        set @Resultado = 1;
+        set @Mensaje = '';
+
+        begin transaction eliminar_venta;
+
+        -- Guardar los detalles de la venta que se eliminará
+        declare @DetallesVenta table (
+            IdProducto int,
+            Cantidad int
+        );
+
+        -- Insertar los detalles de la venta en la tabla temporal
+        insert into @DetallesVenta (IdProducto, Cantidad)
+        select IdProducto, Cantidad
+        from DetalleVenta
+        where IdVenta = @IdVenta;
+
+        -- Eliminar detalles de la venta
+        delete from DetalleVenta where IdVenta = @IdVenta;
+
+        -- Eliminar la venta
+        delete from Venta where IdVenta = @IdVenta;
+
+        -- Restaurar el stock de productos
+        update Producto
+        set Stock = Stock + DV.Cantidad
+        from Producto P
+        inner join @DetallesVenta DV on P.IdProducto = DV.IdProducto;
+
+        commit transaction eliminar_venta;
+    end try
+    begin catch
+        set @Resultado = 0;
+        set @Mensaje = ERROR_MESSAGE();
+        rollback transaction eliminar_venta;
+    end catch
+end;

@@ -16,8 +16,8 @@ namespace CapaPresentacion
 {
     public partial class frmCompra : Form
     {
-        private CC_Compra oCC_Compra = new CC_Compra();
         private Usuario _usuarioActual;
+        private CC_Compra oCC_Compra = new CC_Compra();
 
         public frmCompra(Usuario oUsuario)
         {
@@ -145,8 +145,8 @@ namespace CapaPresentacion
                     "",
                     oCompra.IdCompra,
                     oCompra.oUsuario.IdUsuario,
-                    oCompra.oPersona.IdPersona,
-                    oCompra.oPersona.NombreCompleto,
+                    oCompra.oUsuario.IdPersona,
+                    oCompra.oUsuario.NombreCompleto,
                     oCompra.oProveedor.IdProveedor,
                     oCompra.oProveedor.RazonSocial,
                     oCompra.TipoDocumento,
@@ -160,6 +160,7 @@ namespace CapaPresentacion
             dataGridView.ClearSelection();
 
             textBoxId.Text = "";
+            textBoxNumeroDocumento.Text = "";
         }
 
         private void buttonBuscar_Click(object sender, EventArgs e)

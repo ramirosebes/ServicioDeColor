@@ -319,7 +319,7 @@
             this.MaximizeBox = false;
             this.Name = "mdDetalleGrupoPermiso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdDetalleGrupoPermiso";
+            this.Text = "Detalle grupo permiso";
             this.Load += new System.EventHandler(this.mdDetalleGrupoPermiso_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

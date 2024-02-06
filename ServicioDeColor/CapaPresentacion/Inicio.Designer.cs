@@ -43,6 +43,7 @@
             this.menuPermisosUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.pedidosDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCategorias = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProductos = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +53,8 @@
             this.menuConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDatosNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
+            this.menuReportesCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuReportesVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,7 +150,7 @@
             // menuUsuarios
             // 
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(180, 28);
+            this.menuUsuarios.Size = new System.Drawing.Size(137, 28);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -158,7 +161,7 @@
             this.menuGruposPermisos,
             this.menuPermisosUsuarios});
             this.menuPermisos.Name = "menuPermisos";
-            this.menuPermisos.Size = new System.Drawing.Size(180, 28);
+            this.menuPermisos.Size = new System.Drawing.Size(137, 28);
             this.menuPermisos.Text = "Permisos";
             // 
             // menuPermisosSimples
@@ -186,7 +189,8 @@
             // 
             this.menuVentas.BackColor = System.Drawing.SystemColors.Window;
             this.menuVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuClientes});
+            this.menuClientes,
+            this.pedidosDeVentasToolStripMenuItem});
             this.menuVentas.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuVentas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuVentas.Name = "menuVentas";
@@ -197,9 +201,16 @@
             // menuClientes
             // 
             this.menuClientes.Name = "menuClientes";
-            this.menuClientes.Size = new System.Drawing.Size(180, 28);
+            this.menuClientes.Size = new System.Drawing.Size(193, 28);
             this.menuClientes.Text = "Clientes";
             this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
+            // 
+            // pedidosDeVentasToolStripMenuItem
+            // 
+            this.pedidosDeVentasToolStripMenuItem.Name = "pedidosDeVentasToolStripMenuItem";
+            this.pedidosDeVentasToolStripMenuItem.Size = new System.Drawing.Size(193, 28);
+            this.pedidosDeVentasToolStripMenuItem.Text = "Pedidos de ventas";
+            this.pedidosDeVentasToolStripMenuItem.Click += new System.EventHandler(this.pedidosDeVentasToolStripMenuItem_Click);
             // 
             // menuCompras
             // 
@@ -247,6 +258,9 @@
             // menuReportes
             // 
             this.menuReportes.BackColor = System.Drawing.SystemColors.Window;
+            this.menuReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuReportesCompras,
+            this.menuReportesVentas});
             this.menuReportes.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuReportes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuReportes.Name = "menuReportes";
@@ -283,6 +297,18 @@
             this.menuTitulo.Size = new System.Drawing.Size(1484, 60);
             this.menuTitulo.TabIndex = 85;
             this.menuTitulo.Text = "menuStrip2";
+            // 
+            // menuReportesCompras
+            // 
+            this.menuReportesCompras.Name = "menuReportesCompras";
+            this.menuReportesCompras.Size = new System.Drawing.Size(214, 28);
+            this.menuReportesCompras.Text = "Reportes de compras";
+            // 
+            // menuReportesVentas
+            // 
+            this.menuReportesVentas.Name = "menuReportesVentas";
+            this.menuReportesVentas.Size = new System.Drawing.Size(214, 28);
+            this.menuReportesVentas.Text = "Reportes de ventas";
             // 
             // Inicio
             // 
@@ -334,6 +360,9 @@
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuDatosNegocio;
         private System.Windows.Forms.ToolStripMenuItem ordenesDeComprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pedidosDeVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuReportesCompras;
+        private System.Windows.Forms.ToolStripMenuItem menuReportesVentas;
     }
 }
 

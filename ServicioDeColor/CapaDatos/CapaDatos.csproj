@@ -125,6 +125,7 @@
     <Compile Include="CD_Usuario.cs" />
     <Compile Include="CD_UsuarioPermiso.cs" />
     <Compile Include="CD_Producto.cs" />
+    <Compile Include="CD_Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

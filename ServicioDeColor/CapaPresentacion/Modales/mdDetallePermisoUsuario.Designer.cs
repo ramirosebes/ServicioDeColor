@@ -318,7 +318,7 @@
             this.MaximizeBox = false;
             this.Name = "mdDetallePermisoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdDetallePermisoUsuario";
+            this.Text = "Detalle permiso usuario";
             this.Load += new System.EventHandler(this.mdDetallePermisoUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel2.ResumeLayout(false);

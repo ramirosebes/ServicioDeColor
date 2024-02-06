@@ -375,8 +375,8 @@ namespace CapaPresentacion.Modales
 
             Compra oCompra = new Compra()
             {
-                oUsuario = new Usuario() { IdUsuario = _usuarioActual.IdUsuario },
-                oPersona = new Persona() { IdPersona = _usuarioActual.IdPersona, NombreCompleto = _usuarioActual.NombreCompleto, Correo = _usuarioActual.Correo, Documento = _usuarioActual.Documento },
+                oUsuario = new Usuario() { IdUsuario = _usuarioActual.IdUsuario, NombreCompleto = _usuarioActual.NombreCompleto, Correo = _usuarioActual.Correo, Documento = _usuarioActual.Documento },
+                //oPersona = new Persona() { IdPersona = _usuarioActual.IdPersona, NombreCompleto = _usuarioActual.NombreCompleto, Correo = _usuarioActual.Correo, Documento = _usuarioActual.Documento },
                 oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(textBoxIdProveedor.Text) },
                 TipoDocumento = ((OpcionCombo)comboBoxTipoDocumento.SelectedItem).Texto,
                 NumeroDocumento = numeroDocumento,
@@ -384,7 +384,7 @@ namespace CapaPresentacion.Modales
             };
 
             string mensaje = string.Empty;
-            bool respuesta = new CC_Compra().Registrar(oCompra, detalleCompra, out mensaje);
+            bool respuesta = new CC_Compra().AgregarCompra(oCompra, detalleCompra, out mensaje);
 
             if (respuesta)
             {
@@ -392,6 +392,7 @@ namespace CapaPresentacion.Modales
                 if (result == DialogResult.Yes)
                 {
                     Clipboard.SetText(numeroDocumento);
+                    this.Close(); //Agregado recientemente
                 }
 
                 textBoxIdProveedor.Text = "0";

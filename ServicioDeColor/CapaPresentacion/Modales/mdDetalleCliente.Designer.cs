@@ -377,7 +377,7 @@
             this.MaximizeBox = false;
             this.Name = "mdDetalleCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "mdDetalleCliente";
+            this.Text = "Detalle cliente";
             this.Load += new System.EventHandler(this.mdDetalleCliente_Load);
             this.paneTitulo.ResumeLayout(false);
             this.paneTitulo.PerformLayout();

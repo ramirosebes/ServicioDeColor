@@ -143,3 +143,7 @@ insert into Negocio (IdNegocio, Nombre, CUIT, Direccion)
 --INSERT COMPRA--
 insert into Compra ( IdUsuario, IdProveedor, TipoDocumento, NumeroDocumento, MontoTotal)
 	values  (2, 2, 'Factura', 00001, 100)
+
+--INSERT VENTA--
+insert into Venta (IdUsuario, IdCliente, TipoDocumento, NumeroDocumento, MontoPago, MontoCambio, MontoTotal)
+	values (2, 5, 'Factura', 00001, 100, 50, 50)
