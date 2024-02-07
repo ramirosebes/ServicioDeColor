@@ -1172,3 +1172,68 @@ begin
         rollback transaction eliminar_venta;
     end catch
 end;
+
+go
+
+--PROCEDURE REPORTE VENTAS--
+create proc SP_ReporteVentas (
+	@FechaInicio nvarchar(10),
+	@FechaFin nvarchar(10),
+	@IdCliente int
+)
+as
+begin
+	set dateformat dmy;
+
+	select
+		convert(char(10), v.FechaRegistro,103)[FechaRegistro], v.TipoDocumento, v.NumeroDocumento, v.MontoTotal,
+		u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario],
+		c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente],
+		p.Codigo[CodigoProducto], p.Nombre[NombreProducto],
+		ca.Descripcion[Categoria],
+		dv.PrecioVenta, dv.Cantidad, dv.SubTotal
+	from Venta v
+		inner join Usuario u on u.IdUsuario = v.IdUsuario
+		inner join Persona pu on pu.IdPersona = u.IdPersona
+		inner join Cliente c on c.IdCliente = v.IdCliente
+		inner join Persona pc on pc.IdPersona = c.IdPersona
+		inner join DetalleVenta dv on dv.IdVenta = v.IdVenta
+		inner join Producto p on p.IdProducto = dv.IdProducto
+		inner join Categoria ca on ca.IdCategoria = p.IdCategoria
+	where convert(date, v.FechaRegistro, 103) between @FechaInicio and @FechaFin
+		and c.IdCliente = iif(@IdCliente = 0, c.IdCliente, @IdCliente)
+
+	set dateformat mdy;
+end
+
+go
+
+--PROCEDURE REPORTE COMPRAS--
+create proc SP_ReporteCompras (
+	@FechaInicio nvarchar(10),
+	@FechaFin nvarchar(10),
+	@IdProveedor int
+)
+as
+begin
+	set dateformat dmy;
+
+	select
+	convert(char(10), c.FechaRegistro,103)[FechaRegistro], c.TipoDocumento, c.NumeroDocumento, c.MontoTotal,
+	u.IdUsuario, u.IdPersona, ps.NombreCompleto[NombreCompletoUsuario], ps.Documento[DocumentoUsuario],
+	pr.CUIT, pr.RazonSocial,
+	p.Codigo[CodigoProducto], p.Nombre[NombreProducto], 
+	ca.Descripcion[Categoria], 
+	dc.PrecioCompra, dc.PrecioVenta, dc.Cantidad, dc.MontoTotal[SubTotal]
+	from COMPRA c
+	inner join Usuario u on u.IdUsuario = c.IdUsuario
+	inner join Persona ps on ps.IdPersona = u.IdPersona
+	inner join Proveedor pr on pr.IdProveedor = c.IdProveedor
+	inner join DetalleCompra dc on dc.IdCompra = c.IdCompra
+	inner join Producto p on p.IdProducto = dc.IdProducto
+	inner join Categoria ca on ca.IdCategoria = p.IdCategoria
+	where convert(date, c.FechaRegistro, 103) between @FechaInicio and @FechaFin
+	and pr.IdProveedor = iif(@IdProveedor = 0, pr.IdProveedor, @IdProveedor)
+
+	set dateformat mdy;
+end

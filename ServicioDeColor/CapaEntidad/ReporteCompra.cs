@@ -14,7 +14,7 @@ namespace CapaEntidad
         private string numeroDocumento;
         private string montoTotal;
         private string usuarioRegistro;
-        private string documentoProveedor;
+        private string cuitProveedor;
         private string razonSocial;
         private string codigoProducto;
         private string nombreProducto;
@@ -31,7 +31,7 @@ namespace CapaEntidad
         public string NumeroDocumento { get { return numeroDocumento; } set { numeroDocumento = value; } }
         public string MontoTotal { get { return montoTotal; } set { montoTotal = value; } }
         public string UsuarioRegistro { get { return usuarioRegistro; } set { usuarioRegistro = value; } }
-        public string DocumentoProveedor { get { return documentoProveedor; } set { documentoProveedor = value; } }
+        public string CUITProveedor { get { return cuitProveedor; } set { cuitProveedor = value; } }
         public string RazonSocial { get { return razonSocial; } set { razonSocial = value; } }
         public string CodigoProducto { get { return codigoProducto; } set { codigoProducto = value; } }
         public string NombreProducto { get { return nombreProducto; } set { nombreProducto = value; } }

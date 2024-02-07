@@ -12,6 +12,7 @@ namespace CapaControladora
     public class CC_Cliente
     {
         private CD_Cliente oCD_Cliente = new CD_Cliente();
+
         public List<Cliente> ListarClientes()
         {
             try

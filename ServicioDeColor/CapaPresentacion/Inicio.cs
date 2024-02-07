@@ -185,5 +185,15 @@ namespace CapaPresentacion
         {
             abrirFormulario(menuVentas, new frmVenta(_usuarioActual));
         }
+
+        private void menuReportesCompras_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuReportes, new frmReporteCompra(_usuarioActual));
+        }
+
+        private void menuReportesVentas_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuReportes, new frmReporteVentas(_usuarioActual));
+        }
     }
 }

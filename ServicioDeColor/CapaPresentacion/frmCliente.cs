@@ -250,5 +250,10 @@ namespace CapaPresentacion
                 menuVerDetalleCliente_Click(sender, e);
             }
         }
+
+        private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

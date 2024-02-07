@@ -46,7 +46,6 @@
             this.menuAgregarCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVerDetalleCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.menu = new System.Windows.Forms.MenuStrip();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdPersona = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +56,7 @@
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menu = new System.Windows.Forms.MenuStrip();
             this.panelLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menu.SuspendLayout();
@@ -289,20 +289,6 @@
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView_CellPainting);
             // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuVerDetalleCliente,
-            this.menuAgregarCliente,
-            this.menuEditarCliente,
-            this.menuEliminarCliente});
-            this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1484, 34);
-            this.menu.TabIndex = 92;
-            this.menu.Text = "menuStrip1";
-            // 
             // buttonSeleccionar
             // 
             this.buttonSeleccionar.HeaderText = "";
@@ -371,6 +357,21 @@
             this.estadoValor.HeaderText = "Estado";
             this.estadoValor.Name = "estadoValor";
             this.estadoValor.ReadOnly = true;
+            // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuVerDetalleCliente,
+            this.menuAgregarCliente,
+            this.menuEditarCliente,
+            this.menuEliminarCliente});
+            this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(1484, 34);
+            this.menu.TabIndex = 92;
+            this.menu.Text = "menuStrip1";
+            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
             // 
             // frmCliente
             // 

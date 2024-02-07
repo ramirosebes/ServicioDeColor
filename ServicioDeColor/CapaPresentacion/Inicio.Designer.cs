@@ -50,11 +50,11 @@
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenesDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuReportesCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuReportesVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDatosNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.menuReportesCompras = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuReportesVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -268,6 +268,20 @@
             this.menuReportes.Text = "Reportes";
             this.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // menuReportesCompras
+            // 
+            this.menuReportesCompras.Name = "menuReportesCompras";
+            this.menuReportesCompras.Size = new System.Drawing.Size(214, 28);
+            this.menuReportesCompras.Text = "Reportes de compras";
+            this.menuReportesCompras.Click += new System.EventHandler(this.menuReportesCompras_Click);
+            // 
+            // menuReportesVentas
+            // 
+            this.menuReportesVentas.Name = "menuReportesVentas";
+            this.menuReportesVentas.Size = new System.Drawing.Size(214, 28);
+            this.menuReportesVentas.Text = "Reportes de ventas";
+            this.menuReportesVentas.Click += new System.EventHandler(this.menuReportesVentas_Click);
+            // 
             // menuConfiguracion
             // 
             this.menuConfiguracion.BackColor = System.Drawing.SystemColors.Window;
@@ -297,18 +311,6 @@
             this.menuTitulo.Size = new System.Drawing.Size(1484, 60);
             this.menuTitulo.TabIndex = 85;
             this.menuTitulo.Text = "menuStrip2";
-            // 
-            // menuReportesCompras
-            // 
-            this.menuReportesCompras.Name = "menuReportesCompras";
-            this.menuReportesCompras.Size = new System.Drawing.Size(214, 28);
-            this.menuReportesCompras.Text = "Reportes de compras";
-            // 
-            // menuReportesVentas
-            // 
-            this.menuReportesVentas.Name = "menuReportesVentas";
-            this.menuReportesVentas.Size = new System.Drawing.Size(214, 28);
-            this.menuReportesVentas.Text = "Reportes de ventas";
             // 
             // Inicio
             // 

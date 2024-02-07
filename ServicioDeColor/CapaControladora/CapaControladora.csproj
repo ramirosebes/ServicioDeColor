@@ -120,6 +120,7 @@
     <Compile Include="CC_Negocio.cs" />
     <Compile Include="CC_Producto.cs" />
     <Compile Include="CC_Proveedor.cs" />
+    <Compile Include="CC_Reporte.cs" />
     <Compile Include="CC_Usuario.cs" />
     <Compile Include="CC_UsuarioPermiso.cs" />
     <Compile Include="CC_Permiso.cs" />
