@@ -107,7 +107,7 @@
             this.buttonVolver.Location = new System.Drawing.Point(190, 272);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
-            this.buttonVolver.TabIndex = 57;
+            this.buttonVolver.TabIndex = 7;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonVolver.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             this.buttonConfirmar.Location = new System.Drawing.Point(155, 236);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
-            this.buttonConfirmar.TabIndex = 56;
+            this.buttonConfirmar.TabIndex = 6;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
@@ -148,7 +148,7 @@
             this.textBoxCorreo.Location = new System.Drawing.Point(249, 74);
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
-            this.textBoxCorreo.TabIndex = 47;
+            this.textBoxCorreo.TabIndex = 3;
             // 
             // label2
             // 
@@ -180,7 +180,7 @@
             this.textBoxTelefono.Location = new System.Drawing.Point(249, 139);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
-            this.textBoxTelefono.TabIndex = 3;
+            this.textBoxTelefono.TabIndex = 4;
             // 
             // labelLineCorreo
             // 
@@ -277,7 +277,7 @@
             this.comboBoxEstado.Location = new System.Drawing.Point(9, 197);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxEstado.TabIndex = 39;
+            this.comboBoxEstado.TabIndex = 5;
             // 
             // labelInfo
             // 

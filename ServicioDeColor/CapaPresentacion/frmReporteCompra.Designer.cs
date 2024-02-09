@@ -79,7 +79,7 @@
             this.buttonDescarcarExcel.Location = new System.Drawing.Point(1322, 619);
             this.buttonDescarcarExcel.Name = "buttonDescarcarExcel";
             this.buttonDescarcarExcel.Size = new System.Drawing.Size(150, 30);
-            this.buttonDescarcarExcel.TabIndex = 91;
+            this.buttonDescarcarExcel.TabIndex = 10;
             this.buttonDescarcarExcel.Text = "Descargar Excel";
             this.buttonDescarcarExcel.UseVisualStyleBackColor = false;
             this.buttonDescarcarExcel.Click += new System.EventHandler(this.buttonDescarcarExcel_Click);
@@ -91,7 +91,7 @@
             this.comboBoxBusqueda.Location = new System.Drawing.Point(83, 46);
             this.comboBoxBusqueda.Name = "comboBoxBusqueda";
             this.comboBoxBusqueda.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxBusqueda.TabIndex = 90;
+            this.comboBoxBusqueda.TabIndex = 6;
             // 
             // label2
             // 
@@ -114,7 +114,7 @@
             this.buttonLimpiarBuscador.Location = new System.Drawing.Point(576, 43);
             this.buttonLimpiarBuscador.Name = "buttonLimpiarBuscador";
             this.buttonLimpiarBuscador.Size = new System.Drawing.Size(75, 30);
-            this.buttonLimpiarBuscador.TabIndex = 88;
+            this.buttonLimpiarBuscador.TabIndex = 9;
             this.buttonLimpiarBuscador.Text = "Limpiar";
             this.buttonLimpiarBuscador.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLimpiarBuscador.UseVisualStyleBackColor = false;
@@ -129,7 +129,7 @@
             this.textBoxBusqueda.Location = new System.Drawing.Point(289, 46);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(200, 27);
-            this.textBoxBusqueda.TabIndex = 86;
+            this.textBoxBusqueda.TabIndex = 7;
             // 
             // buttonBuscar
             // 
@@ -142,7 +142,7 @@
             this.buttonBuscar.Location = new System.Drawing.Point(495, 43);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 30);
-            this.buttonBuscar.TabIndex = 87;
+            this.buttonBuscar.TabIndex = 8;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonBuscar.UseVisualStyleBackColor = false;
@@ -304,10 +304,10 @@
             // 
             this.comboBoxProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProveedor.FormattingEnabled = true;
-            this.comboBoxProveedor.Location = new System.Drawing.Point(1095, 30);
+            this.comboBoxProveedor.Location = new System.Drawing.Point(1095, 32);
             this.comboBoxProveedor.Name = "comboBoxProveedor";
             this.comboBoxProveedor.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxProveedor.TabIndex = 92;
+            this.comboBoxProveedor.TabIndex = 3;
             // 
             // buttonBuscarResultado
             // 
@@ -320,7 +320,7 @@
             this.buttonBuscarResultado.Location = new System.Drawing.Point(1301, 30);
             this.buttonBuscarResultado.Name = "buttonBuscarResultado";
             this.buttonBuscarResultado.Size = new System.Drawing.Size(75, 30);
-            this.buttonBuscarResultado.TabIndex = 83;
+            this.buttonBuscarResultado.TabIndex = 4;
             this.buttonBuscarResultado.Text = "Buscar";
             this.buttonBuscarResultado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonBuscarResultado.UseVisualStyleBackColor = false;
@@ -332,7 +332,7 @@
             this.labelProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelProveedor.Location = new System.Drawing.Point(1025, 33);
+            this.labelProveedor.Location = new System.Drawing.Point(1025, 36);
             this.labelProveedor.Name = "labelProveedor";
             this.labelProveedor.Size = new System.Drawing.Size(64, 19);
             this.labelProveedor.TabIndex = 85;
@@ -355,10 +355,10 @@
             this.dateTimePickerFechaFin.CustomFormat = "";
             this.dateTimePickerFechaFin.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFechaFin.Location = new System.Drawing.Point(917, 30);
+            this.dateTimePickerFechaFin.Location = new System.Drawing.Point(919, 33);
             this.dateTimePickerFechaFin.Name = "dateTimePickerFechaFin";
             this.dateTimePickerFechaFin.Size = new System.Drawing.Size(100, 27);
-            this.dateTimePickerFechaFin.TabIndex = 80;
+            this.dateTimePickerFechaFin.TabIndex = 2;
             // 
             // labelFechaInicio
             // 
@@ -387,7 +387,7 @@
             this.dateTimePickerFechaInicio.CustomFormat = "";
             this.dateTimePickerFechaInicio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(729, 30);
+            this.dateTimePickerFechaInicio.Location = new System.Drawing.Point(729, 33);
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
             this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(100, 27);
             this.dateTimePickerFechaInicio.TabIndex = 1;
@@ -420,7 +420,7 @@
             this.buttonLimpiarProveedor.Location = new System.Drawing.Point(1382, 30);
             this.buttonLimpiarProveedor.Name = "buttonLimpiarProveedor";
             this.buttonLimpiarProveedor.Size = new System.Drawing.Size(75, 30);
-            this.buttonLimpiarProveedor.TabIndex = 93;
+            this.buttonLimpiarProveedor.TabIndex = 5;
             this.buttonLimpiarProveedor.Text = "Limpiar";
             this.buttonLimpiarProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLimpiarProveedor.UseVisualStyleBackColor = false;

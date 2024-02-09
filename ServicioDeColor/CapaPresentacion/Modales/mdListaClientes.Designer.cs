@@ -72,7 +72,7 @@
             this.buttonLimpiarBuscardor.Location = new System.Drawing.Point(492, 50);
             this.buttonLimpiarBuscardor.Name = "buttonLimpiarBuscardor";
             this.buttonLimpiarBuscardor.Size = new System.Drawing.Size(35, 30);
-            this.buttonLimpiarBuscardor.TabIndex = 54;
+            this.buttonLimpiarBuscardor.TabIndex = 4;
             this.buttonLimpiarBuscardor.UseVisualStyleBackColor = false;
             this.buttonLimpiarBuscardor.Click += new System.EventHandler(this.buttonLimpiarBuscardor_Click);
             // 
@@ -99,7 +99,7 @@
             this.buttonBuscar.Location = new System.Drawing.Point(451, 50);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(35, 30);
-            this.buttonBuscar.TabIndex = 53;
+            this.buttonBuscar.TabIndex = 3;
             this.buttonBuscar.UseVisualStyleBackColor = false;
             this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
             // 
@@ -112,7 +112,7 @@
             this.textBoxBusqueda.Location = new System.Drawing.Point(270, 50);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(175, 27);
-            this.textBoxBusqueda.TabIndex = 52;
+            this.textBoxBusqueda.TabIndex = 2;
             // 
             // labelTitulo
             // 
@@ -134,7 +134,7 @@
             this.comboBoxBusqueda.Location = new System.Drawing.Point(90, 50);
             this.comboBoxBusqueda.Name = "comboBoxBusqueda";
             this.comboBoxBusqueda.Size = new System.Drawing.Size(174, 27);
-            this.comboBoxBusqueda.TabIndex = 55;
+            this.comboBoxBusqueda.TabIndex = 1;
             // 
             // dataGridViewData
             // 

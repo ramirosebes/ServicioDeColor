@@ -33,13 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdAgregarVenta));
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.buttonDescuento = new System.Windows.Forms.Button();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxDescuento = new System.Windows.Forms.TextBox();
-            this.labelDescuento = new System.Windows.Forms.Label();
-            this.comboBoxDescuento = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelTipoDescuento = new System.Windows.Forms.Label();
+            this.labelDescuento = new System.Windows.Forms.Label();
             this.textBoxSubTotal = new System.Windows.Forms.TextBox();
+            this.comboBoxDescuento = new System.Windows.Forms.ComboBox();
             this.labelSubTotal = new System.Windows.Forms.Label();
             this.textBoxPagaCon = new System.Windows.Forms.TextBox();
             this.labelPagaCon = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@
             this.labelTipoDocumento = new System.Windows.Forms.Label();
             this.labelFehca = new System.Windows.Forms.Label();
             this.labelRegistrarVentas = new System.Windows.Forms.Label();
-            this.buttonDescuento = new System.Windows.Forms.Button();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.groupBoxInformacionProducto.SuspendLayout();
@@ -117,6 +117,22 @@
             this.panelContenedor.Size = new System.Drawing.Size(835, 629);
             this.panelContenedor.TabIndex = 1;
             // 
+            // buttonDescuento
+            // 
+            this.buttonDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(17)))));
+            this.buttonDescuento.FlatAppearance.BorderSize = 0;
+            this.buttonDescuento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDescuento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonDescuento.Location = new System.Drawing.Point(688, 445);
+            this.buttonDescuento.Name = "buttonDescuento";
+            this.buttonDescuento.Size = new System.Drawing.Size(129, 30);
+            this.buttonDescuento.TabIndex = 17;
+            this.buttonDescuento.Text = "Calcular descuento";
+            this.buttonDescuento.UseVisualStyleBackColor = false;
+            this.buttonDescuento.Visible = false;
+            this.buttonDescuento.Click += new System.EventHandler(this.button1_Click);
+            // 
             // textBoxTotal
             // 
             this.textBoxTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,8 +140,18 @@
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.ReadOnly = true;
             this.textBoxTotal.Size = new System.Drawing.Size(129, 27);
-            this.textBoxTotal.TabIndex = 28;
+            this.textBoxTotal.TabIndex = 16;
             this.textBoxTotal.Text = "0.00";
+            // 
+            // textBoxDescuento
+            // 
+            this.textBoxDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDescuento.Location = new System.Drawing.Point(688, 360);
+            this.textBoxDescuento.Name = "textBoxDescuento";
+            this.textBoxDescuento.Size = new System.Drawing.Size(129, 27);
+            this.textBoxDescuento.TabIndex = 15;
+            this.textBoxDescuento.Text = "0.00";
+            this.textBoxDescuento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDescuento_KeyDown);
             // 
             // label1
             // 
@@ -137,15 +163,15 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Total:";
             // 
-            // textBoxDescuento
+            // labelTipoDescuento
             // 
-            this.textBoxDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDescuento.Location = new System.Drawing.Point(688, 360);
-            this.textBoxDescuento.Name = "textBoxDescuento";
-            this.textBoxDescuento.Size = new System.Drawing.Size(129, 27);
-            this.textBoxDescuento.TabIndex = 26;
-            this.textBoxDescuento.Text = "0.00";
-            this.textBoxDescuento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDescuento_KeyDown);
+            this.labelTipoDescuento.AutoSize = true;
+            this.labelTipoDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipoDescuento.Location = new System.Drawing.Point(684, 286);
+            this.labelTipoDescuento.Name = "labelTipoDescuento";
+            this.labelTipoDescuento.Size = new System.Drawing.Size(105, 19);
+            this.labelTipoDescuento.TabIndex = 23;
+            this.labelTipoDescuento.Text = "Tipo de descuento:";
             // 
             // labelDescuento
             // 
@@ -157,26 +183,6 @@
             this.labelDescuento.TabIndex = 25;
             this.labelDescuento.Text = "Descuento:";
             // 
-            // comboBoxDescuento
-            // 
-            this.comboBoxDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxDescuento.FormattingEnabled = true;
-            this.comboBoxDescuento.Location = new System.Drawing.Point(688, 308);
-            this.comboBoxDescuento.Name = "comboBoxDescuento";
-            this.comboBoxDescuento.Size = new System.Drawing.Size(129, 27);
-            this.comboBoxDescuento.TabIndex = 24;
-            this.comboBoxDescuento.SelectedIndexChanged += new System.EventHandler(this.comboBoxDescuento_SelectedIndexChanged);
-            // 
-            // labelTipoDescuento
-            // 
-            this.labelTipoDescuento.AutoSize = true;
-            this.labelTipoDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTipoDescuento.Location = new System.Drawing.Point(684, 286);
-            this.labelTipoDescuento.Name = "labelTipoDescuento";
-            this.labelTipoDescuento.Size = new System.Drawing.Size(105, 19);
-            this.labelTipoDescuento.TabIndex = 23;
-            this.labelTipoDescuento.Text = "Tipo de descuento:";
-            // 
             // textBoxSubTotal
             // 
             this.textBoxSubTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,8 +190,18 @@
             this.textBoxSubTotal.Name = "textBoxSubTotal";
             this.textBoxSubTotal.ReadOnly = true;
             this.textBoxSubTotal.Size = new System.Drawing.Size(129, 27);
-            this.textBoxSubTotal.TabIndex = 22;
+            this.textBoxSubTotal.TabIndex = 13;
             this.textBoxSubTotal.Text = "0.00";
+            // 
+            // comboBoxDescuento
+            // 
+            this.comboBoxDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxDescuento.FormattingEnabled = true;
+            this.comboBoxDescuento.Location = new System.Drawing.Point(688, 308);
+            this.comboBoxDescuento.Name = "comboBoxDescuento";
+            this.comboBoxDescuento.Size = new System.Drawing.Size(129, 27);
+            this.comboBoxDescuento.TabIndex = 14;
+            this.comboBoxDescuento.SelectedIndexChanged += new System.EventHandler(this.comboBoxDescuento_SelectedIndexChanged);
             // 
             // labelSubTotal
             // 
@@ -203,7 +219,7 @@
             this.textBoxPagaCon.Location = new System.Drawing.Point(688, 499);
             this.textBoxPagaCon.Name = "textBoxPagaCon";
             this.textBoxPagaCon.Size = new System.Drawing.Size(129, 27);
-            this.textBoxPagaCon.TabIndex = 20;
+            this.textBoxPagaCon.TabIndex = 18;
             this.textBoxPagaCon.Text = "0.00";
             this.textBoxPagaCon.TextChanged += new System.EventHandler(this.textBoxPagaCon_TextChanged);
             this.textBoxPagaCon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPagaCon_KeyDown);
@@ -229,7 +245,7 @@
             this.buttonRegistrar.Location = new System.Drawing.Point(688, 584);
             this.buttonRegistrar.Name = "buttonRegistrar";
             this.buttonRegistrar.Size = new System.Drawing.Size(129, 30);
-            this.buttonRegistrar.TabIndex = 18;
+            this.buttonRegistrar.TabIndex = 20;
             this.buttonRegistrar.Text = "Registrar";
             this.buttonRegistrar.UseVisualStyleBackColor = false;
             this.buttonRegistrar.Click += new System.EventHandler(this.buttonRegistrar_Click);
@@ -241,7 +257,7 @@
             this.textBoxCambio.Name = "textBoxCambio";
             this.textBoxCambio.ReadOnly = true;
             this.textBoxCambio.Size = new System.Drawing.Size(129, 27);
-            this.textBoxCambio.TabIndex = 17;
+            this.textBoxCambio.TabIndex = 19;
             this.textBoxCambio.Text = "0.00";
             // 
             // labelCambio
@@ -353,7 +369,7 @@
             this.buttonAgregar.Location = new System.Drawing.Point(758, 152);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(59, 76);
-            this.buttonAgregar.TabIndex = 13;
+            this.buttonAgregar.TabIndex = 12;
             this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
@@ -619,22 +635,6 @@
             this.labelRegistrarVentas.Size = new System.Drawing.Size(162, 33);
             this.labelRegistrarVentas.TabIndex = 1;
             this.labelRegistrarVentas.Text = "Registrar ventas";
-            // 
-            // buttonDescuento
-            // 
-            this.buttonDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(17)))));
-            this.buttonDescuento.FlatAppearance.BorderSize = 0;
-            this.buttonDescuento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDescuento.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonDescuento.Location = new System.Drawing.Point(688, 445);
-            this.buttonDescuento.Name = "buttonDescuento";
-            this.buttonDescuento.Size = new System.Drawing.Size(129, 30);
-            this.buttonDescuento.TabIndex = 29;
-            this.buttonDescuento.Text = "Calcular descuento";
-            this.buttonDescuento.UseVisualStyleBackColor = false;
-            this.buttonDescuento.Visible = false;
-            this.buttonDescuento.Click += new System.EventHandler(this.button1_Click);
             // 
             // mdAgregarVenta
             // 

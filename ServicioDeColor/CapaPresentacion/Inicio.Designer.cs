@@ -70,7 +70,7 @@
             this.buttonCerrarSesion.Location = new System.Drawing.Point(1432, 15);
             this.buttonCerrarSesion.Name = "buttonCerrarSesion";
             this.buttonCerrarSesion.Size = new System.Drawing.Size(40, 40);
-            this.buttonCerrarSesion.TabIndex = 91;
+            this.buttonCerrarSesion.TabIndex = 1;
             this.buttonCerrarSesion.UseVisualStyleBackColor = false;
             this.buttonCerrarSesion.Click += new System.EventHandler(this.buttonCerrarSesion_Click);
             // 
@@ -150,7 +150,7 @@
             // menuUsuarios
             // 
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(137, 28);
+            this.menuUsuarios.Size = new System.Drawing.Size(180, 28);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -161,7 +161,7 @@
             this.menuGruposPermisos,
             this.menuPermisosUsuarios});
             this.menuPermisos.Name = "menuPermisos";
-            this.menuPermisos.Size = new System.Drawing.Size(137, 28);
+            this.menuPermisos.Size = new System.Drawing.Size(180, 28);
             this.menuPermisos.Text = "Permisos";
             // 
             // menuPermisosSimples

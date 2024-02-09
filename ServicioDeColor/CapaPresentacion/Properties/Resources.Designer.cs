@@ -63,6 +63,26 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actualizar {
+            get {
+                object obj = ResourceManager.GetObject("Actualizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Actualizar2 {
+            get {
+                object obj = ResourceManager.GetObject("Actualizar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Escoba {
             get {
                 object obj = ResourceManager.GetObject("Escoba", resourceCulture);
@@ -180,6 +200,16 @@ namespace CapaPresentacion.Properties {
         internal static System.Drawing.Bitmap Seleccion {
             get {
                 object obj = ResourceManager.GetObject("Seleccion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Volver {
+            get {
+                object obj = ResourceManager.GetObject("Volver", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

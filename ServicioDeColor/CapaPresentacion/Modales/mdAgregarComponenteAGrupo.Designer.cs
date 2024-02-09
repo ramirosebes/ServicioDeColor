@@ -79,15 +79,16 @@
             // 
             // buttonVolver
             // 
-            this.buttonVolver.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonVolver.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.buttonVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolver.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonVolver.Image = global::CapaPresentacion.Properties.Resources.Volver;
             this.buttonVolver.Location = new System.Drawing.Point(779, 45);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(75, 30);
-            this.buttonVolver.TabIndex = 51;
+            this.buttonVolver.TabIndex = 5;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonVolver.UseVisualStyleBackColor = false;
@@ -114,7 +115,7 @@
             this.comboBoxBusqueda.Location = new System.Drawing.Point(256, 44);
             this.comboBoxBusqueda.Name = "comboBoxBusqueda";
             this.comboBoxBusqueda.Size = new System.Drawing.Size(174, 27);
-            this.comboBoxBusqueda.TabIndex = 42;
+            this.comboBoxBusqueda.TabIndex = 1;
             this.comboBoxBusqueda.SelectedIndexChanged += new System.EventHandler(this.comboBoxBusqueda_SelectedIndexChanged);
             // 
             // labelBuscarPor
@@ -136,10 +137,11 @@
             this.buttonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLimpiar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonLimpiar.Image = global::CapaPresentacion.Properties.Resources.Escoba;
             this.buttonLimpiar.Location = new System.Drawing.Point(698, 45);
             this.buttonLimpiar.Name = "buttonLimpiar";
             this.buttonLimpiar.Size = new System.Drawing.Size(75, 30);
-            this.buttonLimpiar.TabIndex = 14;
+            this.buttonLimpiar.TabIndex = 4;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLimpiar.UseVisualStyleBackColor = false;
@@ -154,7 +156,7 @@
             this.textBoxBusqueda.Location = new System.Drawing.Point(436, 45);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(175, 27);
-            this.textBoxBusqueda.TabIndex = 12;
+            this.textBoxBusqueda.TabIndex = 2;
             this.textBoxBusqueda.TextChanged += new System.EventHandler(this.textBoxBusqueda_TextChanged);
             // 
             // buttonBuscar
@@ -164,10 +166,11 @@
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
             this.buttonBuscar.Location = new System.Drawing.Point(617, 45);
             this.buttonBuscar.Name = "buttonBuscar";
             this.buttonBuscar.Size = new System.Drawing.Size(75, 30);
-            this.buttonBuscar.TabIndex = 13;
+            this.buttonBuscar.TabIndex = 3;
             this.buttonBuscar.Text = "Buscar";
             this.buttonBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonBuscar.UseVisualStyleBackColor = false;

@@ -111,7 +111,7 @@
             this.textBoxTipoDescuento.Name = "textBoxTipoDescuento";
             this.textBoxTipoDescuento.ReadOnly = true;
             this.textBoxTipoDescuento.Size = new System.Drawing.Size(75, 27);
-            this.textBoxTipoDescuento.TabIndex = 93;
+            this.textBoxTipoDescuento.TabIndex = 7;
             this.textBoxTipoDescuento.Text = "-";
             // 
             // buttonDescargarPDF
@@ -124,7 +124,7 @@
             this.buttonDescargarPDF.Location = new System.Drawing.Point(667, 533);
             this.buttonDescargarPDF.Name = "buttonDescargarPDF";
             this.buttonDescargarPDF.Size = new System.Drawing.Size(150, 30);
-            this.buttonDescargarPDF.TabIndex = 84;
+            this.buttonDescargarPDF.TabIndex = 12;
             this.buttonDescargarPDF.Text = "Descargar PDF";
             this.buttonDescargarPDF.UseVisualStyleBackColor = false;
             this.buttonDescargarPDF.Click += new System.EventHandler(this.buttonDescargarPDF_Click);
@@ -147,7 +147,7 @@
             this.textBoxDescuento.Name = "textBoxDescuento";
             this.textBoxDescuento.ReadOnly = true;
             this.textBoxDescuento.Size = new System.Drawing.Size(75, 27);
-            this.textBoxDescuento.TabIndex = 91;
+            this.textBoxDescuento.TabIndex = 8;
             this.textBoxDescuento.Text = "0.00";
             // 
             // labelDescuento
@@ -168,7 +168,7 @@
             this.textBoxSubTotal.Name = "textBoxSubTotal";
             this.textBoxSubTotal.ReadOnly = true;
             this.textBoxSubTotal.Size = new System.Drawing.Size(75, 27);
-            this.textBoxSubTotal.TabIndex = 89;
+            this.textBoxSubTotal.TabIndex = 6;
             this.textBoxSubTotal.Text = "0.00";
             // 
             // labelSubTotal
@@ -189,7 +189,7 @@
             this.textBoxMontoCambio.Name = "textBoxMontoCambio";
             this.textBoxMontoCambio.ReadOnly = true;
             this.textBoxMontoCambio.Size = new System.Drawing.Size(75, 27);
-            this.textBoxMontoCambio.TabIndex = 87;
+            this.textBoxMontoCambio.TabIndex = 1;
             this.textBoxMontoCambio.Text = "0.00";
             // 
             // labelMontoCambio
@@ -210,7 +210,7 @@
             this.textBoxMontoPago.Name = "textBoxMontoPago";
             this.textBoxMontoPago.ReadOnly = true;
             this.textBoxMontoPago.Size = new System.Drawing.Size(75, 27);
-            this.textBoxMontoPago.TabIndex = 85;
+            this.textBoxMontoPago.TabIndex = 10;
             this.textBoxMontoPago.Text = "0.00";
             // 
             // labelMontoPago
@@ -231,7 +231,7 @@
             this.textBoxMontoTotal.Name = "textBoxMontoTotal";
             this.textBoxMontoTotal.ReadOnly = true;
             this.textBoxMontoTotal.Size = new System.Drawing.Size(75, 27);
-            this.textBoxMontoTotal.TabIndex = 8;
+            this.textBoxMontoTotal.TabIndex = 9;
             this.textBoxMontoTotal.Text = "0.00";
             // 
             // dataGridViewData
@@ -350,7 +350,7 @@
             this.textBoxDocumentoCliente.Name = "textBoxDocumentoCliente";
             this.textBoxDocumentoCliente.ReadOnly = true;
             this.textBoxDocumentoCliente.Size = new System.Drawing.Size(200, 27);
-            this.textBoxDocumentoCliente.TabIndex = 3;
+            this.textBoxDocumentoCliente.TabIndex = 4;
             // 
             // labelDocumentoCliente
             // 
@@ -383,7 +383,7 @@
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.ReadOnly = true;
             this.textBoxUsuario.Size = new System.Drawing.Size(200, 27);
-            this.textBoxUsuario.TabIndex = 7;
+            this.textBoxUsuario.TabIndex = 3;
             // 
             // labelUsuario
             // 
@@ -400,7 +400,7 @@
             this.textBoxTipoDocumento.Name = "textBoxTipoDocumento";
             this.textBoxTipoDocumento.ReadOnly = true;
             this.textBoxTipoDocumento.Size = new System.Drawing.Size(200, 27);
-            this.textBoxTipoDocumento.TabIndex = 5;
+            this.textBoxTipoDocumento.TabIndex = 2;
             // 
             // labelTipoDocumento
             // 
@@ -417,7 +417,7 @@
             this.textBoxFecha.Name = "textBoxFecha";
             this.textBoxFecha.ReadOnly = true;
             this.textBoxFecha.Size = new System.Drawing.Size(150, 27);
-            this.textBoxFecha.TabIndex = 3;
+            this.textBoxFecha.TabIndex = 1;
             // 
             // labelFehca
             // 

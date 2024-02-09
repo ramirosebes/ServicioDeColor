@@ -89,7 +89,7 @@
             this.buttonConfirmar.Location = new System.Drawing.Point(155, 110);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
-            this.buttonConfirmar.TabIndex = 6;
+            this.buttonConfirmar.TabIndex = 3;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
@@ -104,7 +104,7 @@
             this.buttonVolver.Location = new System.Drawing.Point(190, 146);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
-            this.buttonVolver.TabIndex = 7;
+            this.buttonVolver.TabIndex = 4;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonVolver.UseVisualStyleBackColor = false;
@@ -163,7 +163,7 @@
             this.comboBoxEstado.Location = new System.Drawing.Point(249, 71);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxEstado.TabIndex = 39;
+            this.comboBoxEstado.TabIndex = 2;
             // 
             // labelInfo
             // 

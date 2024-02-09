@@ -501,5 +501,14 @@
   <ItemGroup>
     <None Include="Multimedia\PlantillaVenta.html" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\Actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\Actualizar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\Volver.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

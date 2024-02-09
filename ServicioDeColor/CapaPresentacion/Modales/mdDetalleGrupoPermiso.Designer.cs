@@ -130,7 +130,7 @@
             this.textBoxNombreGrupo.Location = new System.Drawing.Point(148, 53);
             this.textBoxNombreGrupo.Name = "textBoxNombreGrupo";
             this.textBoxNombreGrupo.Size = new System.Drawing.Size(175, 27);
-            this.textBoxNombreGrupo.TabIndex = 13;
+            this.textBoxNombreGrupo.TabIndex = 1;
             // 
             // labelNombreGrupo
             // 
@@ -163,7 +163,7 @@
             this.buttonVolver.Location = new System.Drawing.Point(1008, 569);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
-            this.buttonVolver.TabIndex = 10;
+            this.buttonVolver.TabIndex = 6;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.UseVisualStyleBackColor = false;
             this.buttonVolver.Click += new System.EventHandler(this.buttonVolver_Click);
@@ -267,7 +267,7 @@
             this.buttonEliminar.Location = new System.Drawing.Point(972, 220);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(150, 30);
-            this.buttonEliminar.TabIndex = 93;
+            this.buttonEliminar.TabIndex = 4;
             this.buttonEliminar.Text = "Eliminar permiso";
             this.buttonEliminar.UseVisualStyleBackColor = false;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
@@ -283,7 +283,7 @@
             this.buttonAgregar.Location = new System.Drawing.Point(972, 184);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(150, 30);
-            this.buttonAgregar.TabIndex = 92;
+            this.buttonAgregar.TabIndex = 3;
             this.buttonAgregar.Text = "Agregar permiso";
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
@@ -299,7 +299,7 @@
             this.buttonConfirmar.Location = new System.Drawing.Point(972, 533);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
-            this.buttonConfirmar.TabIndex = 91;
+            this.buttonConfirmar.TabIndex = 5;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);

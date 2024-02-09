@@ -90,7 +90,7 @@
             this.buttonVolver.Location = new System.Drawing.Point(190, 49);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
-            this.buttonVolver.TabIndex = 7;
+            this.buttonVolver.TabIndex = 8;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonVolver.UseVisualStyleBackColor = false;
@@ -234,7 +234,7 @@
             this.comboBoxEstado.Location = new System.Drawing.Point(249, 133);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxEstado.TabIndex = 39;
+            this.comboBoxEstado.TabIndex = 4;
             // 
             // labelInfo
             // 
@@ -267,7 +267,7 @@
             this.textBoxConfirmarClave.Name = "textBoxConfirmarClave";
             this.textBoxConfirmarClave.PasswordChar = '*';
             this.textBoxConfirmarClave.Size = new System.Drawing.Size(168, 20);
-            this.textBoxConfirmarClave.TabIndex = 5;
+            this.textBoxConfirmarClave.TabIndex = 6;
             // 
             // labelLineConfirmarClave
             // 
@@ -300,7 +300,7 @@
             this.textBoxClave.Name = "textBoxClave";
             this.textBoxClave.PasswordChar = '*';
             this.textBoxClave.Size = new System.Drawing.Size(200, 20);
-            this.textBoxClave.TabIndex = 4;
+            this.textBoxClave.TabIndex = 5;
             // 
             // labelLineClave
             // 
@@ -322,7 +322,7 @@
             this.buttonConfirmar.Location = new System.Drawing.Point(155, 13);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
-            this.buttonConfirmar.TabIndex = 6;
+            this.buttonConfirmar.TabIndex = 7;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);

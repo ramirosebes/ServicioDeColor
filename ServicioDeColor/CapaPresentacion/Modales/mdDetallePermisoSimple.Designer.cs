@@ -93,7 +93,7 @@
             this.buttonVolver.Location = new System.Drawing.Point(190, 169);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
-            this.buttonVolver.TabIndex = 9;
+            this.buttonVolver.TabIndex = 4;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.UseVisualStyleBackColor = false;
             this.buttonVolver.Click += new System.EventHandler(this.buttonVolver_Click);
@@ -183,7 +183,7 @@
             this.comboBoxEstado.Location = new System.Drawing.Point(9, 131);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxEstado.TabIndex = 39;
+            this.comboBoxEstado.TabIndex = 3;
             // 
             // labelInfoPermiso
             // 

@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonIngresar = new System.Windows.Forms.Button();
-            this.labelTerminosYCondiciones = new System.Windows.Forms.Label();
             this.labelRecuperarContrasena = new System.Windows.Forms.Label();
             this.labelContrasena = new System.Windows.Forms.Label();
             this.textBoxClave = new System.Windows.Forms.TextBox();
@@ -61,10 +60,10 @@
             this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalir.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalir.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonSalir.Location = new System.Drawing.Point(105, 347);
+            this.buttonSalir.Location = new System.Drawing.Point(105, 362);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(80, 35);
-            this.buttonSalir.TabIndex = 35;
+            this.buttonSalir.TabIndex = 4;
             this.buttonSalir.Text = "Salir";
             this.buttonSalir.UseVisualStyleBackColor = false;
             this.buttonSalir.Click += new System.EventHandler(this.buttonSalir_Click);
@@ -76,25 +75,13 @@
             this.buttonIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonIngresar.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIngresar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonIngresar.Location = new System.Drawing.Point(70, 307);
+            this.buttonIngresar.Location = new System.Drawing.Point(70, 322);
             this.buttonIngresar.Name = "buttonIngresar";
             this.buttonIngresar.Size = new System.Drawing.Size(150, 35);
-            this.buttonIngresar.TabIndex = 34;
+            this.buttonIngresar.TabIndex = 3;
             this.buttonIngresar.Text = "Ingresar";
             this.buttonIngresar.UseVisualStyleBackColor = false;
             this.buttonIngresar.Click += new System.EventHandler(this.buttonIngresar_Click);
-            // 
-            // labelTerminosYCondiciones
-            // 
-            this.labelTerminosYCondiciones.AutoSize = true;
-            this.labelTerminosYCondiciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelTerminosYCondiciones.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTerminosYCondiciones.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelTerminosYCondiciones.Location = new System.Drawing.Point(11, 419);
-            this.labelTerminosYCondiciones.Name = "labelTerminosYCondiciones";
-            this.labelTerminosYCondiciones.Size = new System.Drawing.Size(131, 19);
-            this.labelTerminosYCondiciones.TabIndex = 33;
-            this.labelTerminosYCondiciones.Text = "Terminos y condiciones";
             // 
             // labelRecuperarContrasena
             // 
@@ -129,7 +116,7 @@
             this.textBoxClave.Name = "textBoxClave";
             this.textBoxClave.PasswordChar = '*';
             this.textBoxClave.Size = new System.Drawing.Size(250, 20);
-            this.textBoxClave.TabIndex = 30;
+            this.textBoxClave.TabIndex = 2;
             // 
             // labelLineContrasena
             // 
@@ -160,7 +147,7 @@
             this.textBoxDocumento.Location = new System.Drawing.Point(20, 165);
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(250, 20);
-            this.textBoxDocumento.TabIndex = 27;
+            this.textBoxDocumento.TabIndex = 1;
             // 
             // labelLineDocumento
             // 
@@ -187,11 +174,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(284, 461);
+            this.ClientSize = new System.Drawing.Size(284, 411);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.buttonIngresar);
-            this.Controls.Add(this.labelTerminosYCondiciones);
             this.Controls.Add(this.labelRecuperarContrasena);
             this.Controls.Add(this.labelContrasena);
             this.Controls.Add(this.textBoxClave);
@@ -217,7 +203,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Button buttonIngresar;
-        private System.Windows.Forms.Label labelTerminosYCondiciones;
         private System.Windows.Forms.Label labelRecuperarContrasena;
         private System.Windows.Forms.Label labelContrasena;
         private System.Windows.Forms.TextBox textBoxClave;

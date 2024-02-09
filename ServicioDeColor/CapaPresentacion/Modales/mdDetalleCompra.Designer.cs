@@ -94,7 +94,7 @@
             this.buttonDescargarPDF.Location = new System.Drawing.Point(668, 533);
             this.buttonDescargarPDF.Name = "buttonDescargarPDF";
             this.buttonDescargarPDF.Size = new System.Drawing.Size(150, 30);
-            this.buttonDescargarPDF.TabIndex = 84;
+            this.buttonDescargarPDF.TabIndex = 7;
             this.buttonDescargarPDF.Text = "Descargar PDF";
             this.buttonDescargarPDF.UseVisualStyleBackColor = false;
             this.buttonDescargarPDF.Click += new System.EventHandler(this.buttonDescargarPDF_Click);
@@ -106,7 +106,7 @@
             this.textBoxMontoTotal.Location = new System.Drawing.Point(106, 536);
             this.textBoxMontoTotal.Name = "textBoxMontoTotal";
             this.textBoxMontoTotal.Size = new System.Drawing.Size(150, 27);
-            this.textBoxMontoTotal.TabIndex = 8;
+            this.textBoxMontoTotal.TabIndex = 6;
             this.textBoxMontoTotal.Text = "0.00";
             // 
             // dataGridViewData
@@ -233,7 +233,7 @@
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.ReadOnly = true;
             this.textBoxCUIT.Size = new System.Drawing.Size(200, 27);
-            this.textBoxCUIT.TabIndex = 3;
+            this.textBoxCUIT.TabIndex = 4;
             // 
             // labelCUIT
             // 
@@ -266,7 +266,7 @@
             this.textBoxUsuario.Name = "textBoxUsuario";
             this.textBoxUsuario.ReadOnly = true;
             this.textBoxUsuario.Size = new System.Drawing.Size(200, 27);
-            this.textBoxUsuario.TabIndex = 7;
+            this.textBoxUsuario.TabIndex = 3;
             // 
             // labelUsuario
             // 
@@ -283,7 +283,7 @@
             this.textBoxTipoDocumento.Name = "textBoxTipoDocumento";
             this.textBoxTipoDocumento.ReadOnly = true;
             this.textBoxTipoDocumento.Size = new System.Drawing.Size(200, 27);
-            this.textBoxTipoDocumento.TabIndex = 5;
+            this.textBoxTipoDocumento.TabIndex = 2;
             // 
             // labelTipoDocumento
             // 
@@ -300,7 +300,7 @@
             this.textBoxFecha.Name = "textBoxFecha";
             this.textBoxFecha.ReadOnly = true;
             this.textBoxFecha.Size = new System.Drawing.Size(150, 27);
-            this.textBoxFecha.TabIndex = 3;
+            this.textBoxFecha.TabIndex = 1;
             // 
             // labelFehca
             // 

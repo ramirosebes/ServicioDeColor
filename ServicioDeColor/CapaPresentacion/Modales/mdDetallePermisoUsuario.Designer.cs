@@ -68,7 +68,7 @@
             this.buttonEliminar.Location = new System.Drawing.Point(972, 220);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(150, 30);
-            this.buttonEliminar.TabIndex = 100;
+            this.buttonEliminar.TabIndex = 4;
             this.buttonEliminar.Text = "Eliminar permiso";
             this.buttonEliminar.UseVisualStyleBackColor = false;
             this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
@@ -84,7 +84,7 @@
             this.buttonConfirmar.Location = new System.Drawing.Point(972, 533);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
-            this.buttonConfirmar.TabIndex = 98;
+            this.buttonConfirmar.TabIndex = 5;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
@@ -141,7 +141,7 @@
             this.buttonAgregar.Location = new System.Drawing.Point(972, 184);
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(150, 30);
-            this.buttonAgregar.TabIndex = 99;
+            this.buttonAgregar.TabIndex = 3;
             this.buttonAgregar.Text = "Agregar permiso";
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
@@ -204,7 +204,7 @@
             this.buttonVolver.Location = new System.Drawing.Point(1008, 569);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
-            this.buttonVolver.TabIndex = 96;
+            this.buttonVolver.TabIndex = 6;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.UseVisualStyleBackColor = false;
             this.buttonVolver.Click += new System.EventHandler(this.buttonVolver_Click);
@@ -227,7 +227,7 @@
             this.comboBoxEstado.Location = new System.Drawing.Point(387, 53);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(175, 27);
-            this.comboBoxEstado.TabIndex = 43;
+            this.comboBoxEstado.TabIndex = 2;
             // 
             // labelEstado
             // 
@@ -248,7 +248,7 @@
             this.textBoxNombreCompleto.Location = new System.Drawing.Point(145, 54);
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
             this.textBoxNombreCompleto.Size = new System.Drawing.Size(175, 27);
-            this.textBoxNombreCompleto.TabIndex = 13;
+            this.textBoxNombreCompleto.TabIndex = 1;
             // 
             // labelNombreCompleto
             // 

@@ -81,7 +81,7 @@
             this.buttonConfirmar.Location = new System.Drawing.Point(180, 479);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(100, 31);
-            this.buttonConfirmar.TabIndex = 46;
+            this.buttonConfirmar.TabIndex = 5;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
@@ -95,7 +95,7 @@
             this.buttonSubirImagen.Location = new System.Drawing.Point(18, 201);
             this.buttonSubirImagen.Name = "buttonSubirImagen";
             this.buttonSubirImagen.Size = new System.Drawing.Size(150, 29);
-            this.buttonSubirImagen.TabIndex = 45;
+            this.buttonSubirImagen.TabIndex = 1;
             this.buttonSubirImagen.Text = "Subir";
             this.buttonSubirImagen.UseVisualStyleBackColor = false;
             this.buttonSubirImagen.Click += new System.EventHandler(this.buttonSubirImagen_Click);
@@ -120,7 +120,7 @@
             this.textBoxDireccion.Location = new System.Drawing.Point(18, 437);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(425, 20);
-            this.textBoxDireccion.TabIndex = 38;
+            this.textBoxDireccion.TabIndex = 4;
             // 
             // labelLineDireccion
             // 
@@ -152,7 +152,7 @@
             this.textBoxCUIT.Location = new System.Drawing.Point(18, 355);
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(425, 20);
-            this.textBoxCUIT.TabIndex = 37;
+            this.textBoxCUIT.TabIndex = 3;
             // 
             // labelLineRUC
             // 
@@ -181,16 +181,16 @@
             this.textBoxNombreNegocio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombreNegocio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombreNegocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxNombreNegocio.Location = new System.Drawing.Point(18, 273);
+            this.textBoxNombreNegocio.Location = new System.Drawing.Point(18, 283);
             this.textBoxNombreNegocio.Name = "textBoxNombreNegocio";
             this.textBoxNombreNegocio.Size = new System.Drawing.Size(425, 20);
-            this.textBoxNombreNegocio.TabIndex = 36;
+            this.textBoxNombreNegocio.TabIndex = 2;
             // 
             // labelLineNombre
             // 
             this.labelLineNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineNombre.Location = new System.Drawing.Point(18, 296);
+            this.labelLineNombre.Location = new System.Drawing.Point(18, 306);
             this.labelLineNombre.Name = "labelLineNombre";
             this.labelLineNombre.Size = new System.Drawing.Size(425, 1);
             this.labelLineNombre.TabIndex = 39;
