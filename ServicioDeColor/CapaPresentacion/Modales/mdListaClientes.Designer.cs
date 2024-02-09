@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdListaClientes));
             this.panelCliente = new System.Windows.Forms.Panel();
             this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
             this.labelBuscarPor = new System.Windows.Forms.Label();
@@ -209,6 +210,7 @@
             this.ClientSize = new System.Drawing.Size(566, 503);
             this.Controls.Add(this.panelCliente);
             this.Controls.Add(this.dataGridViewData);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mdListaClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista clientes";

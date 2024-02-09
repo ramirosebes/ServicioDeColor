@@ -30,13 +30,18 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdDetalleVenta));
             this.panelDetalleVenta = new System.Windows.Forms.Panel();
+            this.textBoxTipoDescuento = new System.Windows.Forms.TextBox();
+            this.buttonDescargarPDF = new System.Windows.Forms.Button();
+            this.labelTipoDescuento = new System.Windows.Forms.Label();
+            this.textBoxDescuento = new System.Windows.Forms.TextBox();
+            this.labelDescuento = new System.Windows.Forms.Label();
+            this.textBoxSubTotal = new System.Windows.Forms.TextBox();
+            this.labelSubTotal = new System.Windows.Forms.Label();
             this.textBoxMontoCambio = new System.Windows.Forms.TextBox();
             this.labelMontoCambio = new System.Windows.Forms.Label();
             this.textBoxMontoPago = new System.Windows.Forms.TextBox();
-            this.buttonDescargarPDF = new System.Windows.Forms.Button();
             this.labelMontoPago = new System.Windows.Forms.Label();
             this.textBoxMontoTotal = new System.Windows.Forms.TextBox();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
@@ -72,10 +77,16 @@
             // panelDetalleVenta
             // 
             this.panelDetalleVenta.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelDetalleVenta.Controls.Add(this.textBoxTipoDescuento);
+            this.panelDetalleVenta.Controls.Add(this.buttonDescargarPDF);
+            this.panelDetalleVenta.Controls.Add(this.labelTipoDescuento);
+            this.panelDetalleVenta.Controls.Add(this.textBoxDescuento);
+            this.panelDetalleVenta.Controls.Add(this.labelDescuento);
+            this.panelDetalleVenta.Controls.Add(this.textBoxSubTotal);
+            this.panelDetalleVenta.Controls.Add(this.labelSubTotal);
             this.panelDetalleVenta.Controls.Add(this.textBoxMontoCambio);
             this.panelDetalleVenta.Controls.Add(this.labelMontoCambio);
             this.panelDetalleVenta.Controls.Add(this.textBoxMontoPago);
-            this.panelDetalleVenta.Controls.Add(this.buttonDescargarPDF);
             this.panelDetalleVenta.Controls.Add(this.labelMontoPago);
             this.panelDetalleVenta.Controls.Add(this.textBoxMontoTotal);
             this.panelDetalleVenta.Controls.Add(this.dataGridViewData);
@@ -89,40 +100,19 @@
             this.panelDetalleVenta.Controls.Add(this.labelDetalleVenta);
             this.panelDetalleVenta.Location = new System.Drawing.Point(12, 12);
             this.panelDetalleVenta.Name = "panelDetalleVenta";
-            this.panelDetalleVenta.Size = new System.Drawing.Size(835, 578);
+            this.panelDetalleVenta.Size = new System.Drawing.Size(835, 609);
             this.panelDetalleVenta.TabIndex = 2;
             // 
-            // textBoxMontoCambio
+            // textBoxTipoDescuento
             // 
-            this.textBoxMontoCambio.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxMontoCambio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMontoCambio.Location = new System.Drawing.Point(466, 536);
-            this.textBoxMontoCambio.Name = "textBoxMontoCambio";
-            this.textBoxMontoCambio.ReadOnly = true;
-            this.textBoxMontoCambio.Size = new System.Drawing.Size(75, 27);
-            this.textBoxMontoCambio.TabIndex = 87;
-            this.textBoxMontoCambio.Text = "0.00";
-            // 
-            // labelMontoCambio
-            // 
-            this.labelMontoCambio.AutoSize = true;
-            this.labelMontoCambio.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMontoCambio.Location = new System.Drawing.Point(359, 536);
-            this.labelMontoCambio.Name = "labelMontoCambio";
-            this.labelMontoCambio.Size = new System.Drawing.Size(101, 23);
-            this.labelMontoCambio.TabIndex = 88;
-            this.labelMontoCambio.Text = "Monto cambio:";
-            // 
-            // textBoxMontoPago
-            // 
-            this.textBoxMontoPago.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxMontoPago.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMontoPago.Location = new System.Drawing.Point(278, 536);
-            this.textBoxMontoPago.Name = "textBoxMontoPago";
-            this.textBoxMontoPago.ReadOnly = true;
-            this.textBoxMontoPago.Size = new System.Drawing.Size(75, 27);
-            this.textBoxMontoPago.TabIndex = 85;
-            this.textBoxMontoPago.Text = "0.00";
+            this.textBoxTipoDescuento.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxTipoDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTipoDescuento.Location = new System.Drawing.Point(281, 533);
+            this.textBoxTipoDescuento.Name = "textBoxTipoDescuento";
+            this.textBoxTipoDescuento.ReadOnly = true;
+            this.textBoxTipoDescuento.Size = new System.Drawing.Size(75, 27);
+            this.textBoxTipoDescuento.TabIndex = 93;
+            this.textBoxTipoDescuento.Text = "-";
             // 
             // buttonDescargarPDF
             // 
@@ -139,11 +129,95 @@
             this.buttonDescargarPDF.UseVisualStyleBackColor = false;
             this.buttonDescargarPDF.Click += new System.EventHandler(this.buttonDescargarPDF_Click);
             // 
+            // labelTipoDescuento
+            // 
+            this.labelTipoDescuento.AutoSize = true;
+            this.labelTipoDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipoDescuento.Location = new System.Drawing.Point(168, 533);
+            this.labelTipoDescuento.Name = "labelTipoDescuento";
+            this.labelTipoDescuento.Size = new System.Drawing.Size(107, 23);
+            this.labelTipoDescuento.TabIndex = 94;
+            this.labelTipoDescuento.Text = "Tipo descuento:";
+            // 
+            // textBoxDescuento
+            // 
+            this.textBoxDescuento.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDescuento.Location = new System.Drawing.Point(446, 533);
+            this.textBoxDescuento.Name = "textBoxDescuento";
+            this.textBoxDescuento.ReadOnly = true;
+            this.textBoxDescuento.Size = new System.Drawing.Size(75, 27);
+            this.textBoxDescuento.TabIndex = 91;
+            this.textBoxDescuento.Text = "0.00";
+            // 
+            // labelDescuento
+            // 
+            this.labelDescuento.AutoSize = true;
+            this.labelDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescuento.Location = new System.Drawing.Point(363, 533);
+            this.labelDescuento.Name = "labelDescuento";
+            this.labelDescuento.Size = new System.Drawing.Size(77, 23);
+            this.labelDescuento.TabIndex = 92;
+            this.labelDescuento.Text = "Descuento:";
+            // 
+            // textBoxSubTotal
+            // 
+            this.textBoxSubTotal.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxSubTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSubTotal.Location = new System.Drawing.Point(87, 533);
+            this.textBoxSubTotal.Name = "textBoxSubTotal";
+            this.textBoxSubTotal.ReadOnly = true;
+            this.textBoxSubTotal.Size = new System.Drawing.Size(75, 27);
+            this.textBoxSubTotal.TabIndex = 89;
+            this.textBoxSubTotal.Text = "0.00";
+            // 
+            // labelSubTotal
+            // 
+            this.labelSubTotal.AutoSize = true;
+            this.labelSubTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSubTotal.Location = new System.Drawing.Point(15, 533);
+            this.labelSubTotal.Name = "labelSubTotal";
+            this.labelSubTotal.Size = new System.Drawing.Size(66, 23);
+            this.labelSubTotal.TabIndex = 90;
+            this.labelSubTotal.Text = "SubTotal:";
+            // 
+            // textBoxMontoCambio
+            // 
+            this.textBoxMontoCambio.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxMontoCambio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMontoCambio.Location = new System.Drawing.Point(466, 566);
+            this.textBoxMontoCambio.Name = "textBoxMontoCambio";
+            this.textBoxMontoCambio.ReadOnly = true;
+            this.textBoxMontoCambio.Size = new System.Drawing.Size(75, 27);
+            this.textBoxMontoCambio.TabIndex = 87;
+            this.textBoxMontoCambio.Text = "0.00";
+            // 
+            // labelMontoCambio
+            // 
+            this.labelMontoCambio.AutoSize = true;
+            this.labelMontoCambio.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMontoCambio.Location = new System.Drawing.Point(359, 566);
+            this.labelMontoCambio.Name = "labelMontoCambio";
+            this.labelMontoCambio.Size = new System.Drawing.Size(101, 23);
+            this.labelMontoCambio.TabIndex = 88;
+            this.labelMontoCambio.Text = "Monto cambio:";
+            // 
+            // textBoxMontoPago
+            // 
+            this.textBoxMontoPago.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxMontoPago.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMontoPago.Location = new System.Drawing.Point(278, 566);
+            this.textBoxMontoPago.Name = "textBoxMontoPago";
+            this.textBoxMontoPago.ReadOnly = true;
+            this.textBoxMontoPago.Size = new System.Drawing.Size(75, 27);
+            this.textBoxMontoPago.TabIndex = 85;
+            this.textBoxMontoPago.Text = "0.00";
+            // 
             // labelMontoPago
             // 
             this.labelMontoPago.AutoSize = true;
             this.labelMontoPago.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMontoPago.Location = new System.Drawing.Point(186, 536);
+            this.labelMontoPago.Location = new System.Drawing.Point(186, 566);
             this.labelMontoPago.Name = "labelMontoPago";
             this.labelMontoPago.Size = new System.Drawing.Size(86, 23);
             this.labelMontoPago.TabIndex = 86;
@@ -153,7 +227,7 @@
             // 
             this.textBoxMontoTotal.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxMontoTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMontoTotal.Location = new System.Drawing.Point(105, 536);
+            this.textBoxMontoTotal.Location = new System.Drawing.Point(105, 566);
             this.textBoxMontoTotal.Name = "textBoxMontoTotal";
             this.textBoxMontoTotal.ReadOnly = true;
             this.textBoxMontoTotal.Size = new System.Drawing.Size(75, 27);
@@ -166,7 +240,7 @@
             this.dataGridViewData.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -180,7 +254,7 @@
             this.SubTotal});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -189,14 +263,6 @@
             this.dataGridViewData.Location = new System.Drawing.Point(19, 234);
             this.dataGridViewData.Name = "dataGridViewData";
             this.dataGridViewData.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewData.Size = new System.Drawing.Size(798, 293);
             this.dataGridViewData.TabIndex = 60;
             // 
@@ -232,7 +298,7 @@
             // 
             this.labelMontoTotal.AutoSize = true;
             this.labelMontoTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMontoTotal.Location = new System.Drawing.Point(15, 536);
+            this.labelMontoTotal.Location = new System.Drawing.Point(15, 566);
             this.labelMontoTotal.Name = "labelMontoTotal";
             this.labelMontoTotal.Size = new System.Drawing.Size(84, 23);
             this.labelMontoTotal.TabIndex = 8;
@@ -436,7 +502,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(859, 603);
+            this.ClientSize = new System.Drawing.Size(860, 634);
             this.Controls.Add(this.panelDetalleVenta);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mdDetalleVenta";
@@ -462,13 +528,11 @@
         private System.Windows.Forms.TextBox textBoxMontoPago;
         private System.Windows.Forms.Button buttonDescargarPDF;
         private System.Windows.Forms.Label labelMontoPago;
-        private System.Windows.Forms.TextBox textBoxMontoTotal;
         private System.Windows.Forms.DataGridView dataGridViewData;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.Label labelMontoTotal;
         private System.Windows.Forms.GroupBox groupBoxInformacionCliente;
         private System.Windows.Forms.TextBox textBoxNumeroDocumento;
         private System.Windows.Forms.TextBox textBoxNombreCliente;
@@ -487,5 +551,13 @@
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.Label labelNumeroDocumento;
         private System.Windows.Forms.Label labelDetalleVenta;
+        private System.Windows.Forms.TextBox textBoxTipoDescuento;
+        private System.Windows.Forms.Label labelTipoDescuento;
+        private System.Windows.Forms.TextBox textBoxDescuento;
+        private System.Windows.Forms.Label labelDescuento;
+        private System.Windows.Forms.TextBox textBoxSubTotal;
+        private System.Windows.Forms.Label labelSubTotal;
+        private System.Windows.Forms.TextBox textBoxMontoTotal;
+        private System.Windows.Forms.Label labelMontoTotal;
     }
 }

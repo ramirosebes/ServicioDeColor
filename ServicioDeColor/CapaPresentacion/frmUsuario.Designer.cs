@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuario));
             this.menu = new System.Windows.Forms.MenuStrip();
             this.menuVerDetalleUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAgregarUsuario = new System.Windows.Forms.ToolStripMenuItem();
@@ -379,8 +380,9 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.panelLista);
             this.Controls.Add(this.menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUsuario";
-            this.Text = "frmUsuario";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();

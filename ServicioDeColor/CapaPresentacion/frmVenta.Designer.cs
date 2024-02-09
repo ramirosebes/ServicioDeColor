@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVenta));
             this.textBoxNumeroDocumento = new System.Windows.Forms.TextBox();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.labelSubTitulo = new System.Windows.Forms.Label();
@@ -42,10 +43,6 @@
             this.panelLista = new System.Windows.Forms.Panel();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.menuEliminarVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAgregarVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuVerDetalleVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu = new System.Windows.Forms.MenuStrip();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,8 +57,15 @@
             this.numeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoCambio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.montoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuEliminarVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAgregarVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVerDetalleVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu = new System.Windows.Forms.MenuStrip();
             this.panelLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menu.SuspendLayout();
@@ -223,6 +227,9 @@
             this.numeroDocumento,
             this.montoPago,
             this.montoCambio,
+            this.subTotal,
+            this.tipoDescuento,
+            this.montoDescuento,
             this.montoTotal,
             this.fechaRegistro});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -251,6 +258,136 @@
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView_CellPainting);
+            // 
+            // buttonSeleccionar
+            // 
+            this.buttonSeleccionar.HeaderText = "";
+            this.buttonSeleccionar.Name = "buttonSeleccionar";
+            this.buttonSeleccionar.ReadOnly = true;
+            this.buttonSeleccionar.Width = 30;
+            // 
+            // idVenta
+            // 
+            this.idVenta.HeaderText = "IdVenta";
+            this.idVenta.Name = "idVenta";
+            this.idVenta.ReadOnly = true;
+            this.idVenta.Visible = false;
+            // 
+            // idUsuario
+            // 
+            this.idUsuario.HeaderText = "IdUsuario";
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.ReadOnly = true;
+            this.idUsuario.Visible = false;
+            // 
+            // idPersonaUsuario
+            // 
+            this.idPersonaUsuario.HeaderText = "IdPersonaUsario";
+            this.idPersonaUsuario.Name = "idPersonaUsuario";
+            this.idPersonaUsuario.ReadOnly = true;
+            this.idPersonaUsuario.Visible = false;
+            // 
+            // nombreCompletoUsuario
+            // 
+            this.nombreCompletoUsuario.HeaderText = "Usuario";
+            this.nombreCompletoUsuario.Name = "nombreCompletoUsuario";
+            this.nombreCompletoUsuario.ReadOnly = true;
+            // 
+            // documentoUsuario
+            // 
+            this.documentoUsuario.HeaderText = "Documento usuario";
+            this.documentoUsuario.Name = "documentoUsuario";
+            this.documentoUsuario.ReadOnly = true;
+            this.documentoUsuario.Visible = false;
+            // 
+            // idCliente
+            // 
+            this.idCliente.HeaderText = "IdCliente";
+            this.idCliente.Name = "idCliente";
+            this.idCliente.ReadOnly = true;
+            this.idCliente.Visible = false;
+            // 
+            // idPersonaCliente
+            // 
+            this.idPersonaCliente.HeaderText = "IdPersonaCliente";
+            this.idPersonaCliente.Name = "idPersonaCliente";
+            this.idPersonaCliente.ReadOnly = true;
+            this.idPersonaCliente.Visible = false;
+            // 
+            // nombreCompletoCliente
+            // 
+            this.nombreCompletoCliente.HeaderText = "Cliente";
+            this.nombreCompletoCliente.Name = "nombreCompletoCliente";
+            this.nombreCompletoCliente.ReadOnly = true;
+            // 
+            // documentoCliente
+            // 
+            this.documentoCliente.HeaderText = "Documento cliente";
+            this.documentoCliente.Name = "documentoCliente";
+            this.documentoCliente.ReadOnly = true;
+            this.documentoCliente.Visible = false;
+            // 
+            // tipoDocumento
+            // 
+            this.tipoDocumento.HeaderText = "Tipo de documento";
+            this.tipoDocumento.Name = "tipoDocumento";
+            this.tipoDocumento.ReadOnly = true;
+            this.tipoDocumento.Width = 125;
+            // 
+            // numeroDocumento
+            // 
+            this.numeroDocumento.HeaderText = "Numero del documento";
+            this.numeroDocumento.Name = "numeroDocumento";
+            this.numeroDocumento.ReadOnly = true;
+            this.numeroDocumento.Width = 125;
+            // 
+            // montoPago
+            // 
+            this.montoPago.HeaderText = "Monto pago";
+            this.montoPago.Name = "montoPago";
+            this.montoPago.ReadOnly = true;
+            this.montoPago.Width = 125;
+            // 
+            // montoCambio
+            // 
+            this.montoCambio.HeaderText = "Monto cambio";
+            this.montoCambio.Name = "montoCambio";
+            this.montoCambio.ReadOnly = true;
+            this.montoCambio.Width = 125;
+            // 
+            // subTotal
+            // 
+            this.subTotal.HeaderText = "SubTotal";
+            this.subTotal.Name = "subTotal";
+            this.subTotal.ReadOnly = true;
+            this.subTotal.Width = 125;
+            // 
+            // tipoDescuento
+            // 
+            this.tipoDescuento.HeaderText = "Tipo de descuento";
+            this.tipoDescuento.Name = "tipoDescuento";
+            this.tipoDescuento.ReadOnly = true;
+            this.tipoDescuento.Width = 125;
+            // 
+            // montoDescuento
+            // 
+            this.montoDescuento.HeaderText = "Monto descuento";
+            this.montoDescuento.Name = "montoDescuento";
+            this.montoDescuento.ReadOnly = true;
+            this.montoDescuento.Width = 125;
+            // 
+            // montoTotal
+            // 
+            this.montoTotal.HeaderText = "Monto total";
+            this.montoTotal.Name = "montoTotal";
+            this.montoTotal.ReadOnly = true;
+            this.montoTotal.Width = 125;
+            // 
+            // fechaRegistro
+            // 
+            this.fechaRegistro.HeaderText = "Fecha de registro";
+            this.fechaRegistro.Name = "fechaRegistro";
+            this.fechaRegistro.ReadOnly = true;
             // 
             // menuEliminarVenta
             // 
@@ -301,118 +438,6 @@
             this.menu.TabIndex = 102;
             this.menu.Text = "menuStrip1";
             // 
-            // buttonSeleccionar
-            // 
-            this.buttonSeleccionar.HeaderText = "";
-            this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.ReadOnly = true;
-            this.buttonSeleccionar.Width = 30;
-            // 
-            // idVenta
-            // 
-            this.idVenta.HeaderText = "IdVenta";
-            this.idVenta.Name = "idVenta";
-            this.idVenta.ReadOnly = true;
-            this.idVenta.Visible = false;
-            // 
-            // idUsuario
-            // 
-            this.idUsuario.HeaderText = "IdUsuario";
-            this.idUsuario.Name = "idUsuario";
-            this.idUsuario.ReadOnly = true;
-            this.idUsuario.Visible = false;
-            // 
-            // idPersonaUsuario
-            // 
-            this.idPersonaUsuario.HeaderText = "IdPersonaUsario";
-            this.idPersonaUsuario.Name = "idPersonaUsuario";
-            this.idPersonaUsuario.ReadOnly = true;
-            this.idPersonaUsuario.Visible = false;
-            // 
-            // nombreCompletoUsuario
-            // 
-            this.nombreCompletoUsuario.HeaderText = "Usuario";
-            this.nombreCompletoUsuario.Name = "nombreCompletoUsuario";
-            this.nombreCompletoUsuario.ReadOnly = true;
-            this.nombreCompletoUsuario.Width = 150;
-            // 
-            // documentoUsuario
-            // 
-            this.documentoUsuario.HeaderText = "Documento usuario";
-            this.documentoUsuario.Name = "documentoUsuario";
-            this.documentoUsuario.ReadOnly = true;
-            this.documentoUsuario.Visible = false;
-            // 
-            // idCliente
-            // 
-            this.idCliente.HeaderText = "IdCliente";
-            this.idCliente.Name = "idCliente";
-            this.idCliente.ReadOnly = true;
-            this.idCliente.Visible = false;
-            // 
-            // idPersonaCliente
-            // 
-            this.idPersonaCliente.HeaderText = "IdPersonaCliente";
-            this.idPersonaCliente.Name = "idPersonaCliente";
-            this.idPersonaCliente.ReadOnly = true;
-            this.idPersonaCliente.Visible = false;
-            // 
-            // nombreCompletoCliente
-            // 
-            this.nombreCompletoCliente.HeaderText = "Cliente";
-            this.nombreCompletoCliente.Name = "nombreCompletoCliente";
-            this.nombreCompletoCliente.ReadOnly = true;
-            this.nombreCompletoCliente.Width = 150;
-            // 
-            // documentoCliente
-            // 
-            this.documentoCliente.HeaderText = "Documento cliente";
-            this.documentoCliente.Name = "documentoCliente";
-            this.documentoCliente.ReadOnly = true;
-            this.documentoCliente.Visible = false;
-            // 
-            // tipoDocumento
-            // 
-            this.tipoDocumento.HeaderText = "Tipo de documento";
-            this.tipoDocumento.Name = "tipoDocumento";
-            this.tipoDocumento.ReadOnly = true;
-            this.tipoDocumento.Width = 150;
-            // 
-            // numeroDocumento
-            // 
-            this.numeroDocumento.HeaderText = "Numero del documento";
-            this.numeroDocumento.Name = "numeroDocumento";
-            this.numeroDocumento.ReadOnly = true;
-            this.numeroDocumento.Width = 150;
-            // 
-            // montoPago
-            // 
-            this.montoPago.HeaderText = "Monto pago";
-            this.montoPago.Name = "montoPago";
-            this.montoPago.ReadOnly = true;
-            this.montoPago.Width = 150;
-            // 
-            // montoCambio
-            // 
-            this.montoCambio.HeaderText = "Monto cambio";
-            this.montoCambio.Name = "montoCambio";
-            this.montoCambio.ReadOnly = true;
-            this.montoCambio.Width = 150;
-            // 
-            // montoTotal
-            // 
-            this.montoTotal.HeaderText = "Monto total";
-            this.montoTotal.Name = "montoTotal";
-            this.montoTotal.ReadOnly = true;
-            this.montoTotal.Width = 150;
-            // 
-            // fechaRegistro
-            // 
-            this.fechaRegistro.HeaderText = "Fecha de registro";
-            this.fechaRegistro.Name = "fechaRegistro";
-            this.fechaRegistro.ReadOnly = true;
-            this.fechaRegistro.Width = 150;
-            // 
             // frmVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,8 +448,9 @@
             this.Controls.Add(this.panelLista);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmVenta";
-            this.Text = "frmVenta";
+            this.Text = "Ventas";
             this.Load += new System.EventHandler(this.frmVenta_Load);
             this.panelLista.ResumeLayout(false);
             this.panelLista.PerformLayout();
@@ -467,6 +493,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoCambio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDescuento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn montoDescuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn montoTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaRegistro;
     }

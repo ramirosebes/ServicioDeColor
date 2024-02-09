@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdDetallePermisoSimple));
             this.paneTitulo = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -202,6 +203,7 @@
             this.ClientSize = new System.Drawing.Size(484, 291);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.paneTitulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "mdDetallePermisoSimple";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

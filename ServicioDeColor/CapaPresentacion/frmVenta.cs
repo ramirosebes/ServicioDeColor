@@ -143,6 +143,9 @@ namespace CapaPresentacion
                     oVenta.NumeroDocumento,
                     oVenta.MontoPago,
                     oVenta.MontoCambio,
+                    oVenta.SubTotal,
+                    oVenta.TipoDescuento,
+                    oVenta.MontoDescuento,
                     oVenta.MontoTotal,
                     oVenta.FechaRegistro
                     );

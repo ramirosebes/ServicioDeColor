@@ -49,6 +49,9 @@ namespace CapaPresentacion.Modales
                     dataGridViewData.Rows.Add(new object[] { dv.oProducto.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal });
                 }
 
+                textBoxTipoDescuento.Text = oVenta.TipoDescuento;
+                textBoxDescuento.Text = oVenta.MontoDescuento.ToString("0.00");
+                textBoxSubTotal.Text = oVenta.SubTotal.ToString("0.00");
                 textBoxMontoTotal.Text = oVenta.MontoTotal.ToString("0.00");
                 textBoxMontoPago.Text = oVenta.MontoPago.ToString("0.00");
                 textBoxMontoCambio.Text = oVenta.MontoCambio.ToString("0.00");

@@ -1,12 +1,9 @@
-create database DB_SDC;
-use DB_SDC;
-
 --TABLA PERSONA--
 create table Persona (
 	IdPersona int primary key identity,
 	NombreCompleto nvarchar(100),
 	Correo nvarchar(100),
-	Documento nvarchar(60)
+	Documento nvarchar(50)
 );
 go
 
@@ -15,7 +12,7 @@ go
 create table Usuario(
 IdUsuario int primary key identity,
 IdPersona int,
-Clave nvarchar(400),
+Clave nvarchar(500),
 Estado bit,
 foreign key (IdPersona) references Persona(IdPersona)
 )
@@ -24,8 +21,8 @@ go
 --TABLA COMPONENTE--
 create table Componente(
 IdComponente int primary key identity,
-Nombre nvarchar(60),
-TipoComponente nvarchar(20),
+Nombre nvarchar(50),
+TipoComponente nvarchar(50),
 Estado bit
 )
 go
@@ -43,7 +40,7 @@ go
 create table GrupoPermiso(
 IdGrupoPermiso int primary key identity,
 IdComponente int,
-NombreGrupo nvarchar(60)
+NombreGrupo nvarchar(50)
 foreign key (IdComponente) references Componente(IdComponente)
 )
 go
@@ -73,7 +70,7 @@ go
 create table Cliente (
 	IdCliente int primary key identity,
 	IdPersona int,
-	Telefono nvarchar(60),
+	Telefono nvarchar(50),
 	Direccion nvarchar(100),
 	Estado bit,
 	foreign key (IdPersona) references Persona(IdPersona)
@@ -83,10 +80,10 @@ go
 --TABLA PROVEEDOR--
 create table Proveedor (
 	IdProveedor int primary key identity,
-	CUIT nvarchar(60),
-	RazonSocial nvarchar(60),
-	Correo nvarchar(60),
-	Telefono nvarchar(60),
+	CUIT nvarchar(50),
+	RazonSocial nvarchar(50),
+	Correo nvarchar(50),
+	Telefono nvarchar(50),
 	Estado bit not null default 1,
 );
 go
@@ -147,8 +144,8 @@ create table Venta (
 	IdCliente int references Cliente (IdCliente),
 	TipoDocumento nvarchar(50),
 	NumeroDocumento nvarchar(50),
-	DocumentoCliente nvarchar(50),
-	NombreCliente nvarchar(100),
+	TipoDescuento nvarchar(50),
+	Descuento decimal(10, 2),
 	MontoPago decimal(10,2),
 	MontoCambio decimal (10,2),
 	MontoTotal decimal (10,2),

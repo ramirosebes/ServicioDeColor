@@ -208,11 +208,12 @@ namespace CapaPresentacion.Modales
 
         private void buttonConfirmar_Click(object sender, EventArgs e)
         {
-            if (dataGridView.Rows.Count == 0)
-            {
-                MessageBox.Show("Debe agregar al menos un permiso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //Lo saque temporalmente
+            //if (dataGridView.Rows.Count == 0)
+            //{
+            //    MessageBox.Show("Debe agregar al menos un permiso", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
             DataTable listaComponentes = new DataTable();
 

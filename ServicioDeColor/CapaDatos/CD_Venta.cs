@@ -26,7 +26,7 @@ namespace CapaDatos
                     query.AppendLine("select v.IdVenta,");
                     query.AppendLine("u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario], pu.IdPersona[IdPersonaUsuario],");
                     query.AppendLine("c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente], pc.IdPersona[IdPersonaCliente],");
-                    query.AppendLine("v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.MontoTotal, convert(char(10),v.FechaRegistro,103)[FechaRegistro]");
+                    query.AppendLine("v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.SubTotal, v.MontoTotal, v.TipoDescuento, v.MontoDescuento, convert(char(10),v.FechaRegistro,103)[FechaRegistro]");
                     query.AppendLine("from Venta v");
                     query.AppendLine("inner join Usuario u on u.IdUsuario = v.IdUsuario");
                     query.AppendLine("inner join Persona pu on pu.IdPersona = u.IdPersona");
@@ -47,7 +47,10 @@ namespace CapaDatos
                         oVenta.NumeroDocumento = dr["NumeroDocumento"].ToString();
                         oVenta.MontoPago = Convert.ToDecimal(dr["MontoPago"].ToString());
                         oVenta.MontoCambio = Convert.ToDecimal(dr["MontoCambio"].ToString());
+                        oVenta.SubTotal = Convert.ToDecimal(dr["SubTotal"].ToString());
                         oVenta.MontoTotal = Convert.ToDecimal(dr["MontoTotal"].ToString());
+                        oVenta.TipoDescuento = dr["TipoDescuento"].ToString();
+                        oVenta.MontoDescuento = Convert.ToDecimal(dr["MontoDescuento"].ToString());
                         oVenta.FechaRegistro = dr["FechaRegistro"].ToString();
                         oListaVentas.Add(oVenta);
                     }
@@ -169,7 +172,10 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("NumeroDocumento", oVenta.NumeroDocumento);
                     cmd.Parameters.AddWithValue("MontoPago", oVenta.MontoPago);
                     cmd.Parameters.AddWithValue("MontoCambio", oVenta.MontoCambio);
+                    cmd.Parameters.AddWithValue("SubTotal", oVenta.SubTotal);
                     cmd.Parameters.AddWithValue("MontoTotal", oVenta.MontoTotal);
+                    cmd.Parameters.AddWithValue("TipoDescuento", oVenta.TipoDescuento);
+                    cmd.Parameters.AddWithValue("MontoDescuento", oVenta.MontoDescuento);
                     cmd.Parameters.AddWithValue("DetalleVenta", oDetalleVenta);
                     //PARAMETRO DE SALIDA
                     cmd.Parameters.Add("Resultado", SqlDbType.Bit).Direction = ParameterDirection.Output;
@@ -207,7 +213,7 @@ namespace CapaDatos
                     query.AppendLine("select v.IdVenta,");
                     query.AppendLine("u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario], pu.IdPersona[IdPersonaUsuario],");
                     query.AppendLine("c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente], pc.IdPersona[IdPersonaCliente],");
-                    query.AppendLine("v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.MontoTotal, convert(char(10),v.FechaRegistro,103)[FechaRegistro]");
+                    query.AppendLine("v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.SubTotal, v.MontoTotal, v.TipoDescuento, v.MontoDescuento, convert(char(10),v.FechaRegistro,103)[FechaRegistro]");
                     query.AppendLine("from Venta v");
                     query.AppendLine("inner join Usuario u on u.IdUsuario = v.IdUsuario");
                     query.AppendLine("inner join Persona pu on pu.IdPersona = u.IdPersona");
@@ -232,7 +238,10 @@ namespace CapaDatos
                                 NumeroDocumento = dr["NumeroDocumento"].ToString(),
                                 MontoPago = Convert.ToDecimal(dr["MontoPago"].ToString()),
                                 MontoCambio = Convert.ToDecimal(dr["MontoCambio"].ToString()),
+                                SubTotal = Convert.ToDecimal(dr["SubTotal"].ToString()),
                                 MontoTotal = Convert.ToDecimal(dr["MontoTotal"].ToString()),
+                                TipoDescuento = dr["TipoDescuento"].ToString(),
+                                MontoDescuento = Convert.ToDecimal(dr["MontoDescuento"].ToString()),
                                 FechaRegistro = dr["FechaRegistro"].ToString()
                             };
                         }

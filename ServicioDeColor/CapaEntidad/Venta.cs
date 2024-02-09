@@ -16,7 +16,10 @@ namespace CapaEntidad
         private string numeroDocumento;
         private decimal montoPago;
         private decimal montoCambio;
+        private decimal subTotal;
         private decimal montoTotal;
+        private string tipoDescuento;
+        private decimal montoDescuento;
         private List<DetalleVenta> detalleVenta;
         private string fechaRegistro;
         #endregion
@@ -29,7 +32,10 @@ namespace CapaEntidad
         public string NumeroDocumento { get { return numeroDocumento; } set { numeroDocumento = value; } }
         public decimal MontoPago { get { return montoPago; } set { montoPago = value; } }
         public decimal MontoCambio { get { return montoCambio; } set { montoCambio = value; } }
+        public decimal SubTotal { get { return subTotal; } set { subTotal = value; } }
         public decimal MontoTotal { get { return montoTotal; } set { montoTotal = value; } }
+        public string TipoDescuento { get { return tipoDescuento; } set { tipoDescuento = value; } }
+        public decimal MontoDescuento { get { return montoDescuento; } set { montoDescuento = value; } }
         public List<DetalleVenta> oDetalleVenta { get { return detalleVenta; } set { detalleVenta = value; } }
         public string FechaRegistro { get { return fechaRegistro; } set { fechaRegistro = value; } }
         #endregion

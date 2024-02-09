@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompra));
             this.menu = new System.Windows.Forms.MenuStrip();
             this.menuVerDetalleCompra = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAgregarCompra = new System.Windows.Forms.ToolStripMenuItem();
@@ -378,8 +379,9 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.panelLista);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCompra";
-            this.Text = "frmCompra";
+            this.Text = "Compras";
             this.Load += new System.EventHandler(this.frmCompra_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();

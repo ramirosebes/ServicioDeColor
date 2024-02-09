@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdDetalleNegocio));
             this.panelContenido = new System.Windows.Forms.Panel();
             this.buttonConfirmar = new System.Windows.Forms.Button();
             this.buttonSubirImagen = new System.Windows.Forms.Button();
@@ -242,6 +243,7 @@
             this.ClientSize = new System.Drawing.Size(484, 604);
             this.Controls.Add(this.paneTitulo);
             this.Controls.Add(this.panelContenido);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "mdDetalleNegocio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

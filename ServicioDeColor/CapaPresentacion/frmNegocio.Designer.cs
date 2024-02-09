@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNegocio));
             this.menu = new System.Windows.Forms.MenuStrip();
             this.menuEditarNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.panelLista = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
             this.panelContenido = new System.Windows.Forms.Panel();
-            this.labelLogo = new System.Windows.Forms.Label();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.buttonActualizar = new System.Windows.Forms.Button();
             this.labelDireccion = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
             this.labelLineDireccion = new System.Windows.Forms.Label();
@@ -44,7 +44,8 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.textBoxNombreNegocio = new System.Windows.Forms.TextBox();
             this.labelLineNombre = new System.Windows.Forms.Label();
-            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.labelLogo = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.panelLista.SuspendLayout();
             this.panelContenido.SuspendLayout();
@@ -114,26 +115,22 @@
             this.panelContenido.Size = new System.Drawing.Size(336, 526);
             this.panelContenido.TabIndex = 95;
             // 
-            // labelLogo
+            // buttonActualizar
             // 
-            this.labelLogo.AutoSize = true;
-            this.labelLogo.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogo.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.labelLogo.Location = new System.Drawing.Point(13, 13);
-            this.labelLogo.Name = "labelLogo";
-            this.labelLogo.Size = new System.Drawing.Size(54, 29);
-            this.labelLogo.TabIndex = 1;
-            this.labelLogo.Text = "Logo:";
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(18, 45);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(150, 150);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLogo.TabIndex = 0;
-            this.pictureBoxLogo.TabStop = false;
+            this.buttonActualizar.AutoSize = true;
+            this.buttonActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonActualizar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonActualizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonActualizar.Location = new System.Drawing.Point(125, 445);
+            this.buttonActualizar.Name = "buttonActualizar";
+            this.buttonActualizar.Size = new System.Drawing.Size(87, 35);
+            this.buttonActualizar.TabIndex = 52;
+            this.buttonActualizar.Text = "Actualizar";
+            this.buttonActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonActualizar.UseVisualStyleBackColor = false;
+            this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
             // 
             // labelDireccion
             // 
@@ -234,22 +231,26 @@
             this.labelLineNombre.TabIndex = 39;
             this.labelLineNombre.Text = "label2";
             // 
-            // buttonActualizar
+            // pictureBoxLogo
             // 
-            this.buttonActualizar.AutoSize = true;
-            this.buttonActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.buttonActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonActualizar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonActualizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonActualizar.Location = new System.Drawing.Point(125, 445);
-            this.buttonActualizar.Name = "buttonActualizar";
-            this.buttonActualizar.Size = new System.Drawing.Size(87, 35);
-            this.buttonActualizar.TabIndex = 52;
-            this.buttonActualizar.Text = "Actualizar";
-            this.buttonActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonActualizar.UseVisualStyleBackColor = false;
-            this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
+            this.pictureBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(18, 45);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(150, 150);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLogo.TabIndex = 0;
+            this.pictureBoxLogo.TabStop = false;
+            // 
+            // labelLogo
+            // 
+            this.labelLogo.AutoSize = true;
+            this.labelLogo.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogo.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labelLogo.Location = new System.Drawing.Point(13, 13);
+            this.labelLogo.Name = "labelLogo";
+            this.labelLogo.Size = new System.Drawing.Size(54, 29);
+            this.labelLogo.TabIndex = 1;
+            this.labelLogo.Text = "Logo:";
             // 
             // frmNegocio
             // 
@@ -259,8 +260,9 @@
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panelLista);
             this.Controls.Add(this.menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNegocio";
-            this.Text = "frmNegocio";
+            this.Text = "Negocio";
             this.Load += new System.EventHandler(this.frmNegocio_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();

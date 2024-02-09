@@ -113,10 +113,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculadorDescuento.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Componente.cs" />
     <Compile Include="Compra.cs" />
+    <Compile Include="Descuento.cs" />
+    <Compile Include="DescuentoFijo.cs" />
+    <Compile Include="DescuentoPorcentual.cs" />
     <Compile Include="DetalleCompra.cs" />
     <Compile Include="DetalleVenta.cs" />
     <Compile Include="GrupoPermiso.cs" />
@@ -128,6 +132,7 @@
     <Compile Include="Proveedor.cs" />
     <Compile Include="ReporteCompra.cs" />
     <Compile Include="ReporteVenta.cs" />
+    <Compile Include="SinDescuento.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Venta.cs" />
   </ItemGroup>

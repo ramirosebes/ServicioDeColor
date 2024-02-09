@@ -27,7 +27,7 @@ where c.NumeroDocumento = 1
 select v.IdVenta,
 u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario], pu.IdPersona[IdPersonaUsuario],
 c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente], pc.IdPersona[IdPersonaCliente],
-v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.MontoTotal, convert(char(10),v.FechaRegistro,103)[FechaRegistro]
+v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.MontoTotal, v.TipoDescuento, v.MontoDescuento, convert(char(10),v.FechaRegistro,103)[FechaRegistro]
 from Venta v
 inner join Usuario u on u.IdUsuario = v.IdUsuario
 inner join Persona pu on pu.IdPersona = u.IdPersona
@@ -39,7 +39,7 @@ where v.NumeroDocumento = @numero
 select v.IdVenta,
 u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario], pu.IdPersona[IdPersonaUsuario],
 c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente], pc.IdPersona[IdPersonaCliente],
-v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.MontoTotal, convert(char(10),v.FechaRegistro,103)[FechaRegistro]
+v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.MontoTotal, v.TipoDescuento, v.MontoDescuento, convert(char(10),v.FechaRegistro,103)[FechaRegistro]
 from Venta v
 inner join Usuario u on u.IdUsuario = v.IdUsuario
 inner join Persona pu on pu.IdPersona = u.IdPersona

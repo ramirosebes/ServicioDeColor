@@ -138,4 +138,72 @@
   <metadata name="PrecioVenta.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
 </root>

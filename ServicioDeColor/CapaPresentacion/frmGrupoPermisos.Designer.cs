@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGrupoPermisos));
             this.textBoxIdComponente = new System.Windows.Forms.TextBox();
             this.panelLista = new System.Windows.Forms.Panel();
             this.buttonActualizar = new System.Windows.Forms.Button();
@@ -346,8 +347,9 @@
             this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGrupoPermisos";
-            this.Text = " frmGrupo";
+            this.Text = "Grupo de permisos";
             this.Load += new System.EventHandler(this.frmGrupo_Load);
             this.panelLista.ResumeLayout(false);
             this.panelLista.PerformLayout();

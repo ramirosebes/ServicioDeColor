@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdAgregarComponenteAGrupo));
             this.panelLista = new System.Windows.Forms.Panel();
             this.textBoxId = new System.Windows.Forms.TextBox();
             this.buttonVolver = new System.Windows.Forms.Button();
@@ -269,6 +270,7 @@
             this.ClientSize = new System.Drawing.Size(884, 511);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.panelLista);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "mdAgregarComponenteAGrupo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

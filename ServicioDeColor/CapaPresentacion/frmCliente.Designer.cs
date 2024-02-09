@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.textBoxIdPersona = new System.Windows.Forms.TextBox();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.labelSubTitulo = new System.Windows.Forms.Label();
@@ -383,8 +384,9 @@
             this.Controls.Add(this.panelLista);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.menu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCliente";
-            this.Text = "frmCliente";
+            this.Text = "Clientes";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.panelLista.ResumeLayout(false);
             this.panelLista.PerformLayout();

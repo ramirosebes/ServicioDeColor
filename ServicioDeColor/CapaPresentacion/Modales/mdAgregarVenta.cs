@@ -32,12 +32,24 @@ namespace CapaPresentacion.Modales
             comboBoxTipoDocumento.ValueMember = "Valor";
             comboBoxTipoDocumento.SelectedIndex = 0;
 
+            //CONFIGURACION DESCUENTO
+            comboBoxDescuento.Items.Add(new OpcionCombo() { Valor = "SinDescuento", Texto = "Sin descuento" });
+            comboBoxDescuento.Items.Add(new OpcionCombo() { Valor = "Fijo", Texto = "Fijo" });
+            comboBoxDescuento.Items.Add(new OpcionCombo() { Valor = "Porcentual", Texto = "Porcentual" });
+            comboBoxDescuento.DisplayMember = "Texto";
+            comboBoxDescuento.ValueMember = "Valor";
+            comboBoxDescuento.SelectedIndex = 0;
+
+            textBoxDescuento.Text = "0.00";
+            textBoxDescuento.Enabled = false;
+            //FIN CONFIGURACION DESCUENTO
+
             textBoxFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
             textBoxIdProducto.Text = "0";
 
             textBoxPagaCon.Text = "0.00";
             textBoxCambio.Text = "0.00";
-            textBoxTotalAPagar.Text = "0.00";
+            textBoxSubTotal.Text = "0.00";
         }
 
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
@@ -160,14 +172,15 @@ namespace CapaPresentacion.Modales
                     (numericUpDownCantidad.Value * precio).ToString("0.00")
                 });
 
-                    calcularTotal();
-                    limpiarProducto();
+                    CalcularSubTotal();
+                    LimpiarProducto();
+                    CalcularDescuento();
                     textBoxCodigoProducto.Select();
                 }
             }
         }
 
-        private void calcularTotal()
+        private void CalcularSubTotal()
         {
             decimal total = 0;
 
@@ -177,16 +190,60 @@ namespace CapaPresentacion.Modales
                 {
                     total += Convert.ToDecimal(row.Cells["SubTotal"].Value.ToString());
                 }
-                textBoxTotalAPagar.Text = total.ToString("0.00");
+                textBoxSubTotal.Text = total.ToString("0.00");
             }
             else if (dataGridViewData.Rows.Count == 0) //Esto lo agregue yo
             {
                 total = 0;
-                textBoxTotalAPagar.Text = total.ToString("0.00");
+                textBoxSubTotal.Text = total.ToString("0.00");
             }
         }
 
-        private void limpiarProducto()
+        private void CalcularDescuento()
+        {
+            CalculadorDescuento calculadorDescuento = new CalculadorDescuento();
+            decimal totalOriginal = Convert.ToDecimal(textBoxSubTotal.Text);
+
+            switch ((((OpcionCombo)comboBoxDescuento.SelectedItem).Valor))
+            {
+                case "SinDescuento":
+                    calculadorDescuento.SetDescuento(new SinDescuento());
+                    decimal totalSinDescuento = Convert.ToDecimal(totalOriginal);
+                    textBoxTotal.Text = totalSinDescuento.ToString("0.00");
+                    break;
+                case "Fijo":
+                    calculadorDescuento.SetDescuento(new DescuentoFijo(Convert.ToDecimal(textBoxDescuento.Text)));
+                    decimal totalDescuentoNominal = calculadorDescuento.AplicarDescuento(totalOriginal);
+                    textBoxTotal.Text = totalDescuentoNominal.ToString("0.00");
+                    break;
+                case "Porcentual":
+                    calculadorDescuento.SetDescuento(new DescuentoPorcentual(Convert.ToDecimal(textBoxDescuento.Text)));
+                    decimal totalDescuentoPorcentual = calculadorDescuento.AplicarDescuento(totalOriginal);
+                    textBoxTotal.Text = totalDescuentoPorcentual.ToString("0.00");
+                    break;
+            }
+
+            //if (comboBoxDescuento.SelectedIndex == 1)
+            //{
+            //    calculadorDescuento.SetDescuento(new SinDescuento());
+            //    decimal totalSinDescuento = Convert.ToDecimal(totalOriginal);
+            //    textBoxTotal.Text = totalSinDescuento.ToString("0.00");
+            //} 
+            //else if (comboBoxDescuento.SelectedIndex == 2)
+            //{
+            //    calculadorDescuento.SetDescuento(new DescuentoFijo(Convert.ToDecimal(textBoxDescuento.Text)));
+            //    decimal totalDescuentoNominal = calculadorDescuento.AplicarDescuento(totalOriginal);
+            //    textBoxTotal.Text = totalDescuentoNominal.ToString("0.00");
+            //} 
+            //else
+            //{
+            //    calculadorDescuento.SetDescuento(new DescuentoPorcentual(Convert.ToDecimal(textBoxDescuento.Text)));
+            //    decimal totalDescuentoPorcentual = calculadorDescuento.AplicarDescuento(totalOriginal);
+            //    textBoxTotal.Text = totalDescuentoPorcentual.ToString("0.00");
+            //}
+        }
+
+        private void LimpiarProducto()
         {
             textBoxIdProducto.Text = "0";
             textBoxCodigoProducto.Text = "";
@@ -231,8 +288,9 @@ namespace CapaPresentacion.Modales
                     if (respuesta)
                     {
                         dataGridViewData.Rows.RemoveAt(indice);
-                        calcularTotal();
-                        limpiarProducto(); //Esto lo agregue yo
+                        CalcularDescuento();
+                        CalcularSubTotal();
+                        LimpiarProducto(); //Esto lo agregue yo
                     }
                 }
             }
@@ -315,7 +373,7 @@ namespace CapaPresentacion.Modales
             decimal total, pagaCon;
 
             // Intenta convertir el texto del textBoxTotalAPagar a decimal
-            if (!decimal.TryParse(textBoxTotalAPagar.Text.Trim(), out total))
+            if (!decimal.TryParse(textBoxTotal.Text.Trim(), out total))
             {
                 MessageBox.Show("El total a pagar no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -375,13 +433,13 @@ namespace CapaPresentacion.Modales
                 return;
             }
 
-            if (textBoxTotalAPagar.Text.Trim() == "")
+            if (textBoxSubTotal.Text.Trim() == "")
             {
                 MessageBox.Show("No existen productos en la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
-            if (Convert.ToDecimal(textBoxPagaCon.Text.Trim()) < Convert.ToDecimal(textBoxTotalAPagar.Text.Trim()))
+            if (Convert.ToDecimal(textBoxPagaCon.Text.Trim()) < Convert.ToDecimal(textBoxSubTotal.Text.Trim()))
             {
                 MessageBox.Show("Fondos insuficientes", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -425,7 +483,10 @@ namespace CapaPresentacion.Modales
                 oCliente = new Cliente() { IdCliente = Convert.ToInt32(textBoxIdCliente.Text), Documento = textBoxDocumentoCliente.Text, NombreCompleto = textBoxNombreCompleto.Text },
                 MontoPago = Convert.ToDecimal(textBoxPagaCon.Text),
                 MontoCambio = Convert.ToDecimal(textBoxCambio.Text),
-                MontoTotal = Convert.ToDecimal(textBoxTotalAPagar.Text),
+                SubTotal = Convert.ToDecimal(textBoxSubTotal.Text),
+                MontoTotal = Convert.ToDecimal(textBoxTotal.Text),
+                TipoDescuento = ((OpcionCombo)comboBoxDescuento.SelectedItem).Texto,
+                MontoDescuento = Convert.ToDecimal(textBoxDescuento.Text),
             };
 
             string mensaje = string.Empty;
@@ -442,7 +503,7 @@ namespace CapaPresentacion.Modales
                 textBoxDocumentoCliente.Clear();
                 textBoxNombreCompleto.Clear();
                 dataGridViewData.Rows.Clear();
-                calcularTotal();
+                CalcularSubTotal();
                 textBoxPagaCon.Clear();
                 textBoxCambio.Clear();
             }
@@ -458,6 +519,32 @@ namespace CapaPresentacion.Modales
             textBoxPrecio.Text = "";
             textBoxStock.Text = "";
             numericUpDownCantidad.Value = 1;
+        }
+
+        private void comboBoxDescuento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxDescuento.SelectedIndex != 0)
+            {
+                textBoxDescuento.Enabled = true;
+            }
+            else
+            {
+                textBoxDescuento.Enabled = false;
+                textBoxDescuento.Text = "0.00";
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CalcularDescuento();
+        }
+
+        private void textBoxDescuento_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                CalcularDescuento();
+            }
         }
     }
 }
