@@ -53,7 +53,6 @@
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UsuarioRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DocumentoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +61,10 @@
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.montoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelReporteCompras.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
@@ -317,7 +319,6 @@
             this.FechaRegistro,
             this.TipoDocumento,
             this.NumeroDocumento,
-            this.MontoTotal,
             this.UsuarioRegistro,
             this.DocumentoCliente,
             this.NombreCliente,
@@ -326,7 +327,10 @@
             this.Categoria,
             this.PrecioVenta,
             this.Cantidad,
-            this.SubTotal});
+            this.tipoDescuento,
+            this.montoDescuento,
+            this.SubTotal,
+            this.MontoTotal});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,12 +362,6 @@
             this.NumeroDocumento.HeaderText = "Numero Documento";
             this.NumeroDocumento.Name = "NumeroDocumento";
             this.NumeroDocumento.ReadOnly = true;
-            // 
-            // MontoTotal
-            // 
-            this.MontoTotal.HeaderText = "Monto Total";
-            this.MontoTotal.Name = "MontoTotal";
-            this.MontoTotal.ReadOnly = true;
             // 
             // UsuarioRegistro
             // 
@@ -413,11 +411,29 @@
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
             // 
+            // tipoDescuento
+            // 
+            this.tipoDescuento.HeaderText = "Tipo de descuento";
+            this.tipoDescuento.Name = "tipoDescuento";
+            this.tipoDescuento.ReadOnly = true;
+            // 
+            // montoDescuento
+            // 
+            this.montoDescuento.HeaderText = "Monto descuento";
+            this.montoDescuento.Name = "montoDescuento";
+            this.montoDescuento.ReadOnly = true;
+            // 
             // SubTotal
             // 
             this.SubTotal.HeaderText = "Sub Total";
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
+            // 
+            // MontoTotal
+            // 
+            this.MontoTotal.HeaderText = "Monto Total";
+            this.MontoTotal.Name = "MontoTotal";
+            this.MontoTotal.ReadOnly = true;
             // 
             // frmReporteVentas
             // 
@@ -465,7 +481,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MontoTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn DocumentoCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCliente;
@@ -474,6 +489,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDescuento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn montoDescuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MontoTotal;
     }
 }

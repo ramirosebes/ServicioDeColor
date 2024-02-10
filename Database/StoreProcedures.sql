@@ -1213,12 +1213,12 @@ begin
 	set dateformat dmy;
 
 	select
-		convert(char(10), v.FechaRegistro,103)[FechaRegistro], v.TipoDocumento, v.NumeroDocumento, v.MontoTotal,
+		convert(char(10), v.FechaRegistro,103)[FechaRegistro], v.TipoDocumento, v.NumeroDocumento, v.TipoDescuento, v.MontoDescuento, v.SubTotal, v.MontoTotal,
 		u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario],
 		c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente],
 		p.Codigo[CodigoProducto], p.Nombre[NombreProducto],
 		ca.Descripcion[Categoria],
-		dv.PrecioVenta, dv.Cantidad, dv.SubTotal
+		dv.PrecioVenta, dv.Cantidad --, dv.SubTotal
 	from Venta v
 		inner join Usuario u on u.IdUsuario = v.IdUsuario
 		inner join Persona pu on pu.IdPersona = u.IdPersona

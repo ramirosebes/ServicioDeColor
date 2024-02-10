@@ -22,6 +22,8 @@ namespace CapaEntidad
         private string precioVenta;
         private string cantidad;
         private string subTotal;
+        private string tipoDescuento;
+        private string montoDescuento;
         #endregion
 
         #region Propiedades
@@ -38,6 +40,8 @@ namespace CapaEntidad
         public string PrecioVenta { get { return precioVenta; } set { precioVenta = value; } }
         public string Cantidad { get { return cantidad; } set { cantidad = value; } }
         public string SubTotal { get { return subTotal; } set { subTotal = value; } }
+        public string TipoDescuento { get { return tipoDescuento; } set { tipoDescuento = value; } }
+        public string MontoDescuento { get { return montoDescuento; } set { montoDescuento = value; } }
         #endregion
     }
 }

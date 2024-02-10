@@ -100,6 +100,8 @@ namespace CapaDatos
                                 PrecioVenta = dr["PrecioVenta"].ToString(),
                                 Cantidad = dr["Cantidad"].ToString(),
                                 SubTotal = dr["SubTotal"].ToString(),
+                                TipoDescuento = dr["TipoDescuento"].ToString(),
+                                MontoDescuento = dr["MontoDescuento"].ToString(),
                             });
                         }
 

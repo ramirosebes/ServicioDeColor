@@ -68,7 +68,6 @@ namespace CapaPresentacion
                     rv.FechaRegistro,
                     rv.TipoDocumento,
                     rv.NumeroDocumento,
-                    rv.MontoTotal,
                     rv.UsuarioRegistro,
                     rv.DocumentoCliente,
                     rv.NombreCliente,
@@ -77,7 +76,10 @@ namespace CapaPresentacion
                     rv.Categoria,
                     rv.PrecioVenta,
                     rv.Cantidad,
-                    rv.SubTotal
+                    rv.TipoDescuento,
+                    rv.MontoDescuento,
+                    rv.SubTotal,
+                    rv.MontoTotal
                 });
             }
         }
