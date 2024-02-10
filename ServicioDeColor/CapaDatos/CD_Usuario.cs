@@ -71,7 +71,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Clave", clave);
                     cmd.Parameters.AddWithValue("Estado", oUsuario.Estado);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("IdUsuarioRegistrado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -110,7 +110,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Documento", oUsuario.Documento);
                     cmd.Parameters.AddWithValue("Estado", oUsuario.Estado);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -145,7 +145,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdUsuario", idUsuario);
                     cmd.Parameters.AddWithValue("Clave", clave);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -180,7 +180,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdUsuario", idUsuario);
                     cmd.Parameters.AddWithValue("IdPersona", idPersona);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;

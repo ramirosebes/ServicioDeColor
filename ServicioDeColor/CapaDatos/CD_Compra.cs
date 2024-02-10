@@ -287,7 +287,7 @@ namespace CapaDatos
                     //PARAMETROS DE ENTRADA
                     cmd.Parameters.AddWithValue("IdCompra", idCompra);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;

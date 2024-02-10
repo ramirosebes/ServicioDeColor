@@ -121,7 +121,7 @@ namespace CapaDatos
 
                     //PARAMETROS DE SALIDA
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
 
                     //EJECUTAR COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -160,7 +160,7 @@ namespace CapaDatos
 
                     //PARAMETROS DE SALIDA
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
 
                     //EJECUTAR COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -196,7 +196,7 @@ namespace CapaDatos
 
                     //PARAMETROS DE SALIDA
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
 
                     //EJECUTAR COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;

@@ -40,7 +40,7 @@ go
 create table GrupoPermiso(
 IdGrupoPermiso int primary key identity,
 IdComponente int,
-NombreGrupo nvarchar(50)
+NombreGrupo nvarchar(100)
 foreign key (IdComponente) references Componente(IdComponente)
 )
 go

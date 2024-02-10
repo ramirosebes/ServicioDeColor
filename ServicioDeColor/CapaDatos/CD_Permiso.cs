@@ -246,7 +246,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdComponente", idComponente);
                     cmd.Parameters.AddWithValue("Estado", estado);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;

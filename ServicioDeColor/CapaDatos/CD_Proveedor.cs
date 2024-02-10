@@ -113,8 +113,8 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Telefono", oProveedor.Telefono);
                     cmd.Parameters.AddWithValue("Estado", oProveedor.Estado);
                     //PARAMETROS DE SALIDA
-                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 500).Direction = System.Data.ParameterDirection.Output;
-                    cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;
 

@@ -79,7 +79,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Localidad", oCliente.Localidad);
                     cmd.Parameters.AddWithValue("Estado", oCliente.Estado);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.VarChar, 400).Direction = System.Data.ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 500).Direction = System.Data.ParameterDirection.Output;
                     cmd.Parameters.Add("IdClienteRegistrado", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -123,7 +123,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Localidad", oCliente.Localidad);
                     cmd.Parameters.AddWithValue("Estado", oCliente.Estado);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.VarChar, 400).Direction = System.Data.ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 500).Direction = System.Data.ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -160,7 +160,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdCliente", idCliente);
                     cmd.Parameters.AddWithValue("IdPersona", idPersona);
                     //PARAMETRO DE SALIDA
-                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 400).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = ParameterDirection.Output;
                     //TIPO DE COMANDO
                     cmd.CommandType = CommandType.StoredProcedure;

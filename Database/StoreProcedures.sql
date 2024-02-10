@@ -2,10 +2,10 @@
 create procedure SP_RegistrarUsuario (
 	@NombreCompleto nvarchar(100),
 	@Correo nvarchar(100),
-	@Documento nvarchar(100),
-	@Clave nvarchar(400),
+	@Documento nvarchar(50),
+	@Clave nvarchar(500),
 	@Estado bit,
-	@Mensaje nvarchar(400) output,
+	@Mensaje nvarchar(500) output,
 	@IdUsuarioRegistrado int output
 )
 as
@@ -17,7 +17,7 @@ begin
 
 		begin transaction registro
 		
-			if exists(
+			if exists (
 				select * 
 				from Persona
 				where Documento = @Documento
@@ -27,7 +27,7 @@ begin
 				from Persona
 				where Documento = @Documento
 
-				if not exists(
+				if not exists (
 					select *
 					from Usuario
 					where IdPersona = @IdPersona
@@ -129,9 +129,9 @@ go
 --PROCEDURE RESTABLECER CLAVE--
 create procedure SP_RestablecerClave (
 @IdUsuario int,
-@Clave nvarchar(400),
-@Mensaje nvarchar(400) output,
-@Resultado bit output
+	@Clave nvarchar(500),
+	@Mensaje nvarchar(500) output,
+	@Resultado bit output
 )
 as
 begin
@@ -160,10 +160,10 @@ go
 
 --PROCEDURE ELIMINAR USUARIO--
 create procedure SP_EliminarUsuario (
-@IdUsuario int,
-@IdPersona int,
-@Mensaje nvarchar(400) output,
-@Resultado bit output
+	@IdUsuario int,
+	@IdPersona int,
+	@Mensaje nvarchar(500) output,
+	@Resultado bit output
 )
 as
 begin
@@ -177,28 +177,38 @@ begin
 		inner join Usuario u on u.IdUsuario = c.IdUsuario
 		where u.IdUsuario = @IdUsuario
 	)
-
 	begin
 		set @Resultado = 0
-		set @Mensaje = @Mensaje + 'No se puede eliminar porue el usuario se encuentra relacionado a una compra\n'
+		set @Mensaje = @Mensaje + 'No se puede eliminar el usuario porque se encuentra relacionado a una compra'
 		set @pasoreglas = 0
 	end
 
 	if exists (
-		select * from VENTA v
+		select * from Venta v
 		inner join USUARIO u on u.IdUsuario = v.IdUsuario
 		where u.IdUsuario = @IdUsuario
 	)
 	begin
 		set @Resultado = 0
-		set @Mensaje = @Mensaje + 'No se puede eliminar porue el usuario se encuentra relacionado a una venta\n'
+		set @Mensaje = @Mensaje + 'No se puede eliminar el usuario porque se encuentra relacionado a una venta'
+		set @pasoreglas = 0
+	end
+
+	if exists (
+		select * from UsuarioComponente uc
+		inner join USUARIO u on u.IdUsuario = uc.IdUsuario
+		where u.IdUsuario = @IdUsuario
+	)
+	begin
+		set @Resultado = 0
+		set @Mensaje = @Mensaje + 'No se puede eliminar el usuario porque se encuentra relacionado a un permiso o grupo de permisos'
 		set @pasoreglas = 0
 	end
 
 	if (@pasoreglas = 1)
 	begin
 		delete from Usuario where IdUsuario = @IdUsuario
-		delete from Persona where IdPersona = @IdPersona
+		--delete from Persona where IdPersona = @IdPersona
 		set @Resultado = 1
 	end
 end;
@@ -213,7 +223,7 @@ create type [dbo].[EListaComponentes] as table(
 
 go
 create procedure SP_RegistrarGrupoPermiso(
-@NombreGrupo nvarchar(60),
+@NombreGrupo nvarchar(100),
 @Estado bit,
 @Componentes [EListaComponentes] readonly,
 @Resultado bit output,
@@ -258,7 +268,7 @@ go
 create procedure SP_EditarGrupoPermiso(
     @IdGrupoPermiso int,
 	@IdComponente int,
-    @NombreGrupo nvarchar(60),
+    @NombreGrupo nvarchar(100),
     @Estado bit,
     @Componentes [EListaComponentes] readonly,
     @Resultado bit output,
@@ -422,7 +432,7 @@ go
 create procedure SP_RegistrarPermiso(
 @Nombre nvarchar(100),
 @NombreMenu nvarchar(100),
-@Mensaje nvarchar(400) output,
+@Mensaje nvarchar(500) output,
 @IdPermisoRegistrado int output
 )
 as
@@ -503,12 +513,12 @@ go
 create procedure SP_RegistrarCliente(
 	@NombreCompleto nvarchar(100),
 	@Correo nvarchar(100),
-	@Documento nvarchar(100),
-	@Telefono nvarchar(60),
+	@Documento nvarchar(50),
+	@Telefono nvarchar(50),
 	@Direccion nvarchar(100),
-	@Localidad nvarchar(60),
+	@Localidad nvarchar(50),
 	@Estado bit,
-	@Mensaje nvarchar(400) output,
+	@Mensaje nvarchar(500) output,
 	@IdClienteRegistrado int output
 )
 as
@@ -519,7 +529,8 @@ begin
 		declare @IdPersona int = 0
 
 		begin transaction registro
-			if exists(
+
+			if exists (
 				select * 
 				from Persona
 				where Documento = @Documento
@@ -529,7 +540,7 @@ begin
 				from Persona
 				where Documento = @Documento
 
-				if not exists(
+				if not exists (
 					select *
 					from Cliente
 					where IdPersona = @IdPersona
@@ -540,8 +551,8 @@ begin
 						Correo = @Correo
 					where Documento = @Documento
 
-					insert into Cliente(Direccion,Localidad,Telefono,Estado) values
-					(@Direccion,@Localidad,@Telefono,@Estado)
+					insert into Cliente(IdPersona,Direccion,Localidad,Telefono,Estado) values
+					(@IdPersona, @Direccion,@Localidad,@Telefono,@Estado)
 
 					set @IdClienteRegistrado = SCOPE_IDENTITY()
 				end
@@ -578,15 +589,16 @@ go
 --PROCEDURE EDITAR CLIENTE--
 create procedure SP_EditarCliente(
 @IdCliente int,
-@IdPersona int,
-@NombreCompleto nvarchar(100),
-@Correo nvarchar(100),
-@Documento nvarchar(100),
-@Telefono nvarchar(60),
-@Direccion nvarchar(100),
-@Estado bit,
-@Mensaje nvarchar(400) output,
-@Resultado bit output
+	@IdPersona int,
+	@NombreCompleto nvarchar(100),
+	@Correo nvarchar(100),
+	@Documento nvarchar(50),
+	@Telefono nvarchar(50),
+	@Direccion nvarchar(100),
+	@Localidad nvarchar(50),
+	@Estado bit,
+	@Mensaje nvarchar(500) output,
+	@Resultado bit output
 )
 as
 begin
@@ -599,7 +611,7 @@ begin
         if not exists (
                 select *
                 from Cliente
-                         inner join Persona on Cliente.IdPersona = Persona.IdPersona
+                inner join Persona on Cliente.IdPersona = Persona.IdPersona
                 where Persona.Documento = @Documento and IdCliente != @IdCliente
         )
         begin
@@ -611,6 +623,7 @@ begin
 
             update Cliente set
 				Direccion = @Direccion,
+				Localidad = @Localidad,
 				Telefono = @Telefono,
                 Estado = @Estado
             where IdCliente = @IdCliente;
@@ -634,9 +647,10 @@ go
 
 --PROCEDURE ELIMINAR CLIENTE--
 create procedure SP_EliminarCliente(
-@IdCliente int,
-@Mensaje nvarchar(400) output,
-@Resultado bit output
+	@IdCliente int,
+	@IdPersona int,
+	@Mensaje nvarchar(500) output,
+	@Resultado bit output
 )
 as
 begin
@@ -651,13 +665,14 @@ begin
 	)
 	begin
 		set @Resultado = 0
-		set @Mensaje = @Mensaje + 'No se puede eliminar. El cliente se encuentra ligado a una venta.\n'
+		set @Mensaje = @Mensaje + 'No se puede eliminar el cliente porque se encuentra relacionado a una venta'
 		set @pasoreglas = 0
 	end
 
 	if (@pasoreglas = 1)
 	begin
 		delete from Cliente where IdCliente = @IdCliente
+		--delete from Persona where IdPersona = @IdPersona
 		set @Resultado = 1
 	end
 end;
@@ -732,7 +747,7 @@ begin
 	else
 	begin
 		set @Resultado = 0
-		set @Mensaje = 'La categoria se encuentra relacionada a un producto'
+		set @Mensaje = 'No se puede eliminar la categoria porque se encuentra relacionada a un producto'
 	end
 end
 
@@ -740,9 +755,9 @@ go
 
 --PROCEDURE AGREGAR PRODUCTO--
 create proc SP_RegistrarProducto (
-	@Codigo nvarchar(20),
-	@Nombre nvarchar(30),
-	@Descripcion nvarchar(30),
+	@Codigo nvarchar(50),
+	@Nombre nvarchar(50),
+	@Descripcion nvarchar(50),
 	@IdCategoria int,
 	@Stock int,
 	@PrecioCompra decimal(10,2),
@@ -769,9 +784,9 @@ go
 --PROCEDURE EDITAR PRODUCTO--
 create procedure SP_EditarProducto (
 	@IdProducto int,
-	@Codigo nvarchar(20),
-	@Nombre nvarchar(30),
-	@Descripcion nvarchar(30),
+	@Codigo nvarchar(50),
+	@Nombre nvarchar(50),
+	@Descripcion nvarchar(50),
 	@IdCategoria int,
 	@Stock int,
 	@PrecioCompra decimal(10,2),
@@ -822,7 +837,7 @@ begin
 	begin
 		set @pasoreglas = 0
 		set @Resultado = 0
-		set @Mensaje = @Mensaje + 'No se puede eliminar el producto porque se encuentra relacionado a una compra\n'
+		set @Mensaje = @Mensaje + 'No se puede eliminar el producto porque se encuentra relacionado a una compra'
 	end
 
 	if exists (select * from DetalleVenta dv
@@ -832,7 +847,7 @@ begin
 	begin
 		set @pasoreglas = 0
 		set @Resultado = 0
-		set @Mensaje = @Mensaje + 'No se puede eliminar el producto porque se encuentra relacioado a una venta\n'
+		set @Mensaje = @Mensaje + 'No se puede eliminar el producto porque se encuentra relacioado a una venta'
 	end
 
 	if (@pasoreglas = 1)
@@ -925,7 +940,7 @@ begin
 	else
 	begin
 		set @Resultado = 0
-		set @Mensaje = 'El proveedor se encuentra relacionado a una compra'
+		set @Mensaje = 'No se puede eliminar el proveedor porque se encuentra relacionado a una compra'
 	end
 end
 
@@ -946,8 +961,8 @@ go
 create procedure SP_RegistrarCompra (
 	@IdUsuario int,
 	@IdProveedor int,
-	@TipoDocumento nvarchar(500),
-	@NumeroDocumento nvarchar(500),
+	@TipoDocumento nvarchar(50),
+	@NumeroDocumento nvarchar(50),
 	@MontoTotal decimal(18,2),
 	@DetalleCompra [EDetalleCompra] readonly,
 	@Resultado bit output,
@@ -988,7 +1003,6 @@ begin
 		rollback transaction registro
 
 	end catch
-
 end
 
 go
@@ -1053,11 +1067,14 @@ go
 create procedure SP_RegistrarVenta (
 	@IdUsuario int,
 	@IdCliente int,
-	@TipoDocumento nvarchar(500),
-	@NumeroDocumento nvarchar(500),
-	@MontoPago decimal(18,2),
-	@MontoCambio decimal(18,2),
-	@MontoTotal decimal(18,2),
+	@TipoDocumento nvarchar(50),
+	@NumeroDocumento nvarchar(50),
+	@TipoDescuento nvarchar(50),
+	@MontoDescuento decimal (10,2),
+	@MontoPago decimal(10,2),
+	@MontoCambio decimal(10,2),
+	@SubTotal decimal (10,2),
+	@MontoTotal decimal(10,2),
 	@DetalleVenta [EDetalleVenta] readonly,
 	@Resultado bit output,
 	@Mensaje nvarchar(500) output
@@ -1071,8 +1088,8 @@ begin
 
 		begin transaction registro
 
-			insert into Venta(IdUsuario, IdCliente,TipoDocumento, NumeroDocumento, MontoPago, MontoCambio, MontoTotal)
-			values (@IdUsuario, @IdCliente, @TipoDocumento, @NumeroDocumento, @MontoPago, @MontoCambio, @MontoTotal)
+			insert into Venta(IdUsuario, IdCliente,TipoDocumento, NumeroDocumento, MontoPago, MontoCambio, SubTotal, MontoTotal, TipoDescuento, MontoDescuento)
+			values (@IdUsuario, @IdCliente, @TipoDocumento, @NumeroDocumento, @MontoPago, @MontoCambio, @SubTotal, @MontoTotal, @TipoDescuento, @MontoDescuento)
 
 			set @IdVenta = SCOPE_IDENTITY()
 
@@ -1139,37 +1156,6 @@ go
 --PROCEDURE ELIMINAR VENTA--
 create procedure SP_EliminarVenta (
     @IdVenta int,
-    @Resultado bit output,
-    @Mensaje nvarchar(500) output
-)
-as
-BEGIN
-    begin try
-        set @Resultado = 1;
-        set @Mensaje = '';
-
-        begin transaction eliminar_venta;
-
-        -- Eliminar detalles de la venta
-        delete from DetalleVenta where IdVenta = @IdVenta;
-
-        -- Eliminar la venta
-        delete from Venta where IdVenta = @IdVenta;
-
-        commit transaction eliminar_venta;
-    end TRY
-    begin catch
-        set @Resultado = 0;
-        set @Mensaje = ERROR_MESSAGE();
-        rollback transaction eliminar_venta;
-    end catch
-end;
-
-go
-
---PROCEDURE ELIMINAR VENTA v2--
-create procedure SP_EliminarVenta (
-@IdVenta int,
     @Resultado bit output,
     @Mensaje nvarchar(500) output
 )
