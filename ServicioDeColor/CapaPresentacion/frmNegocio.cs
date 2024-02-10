@@ -29,19 +29,19 @@ namespace CapaPresentacion
         private void frmNegocio_Load(object sender, EventArgs e)
         {
             //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
-            //foreach (ToolStripMenuItem menu in menu.Items)
-            //{
-            //    bool encontrado = _usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
+            foreach (ToolStripMenuItem menu in menu.Items)
+            {
+                bool encontrado = _usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
 
-            //    if (encontrado)
-            //    {
-            //        menu.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menu.Visible = false;
-            //    }
-            //}
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
 
             ActualizarDatos();
         }

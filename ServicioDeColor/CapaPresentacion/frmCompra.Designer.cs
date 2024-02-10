@@ -33,9 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompra));
             this.menu = new System.Windows.Forms.MenuStrip();
-            this.menuVerDetalleCompra = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAgregarCompra = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuEliminarCompra = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVerDetalleOrdenCompra = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAgregarOrdenCompra = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEliminarOrdenCompra = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,50 +67,50 @@
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuVerDetalleCompra,
-            this.menuAgregarCompra,
-            this.menuEliminarCompra});
+            this.menuVerDetalleOrdenCompra,
+            this.menuAgregarOrdenCompra,
+            this.menuEliminarOrdenCompra});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(1484, 34);
             this.menu.TabIndex = 97;
             this.menu.Text = "menuStrip1";
             // 
-            // menuVerDetalleCompra
+            // menuVerDetalleOrdenCompra
             // 
-            this.menuVerDetalleCompra.AutoSize = false;
-            this.menuVerDetalleCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuVerDetalleCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuVerDetalleCompra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuVerDetalleCompra.Name = "menuVerDetalleCompra";
-            this.menuVerDetalleCompra.Size = new System.Drawing.Size(88, 30);
-            this.menuVerDetalleCompra.Text = "Ver detalle";
-            this.menuVerDetalleCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuVerDetalleCompra.Click += new System.EventHandler(this.menuVerDetalleCompra_Click);
+            this.menuVerDetalleOrdenCompra.AutoSize = false;
+            this.menuVerDetalleOrdenCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuVerDetalleOrdenCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuVerDetalleOrdenCompra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuVerDetalleOrdenCompra.Name = "menuVerDetalleOrdenCompra";
+            this.menuVerDetalleOrdenCompra.Size = new System.Drawing.Size(88, 30);
+            this.menuVerDetalleOrdenCompra.Text = "Ver detalle";
+            this.menuVerDetalleOrdenCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuVerDetalleOrdenCompra.Click += new System.EventHandler(this.menuVerDetalleCompra_Click);
             // 
-            // menuAgregarCompra
+            // menuAgregarOrdenCompra
             // 
-            this.menuAgregarCompra.AutoSize = false;
-            this.menuAgregarCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuAgregarCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuAgregarCompra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuAgregarCompra.Name = "menuAgregarCompra";
-            this.menuAgregarCompra.Size = new System.Drawing.Size(73, 30);
-            this.menuAgregarCompra.Text = "Agregar";
-            this.menuAgregarCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuAgregarCompra.Click += new System.EventHandler(this.menuAgregarCompra_Click);
+            this.menuAgregarOrdenCompra.AutoSize = false;
+            this.menuAgregarOrdenCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuAgregarOrdenCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuAgregarOrdenCompra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuAgregarOrdenCompra.Name = "menuAgregarOrdenCompra";
+            this.menuAgregarOrdenCompra.Size = new System.Drawing.Size(73, 30);
+            this.menuAgregarOrdenCompra.Text = "Agregar";
+            this.menuAgregarOrdenCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuAgregarOrdenCompra.Click += new System.EventHandler(this.menuAgregarCompra_Click);
             // 
-            // menuEliminarCompra
+            // menuEliminarOrdenCompra
             // 
-            this.menuEliminarCompra.AutoSize = false;
-            this.menuEliminarCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuEliminarCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuEliminarCompra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuEliminarCompra.Name = "menuEliminarCompra";
-            this.menuEliminarCompra.Size = new System.Drawing.Size(75, 30);
-            this.menuEliminarCompra.Text = "Eliminar";
-            this.menuEliminarCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuEliminarCompra.Click += new System.EventHandler(this.menuEliminarCompra_Click);
+            this.menuEliminarOrdenCompra.AutoSize = false;
+            this.menuEliminarOrdenCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuEliminarOrdenCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuEliminarOrdenCompra.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuEliminarOrdenCompra.Name = "menuEliminarOrdenCompra";
+            this.menuEliminarOrdenCompra.Size = new System.Drawing.Size(75, 30);
+            this.menuEliminarOrdenCompra.Text = "Eliminar";
+            this.menuEliminarOrdenCompra.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuEliminarOrdenCompra.Click += new System.EventHandler(this.menuEliminarCompra_Click);
             // 
             // dataGridView
             // 
@@ -399,9 +399,9 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.ToolStripMenuItem menuVerDetalleCompra;
-        private System.Windows.Forms.ToolStripMenuItem menuAgregarCompra;
-        private System.Windows.Forms.ToolStripMenuItem menuEliminarCompra;
+        private System.Windows.Forms.ToolStripMenuItem menuVerDetalleOrdenCompra;
+        private System.Windows.Forms.ToolStripMenuItem menuAgregarOrdenCompra;
+        private System.Windows.Forms.ToolStripMenuItem menuEliminarOrdenCompra;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.TextBox textBoxId;
         private System.Windows.Forms.Panel panelLista;

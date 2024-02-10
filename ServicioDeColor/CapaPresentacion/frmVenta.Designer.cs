@@ -62,9 +62,9 @@
             this.montoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuEliminarVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAgregarVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuVerDetalleVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEliminarPedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAgregarPedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVerDetallePedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.panelLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -392,49 +392,49 @@
             this.fechaRegistro.Name = "fechaRegistro";
             this.fechaRegistro.ReadOnly = true;
             // 
-            // menuEliminarVenta
+            // menuEliminarPedidoVenta
             // 
-            this.menuEliminarVenta.AutoSize = false;
-            this.menuEliminarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuEliminarVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuEliminarVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuEliminarVenta.Name = "menuEliminarVenta";
-            this.menuEliminarVenta.Size = new System.Drawing.Size(75, 30);
-            this.menuEliminarVenta.Text = "Eliminar";
-            this.menuEliminarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuEliminarVenta.Click += new System.EventHandler(this.menuEliminarVenta_Click);
+            this.menuEliminarPedidoVenta.AutoSize = false;
+            this.menuEliminarPedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuEliminarPedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuEliminarPedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuEliminarPedidoVenta.Name = "menuEliminarPedidoVenta";
+            this.menuEliminarPedidoVenta.Size = new System.Drawing.Size(75, 30);
+            this.menuEliminarPedidoVenta.Text = "Eliminar";
+            this.menuEliminarPedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuEliminarPedidoVenta.Click += new System.EventHandler(this.menuEliminarVenta_Click);
             // 
-            // menuAgregarVenta
+            // menuAgregarPedidoVenta
             // 
-            this.menuAgregarVenta.AutoSize = false;
-            this.menuAgregarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuAgregarVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuAgregarVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuAgregarVenta.Name = "menuAgregarVenta";
-            this.menuAgregarVenta.Size = new System.Drawing.Size(73, 30);
-            this.menuAgregarVenta.Text = "Agregar";
-            this.menuAgregarVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuAgregarVenta.Click += new System.EventHandler(this.menuAgregarVenta_Click);
+            this.menuAgregarPedidoVenta.AutoSize = false;
+            this.menuAgregarPedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuAgregarPedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuAgregarPedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuAgregarPedidoVenta.Name = "menuAgregarPedidoVenta";
+            this.menuAgregarPedidoVenta.Size = new System.Drawing.Size(73, 30);
+            this.menuAgregarPedidoVenta.Text = "Agregar";
+            this.menuAgregarPedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuAgregarPedidoVenta.Click += new System.EventHandler(this.menuAgregarVenta_Click);
             // 
-            // menuVerDetalleVenta
+            // menuVerDetallePedidoVenta
             // 
-            this.menuVerDetalleVenta.AutoSize = false;
-            this.menuVerDetalleVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuVerDetalleVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuVerDetalleVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuVerDetalleVenta.Name = "menuVerDetalleVenta";
-            this.menuVerDetalleVenta.Size = new System.Drawing.Size(88, 30);
-            this.menuVerDetalleVenta.Text = "Ver detalle";
-            this.menuVerDetalleVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuVerDetalleVenta.Click += new System.EventHandler(this.menuVerDetalleVenta_Click);
+            this.menuVerDetallePedidoVenta.AutoSize = false;
+            this.menuVerDetallePedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuVerDetallePedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuVerDetallePedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuVerDetallePedidoVenta.Name = "menuVerDetallePedidoVenta";
+            this.menuVerDetallePedidoVenta.Size = new System.Drawing.Size(88, 30);
+            this.menuVerDetallePedidoVenta.Text = "Ver detalle";
+            this.menuVerDetallePedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuVerDetallePedidoVenta.Click += new System.EventHandler(this.menuVerDetalleVenta_Click);
             // 
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuVerDetalleVenta,
-            this.menuAgregarVenta,
-            this.menuEliminarVenta});
+            this.menuVerDetallePedidoVenta,
+            this.menuAgregarPedidoVenta,
+            this.menuEliminarPedidoVenta});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(1484, 34);
@@ -478,9 +478,9 @@
         private System.Windows.Forms.Panel panelLista;
         private System.Windows.Forms.Button buttonBuscar;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.ToolStripMenuItem menuEliminarVenta;
-        private System.Windows.Forms.ToolStripMenuItem menuAgregarVenta;
-        private System.Windows.Forms.ToolStripMenuItem menuVerDetalleVenta;
+        private System.Windows.Forms.ToolStripMenuItem menuEliminarPedidoVenta;
+        private System.Windows.Forms.ToolStripMenuItem menuAgregarPedidoVenta;
+        private System.Windows.Forms.ToolStripMenuItem menuVerDetallePedidoVenta;
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.DataGridViewButtonColumn buttonSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idVenta;

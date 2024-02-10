@@ -1,7 +1,3 @@
-use DB_SDC
-
-go
-
 --TIPO DE DATO LISTA DE COMPONENTES--
 create type [dbo].[EListaComponentes] as table(
 	[IdComponente] int null

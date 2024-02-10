@@ -42,57 +42,112 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-            
-            ////MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
-            //List<Permiso> listaPermisos = _usuarioActual.GetPermisos();
 
-            ////List<Permiso> listaPermisos = new CC_Permiso().ListarPermisos(__usuarioActual.IdUsuario);
+            //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
+            List<Permiso> listaPermisos = _usuarioActual.GetPermisos();
 
-            ////Recorre todo el menu pricipal ocultado o mostrando los menues dependiendo los permisos que tenga
-            //foreach (ToolStripMenuItem menuItem in menu.Items)
-            //{
-            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menuItem.Name);
+            //List<Permiso> listaPermisos = new CC_Permiso().ListarPermisos(__usuarioActual.IdUsuario);
 
-            //    if (encontrado)
-            //    {
-            //        menuItem.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menuItem.Visible = false;
-            //    }
-            //}
+            //Recorre todo el menu pricipal ocultado o mostrando los menues dependiendo los permisos que tenga
+            foreach (ToolStripMenuItem menuItem in menu.Items)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menuItem.Name);
 
-            ////Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
-            //foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
-            //{
-            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+                if (encontrado)
+                {
+                    menuItem.Visible = true;
+                }
+                else
+                {
+                    menuItem.Visible = false;
+                }
+            }
 
-            //    if (encontrado)
-            //    {
-            //        menu.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menu.Visible = false;
-            //    }
-            //}
+            //Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
+            foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
 
-            ////Recorre todo el menu Permisos ocultado o mostrando los menues dependiendo los permisos que tenga
-            //foreach (ToolStripMenuItem menu in menuPermisos.DropDownItems)
-            //{
-            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
 
-            //    if (encontrado)
-            //    {
-            //        menu.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menu.Visible = false;
-            //    }
-            //}
-            
+            //Recorre todo el menu Permisos ocultado o mostrando los menues dependiendo los permisos que tenga
+            foreach (ToolStripMenuItem menu in menuPermisos.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+
+            foreach (ToolStripMenuItem menu in menuVentas.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+
+            foreach (ToolStripMenuItem menu in menuCompras.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+
+            foreach (ToolStripMenuItem menu in menuReportes.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+
+            foreach (ToolStripMenuItem menu in menuConfiguracion.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
 
             labelUsuario.Text = _usuarioActual.NombreCompleto;
         }
@@ -146,7 +201,7 @@ namespace CapaPresentacion
 
         private void menuPermisosUsuarios_Click(object sender, EventArgs e)
         {
-            abrirFormulario(menuSeguridad, new frmPermisoUsuario());
+            abrirFormulario(menuSeguridad, new frmPermisoUsuario(_usuarioActual));
         }
 
         private void menuClientes_Click(object sender, EventArgs e)

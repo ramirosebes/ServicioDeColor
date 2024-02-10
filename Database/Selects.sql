@@ -1,5 +1,3 @@
-use DB_SDC;
-
 select * from Componente;
 select * from Permiso;
 select * from GrupoPermiso;

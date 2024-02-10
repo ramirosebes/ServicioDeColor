@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNegocio));
             this.menu = new System.Windows.Forms.MenuStrip();
-            this.menuEditarNegocio = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEditarDatosNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.panelLista = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
             this.panelContenido = new System.Windows.Forms.Panel();
@@ -56,24 +56,24 @@
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuEditarNegocio});
+            this.menuEditarDatosNegocio});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(1484, 34);
             this.menu.TabIndex = 93;
             this.menu.Text = "menuStrip1";
             // 
-            // menuEditarNegocio
+            // menuEditarDatosNegocio
             // 
-            this.menuEditarNegocio.AutoSize = false;
-            this.menuEditarNegocio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuEditarNegocio.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuEditarNegocio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuEditarNegocio.Name = "menuEditarNegocio";
-            this.menuEditarNegocio.Size = new System.Drawing.Size(60, 30);
-            this.menuEditarNegocio.Text = "Editar";
-            this.menuEditarNegocio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuEditarNegocio.Click += new System.EventHandler(this.menuEditarNegocio_Click);
+            this.menuEditarDatosNegocio.AutoSize = false;
+            this.menuEditarDatosNegocio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuEditarDatosNegocio.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuEditarDatosNegocio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuEditarDatosNegocio.Name = "menuEditarDatosNegocio";
+            this.menuEditarDatosNegocio.Size = new System.Drawing.Size(60, 30);
+            this.menuEditarDatosNegocio.Text = "Editar";
+            this.menuEditarDatosNegocio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuEditarDatosNegocio.Click += new System.EventHandler(this.menuEditarNegocio_Click);
             // 
             // panelLista
             // 
@@ -279,7 +279,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menu;
-        private System.Windows.Forms.ToolStripMenuItem menuEditarNegocio;
+        private System.Windows.Forms.ToolStripMenuItem menuEditarDatosNegocio;
         private System.Windows.Forms.Panel panelLista;
         private System.Windows.Forms.Label labelSubTitulo;
         private System.Windows.Forms.Panel panelContenido;

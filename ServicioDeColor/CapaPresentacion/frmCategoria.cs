@@ -39,19 +39,20 @@ namespace CapaPresentacion
             comboBoxBusqueda.ValueMember = "Valor";
 
             //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
-            //foreach (ToolStripMenuItem menu in menu.Items)
-            //{
-            //    bool encontrado = _usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
+            foreach (ToolStripMenuItem menu in menu.Items)
+            {
+                bool encontrado = _usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
 
-            //    if (encontrado)
-            //    {
-            //        menu.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menu.Visible = false;
-            //    }
-            //}
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+
             menuVerDetalleCategoria.Visible = true;
 
             buttonActualizar_Click(sender, e);

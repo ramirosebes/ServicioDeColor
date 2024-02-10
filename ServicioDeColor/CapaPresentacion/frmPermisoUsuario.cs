@@ -17,8 +17,11 @@ namespace CapaPresentacion
     public partial class frmPermisoUsuario : Form
     {
         private CC_Usuario oCC_Usuario = new CC_Usuario();
-        public frmPermisoUsuario()
+        private Usuario _usuarioActual;
+
+        public frmPermisoUsuario(Usuario oUsuario)
         {
+            _usuarioActual = oUsuario;
             InitializeComponent();
         }
 
@@ -37,6 +40,22 @@ namespace CapaPresentacion
             comboBoxBusqueda.ValueMember = "Valor";
 
             buttonActualizar_Click(sender, e);
+
+            //MODULO DE SEGURIDAD
+            foreach (ToolStripMenuItem menu in menu.Items)
+            {
+                bool encontrado = _usuarioActual.GetPermisos().Any(p => p.NombreMenu == menu.Name);
+
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+            menuVerPermisosUsuario.Visible = true;
         }
 
         private void AbrirModal(string tipoModal, int idUsuario)

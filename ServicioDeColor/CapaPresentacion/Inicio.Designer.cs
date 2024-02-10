@@ -43,12 +43,12 @@
             this.menuPermisosUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.pedidosDeVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuPedidosVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCategorias = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenesDeComprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuOrdenesCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReportesCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menuReportesVentas = new System.Windows.Forms.ToolStripMenuItem();
@@ -150,7 +150,7 @@
             // menuUsuarios
             // 
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(180, 28);
+            this.menuUsuarios.Size = new System.Drawing.Size(137, 28);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -161,7 +161,7 @@
             this.menuGruposPermisos,
             this.menuPermisosUsuarios});
             this.menuPermisos.Name = "menuPermisos";
-            this.menuPermisos.Size = new System.Drawing.Size(180, 28);
+            this.menuPermisos.Size = new System.Drawing.Size(137, 28);
             this.menuPermisos.Text = "Permisos";
             // 
             // menuPermisosSimples
@@ -190,7 +190,7 @@
             this.menuVentas.BackColor = System.Drawing.SystemColors.Window;
             this.menuVentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuClientes,
-            this.pedidosDeVentasToolStripMenuItem});
+            this.menuPedidosVentas});
             this.menuVentas.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuVentas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuVentas.Name = "menuVentas";
@@ -205,12 +205,12 @@
             this.menuClientes.Text = "Clientes";
             this.menuClientes.Click += new System.EventHandler(this.menuClientes_Click);
             // 
-            // pedidosDeVentasToolStripMenuItem
+            // menuPedidosVentas
             // 
-            this.pedidosDeVentasToolStripMenuItem.Name = "pedidosDeVentasToolStripMenuItem";
-            this.pedidosDeVentasToolStripMenuItem.Size = new System.Drawing.Size(193, 28);
-            this.pedidosDeVentasToolStripMenuItem.Text = "Pedidos de ventas";
-            this.pedidosDeVentasToolStripMenuItem.Click += new System.EventHandler(this.pedidosDeVentasToolStripMenuItem_Click);
+            this.menuPedidosVentas.Name = "menuPedidosVentas";
+            this.menuPedidosVentas.Size = new System.Drawing.Size(193, 28);
+            this.menuPedidosVentas.Text = "Pedidos de ventas";
+            this.menuPedidosVentas.Click += new System.EventHandler(this.pedidosDeVentasToolStripMenuItem_Click);
             // 
             // menuCompras
             // 
@@ -219,7 +219,7 @@
             this.menuCategorias,
             this.menuProductos,
             this.proveedoresToolStripMenuItem,
-            this.ordenesDeComprasToolStripMenuItem});
+            this.menuOrdenesCompras});
             this.menuCompras.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuCompras.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuCompras.Name = "menuCompras";
@@ -248,12 +248,12 @@
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
-            // ordenesDeComprasToolStripMenuItem
+            // menuOrdenesCompras
             // 
-            this.ordenesDeComprasToolStripMenuItem.Name = "ordenesDeComprasToolStripMenuItem";
-            this.ordenesDeComprasToolStripMenuItem.Size = new System.Drawing.Size(210, 28);
-            this.ordenesDeComprasToolStripMenuItem.Text = "Ordenes de compras";
-            this.ordenesDeComprasToolStripMenuItem.Click += new System.EventHandler(this.ordenesDeComprasToolStripMenuItem_Click);
+            this.menuOrdenesCompras.Name = "menuOrdenesCompras";
+            this.menuOrdenesCompras.Size = new System.Drawing.Size(210, 28);
+            this.menuOrdenesCompras.Text = "Ordenes de compras";
+            this.menuOrdenesCompras.Click += new System.EventHandler(this.ordenesDeComprasToolStripMenuItem_Click);
             // 
             // menuReportes
             // 
@@ -361,8 +361,8 @@
         private System.Windows.Forms.ToolStripMenuItem menuProductos;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuDatosNegocio;
-        private System.Windows.Forms.ToolStripMenuItem ordenesDeComprasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pedidosDeVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuOrdenesCompras;
+        private System.Windows.Forms.ToolStripMenuItem menuPedidosVentas;
         private System.Windows.Forms.ToolStripMenuItem menuReportesCompras;
         private System.Windows.Forms.ToolStripMenuItem menuReportesVentas;
     }
