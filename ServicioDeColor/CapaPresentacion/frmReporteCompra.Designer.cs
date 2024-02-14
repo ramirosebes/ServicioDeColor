@@ -71,6 +71,7 @@
             // 
             // buttonDescarcarExcel
             // 
+            this.buttonDescarcarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDescarcarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.buttonDescarcarExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDescarcarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -86,6 +87,8 @@
             // 
             // comboBoxBusqueda
             // 
+            this.comboBoxBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.comboBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBusqueda.FormattingEnabled = true;
             this.comboBoxBusqueda.Location = new System.Drawing.Point(83, 46);
@@ -105,6 +108,8 @@
             // 
             // buttonLimpiarBuscador
             // 
+            this.buttonLimpiarBuscador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonLimpiarBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.buttonLimpiarBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -122,6 +127,8 @@
             // 
             // textBoxBusqueda
             // 
+            this.textBoxBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxBusqueda.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -133,6 +140,8 @@
             // 
             // buttonBuscar
             // 
+            this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -150,6 +159,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.comboBoxBusqueda);
             this.panel1.Controls.Add(this.label2);
@@ -164,6 +175,8 @@
             // 
             // labelBuscarPor
             // 
+            this.labelBuscarPor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelBuscarPor.AutoSize = true;
             this.labelBuscarPor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelBuscarPor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,6 +191,9 @@
             // 
             this.dataGridViewData.AllowUserToAddRows = false;
             this.dataGridViewData.AllowUserToDeleteRows = false;
+            this.dataGridViewData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F);
@@ -302,6 +318,8 @@
             // 
             // comboBoxProveedor
             // 
+            this.comboBoxProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProveedor.FormattingEnabled = true;
             this.comboBoxProveedor.Location = new System.Drawing.Point(1095, 32);
@@ -311,6 +329,8 @@
             // 
             // buttonBuscarResultado
             // 
+            this.buttonBuscarResultado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBuscarResultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.buttonBuscarResultado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonBuscarResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -328,6 +348,8 @@
             // 
             // labelProveedor
             // 
+            this.labelProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelProveedor.AutoSize = true;
             this.labelProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -340,6 +362,8 @@
             // 
             // labelFechaFin
             // 
+            this.labelFechaFin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFechaFin.AutoSize = true;
             this.labelFechaFin.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelFechaFin.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -352,6 +376,8 @@
             // 
             // dateTimePickerFechaFin
             // 
+            this.dateTimePickerFechaFin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerFechaFin.CustomFormat = "";
             this.dateTimePickerFechaFin.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -362,6 +388,8 @@
             // 
             // labelFechaInicio
             // 
+            this.labelFechaInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelFechaInicio.AutoSize = true;
             this.labelFechaInicio.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelFechaInicio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,6 +402,8 @@
             // 
             // labelTitulo
             // 
+            this.labelTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelTitulo.AutoSize = true;
             this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.Location = new System.Drawing.Point(10, 20);
@@ -384,6 +414,8 @@
             // 
             // dateTimePickerFechaInicio
             // 
+            this.dateTimePickerFechaInicio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePickerFechaInicio.CustomFormat = "";
             this.dateTimePickerFechaInicio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -394,6 +426,8 @@
             // 
             // panelReporteCompras
             // 
+            this.panelReporteCompras.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelReporteCompras.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelReporteCompras.Controls.Add(this.buttonLimpiarProveedor);
             this.panelReporteCompras.Controls.Add(this.comboBoxProveedor);
@@ -411,6 +445,8 @@
             // 
             // buttonLimpiarProveedor
             // 
+            this.buttonLimpiarProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonLimpiarProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.buttonLimpiarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLimpiarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

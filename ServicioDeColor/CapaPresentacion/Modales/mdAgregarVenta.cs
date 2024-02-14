@@ -439,7 +439,7 @@ namespace CapaPresentacion.Modales
                 return;
             }
 
-            if (Convert.ToDecimal(textBoxPagaCon.Text.Trim()) < Convert.ToDecimal(textBoxSubTotal.Text.Trim()))
+            if (Convert.ToDecimal(textBoxPagaCon.Text.Trim()) < Convert.ToDecimal(textBoxTotal.Text.Trim()))
             {
                 MessageBox.Show("Fondos insuficientes", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -506,6 +506,7 @@ namespace CapaPresentacion.Modales
                 CalcularSubTotal();
                 textBoxPagaCon.Clear();
                 textBoxCambio.Clear();
+                comboBoxDescuento.SelectedIndex = 0;
             }
             else
             {

@@ -77,6 +77,8 @@
             // 
             // panelLista
             // 
+            this.panelLista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelLista.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelLista.Controls.Add(this.labelSubTitulo);
             this.panelLista.Location = new System.Drawing.Point(12, 37);
@@ -86,6 +88,8 @@
             // 
             // labelSubTitulo
             // 
+            this.labelSubTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelSubTitulo.AutoSize = true;
             this.labelSubTitulo.BackColor = System.Drawing.SystemColors.Window;
             this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -97,6 +101,8 @@
             // 
             // panelContenido
             // 
+            this.panelContenido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panelContenido.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelContenido.Controls.Add(this.buttonActualizar);
             this.panelContenido.Controls.Add(this.labelDireccion);

@@ -60,6 +60,7 @@
             // 
             // buttonCerrarSesion
             // 
+            this.buttonCerrarSesion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.buttonCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCerrarSesion.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
@@ -76,11 +77,12 @@
             // 
             // labelUsuario
             // 
+            this.labelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUsuario.Location = new System.Drawing.Point(249, 23);
+            this.labelUsuario.Location = new System.Drawing.Point(1349, 26);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(77, 19);
             this.labelUsuario.TabIndex = 90;
@@ -88,11 +90,13 @@
             // 
             // labelUsuarioTitulo
             // 
+            this.labelUsuarioTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelUsuarioTitulo.AutoSize = true;
             this.labelUsuarioTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelUsuarioTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuarioTitulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUsuarioTitulo.Location = new System.Drawing.Point(201, 23);
+            this.labelUsuarioTitulo.Location = new System.Drawing.Point(1301, 26);
             this.labelUsuarioTitulo.Name = "labelUsuarioTitulo";
             this.labelUsuarioTitulo.Size = new System.Drawing.Size(53, 19);
             this.labelUsuarioTitulo.TabIndex = 89;
@@ -325,7 +329,7 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1150, 500);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
