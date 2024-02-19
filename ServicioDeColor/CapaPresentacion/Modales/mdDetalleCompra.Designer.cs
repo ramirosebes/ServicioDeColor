@@ -389,6 +389,8 @@
             this.Controls.Add(this.panelDetalleCompra);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(875, 642);
+            this.MinimumSize = new System.Drawing.Size(875, 642);
             this.Name = "mdDetalleCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle compra";

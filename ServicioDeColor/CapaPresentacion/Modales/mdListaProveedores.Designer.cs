@@ -210,6 +210,9 @@
             this.Controls.Add(this.panelProveedor);
             this.Controls.Add(this.dataGridViewData);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(582, 542);
+            this.MinimumSize = new System.Drawing.Size(582, 542);
             this.Name = "mdListaProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista proveedores";

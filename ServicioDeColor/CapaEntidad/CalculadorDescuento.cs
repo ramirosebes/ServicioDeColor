@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class CalculadorDescuento : Descuento
+    public class CalculadorDescuento
     {
         private Descuento _descuento;
 

@@ -644,6 +644,9 @@
             this.ClientSize = new System.Drawing.Size(859, 653);
             this.Controls.Add(this.panelContenedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(875, 692);
+            this.MinimumSize = new System.Drawing.Size(875, 692);
             this.Name = "mdAgregarVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar venta";

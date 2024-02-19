@@ -10,7 +10,6 @@ namespace CapaEntidad
     {
         #region Variables Privadas
         private int idProveedor;
-        private string nombreCompleto;
         private string cuit;
         private string razonSocial;
         private string correo;

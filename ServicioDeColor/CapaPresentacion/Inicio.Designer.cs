@@ -82,7 +82,7 @@
             this.labelUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUsuario.Location = new System.Drawing.Point(1349, 26);
+            this.labelUsuario.Location = new System.Drawing.Point(1296, 26);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(77, 19);
             this.labelUsuario.TabIndex = 90;
@@ -96,7 +96,7 @@
             this.labelUsuarioTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelUsuarioTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuarioTitulo.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelUsuarioTitulo.Location = new System.Drawing.Point(1301, 26);
+            this.labelUsuarioTitulo.Location = new System.Drawing.Point(1248, 26);
             this.labelUsuarioTitulo.Name = "labelUsuarioTitulo";
             this.labelUsuarioTitulo.Size = new System.Drawing.Size(53, 19);
             this.labelUsuarioTitulo.TabIndex = 89;
@@ -154,7 +154,7 @@
             // menuUsuarios
             // 
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(137, 28);
+            this.menuUsuarios.Size = new System.Drawing.Size(180, 28);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -165,7 +165,7 @@
             this.menuGruposPermisos,
             this.menuPermisosUsuarios});
             this.menuPermisos.Name = "menuPermisos";
-            this.menuPermisos.Size = new System.Drawing.Size(137, 28);
+            this.menuPermisos.Size = new System.Drawing.Size(180, 28);
             this.menuPermisos.Text = "Permisos";
             // 
             // menuPermisosSimples

@@ -298,6 +298,8 @@
             this.Controls.Add(this.paneTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 433);
+            this.MinimumSize = new System.Drawing.Size(500, 433);
             this.Name = "mdDetalleProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle proveedor";

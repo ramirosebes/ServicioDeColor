@@ -24,11 +24,11 @@ namespace CapaControladora
             }
         }
 
-        public int AgregarCategoria(Categoria oCategoria, out string Mensaje)
+        public int AgregarCategoria(Categoria oCategoria, out string mensaje)
         {
             try
             {
-                return oCD_Categoria.AgregarCategoria(oCategoria, out Mensaje);
+                return oCD_Categoria.AgregarCategoria(oCategoria, out mensaje);
             }
             catch (Exception ex)
             {
@@ -36,11 +36,11 @@ namespace CapaControladora
             }
         }
 
-        public bool EditarCategoria(Categoria oCategoria, out string Mensaje)
+        public bool EditarCategoria(Categoria oCategoria, out string mensaje)
         {
             try
             {
-                return oCD_Categoria.EditarCategoria(oCategoria, out Mensaje);
+                return oCD_Categoria.EditarCategoria(oCategoria, out mensaje);
             }
             catch (Exception ex)
             {
@@ -48,11 +48,11 @@ namespace CapaControladora
             }
         }
 
-        public bool EliminarCategoria(int idCategoria, out string Mensaje)
+        public bool EliminarCategoria(int idCategoria, out string mensaje)
         {
             try
             {
-                return oCD_Categoria.EliminarCategoria(idCategoria, out Mensaje);
+                return oCD_Categoria.EliminarCategoria(idCategoria, out mensaje);
             }
             catch (Exception ex)
             {

@@ -22,19 +22,19 @@ namespace CapaPresentacion
         public Inicio(Usuario oUsuario = null)
         {
             //Para testear el sistema sin loguearse
-            if (oUsuario == null)
-            {
-                _usuarioActual = new Usuario() { NombreCompleto = "Admin", IdUsuario = 1 };
-                _usuarioActual.SetPermisos(new CC_Permiso().ListarPermisosPorId(_usuarioActual.IdUsuario));
-            }
-            else
-            {
-                _usuarioActual = oUsuario;
-            }
+            //if (oUsuario == null)
+            //{
+            //    _usuarioActual = new Usuario() { NombreCompleto = "Admin", IdUsuario = 1 };
+            //    _usuarioActual.SetPermisos(new CC_Permiso().ListarPermisosPorId(_usuarioActual.IdUsuario));
+            //}
+            //else
+            //{
+            //    _usuarioActual = oUsuario;
+            //}
 
             //Para ingresar logueandose
-            //_usuarioActual = oUsuario;
-            //_usuarioActual.SetPermisos(new CC_Permiso().ListarPermisosPorId(_usuarioActual.IdUsuario));
+            _usuarioActual = oUsuario;
+            _usuarioActual.SetPermisos(new CC_Permiso().ListarPermisosPorId(_usuarioActual.IdUsuario));
             ////_usuarioActual.SetPermisos(new CC_Permiso().ListarPermisos(_usuarioActual.IdUsuario)); //Esta no
 
             InitializeComponent();

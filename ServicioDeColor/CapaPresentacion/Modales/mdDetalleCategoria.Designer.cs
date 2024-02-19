@@ -184,6 +184,8 @@
             this.Controls.Add(this.paneTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 308);
+            this.MinimumSize = new System.Drawing.Size(500, 308);
             this.Name = "mdDetalleCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle categoria";

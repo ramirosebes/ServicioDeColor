@@ -55,16 +55,16 @@ namespace CapaControladora
                 return oCD_Venta.SumarStock(idProducto, cantidad);
             }
             catch (Exception ex)
-            {
+            { 
                 throw new Exception(ex.Message);
             }
         }
 
-        public bool AgregarVenta(Venta oVenta, DataTable oDetalleVenta, out string Mensaje)
+        public bool AgregarVenta(Venta oVenta, DataTable oDetalleVenta, out string mensaje)
         {
             try
             {
-                return oCD_Venta.AgregarVenta(oVenta, oDetalleVenta, out Mensaje);
+                return oCD_Venta.AgregarVenta(oVenta, oDetalleVenta, out mensaje);
             }
             catch (Exception ex)
             {
