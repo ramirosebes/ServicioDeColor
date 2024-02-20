@@ -547,5 +547,47 @@ namespace CapaPresentacion.Modales
                 CalcularDescuento();
             }
         }
+
+        private void textBoxDocumentoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxNombreCompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verifica si la tecla presionada es una letra o una tecla de control
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es una letra ni una tecla de control, suprime la tecla presionada
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxDescuento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                // Permitir dígitos
+                e.Handled = false;
+            }
+            else if (e.KeyChar == '.' && textBoxDescuento.Text.Length > 0 && !textBoxDescuento.Text.Contains("."))
+            {
+                // Permitir un punto si hay al menos un número y no hay punto previamente
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                // Permitir teclas de control como retroceso
+                e.Handled = false;
+            }
+            else
+            {
+                // Bloquear cualquier otro carácter
+                e.Handled = true;
+            }
+        }
     }
 }

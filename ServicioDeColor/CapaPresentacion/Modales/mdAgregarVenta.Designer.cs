@@ -152,6 +152,7 @@
             this.textBoxDescuento.TabIndex = 15;
             this.textBoxDescuento.Text = "0.00";
             this.textBoxDescuento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDescuento_KeyDown);
+            this.textBoxDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDescuento_KeyPress);
             // 
             // label1
             // 
@@ -537,6 +538,7 @@
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
             this.textBoxNombreCompleto.Size = new System.Drawing.Size(200, 27);
             this.textBoxNombreCompleto.TabIndex = 5;
+            this.textBoxNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombreCompleto_KeyPress);
             // 
             // buttonBuscarCliente
             // 
@@ -559,6 +561,7 @@
             this.textBoxDocumentoCliente.Name = "textBoxDocumentoCliente";
             this.textBoxDocumentoCliente.Size = new System.Drawing.Size(150, 27);
             this.textBoxDocumentoCliente.TabIndex = 3;
+            this.textBoxDocumentoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDocumentoCliente_KeyPress);
             // 
             // labelNombreCompleto
             // 
@@ -605,6 +608,7 @@
             // 
             this.textBoxFecha.Location = new System.Drawing.Point(10, 45);
             this.textBoxFecha.Name = "textBoxFecha";
+            this.textBoxFecha.ReadOnly = true;
             this.textBoxFecha.Size = new System.Drawing.Size(150, 27);
             this.textBoxFecha.TabIndex = 1;
             // 

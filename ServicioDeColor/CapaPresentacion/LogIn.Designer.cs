@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSalir = new System.Windows.Forms.Button();
             this.buttonIngresar = new System.Windows.Forms.Button();
-            this.labelRecuperarContrasena = new System.Windows.Forms.Label();
             this.labelContrasena = new System.Windows.Forms.Label();
             this.textBoxClave = new System.Windows.Forms.TextBox();
             this.labelLineContrasena = new System.Windows.Forms.Label();
@@ -60,7 +59,7 @@
             this.buttonSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSalir.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSalir.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonSalir.Location = new System.Drawing.Point(105, 362);
+            this.buttonSalir.Location = new System.Drawing.Point(105, 327);
             this.buttonSalir.Name = "buttonSalir";
             this.buttonSalir.Size = new System.Drawing.Size(80, 35);
             this.buttonSalir.TabIndex = 4;
@@ -75,26 +74,13 @@
             this.buttonIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonIngresar.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonIngresar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonIngresar.Location = new System.Drawing.Point(70, 322);
+            this.buttonIngresar.Location = new System.Drawing.Point(70, 287);
             this.buttonIngresar.Name = "buttonIngresar";
             this.buttonIngresar.Size = new System.Drawing.Size(150, 35);
             this.buttonIngresar.TabIndex = 3;
             this.buttonIngresar.Text = "Ingresar";
             this.buttonIngresar.UseVisualStyleBackColor = false;
             this.buttonIngresar.Click += new System.EventHandler(this.buttonIngresar_Click);
-            // 
-            // labelRecuperarContrasena
-            // 
-            this.labelRecuperarContrasena.AutoSize = true;
-            this.labelRecuperarContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelRecuperarContrasena.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRecuperarContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelRecuperarContrasena.Location = new System.Drawing.Point(142, 263);
-            this.labelRecuperarContrasena.Name = "labelRecuperarContrasena";
-            this.labelRecuperarContrasena.Size = new System.Drawing.Size(128, 19);
-            this.labelRecuperarContrasena.TabIndex = 32;
-            this.labelRecuperarContrasena.Text = "Recuperar contraseña";
-            this.labelRecuperarContrasena.Visible = false;
             // 
             // labelContrasena
             // 
@@ -174,11 +160,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(284, 411);
+            this.ClientSize = new System.Drawing.Size(284, 400);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonSalir);
             this.Controls.Add(this.buttonIngresar);
-            this.Controls.Add(this.labelRecuperarContrasena);
             this.Controls.Add(this.labelContrasena);
             this.Controls.Add(this.textBoxClave);
             this.Controls.Add(this.labelLineContrasena);
@@ -203,7 +188,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSalir;
         private System.Windows.Forms.Button buttonIngresar;
-        private System.Windows.Forms.Label labelRecuperarContrasena;
         private System.Windows.Forms.Label labelContrasena;
         private System.Windows.Forms.TextBox textBoxClave;
         private System.Windows.Forms.Label labelLineContrasena;

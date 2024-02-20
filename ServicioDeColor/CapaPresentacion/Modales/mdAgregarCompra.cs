@@ -333,18 +333,50 @@ namespace CapaPresentacion.Modales
 
         private void buttonRegistrar_Click(object sender, EventArgs e)
         {
+            AgregarCompra();
+        }
+
+        private void AgregarCompra()
+        {
+            if (!ValidarProveedor())
+                return;
+
+            if (!ValidarProductosEnCompra())
+                return;
+
+            DataTable detalleCompra = CrearTablaDetalleCompra();
+
+            LlenarDetalleCompra(detalleCompra);
+
+            string numeroDocumento = ObtenerNumeroDocumento();
+
+            Compra oCompra = CrearCompra(numeroDocumento);
+
+            ProcesarCompra(oCompra, detalleCompra, numeroDocumento);
+        }
+
+        private bool ValidarProveedor()
+        {
             if (Convert.ToInt32(textBoxIdProveedor.Text) == 0)
             {
                 MessageBox.Show("Debe seleccionar un proveedor", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+                return false;
             }
+            return true;
+        }
 
+        private bool ValidarProductosEnCompra()
+        {
             if (dataGridViewData.Rows.Count < 1)
             {
                 MessageBox.Show("Debe ingresar productos en la compra", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+                return false;
             }
+            return true;
+        }
 
+        private DataTable CrearTablaDetalleCompra()
+        {
             DataTable detalleCompra = new DataTable();
 
             detalleCompra.Columns.Add("IdProducto", typeof(int));
@@ -353,58 +385,77 @@ namespace CapaPresentacion.Modales
             detalleCompra.Columns.Add("Cantidad", typeof(int));
             detalleCompra.Columns.Add("MontoTotal", typeof(decimal));
 
+            return detalleCompra;
+        }
+
+        private void LlenarDetalleCompra(DataTable detalleCompra)
+        {
             foreach (DataGridViewRow row in dataGridViewData.Rows)
             {
                 detalleCompra.Rows.Add(
                     new object[]
                     {
-                        Convert.ToInt32(row.Cells["IdProducto"].Value.ToString()), //No hace falta el Convert.ToInt32
-                        row.Cells["PrecioCompra"].Value.ToString(),
-                        row.Cells["PrecioVenta"].Value.ToString(),
-                        row.Cells["Cantidad"].Value.ToString(),
-                        row.Cells["SubTotal"].Value.ToString()
+                Convert.ToInt32(row.Cells["IdProducto"].Value.ToString()),
+                Convert.ToDecimal(row.Cells["PrecioCompra"].Value),
+                Convert.ToDecimal(row.Cells["PrecioVenta"].Value),
+                Convert.ToInt32(row.Cells["Cantidad"].Value),
+                Convert.ToDecimal(row.Cells["SubTotal"].Value)
                     });
             }
+        }
 
+        private string ObtenerNumeroDocumento()
+        {
             int idCorrelativo = new CC_Compra().ObtenerCorrelativo();
             string numeroDocumento = string.Format("{0:00000}", idCorrelativo);
+            return numeroDocumento;
+        }
 
-            //Hacer un listar personas
-            //Producto oProducto = new CC_Producto().ListarProductos().Where(p => p.Codigo == textBoxCodigoProducto.Text && p.Estado == true).FirstOrDefault();
-            //Usuario oUsuario = new CC_Usuario().ListarUsuarios().Where(u => u.IdUsuario == _usuarioActual.IdUsuario).FirstOrDefault();
-
-            Compra oCompra = new Compra()
+        private Compra CrearCompra(string numeroDocumento)
+        {
+            return new Compra()
             {
                 oUsuario = new Usuario() { IdUsuario = _usuarioActual.IdUsuario, NombreCompleto = _usuarioActual.NombreCompleto, Correo = _usuarioActual.Correo, Documento = _usuarioActual.Documento },
-                //oPersona = new Persona() { IdPersona = _usuarioActual.IdPersona, NombreCompleto = _usuarioActual.NombreCompleto, Correo = _usuarioActual.Correo, Documento = _usuarioActual.Documento },
                 oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(textBoxIdProveedor.Text) },
                 TipoDocumento = ((OpcionCombo)comboBoxTipoDocumento.SelectedItem).Texto,
                 NumeroDocumento = numeroDocumento,
                 MontoTotal = Convert.ToDecimal(textBoxTotalAPagar.Text)
             };
+        }
 
+        private void ProcesarCompra(Compra oCompra, DataTable detalleCompra, string numeroDocumento)
+        {
             string mensaje = string.Empty;
             bool respuesta = new CC_Compra().AgregarCompra(oCompra, detalleCompra, out mensaje);
 
             if (respuesta)
             {
-                var result = MessageBox.Show("Numero de compra generado:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
-                {
-                    Clipboard.SetText(numeroDocumento);
-                    this.Close(); //Agregado recientemente
-                }
-
-                textBoxIdProveedor.Text = "0";
-                textBoxDocumentoProveedor.Clear();
-                textBoxRazonSocial.Clear();
-                dataGridViewData.Rows.Clear();
+                MostrarConfirmacion(numeroDocumento);
+                LimpiarCampos();
                 calcularTotal();
             }
             else
             {
                 MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void MostrarConfirmacion(string numeroDocumento)
+        {
+            var result = MessageBox.Show("Numero de compra generado:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
+            {
+                Clipboard.SetText(numeroDocumento);
+                this.Close(); //Agregado recientemente
+            }
+        }
+
+        private void LimpiarCampos()
+        {
+            textBoxIdProveedor.Text = "0";
+            textBoxDocumentoProveedor.Clear();
+            textBoxRazonSocial.Clear();
+            dataGridViewData.Rows.Clear();
         }
     }
 }
