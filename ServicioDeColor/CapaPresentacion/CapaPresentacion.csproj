@@ -128,6 +128,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -316,6 +317,18 @@
     <Compile Include="Modales\mdDetalleVenta.Designer.cs">
       <DependentUpon>mdDetalleVenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modales\mdGraficoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdGraficoCompra.Designer.cs">
+      <DependentUpon>mdGraficoCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modales\mdGraficoVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdGraficoVenta.Designer.cs">
+      <DependentUpon>mdGraficoVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modales\mdListaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -424,6 +437,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetalleVenta.resx">
       <DependentUpon>mdDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdGraficoCompra.resx">
+      <DependentUpon>mdGraficoCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdGraficoVenta.resx">
+      <DependentUpon>mdGraficoVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdListaClientes.resx">
       <DependentUpon>mdListaClientes.cs</DependentUpon>

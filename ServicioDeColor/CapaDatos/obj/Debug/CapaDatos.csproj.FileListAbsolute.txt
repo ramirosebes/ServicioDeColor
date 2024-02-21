@@ -4,7 +4,6 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\CapaD
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\CapaDatos.pdb
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\CapaEntidad.dll
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\CapaEntidad.pdb
-C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\CapaDatos.dll.config
@@ -27,3 +26,4 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\Syste
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\System.Memory.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date

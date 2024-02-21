@@ -65,7 +65,7 @@ namespace CapaPresentacion
             {
                 var resultado = modal.ShowDialog();
 
-                if (resultado == DialogResult.OK)
+                if (resultado == DialogResult.Yes || resultado == DialogResult.No)
                 {
                     buttonActualizar_Click(null, null);
                 }

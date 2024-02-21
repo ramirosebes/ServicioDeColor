@@ -6,7 +6,6 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaEntidad.dll
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaDatos.pdb
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaEntidad.pdb
-C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.csproj.CopyComplete
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.dll
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.pdb
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaControladora.dll.config
@@ -30,3 +29,4 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Memory.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaCont.29DC0580.Up2Date

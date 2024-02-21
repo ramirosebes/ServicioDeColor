@@ -15,7 +15,6 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debug\CapaControladora.pdb
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debug\CapaEntidad.pdb
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debug\CapaDatos.pdb
-C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuario.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleUsuario.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmPermisoUsuario.resources
@@ -73,3 +72,6 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdListaClientes.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteCompra.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmReporteVentas.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdGraficoCompra.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPres.61CA7C38.Up2Date
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdGraficoVenta.resources

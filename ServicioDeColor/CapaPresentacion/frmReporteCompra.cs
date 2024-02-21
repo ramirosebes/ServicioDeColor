@@ -1,6 +1,7 @@
 ﻿using CapaControladora;
 using CapaControladora;
 using CapaEntidad;
+using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 using ClosedXML.Excel;
 using System;
@@ -18,6 +19,7 @@ namespace CapaPresentacion
     public partial class frmReporteCompra : Form
     {
         private Usuario _usuarioActual;
+        private CC_Compra oCC_Compra = new CC_Compra();
 
         public frmReporteCompra(Usuario oUsuario)
         {
@@ -208,6 +210,37 @@ namespace CapaPresentacion
                     rc.Cantidad,
                     rc.SubTotal
                 });
+            }
+        }
+
+        private void buttonGrafico_Click(object sender, EventArgs e)
+        {
+            List<Compra> listaCompras = oCC_Compra.ListarCompras();
+
+            if (listaCompras.Count != 0)
+            {
+                List<Proveedor> listaProveedores;
+
+                if (comboBoxProveedor.SelectedIndex == 0)
+                {
+                    listaProveedores = new CC_Proveedor().ListarProveedores();
+                }
+                else
+                {
+                    int idProveedor = Convert.ToInt32(((OpcionCombo)comboBoxProveedor.SelectedItem).Valor.ToString());
+                    Proveedor proveedor = new CC_Proveedor().ListarProveedores().Where(p => p.IdProveedor == idProveedor).FirstOrDefault();
+                    listaProveedores = new List<Proveedor>() { proveedor };
+                }
+
+                using (var modal = new mdGraficoCompra(listaProveedores))
+                {
+                    var resultado = modal.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay compras registradas", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
     }

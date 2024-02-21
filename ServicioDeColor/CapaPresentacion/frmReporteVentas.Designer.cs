@@ -65,6 +65,7 @@
             this.montoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonGrafico = new System.Windows.Forms.Button();
             this.panelReporteCompras.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
@@ -326,6 +327,7 @@
             this.buttonDescarcarExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDescarcarExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.buttonDescarcarExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDescarcarExcel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
             this.buttonDescarcarExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDescarcarExcel.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDescarcarExcel.ForeColor = System.Drawing.SystemColors.Window;
@@ -473,11 +475,28 @@
             this.MontoTotal.Name = "MontoTotal";
             this.MontoTotal.ReadOnly = true;
             // 
+            // buttonGrafico
+            // 
+            this.buttonGrafico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGrafico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.buttonGrafico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.buttonGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGrafico.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGrafico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonGrafico.Location = new System.Drawing.Point(1241, 619);
+            this.buttonGrafico.Name = "buttonGrafico";
+            this.buttonGrafico.Size = new System.Drawing.Size(75, 30);
+            this.buttonGrafico.TabIndex = 97;
+            this.buttonGrafico.Text = "Gráfico";
+            this.buttonGrafico.UseVisualStyleBackColor = false;
+            this.buttonGrafico.Click += new System.EventHandler(this.buttonGrafico_Click);
+            // 
             // frmReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 661);
+            this.Controls.Add(this.buttonGrafico);
             this.Controls.Add(this.dataGridViewData);
             this.Controls.Add(this.panelReporteCompras);
             this.Controls.Add(this.panel1);
@@ -531,5 +550,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn montoDescuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoTotal;
+        private System.Windows.Forms.Button buttonGrafico;
     }
 }

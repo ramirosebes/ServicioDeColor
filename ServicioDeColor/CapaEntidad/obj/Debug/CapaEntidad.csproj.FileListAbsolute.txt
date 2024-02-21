@@ -23,4 +23,4 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\Sys
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Memory.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.csproj.CopyComplete
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\obj\Debug\CapaEnti.526B9C87.Up2Date

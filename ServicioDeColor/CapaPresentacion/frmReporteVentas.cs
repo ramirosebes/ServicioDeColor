@@ -1,5 +1,6 @@
 ﻿using CapaControladora;
 using CapaEntidad;
+using CapaPresentacion.Modales;
 using CapaPresentacion.Utilidades;
 using ClosedXML.Excel;
 using System;
@@ -17,6 +18,7 @@ namespace CapaPresentacion
     public partial class frmReporteVentas : Form
     {
         private Usuario _usuarioActual;
+        private CC_Venta oCC_Venta = new CC_Venta();
 
         public frmReporteVentas(Usuario oUsuario)
         {
@@ -206,6 +208,37 @@ namespace CapaPresentacion
                     rv.Cantidad,
                     rv.SubTotal
                 });
+            }
+        }
+
+        private void buttonGrafico_Click(object sender, EventArgs e)
+        {
+            List<Venta> listaVentas = oCC_Venta.ListarVentas();
+
+            if(listaVentas.Count != 0)
+            {
+                List<Cliente> listaClientes;
+
+                if (comboBoxCliente.SelectedIndex == 0)
+                {
+                    listaClientes = new CC_Cliente().ListarClientes();
+                }
+                else
+                {
+                    int idCliente = Convert.ToInt32(((OpcionCombo)comboBoxCliente.SelectedItem).Valor.ToString());
+                    Cliente cliente = new CC_Cliente().ListarClientes().Where(c => c.IdCliente == idCliente).FirstOrDefault();
+                    listaClientes = new List<Cliente>() { cliente };
+                }
+
+                using (var modal = new mdGraficoVenta(listaClientes))
+                {
+                    var resultado = modal.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay ventas registradas", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
             }
         }
     }
