@@ -29,13 +29,16 @@ namespace CapaPresentacion.Modales
         private void mdDetallePermisoSimple_Load(object sender, EventArgs e)
         {
             textBoxNombreMenu.Text = oPermiso.NombreMenu;
+            textBoxNombreMenu.Enabled = false;
             textBoxNombrePermiso.Text = oPermiso.Nombre;
+            textBoxNombrePermiso.Enabled = false;
 
             comboBoxEstado.Items.Add(new OpcionCombo(1, "Activo"));
             comboBoxEstado.Items.Add(new OpcionCombo(0, "Inactivo"));
             comboBoxEstado.SelectedIndex = 0;
             comboBoxEstado.DisplayMember = "Texto";
             comboBoxEstado.ValueMember = "Valor";
+            comboBoxEstado.Enabled = false;
         }
 
         private void buttonVolver_Click(object sender, EventArgs e)

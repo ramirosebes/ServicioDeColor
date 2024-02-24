@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacion.Utilidades;
+using System.Text.RegularExpressions;
 
 namespace CapaPresentacion.Modales
 {
@@ -42,6 +43,11 @@ namespace CapaPresentacion.Modales
                     MessageBox.Show("Debe completar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+            }
+            if (!Validaciones.ValidarCamposVacios(panelClave.Controls))
+            {
+                MessageBox.Show("Debe completar todos los campos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             if (panelClave.Visible == true)
             {
@@ -175,6 +181,13 @@ namespace CapaPresentacion.Modales
                     break;
                 }
             }
+
+            panelButtons.Size = new Size(460, 54);
+            panelButtons.Location = new Point(12, 259);
+            buttonVolver.Location = new Point(190, 13);
+            this.Size = new Size(500, 360);
+            this.MinimumSize = new Size(500, 360);
+            this.MaximumSize = new Size(500, 360);
         }
         private void ConfigurarAgregar()
         {
@@ -201,6 +214,11 @@ namespace CapaPresentacion.Modales
                     break;
                 }
             }
+
+            this.Size = new Size(500, 400);
+            this.MinimumSize = new Size(500, 400);
+            this.MaximumSize = new Size(500, 400);
+            panelButtons.Location = new Point(12, 259);
         }
         private void ConfigurarRestablecerClave()
         {
@@ -209,20 +227,28 @@ namespace CapaPresentacion.Modales
 
             panelClave.Visible = true;
             buttonConfirmar.Text = "Restablecer Clave";
-            panelClave.BringToFront();
-            panelClave.Location = new Point(13, 160);
-            buttonConfirmar.BringToFront();
+            panelContenedor.Visible = false;
 
-            textBoxNombreCompleto.Visible = false;
-            textBoxCorreo.Visible = false;
-            textBoxDocumento.Visible = false;
-            comboBoxEstado.Visible = false;
-            labelNombreCompleto.Visible = false;
-            labelDocumento.Visible = false;
-            labelCorreo.Visible = false;
-            labelEstado.Visible = false;
+            //panelClave.BringToFront();
+            //panelClave.Location = new Point(13, 160);
+            //buttonConfirmar.BringToFront();
 
-            buttonConfirmar.Text = "Restablecer Contraseña";
+            //textBoxNombreCompleto.Visible = false;
+            //textBoxCorreo.Visible = false;
+            //textBoxDocumento.Visible = false;
+            //comboBoxEstado.Visible = false;
+            //labelNombreCompleto.Visible = false;
+            //labelDocumento.Visible = false;
+            //labelCorreo.Visible = false;
+            //labelEstado.Visible = false;
+
+            buttonConfirmar.Text = "Restablecer clave";
+
+            this.Size = new Size(500, 330);
+            this.MinimumSize = new Size(500, 330);
+            this.MaximumSize = new Size(500, 330);
+            panelClave.Location = new Point(12, 107);
+            panelButtons.Location = new Point(12, 189);
         }
 
         private void buttonVolver_Click(object sender, EventArgs e)
@@ -247,13 +273,44 @@ namespace CapaPresentacion.Modales
 
         private void textBoxDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+{
+                e.Handled = true;
             }
-            else
+        }
+
+        private void textBoxNombreCompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
             {
                 e.Handled = true;
+            }
+        }
+
+        private void textBoxCorreo_Leave(object sender, EventArgs e)
+        {
+            // Expresión regular para validar la dirección de correo electrónico
+            string pattern = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            // Se verifica si el texto del TextBox coincide con el patrón de la expresión regular
+            if (!Regex.IsMatch(textBoxCorreo.Text, pattern))
+            {
+                MessageBox.Show("El correo electronico no tiene un formato valido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxCorreo.Focus(); // Devolver el foco al TextBox
+                textBoxCorreo.SelectAll(); // Seleccionar todo el texto para facilitar la corrección
+            }
+        }
+
+        private void textBoxDocumento_Leave(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            // Verificar la longitud del texto
+            if (textBox.Text.Length < 7 || textBox.Text.Length > 8)
+            {
+                MessageBox.Show("El documento no tiene un formato valido\n" + "Debe tener entre 7 y 8 digitos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox.Focus(); // Devolver el foco al TextBox
+                textBox.SelectAll(); // Seleccionar todo el texto para facilitar la corrección
             }
         }
     }

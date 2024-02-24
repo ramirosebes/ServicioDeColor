@@ -72,6 +72,7 @@ namespace CapaPresentacion
                         buttonActualizar_Click(null, null);
                     }
                 }
+                buttonActualizar_Click(sender, e);
             }
             else
             {
@@ -90,6 +91,7 @@ namespace CapaPresentacion
                     buttonActualizar_Click(null, null);
                 }
             }
+            buttonActualizar_Click(sender, e);
         }
 
         private void menuEliminarVenta_Click(object sender, EventArgs e)

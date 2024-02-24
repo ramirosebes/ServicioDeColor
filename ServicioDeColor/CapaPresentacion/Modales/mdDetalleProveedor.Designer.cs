@@ -149,6 +149,7 @@
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
             this.textBoxCorreo.TabIndex = 3;
+            this.textBoxCorreo.Leave += new System.EventHandler(this.textBoxCorreo_Leave);
             // 
             // label2
             // 
@@ -181,6 +182,7 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefono.TabIndex = 4;
+            this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             // 
             // labelLineCorreo
             // 
@@ -245,6 +247,8 @@
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(200, 20);
             this.textBoxCUIT.TabIndex = 1;
+            this.textBoxCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCUIT_KeyPress);
+            this.textBoxCUIT.Leave += new System.EventHandler(this.textBoxCUIT_Leave);
             // 
             // labelLineDocumento
             // 

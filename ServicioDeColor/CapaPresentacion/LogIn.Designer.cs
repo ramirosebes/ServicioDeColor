@@ -103,6 +103,7 @@
             this.textBoxClave.PasswordChar = '*';
             this.textBoxClave.Size = new System.Drawing.Size(250, 20);
             this.textBoxClave.TabIndex = 2;
+            this.textBoxClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxClave_KeyDown);
             // 
             // labelLineContrasena
             // 
@@ -177,7 +178,6 @@
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogIn";
-            this.Load += new System.EventHandler(this.LogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

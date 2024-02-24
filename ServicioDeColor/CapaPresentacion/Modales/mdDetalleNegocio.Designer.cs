@@ -116,7 +116,7 @@
             // 
             this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxDireccion.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxDireccion.Location = new System.Drawing.Point(18, 437);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(425, 20);
@@ -148,11 +148,13 @@
             // 
             this.textBoxCUIT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCUIT.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCUIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxCUIT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxCUIT.Location = new System.Drawing.Point(18, 355);
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(425, 20);
             this.textBoxCUIT.TabIndex = 3;
+            this.textBoxCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCUIT_KeyPress);
+            this.textBoxCUIT.Leave += new System.EventHandler(this.textBoxCUIT_Leave);
             // 
             // labelLineRUC
             // 
@@ -180,7 +182,7 @@
             // 
             this.textBoxNombreNegocio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombreNegocio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombreNegocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxNombreNegocio.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxNombreNegocio.Location = new System.Drawing.Point(18, 283);
             this.textBoxNombreNegocio.Name = "textBoxNombreNegocio";
             this.textBoxNombreNegocio.Size = new System.Drawing.Size(425, 20);

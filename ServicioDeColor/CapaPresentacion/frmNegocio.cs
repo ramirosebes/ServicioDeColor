@@ -48,8 +48,14 @@ namespace CapaPresentacion
 
         private void menuEditarNegocio_Click(object sender, EventArgs e)
         {
-            mdDetalleNegocio frm = new mdDetalleNegocio(idNegocio);
-            frm.ShowDialog();
+            //mdDetalleNegocio frm = new mdDetalleNegocio(idNegocio);
+            //frm.ShowDialog();
+
+            using (var modal = new mdDetalleNegocio(idNegocio))
+            {
+                var resultado = modal.ShowDialog();
+            }
+            buttonActualizar_Click(null, null);
         }
 
         public Image ByteToImage(byte[] imageBytes)

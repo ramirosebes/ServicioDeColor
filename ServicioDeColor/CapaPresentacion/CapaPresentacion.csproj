@@ -432,7 +432,13 @@
     <EmbeddedResource Include="Modales\mdDetalleProveedor.resx">
       <DependentUpon>mdDetalleProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdDetalleUsuario.es.resx">
+      <DependentUpon>mdDetalleUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetalleUsuario.resx">
+      <DependentUpon>mdDetalleUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdDetalleUsuario.ssy.resx">
       <DependentUpon>mdDetalleUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetalleVenta.resx">

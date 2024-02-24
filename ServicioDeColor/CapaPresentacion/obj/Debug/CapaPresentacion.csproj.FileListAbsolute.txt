@@ -75,3 +75,9 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdGraficoCompra.resources
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPres.61CA7C38.Up2Date
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdGraficoVenta.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debug\ssy\CapaPresentacion.resources.dll
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleUsuario.ssy.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\ssy\CapaPresentacion.resources.dll
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\bin\Debug\es\CapaPresentacion.resources.dll
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleUsuario.es.resources
+C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\es\CapaPresentacion.resources.dll

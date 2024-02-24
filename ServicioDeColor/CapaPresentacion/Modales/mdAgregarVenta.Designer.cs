@@ -439,6 +439,7 @@
             // 
             this.textBoxPrecio.Location = new System.Drawing.Point(413, 45);
             this.textBoxPrecio.Name = "textBoxPrecio";
+            this.textBoxPrecio.ReadOnly = true;
             this.textBoxPrecio.Size = new System.Drawing.Size(100, 27);
             this.textBoxPrecio.TabIndex = 9;
             this.textBoxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecio_KeyPress);
@@ -479,6 +480,7 @@
             // 
             this.textBoxProducto.Location = new System.Drawing.Point(207, 45);
             this.textBoxProducto.Name = "textBoxProducto";
+            this.textBoxProducto.ReadOnly = true;
             this.textBoxProducto.Size = new System.Drawing.Size(200, 27);
             this.textBoxProducto.TabIndex = 8;
             // 
@@ -497,6 +499,7 @@
             this.textBoxCodigoProducto.Name = "textBoxCodigoProducto";
             this.textBoxCodigoProducto.Size = new System.Drawing.Size(150, 27);
             this.textBoxCodigoProducto.TabIndex = 6;
+            this.textBoxCodigoProducto.TextChanged += new System.EventHandler(this.textBoxCodigoProducto_TextChanged);
             this.textBoxCodigoProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCodigoProducto_KeyDown);
             // 
             // label2
@@ -536,6 +539,7 @@
             // 
             this.textBoxNombreCompleto.Location = new System.Drawing.Point(207, 45);
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
+            this.textBoxNombreCompleto.ReadOnly = true;
             this.textBoxNombreCompleto.Size = new System.Drawing.Size(200, 27);
             this.textBoxNombreCompleto.TabIndex = 5;
             this.textBoxNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombreCompleto_KeyPress);
@@ -561,6 +565,8 @@
             this.textBoxDocumentoCliente.Name = "textBoxDocumentoCliente";
             this.textBoxDocumentoCliente.Size = new System.Drawing.Size(150, 27);
             this.textBoxDocumentoCliente.TabIndex = 3;
+            this.textBoxDocumentoCliente.TextChanged += new System.EventHandler(this.textBoxDocumentoCliente_TextChanged);
+            this.textBoxDocumentoCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDocumentoCliente_KeyDown);
             this.textBoxDocumentoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDocumentoCliente_KeyPress);
             // 
             // labelNombreCompleto

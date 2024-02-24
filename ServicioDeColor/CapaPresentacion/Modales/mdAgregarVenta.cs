@@ -86,6 +86,7 @@ namespace CapaPresentacion.Modales
                     textBoxPrecio.Text = modal._Producto.PrecioVenta.ToString("0.00");
                     textBoxStock.Text = modal._Producto.Stock.ToString();
                     numericUpDownCantidad.Select();
+                    textBoxCodigoProducto.BackColor = Color.FromArgb(255, 255, 255);
                 }
                 else
                 {
@@ -494,10 +495,16 @@ namespace CapaPresentacion.Modales
 
             if (respuesta)
             {
-                var result = MessageBox.Show("Numero de venta generado:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                //var result = MessageBox.Show("Numero de venta generado:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                //if (result == DialogResult.Yes)
+                //{
+                //    Clipboard.SetText(numeroDocumento);
+                //}
+
+                var result = MessageBox.Show("Pedido de venta registrado correctamente\n" + "Numero de venta generado: " + numeroDocumento, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    Clipboard.SetText(numeroDocumento);
+                    this.Close();
                 }
 
                 textBoxDocumentoCliente.Clear();
@@ -587,6 +594,74 @@ namespace CapaPresentacion.Modales
             {
                 // Bloquear cualquier otro carácter
                 e.Handled = true;
+            }
+        }
+
+        private void textBoxCodigoProducto_TextChanged(object sender, EventArgs e)
+        {
+
+            Producto oProducto = new CC_Producto().ListarProductos().Where(p => p.Codigo == textBoxCodigoProducto.Text && p.Estado == true).FirstOrDefault();
+
+            if (oProducto != null)
+            {
+                textBoxCodigoProducto.BackColor = Color.FromArgb(45, 204, 112);
+                textBoxIdProducto.Text = oProducto.IdProducto.ToString();
+                textBoxProducto.Text = oProducto.Nombre;
+                textBoxPrecio.Text = oProducto.PrecioVenta.ToString("0.00");
+                textBoxStock.Text = oProducto.Stock.ToString();
+                numericUpDownCantidad.Select();
+            }
+            else
+            {
+                textBoxCodigoProducto.BackColor = Color.FromArgb(254, 61, 78);
+                textBoxIdProducto.Text = "0";
+                textBoxProducto.Text = "";
+                textBoxPrecio.Text = "";
+                textBoxStock.Text = "";
+                numericUpDownCantidad.Value = 1;
+            }
+        }
+
+        private void textBoxDocumentoCliente_TextChanged(object sender, EventArgs e)
+        {
+            Cliente oCliente = new CC_Cliente().ListarClientes().Where(c => c.Documento == textBoxDocumentoCliente.Text && c.Estado == true).FirstOrDefault();
+
+            if (oCliente != null)
+            {
+                textBoxDocumentoCliente.BackColor = Color.FromArgb(45, 204, 112);
+                textBoxIdCliente.Text = oCliente.IdCliente.ToString();
+                textBoxDocumentoCliente.Text = oCliente.Documento;
+                textBoxNombreCompleto.Text = oCliente.NombreCompleto;
+                textBoxCodigoProducto.Select();
+            }
+            else
+            {
+                textBoxDocumentoCliente.BackColor = Color.FromArgb(254, 61, 78);
+                textBoxIdCliente.Text = "0";
+                textBoxNombreCompleto.Text = "";
+            }
+        }
+
+        private void textBoxDocumentoCliente_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                Cliente oCliente = new CC_Cliente().ListarClientes().Where(c => c.Documento == textBoxDocumentoCliente.Text && c.Estado == true).FirstOrDefault();
+
+                if (oCliente != null)
+                {
+                    textBoxDocumentoCliente.BackColor = Color.FromArgb(45, 204, 112);
+                    textBoxIdCliente.Text = oCliente.IdCliente.ToString();
+                    textBoxDocumentoCliente.Text = oCliente.Documento;
+                    textBoxNombreCompleto.Text = oCliente.NombreCompleto;
+                    textBoxCodigoProducto.Select();
+                }
+                else
+                {
+                    textBoxDocumentoCliente.BackColor = Color.FromArgb(254, 61, 78);
+                    textBoxIdCliente.Text = "0";
+                    textBoxNombreCompleto.Text = "";
+                }
             }
         }
     }

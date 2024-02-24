@@ -62,9 +62,9 @@
             this.textBoxIdProveedor = new System.Windows.Forms.TextBox();
             this.textBoxRazonSocial = new System.Windows.Forms.TextBox();
             this.buttonBuscarProveedor = new System.Windows.Forms.Button();
-            this.textBoxDocumentoProveedor = new System.Windows.Forms.TextBox();
+            this.textBoxCUIT = new System.Windows.Forms.TextBox();
             this.labelRazonSocial = new System.Windows.Forms.Label();
-            this.labelNumeroDocumento = new System.Windows.Forms.Label();
+            this.labelCUIT = new System.Windows.Forms.Label();
             this.groupBoxInformacionCompra = new System.Windows.Forms.GroupBox();
             this.comboBoxTipoDocumento = new System.Windows.Forms.ComboBox();
             this.textBoxFecha = new System.Windows.Forms.TextBox();
@@ -365,6 +365,7 @@
             this.textBoxCodigoProducto.Name = "textBoxCodigoProducto";
             this.textBoxCodigoProducto.Size = new System.Drawing.Size(150, 27);
             this.textBoxCodigoProducto.TabIndex = 6;
+            this.textBoxCodigoProducto.TextChanged += new System.EventHandler(this.textBoxCodigoProducto_TextChanged);
             this.textBoxCodigoProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCodigoProducto_KeyDown);
             // 
             // label2
@@ -381,9 +382,9 @@
             this.groupBoxInformacionProveedor.Controls.Add(this.textBoxIdProveedor);
             this.groupBoxInformacionProveedor.Controls.Add(this.textBoxRazonSocial);
             this.groupBoxInformacionProveedor.Controls.Add(this.buttonBuscarProveedor);
-            this.groupBoxInformacionProveedor.Controls.Add(this.textBoxDocumentoProveedor);
+            this.groupBoxInformacionProveedor.Controls.Add(this.textBoxCUIT);
             this.groupBoxInformacionProveedor.Controls.Add(this.labelRazonSocial);
-            this.groupBoxInformacionProveedor.Controls.Add(this.labelNumeroDocumento);
+            this.groupBoxInformacionProveedor.Controls.Add(this.labelCUIT);
             this.groupBoxInformacionProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxInformacionProveedor.Location = new System.Drawing.Point(401, 48);
             this.groupBoxInformacionProveedor.Name = "groupBoxInformacionProveedor";
@@ -422,12 +423,15 @@
             this.buttonBuscarProveedor.UseVisualStyleBackColor = false;
             this.buttonBuscarProveedor.Click += new System.EventHandler(this.buttonBuscarProveedor_Click);
             // 
-            // textBoxDocumentoProveedor
+            // textBoxCUIT
             // 
-            this.textBoxDocumentoProveedor.Location = new System.Drawing.Point(10, 45);
-            this.textBoxDocumentoProveedor.Name = "textBoxDocumentoProveedor";
-            this.textBoxDocumentoProveedor.Size = new System.Drawing.Size(150, 27);
-            this.textBoxDocumentoProveedor.TabIndex = 3;
+            this.textBoxCUIT.Location = new System.Drawing.Point(10, 45);
+            this.textBoxCUIT.Name = "textBoxCUIT";
+            this.textBoxCUIT.Size = new System.Drawing.Size(150, 27);
+            this.textBoxCUIT.TabIndex = 3;
+            this.textBoxCUIT.TextChanged += new System.EventHandler(this.textBoxCUIT_TextChanged);
+            this.textBoxCUIT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCUIT_KeyDown);
+            this.textBoxCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCUIT_KeyPress);
             // 
             // labelRazonSocial
             // 
@@ -438,14 +442,14 @@
             this.labelRazonSocial.TabIndex = 1;
             this.labelRazonSocial.Text = "Razon social:";
             // 
-            // labelNumeroDocumento
+            // labelCUIT
             // 
-            this.labelNumeroDocumento.AutoSize = true;
-            this.labelNumeroDocumento.Location = new System.Drawing.Point(6, 23);
-            this.labelNumeroDocumento.Name = "labelNumeroDocumento";
-            this.labelNumeroDocumento.Size = new System.Drawing.Size(126, 19);
-            this.labelNumeroDocumento.TabIndex = 0;
-            this.labelNumeroDocumento.Text = "Numero de documento";
+            this.labelCUIT.AutoSize = true;
+            this.labelCUIT.Location = new System.Drawing.Point(6, 23);
+            this.labelCUIT.Name = "labelCUIT";
+            this.labelCUIT.Size = new System.Drawing.Size(33, 19);
+            this.labelCUIT.TabIndex = 0;
+            this.labelCUIT.Text = "CUIT";
             // 
             // groupBoxInformacionCompra
             // 
@@ -475,6 +479,7 @@
             // 
             this.textBoxFecha.Location = new System.Drawing.Point(10, 45);
             this.textBoxFecha.Name = "textBoxFecha";
+            this.textBoxFecha.ReadOnly = true;
             this.textBoxFecha.Size = new System.Drawing.Size(150, 27);
             this.textBoxFecha.TabIndex = 1;
             // 
@@ -567,9 +572,9 @@
         private System.Windows.Forms.TextBox textBoxIdProveedor;
         private System.Windows.Forms.TextBox textBoxRazonSocial;
         private System.Windows.Forms.Button buttonBuscarProveedor;
-        private System.Windows.Forms.TextBox textBoxDocumentoProveedor;
+        private System.Windows.Forms.TextBox textBoxCUIT;
         private System.Windows.Forms.Label labelRazonSocial;
-        private System.Windows.Forms.Label labelNumeroDocumento;
+        private System.Windows.Forms.Label labelCUIT;
         private System.Windows.Forms.GroupBox groupBoxInformacionCompra;
         private System.Windows.Forms.ComboBox comboBoxTipoDocumento;
         private System.Windows.Forms.TextBox textBoxFecha;

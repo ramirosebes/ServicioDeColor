@@ -181,6 +181,8 @@
             this.comboBoxEstado.FormattingEnabled = true;
             this.comboBoxEstado.ItemHeight = 19;
             this.comboBoxEstado.Location = new System.Drawing.Point(9, 131);
+            this.comboBoxEstado.MaximumSize = new System.Drawing.Size(200, 0);
+            this.comboBoxEstado.MinimumSize = new System.Drawing.Size(200, 0);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
             this.comboBoxEstado.TabIndex = 3;

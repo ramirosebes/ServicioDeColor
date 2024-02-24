@@ -216,7 +216,6 @@
             this.textBoxPrecioVenta.Name = "textBoxPrecioVenta";
             this.textBoxPrecioVenta.Size = new System.Drawing.Size(178, 20);
             this.textBoxPrecioVenta.TabIndex = 7;
-            this.textBoxPrecioVenta.Text = "0";
             this.textBoxPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioVenta_KeyPress);
             // 
             // label6
@@ -250,7 +249,6 @@
             this.textBoxPrecioCompra.Name = "textBoxPrecioCompra";
             this.textBoxPrecioCompra.Size = new System.Drawing.Size(178, 20);
             this.textBoxPrecioCompra.TabIndex = 6;
-            this.textBoxPrecioCompra.Text = "0";
             this.textBoxPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioCompra_KeyPress);
             // 
             // label4
@@ -284,7 +282,6 @@
             this.textBoxStock.Name = "textBoxStock";
             this.textBoxStock.Size = new System.Drawing.Size(200, 20);
             this.textBoxStock.TabIndex = 5;
-            this.textBoxStock.Text = "0";
             this.textBoxStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStock_KeyPress);
             // 
             // label2

@@ -136,6 +136,7 @@
             this.buttonActualizar.Text = "Actualizar";
             this.buttonActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonActualizar.UseVisualStyleBackColor = false;
+            this.buttonActualizar.Visible = false;
             this.buttonActualizar.Click += new System.EventHandler(this.buttonActualizar_Click);
             // 
             // labelDireccion

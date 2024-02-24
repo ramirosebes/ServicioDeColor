@@ -105,6 +105,7 @@
             this.textBoxMontoTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMontoTotal.Location = new System.Drawing.Point(106, 536);
             this.textBoxMontoTotal.Name = "textBoxMontoTotal";
+            this.textBoxMontoTotal.ReadOnly = true;
             this.textBoxMontoTotal.Size = new System.Drawing.Size(150, 27);
             this.textBoxMontoTotal.TabIndex = 6;
             this.textBoxMontoTotal.Text = "0.00";

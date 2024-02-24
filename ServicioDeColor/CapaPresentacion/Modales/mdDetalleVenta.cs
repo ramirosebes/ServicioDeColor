@@ -50,7 +50,7 @@ namespace CapaPresentacion.Modales
                 }
 
                 textBoxTipoDescuento.Text = oVenta.TipoDescuento;
-                textBoxDescuento.Text = oVenta.MontoDescuento.ToString("0.00");
+                textBoxMontoDescuento.Text = oVenta.MontoDescuento.ToString("0.00");
                 textBoxSubTotal.Text = oVenta.SubTotal.ToString("0.00");
                 textBoxMontoTotal.Text = oVenta.MontoTotal.ToString("0.00");
                 textBoxMontoPago.Text = oVenta.MontoPago.ToString("0.00");
@@ -94,6 +94,8 @@ namespace CapaPresentacion.Modales
             }
 
             textoHTML = textoHTML.Replace("@filas", filas);
+            textoHTML = textoHTML.Replace("@tipoDescuento", textBoxTipoDescuento.Text);
+            textoHTML = textoHTML.Replace("@montoDescuento", textBoxMontoDescuento.Text);
             textoHTML = textoHTML.Replace("@montototal", textBoxMontoTotal.Text);
             textoHTML = textoHTML.Replace("@pagocon", textBoxMontoPago.Text);
             textoHTML = textoHTML.Replace("@cambio", textBoxMontoCambio.Text);

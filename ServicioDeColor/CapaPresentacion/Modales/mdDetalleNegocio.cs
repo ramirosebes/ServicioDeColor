@@ -95,5 +95,26 @@ namespace CapaPresentacion.Modales
                 MessageBox.Show("No se pudo guardar los cambios", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void textBoxCUIT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxCUIT_Leave(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            // Verificar la longitud del texto
+            if (textBox.Text.Length < 10 || textBox.Text.Length > 11)
+            {
+                MessageBox.Show("El CUIT no tiene un formato valido\n" + "Debe tener entre 10 y 11 digitos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBox.Focus(); // Devolver el foco al TextBox
+                textBox.SelectAll(); // Seleccionar todo el texto para facilitar la corrección
+            }
+        }
     }
 }

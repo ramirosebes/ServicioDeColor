@@ -249,24 +249,48 @@ namespace CapaPresentacion.Modales
 
         private void textBoxPrecioCompra_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
+            if (Char.IsDigit(e.KeyChar))
             {
+                // Permitir dígitos
+                e.Handled = false;
+            }
+            else if (e.KeyChar == '.' && textBoxPrecioCompra.Text.Length > 0 && !textBoxPrecioCompra.Text.Contains("."))
+            {
+                // Permitir un punto si hay al menos un número y no hay punto previamente
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                // Permitir teclas de control como retroceso
                 e.Handled = false;
             }
             else
             {
+                // Bloquear cualquier otro carácter
                 e.Handled = true;
             }
         }
 
         private void textBoxPrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
+            if (Char.IsDigit(e.KeyChar))
             {
+                // Permitir dígitos
+                e.Handled = false;
+            }
+            else if (e.KeyChar == '.' && textBoxPrecioVenta.Text.Length > 0 && !textBoxPrecioVenta.Text.Contains("."))
+            {
+                // Permitir un punto si hay al menos un número y no hay punto previamente
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                // Permitir teclas de control como retroceso
                 e.Handled = false;
             }
             else
             {
+                // Bloquear cualquier otro carácter
                 e.Handled = true;
             }
         }

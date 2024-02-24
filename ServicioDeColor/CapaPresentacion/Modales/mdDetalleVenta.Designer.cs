@@ -35,7 +35,7 @@
             this.textBoxTipoDescuento = new System.Windows.Forms.TextBox();
             this.buttonDescargarPDF = new System.Windows.Forms.Button();
             this.labelTipoDescuento = new System.Windows.Forms.Label();
-            this.textBoxDescuento = new System.Windows.Forms.TextBox();
+            this.textBoxMontoDescuento = new System.Windows.Forms.TextBox();
             this.labelDescuento = new System.Windows.Forms.Label();
             this.textBoxSubTotal = new System.Windows.Forms.TextBox();
             this.labelSubTotal = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             this.panelDetalleVenta.Controls.Add(this.textBoxTipoDescuento);
             this.panelDetalleVenta.Controls.Add(this.buttonDescargarPDF);
             this.panelDetalleVenta.Controls.Add(this.labelTipoDescuento);
-            this.panelDetalleVenta.Controls.Add(this.textBoxDescuento);
+            this.panelDetalleVenta.Controls.Add(this.textBoxMontoDescuento);
             this.panelDetalleVenta.Controls.Add(this.labelDescuento);
             this.panelDetalleVenta.Controls.Add(this.textBoxSubTotal);
             this.panelDetalleVenta.Controls.Add(this.labelSubTotal);
@@ -110,7 +110,7 @@
             this.textBoxTipoDescuento.Location = new System.Drawing.Point(281, 533);
             this.textBoxTipoDescuento.Name = "textBoxTipoDescuento";
             this.textBoxTipoDescuento.ReadOnly = true;
-            this.textBoxTipoDescuento.Size = new System.Drawing.Size(75, 27);
+            this.textBoxTipoDescuento.Size = new System.Drawing.Size(82, 27);
             this.textBoxTipoDescuento.TabIndex = 7;
             this.textBoxTipoDescuento.Text = "-";
             // 
@@ -139,22 +139,22 @@
             this.labelTipoDescuento.TabIndex = 94;
             this.labelTipoDescuento.Text = "Tipo descuento:";
             // 
-            // textBoxDescuento
+            // textBoxMontoDescuento
             // 
-            this.textBoxDescuento.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDescuento.Location = new System.Drawing.Point(446, 533);
-            this.textBoxDescuento.Name = "textBoxDescuento";
-            this.textBoxDescuento.ReadOnly = true;
-            this.textBoxDescuento.Size = new System.Drawing.Size(75, 27);
-            this.textBoxDescuento.TabIndex = 8;
-            this.textBoxDescuento.Text = "0.00";
+            this.textBoxMontoDescuento.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxMontoDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMontoDescuento.Location = new System.Drawing.Point(452, 533);
+            this.textBoxMontoDescuento.Name = "textBoxMontoDescuento";
+            this.textBoxMontoDescuento.ReadOnly = true;
+            this.textBoxMontoDescuento.Size = new System.Drawing.Size(75, 27);
+            this.textBoxMontoDescuento.TabIndex = 8;
+            this.textBoxMontoDescuento.Text = "0.00";
             // 
             // labelDescuento
             // 
             this.labelDescuento.AutoSize = true;
             this.labelDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescuento.Location = new System.Drawing.Point(363, 533);
+            this.labelDescuento.Location = new System.Drawing.Point(369, 533);
             this.labelDescuento.Name = "labelDescuento";
             this.labelDescuento.Size = new System.Drawing.Size(77, 23);
             this.labelDescuento.TabIndex = 92;
@@ -556,7 +556,7 @@
         private System.Windows.Forms.Label labelDetalleVenta;
         private System.Windows.Forms.TextBox textBoxTipoDescuento;
         private System.Windows.Forms.Label labelTipoDescuento;
-        private System.Windows.Forms.TextBox textBoxDescuento;
+        private System.Windows.Forms.TextBox textBoxMontoDescuento;
         private System.Windows.Forms.Label labelDescuento;
         private System.Windows.Forms.TextBox textBoxSubTotal;
         private System.Windows.Forms.Label labelSubTotal;

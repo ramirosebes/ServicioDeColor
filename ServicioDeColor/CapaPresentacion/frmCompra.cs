@@ -65,7 +65,7 @@ namespace CapaPresentacion
             {
                 var resultado = modal.ShowDialog();
 
-                if (resultado == DialogResult.Yes || resultado == DialogResult.No)
+                if (resultado == DialogResult.OK)
                 {
                     buttonActualizar_Click(null, null);
                 }
@@ -85,6 +85,7 @@ namespace CapaPresentacion
                         buttonActualizar_Click(null, null);
                     }
                 }
+                buttonActualizar_Click(sender, e);
             }
             else
             {
@@ -103,6 +104,7 @@ namespace CapaPresentacion
                     buttonActualizar_Click(null, null);
                 }
             }
+            buttonActualizar_Click(sender, e);
         }
 
         private void menuEliminarCompra_Click(object sender, EventArgs e)

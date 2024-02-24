@@ -47,12 +47,12 @@ namespace CapaPresentacion.Modales
                 if (result == DialogResult.OK)
                 {
                     textBoxIdProveedor.Text = modal._Proveedor.IdProveedor.ToString();
-                    textBoxDocumentoProveedor.Text = modal._Proveedor.CUIT;
+                    textBoxCUIT.Text = modal._Proveedor.CUIT;
                     textBoxRazonSocial.Text = modal._Proveedor.RazonSocial; //textBoxNombreProveedor
                 }
                 else
                 {
-                    textBoxDocumentoProveedor.Select();
+                    textBoxCUIT.Select();
                 }
             }
         }
@@ -111,9 +111,23 @@ namespace CapaPresentacion.Modales
                 return;
             }
 
+            if (textBoxPrecioCompra.Text == "")
+            {
+                MessageBox.Show("Debe introducir un precio de compra", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                textBoxPrecioCompra.Select();
+                return;
+            }
+
             if (!decimal.TryParse(textBoxPrecioCompra.Text, out precioCompra))
             {
                 MessageBox.Show("Precio compra - Formato moneda incorrecto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                textBoxPrecioCompra.Select();
+                return;
+            }
+
+            if (textBoxPrecioVenta.Text == "")
+            {
+                MessageBox.Show("Debe introducir un precio de venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 textBoxPrecioCompra.Select();
                 return;
             }
@@ -442,10 +456,16 @@ namespace CapaPresentacion.Modales
 
         private void MostrarConfirmacion(string numeroDocumento)
         {
-            var result = MessageBox.Show("Numero de compra generado:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (result == DialogResult.Yes)
+            //var result = MessageBox.Show("Numero de compra generado:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            //if (result == DialogResult.Yes)
+            //{
+            //    Clipboard.SetText(numeroDocumento);
+            //    this.Close(); //Agregado recientemente
+            //}
+
+            var result = MessageBox.Show("Orden de compra registrada correctamente\n" + "Numero de compra generado: " + numeroDocumento, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (result == DialogResult.OK)
             {
-                Clipboard.SetText(numeroDocumento);
                 this.Close(); //Agregado recientemente
             }
         }
@@ -453,9 +473,79 @@ namespace CapaPresentacion.Modales
         private void LimpiarCampos()
         {
             textBoxIdProveedor.Text = "0";
-            textBoxDocumentoProveedor.Clear();
+            textBoxCUIT.Clear();
             textBoxRazonSocial.Clear();
             dataGridViewData.Rows.Clear();
+        }
+
+        private void textBoxCodigoProducto_TextChanged(object sender, EventArgs e)
+        {
+            Producto oProducto = new CC_Producto().ListarProductos().Where(p => p.Codigo == textBoxCodigoProducto.Text && p.Estado == true).FirstOrDefault();
+
+            if (oProducto != null)
+            {
+                textBoxCodigoProducto.BackColor = Color.FromArgb(45, 204, 112);
+                textBoxIdProducto.Text = oProducto.IdProducto.ToString();
+                textBoxProducto.Text = oProducto.Nombre;
+                textBoxPrecioCompra.Select();
+            }
+            else
+            {
+                textBoxCodigoProducto.BackColor = Color.FromArgb(254, 61, 78);
+                textBoxIdProducto.Text = "0";
+                textBoxProducto.Text = "";
+            }
+        }
+
+        private void textBoxCUIT_TextChanged(object sender, EventArgs e)
+        {
+            Proveedor oProveedor = new CC_Proveedor().ListarProveedores().Where(p => p.CUIT == textBoxCUIT.Text && p.Estado == true).FirstOrDefault();
+
+            if (oProveedor != null)
+            {
+                textBoxCUIT.BackColor = Color.FromArgb(45, 204, 112);
+                textBoxIdProveedor.Text = oProveedor.IdProveedor.ToString();
+                textBoxCUIT.Text = oProveedor.CUIT;
+                textBoxRazonSocial.Text = oProveedor.RazonSocial;
+                textBoxCodigoProducto.Select();
+            }
+            else
+            {
+                textBoxCUIT.BackColor = Color.FromArgb(254, 61, 78);
+                textBoxIdProveedor.Text = "0";
+                textBoxRazonSocial.Text = "";
+            }
+        }
+
+        private void textBoxCUIT_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                Proveedor oProveedor = new CC_Proveedor().ListarProveedores().Where(p => p.CUIT == textBoxCUIT.Text && p.Estado == true).FirstOrDefault();
+
+                if (oProveedor != null)
+                {
+                    textBoxCUIT.BackColor = Color.FromArgb(45, 204, 112);
+                    textBoxIdProveedor.Text = oProveedor.IdProveedor.ToString();
+                    textBoxCUIT.Text = oProveedor.CUIT;
+                    textBoxRazonSocial.Text = oProveedor.RazonSocial;
+                    textBoxCodigoProducto.Select();
+                }
+                else
+                {
+                    textBoxCUIT.BackColor = Color.FromArgb(254, 61, 78);
+                    textBoxIdProveedor.Text = "0";
+                    textBoxRazonSocial.Text = "";
+                }
+            }
+        }
+
+        private void textBoxCUIT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

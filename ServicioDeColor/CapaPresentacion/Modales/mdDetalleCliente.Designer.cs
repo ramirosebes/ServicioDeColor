@@ -156,7 +156,7 @@
             // 
             this.textBoxLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLocalidad.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxLocalidad.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxLocalidad.Location = new System.Drawing.Point(249, 204);
             this.textBoxLocalidad.Name = "textBoxLocalidad";
             this.textBoxLocalidad.Size = new System.Drawing.Size(200, 20);
@@ -188,7 +188,7 @@
             // 
             this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxDireccion.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxDireccion.Location = new System.Drawing.Point(249, 139);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(200, 20);
@@ -220,7 +220,7 @@
             // 
             this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxTelefono.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxTelefono.Location = new System.Drawing.Point(249, 75);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
@@ -252,11 +252,12 @@
             // 
             this.textBoxCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCorreo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxCorreo.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxCorreo.Location = new System.Drawing.Point(9, 204);
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
             this.textBoxCorreo.TabIndex = 3;
+            this.textBoxCorreo.Leave += new System.EventHandler(this.textBoxCorreo_Leave);
             // 
             // labelLineCorreo
             // 
@@ -284,11 +285,12 @@
             // 
             this.textBoxNombreCompleto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombreCompleto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxNombreCompleto.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxNombreCompleto.Location = new System.Drawing.Point(9, 139);
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
             this.textBoxNombreCompleto.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombreCompleto.TabIndex = 2;
+            this.textBoxNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombreCompleto_KeyPress);
             // 
             // labelLineNombreCompleto
             // 
@@ -316,12 +318,13 @@
             // 
             this.textBoxDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDocumento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxDocumento.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBoxDocumento.Location = new System.Drawing.Point(9, 74);
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(200, 20);
             this.textBoxDocumento.TabIndex = 1;
             this.textBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDocumento_KeyPress);
+            this.textBoxDocumento.Leave += new System.EventHandler(this.textBoxDocumento_Leave);
             // 
             // labelLineDocumento
             // 

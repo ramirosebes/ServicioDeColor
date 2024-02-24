@@ -26,6 +26,27 @@ namespace CapaPresentacion
 
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
+            IniciarSesion();
+        }
+
+        private void frm_closing(object sender, FormClosingEventArgs e)
+        {
+            textBoxDocumento.Clear();
+            textBoxClave.Clear();
+            textBoxDocumento.Select();
+            this.Show();
+        }
+
+        private void textBoxClave_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                IniciarSesion();
+            }
+        }
+
+        private void IniciarSesion()
+        {
             Usuario oUsuario = new CC_Usuario().ListarUsuarios().Where(u => u.Documento == textBoxDocumento.Text).FirstOrDefault();
 
             if (oUsuario != null)
@@ -56,19 +77,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("No se encontro el usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
-
-        private void frm_closing(object sender, FormClosingEventArgs e)
-        {
-            textBoxDocumento.Clear();
-            textBoxClave.Clear();
-            textBoxDocumento.Select();
-            this.Show();
-        }
-
-        private void LogIn_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
