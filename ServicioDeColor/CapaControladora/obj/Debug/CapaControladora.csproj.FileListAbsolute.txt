@@ -30,3 +30,35 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debu
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaCont.29DC0580.Up2Date
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaControladora.dll.config
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaControladora.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaControladora.pdb
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaDatos.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaEntidad.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\ExcelNumberFormat.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\Irony.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\SixLabors.Fonts.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Buffers.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.IO.Packaging.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Memory.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\XLParser.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaDatos.pdb
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaDatos.dll.config
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaEntidad.pdb
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\CapaEntidad.dll.config
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\ExcelNumberFormat.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\SixLabors.Fonts.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Buffers.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.IO.Packaging.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Memory.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.csproj.AssemblyReference.cache
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.csproj.CoreCompileInputs.cache
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaCont.29DC0580.Up2Date
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaControladora\obj\Debug\CapaControladora.pdb

@@ -24,3 +24,29 @@ C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\Sys
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\ramir\Desktop\ServicioDeColor\ServicioDeColor\CapaEntidad\obj\Debug\CapaEnti.526B9C87.Up2Date
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\CapaEntidad.dll.config
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\ExcelNumberFormat.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\Irony.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\SixLabors.Fonts.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Buffers.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.IO.Packaging.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Memory.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\XLParser.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\ExcelNumberFormat.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\SixLabors.Fonts.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Buffers.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.IO.Packaging.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Memory.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\obj\Debug\CapaEnti.526B9C87.Up2Date
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaEntidad\obj\Debug\CapaEntidad.pdb

@@ -1,12 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ramir\\Desktop\\ServicioDeColor\\ServicioDeColor\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\ramir\\desktop\\final ing.software\\serviciodecolor\\serviciodecolor\\capapresentacion\\modales\\mdagregarventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\modales\\mdagregarventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\ramir\\desktop\\final ing.software\\serviciodecolor\\serviciodecolor\\capapresentacion\\modales\\mdagregarcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\modales\\mdagregarcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\ramir\\desktop\\final ing.software\\serviciodecolor\\serviciodecolor\\capapresentacion\\modales\\mdagregarcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\modales\\mdagregarcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\ramir\\desktop\\final ing.software\\serviciodecolor\\serviciodecolor\\capapresentacion\\modales\\mdagregarventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\modales\\mdagregarventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "mdAgregarCompra.cs",
+              "DocumentMoniker": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\Modales\\mdAgregarCompra.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Modales\\mdAgregarCompra.cs",
+              "ToolTip": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\Modales\\mdAgregarCompra.cs",
+              "RelativeToolTip": "CapaPresentacion\\Modales\\mdAgregarCompra.cs",
+              "ViewState": "AQIAALYBAAAAAAAAAIAwwNUBAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T03:49:33.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "mdAgregarCompra.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\Modales\\mdAgregarCompra.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Modales\\mdAgregarCompra.cs",
+              "ToolTip": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\Modales\\mdAgregarCompra.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Modales\\mdAgregarCompra.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T03:49:32.184Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "mdAgregarVenta.cs",
+              "DocumentMoniker": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\Modales\\mdAgregarVenta.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Modales\\mdAgregarVenta.cs",
+              "ToolTip": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\Modales\\mdAgregarVenta.cs",
+              "RelativeToolTip": "CapaPresentacion\\Modales\\mdAgregarVenta.cs",
+              "ViewState": "AQIAAOQBAAAAAAAAAAAYwPgBAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T03:47:09.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "mdAgregarVenta.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\Modales\\mdAgregarVenta.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\Modales\\mdAgregarVenta.cs",
+              "ToolTip": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\Modales\\mdAgregarVenta.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\Modales\\mdAgregarVenta.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T03:47:08.494Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

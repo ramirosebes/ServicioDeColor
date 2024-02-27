@@ -502,7 +502,7 @@ namespace CapaPresentacion.Modales
                 //}
 
                 var result = MessageBox.Show("Pedido de venta registrado correctamente\n" + "Numero de venta generado: " + numeroDocumento, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (result == DialogResult.Yes)
+                if (result == DialogResult.OK)
                 {
                     this.Close();
                 }
