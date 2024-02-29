@@ -62,8 +62,8 @@ namespace CapaPresentacion.Modales
                 NombreCompleto = textBoxNombreCompleto.Text.Trim(),
                 Correo = textBoxCorreo.Text.Trim(),
                 Telefono = textBoxTelefono.Text.Trim(),
-                Direccion = textBoxDireccion.Text.Trim(),
-                Localidad = textBoxLocalidad.Text.Trim(),
+                //Direccion = textBoxDireccion.Text.Trim(),
+                //Localidad = textBoxLocalidad.Text.Trim(),
                 Estado = Convert.ToInt32(((OpcionCombo)comboBoxEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
@@ -92,8 +92,8 @@ namespace CapaPresentacion.Modales
                 Documento = textBoxDocumento.Text.Trim(),
                 Correo = textBoxCorreo.Text.Trim(),
                 Telefono = textBoxTelefono.Text.Trim(),
-                Direccion = textBoxDireccion.Text.Trim(),
-                Localidad = textBoxLocalidad.Text.Trim(),
+                //Direccion = textBoxDireccion.Text.Trim(),
+                //Localidad = textBoxLocalidad.Text.Trim(),
                 Estado = Convert.ToInt32(((OpcionCombo)comboBoxEstado.SelectedItem).Valor) == 1 ? true : false
             }, out string mensaje);
 
@@ -139,8 +139,8 @@ namespace CapaPresentacion.Modales
             textBoxCorreo.Enabled = false;
             comboBoxEstado.Enabled = false;
             textBoxTelefono.Enabled = false;
-            textBoxDireccion.Enabled = false;
-            textBoxLocalidad.Enabled = false;
+            //textBoxDireccion.Enabled = false;
+            //textBoxLocalidad.Enabled = false;
             buttonConfirmar.Visible = false;
 
             textBoxNombreCompleto.Text = _oCliente.NombreCompleto.ToString();
@@ -156,8 +156,8 @@ namespace CapaPresentacion.Modales
                 }
             }
             textBoxTelefono.Text = _oCliente.Telefono.ToString();
-            textBoxDireccion.Text = _oCliente.Direccion.ToString();
-            textBoxLocalidad.Text = _oCliente.Localidad.ToString();
+            //textBoxDireccion.Text = _oCliente.Direccion.ToString();
+            //textBoxLocalidad.Text = _oCliente.Localidad.ToString();
         }
 
         private void ConfigurarAgregar()
@@ -185,8 +185,8 @@ namespace CapaPresentacion.Modales
                 }
             }
             textBoxTelefono.Text = _oCliente.Telefono.ToString();
-            textBoxDireccion.Text = _oCliente.Direccion.ToString();
-            textBoxLocalidad.Text = _oCliente.Localidad.ToString();
+            //textBoxDireccion.Text = _oCliente.Direccion.ToString();
+            //textBoxLocalidad.Text = _oCliente.Localidad.ToString();
         }
 
         private void buttonVolver_Click(object sender, EventArgs e)

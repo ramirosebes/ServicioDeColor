@@ -515,8 +515,8 @@ create procedure SP_RegistrarCliente(
 	@Correo nvarchar(100),
 	@Documento nvarchar(50),
 	@Telefono nvarchar(50),
-	@Direccion nvarchar(100),
-	@Localidad nvarchar(50),
+	--@Direccion nvarchar(100),
+	--@Localidad nvarchar(50),
 	@Estado bit,
 	@Mensaje nvarchar(500) output,
 	@IdClienteRegistrado int output
@@ -551,8 +551,8 @@ begin
 						Correo = @Correo
 					where Documento = @Documento
 
-					insert into Cliente(IdPersona,Direccion,Localidad,Telefono,Estado) values
-					(@IdPersona, @Direccion,@Localidad,@Telefono,@Estado)
+					insert into Cliente(IdPersona, Telefono, Estado) values
+					(@IdPersona, @Telefono, @Estado)
 
 					set @IdClienteRegistrado = SCOPE_IDENTITY()
 				end
@@ -570,8 +570,8 @@ begin
 
 				if (@IdPersona != 0)
 				begin
-					insert into Cliente(IdPersona,Telefono,Direccion,Estado,Localidad) values
-					(@IdPersona,@Telefono,@Direccion,@Estado,@Localidad)
+					insert into Cliente(IdPersona, Telefono, Estado) values
+					(@IdPersona, @Telefono, @Estado)
 
 					set @IdClienteRegistrado = SCOPE_IDENTITY()
 				end
@@ -588,14 +588,14 @@ go
 
 --PROCEDURE EDITAR CLIENTE--
 create procedure SP_EditarCliente(
-@IdCliente int,
+	@IdCliente int,
 	@IdPersona int,
 	@NombreCompleto nvarchar(100),
 	@Correo nvarchar(100),
 	@Documento nvarchar(50),
 	@Telefono nvarchar(50),
-	@Direccion nvarchar(100),
-	@Localidad nvarchar(50),
+	--@Direccion nvarchar(100),
+	--@Localidad nvarchar(50),
 	@Estado bit,
 	@Mensaje nvarchar(500) output,
 	@Resultado bit output
@@ -622,8 +622,8 @@ begin
             where IdPersona = @IdPersona;
 
             update Cliente set
-				Direccion = @Direccion,
-				Localidad = @Localidad,
+				--Direccion = @Direccion,
+				--Localidad = @Localidad,
 				Telefono = @Telefono,
                 Estado = @Estado
             where IdCliente = @IdCliente;

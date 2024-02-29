@@ -71,7 +71,6 @@ namespace CapaPresentacion
                     rc.FechaRegistro,
                     rc.TipoDocumento,
                     rc.NumeroDocumento,
-                    rc.MontoTotal,
                     rc.UsuarioRegistro,
                     rc.CUITProveedor,
                     rc.RazonSocial,
@@ -81,7 +80,8 @@ namespace CapaPresentacion
                     rc.PrecioCompra,
                     rc.PrecioVenta,
                     rc.Cantidad,
-                    rc.SubTotal
+                    rc.SubTotal,
+                    rc.MontoTotal
                 });
             }
         }

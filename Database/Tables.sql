@@ -71,7 +71,8 @@ create table Cliente (
 	IdCliente int primary key identity,
 	IdPersona int,
 	Telefono nvarchar(50),
-	Direccion nvarchar(100),
+	--Direccion nvarchar(100),
+	--Localidad nvarchar (50),
 	Estado bit,
 	foreign key (IdPersona) references Persona(IdPersona)
 );

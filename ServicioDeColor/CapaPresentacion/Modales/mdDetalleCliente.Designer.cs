@@ -34,12 +34,6 @@
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.buttonVolver = new System.Windows.Forms.Button();
             this.buttonConfirmar = new System.Windows.Forms.Button();
-            this.labelLocalidad = new System.Windows.Forms.Label();
-            this.textBoxLocalidad = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.labelDireccion = new System.Windows.Forms.Label();
-            this.textBoxDireccion = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.labelTelefono = new System.Windows.Forms.Label();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,12 +77,6 @@
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelContenedor.Controls.Add(this.buttonVolver);
             this.panelContenedor.Controls.Add(this.buttonConfirmar);
-            this.panelContenedor.Controls.Add(this.labelLocalidad);
-            this.panelContenedor.Controls.Add(this.textBoxLocalidad);
-            this.panelContenedor.Controls.Add(this.label6);
-            this.panelContenedor.Controls.Add(this.labelDireccion);
-            this.panelContenedor.Controls.Add(this.textBoxDireccion);
-            this.panelContenedor.Controls.Add(this.label4);
             this.panelContenedor.Controls.Add(this.labelTelefono);
             this.panelContenedor.Controls.Add(this.textBoxTelefono);
             this.panelContenedor.Controls.Add(this.label2);
@@ -106,7 +94,7 @@
             this.panelContenedor.Controls.Add(this.labelInfo);
             this.panelContenedor.Location = new System.Drawing.Point(12, 68);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(460, 378);
+            this.panelContenedor.Size = new System.Drawing.Size(460, 315);
             this.panelContenedor.TabIndex = 2;
             // 
             // buttonVolver
@@ -116,10 +104,10 @@
             this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolver.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVolver.Location = new System.Drawing.Point(190, 337);
+            this.buttonVolver.Location = new System.Drawing.Point(190, 276);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
-            this.buttonVolver.TabIndex = 9;
+            this.buttonVolver.TabIndex = 7;
             this.buttonVolver.Text = "Volver";
             this.buttonVolver.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonVolver.UseVisualStyleBackColor = false;
@@ -132,77 +120,13 @@
             this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonConfirmar.Location = new System.Drawing.Point(155, 301);
+            this.buttonConfirmar.Location = new System.Drawing.Point(155, 240);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
-            this.buttonConfirmar.TabIndex = 8;
+            this.buttonConfirmar.TabIndex = 6;
             this.buttonConfirmar.Text = "Confirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
             this.buttonConfirmar.Click += new System.EventHandler(this.buttonConfirmar_Click);
-            // 
-            // labelLocalidad
-            // 
-            this.labelLocalidad.AutoSize = true;
-            this.labelLocalidad.BackColor = System.Drawing.SystemColors.Window;
-            this.labelLocalidad.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLocalidad.Location = new System.Drawing.Point(249, 176);
-            this.labelLocalidad.Name = "labelLocalidad";
-            this.labelLocalidad.Size = new System.Drawing.Size(63, 19);
-            this.labelLocalidad.TabIndex = 55;
-            this.labelLocalidad.Text = "Localidad:";
-            // 
-            // textBoxLocalidad
-            // 
-            this.textBoxLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLocalidad.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLocalidad.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxLocalidad.Location = new System.Drawing.Point(249, 204);
-            this.textBoxLocalidad.Name = "textBoxLocalidad";
-            this.textBoxLocalidad.Size = new System.Drawing.Size(200, 20);
-            this.textBoxLocalidad.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label6.Location = new System.Drawing.Point(249, 227);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 1);
-            this.label6.TabIndex = 54;
-            this.label6.Text = "label2";
-            // 
-            // labelDireccion
-            // 
-            this.labelDireccion.AutoSize = true;
-            this.labelDireccion.BackColor = System.Drawing.SystemColors.Window;
-            this.labelDireccion.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelDireccion.Location = new System.Drawing.Point(249, 111);
-            this.labelDireccion.Name = "labelDireccion";
-            this.labelDireccion.Size = new System.Drawing.Size(61, 19);
-            this.labelDireccion.TabIndex = 52;
-            this.labelDireccion.Text = "Dirección:";
-            // 
-            // textBoxDireccion
-            // 
-            this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDireccion.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxDireccion.Location = new System.Drawing.Point(249, 139);
-            this.textBoxDireccion.Name = "textBoxDireccion";
-            this.textBoxDireccion.Size = new System.Drawing.Size(200, 20);
-            this.textBoxDireccion.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label4.Location = new System.Drawing.Point(249, 162);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 1);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "label2";
             // 
             // labelTelefono
             // 
@@ -210,7 +134,7 @@
             this.labelTelefono.BackColor = System.Drawing.SystemColors.Window;
             this.labelTelefono.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelTelefono.Location = new System.Drawing.Point(249, 47);
+            this.labelTelefono.Location = new System.Drawing.Point(245, 111);
             this.labelTelefono.Name = "labelTelefono";
             this.labelTelefono.Size = new System.Drawing.Size(56, 19);
             this.labelTelefono.TabIndex = 49;
@@ -221,16 +145,16 @@
             this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTelefono.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxTelefono.Location = new System.Drawing.Point(249, 75);
+            this.textBoxTelefono.Location = new System.Drawing.Point(245, 139);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
-            this.textBoxTelefono.TabIndex = 5;
+            this.textBoxTelefono.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label2.Location = new System.Drawing.Point(249, 98);
+            this.label2.Location = new System.Drawing.Point(245, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 1);
             this.label2.TabIndex = 48;
@@ -242,7 +166,7 @@
             this.labelCorreo.BackColor = System.Drawing.SystemColors.Window;
             this.labelCorreo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelCorreo.Location = new System.Drawing.Point(9, 176);
+            this.labelCorreo.Location = new System.Drawing.Point(249, 46);
             this.labelCorreo.Name = "labelCorreo";
             this.labelCorreo.Size = new System.Drawing.Size(47, 19);
             this.labelCorreo.TabIndex = 46;
@@ -253,7 +177,7 @@
             this.textBoxCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCorreo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCorreo.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxCorreo.Location = new System.Drawing.Point(9, 204);
+            this.textBoxCorreo.Location = new System.Drawing.Point(249, 74);
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
             this.textBoxCorreo.TabIndex = 3;
@@ -263,7 +187,7 @@
             // 
             this.labelLineCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineCorreo.Location = new System.Drawing.Point(9, 227);
+            this.labelLineCorreo.Location = new System.Drawing.Point(249, 97);
             this.labelLineCorreo.Name = "labelLineCorreo";
             this.labelLineCorreo.Size = new System.Drawing.Size(200, 1);
             this.labelLineCorreo.TabIndex = 45;
@@ -341,7 +265,7 @@
             this.labelEstado.AutoSize = true;
             this.labelEstado.BackColor = System.Drawing.SystemColors.Window;
             this.labelEstado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEstado.Location = new System.Drawing.Point(9, 241);
+            this.labelEstado.Location = new System.Drawing.Point(9, 175);
             this.labelEstado.Name = "labelEstado";
             this.labelEstado.Size = new System.Drawing.Size(47, 19);
             this.labelEstado.TabIndex = 40;
@@ -354,10 +278,10 @@
             this.comboBoxEstado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEstado.FormattingEnabled = true;
             this.comboBoxEstado.ItemHeight = 19;
-            this.comboBoxEstado.Location = new System.Drawing.Point(9, 263);
+            this.comboBoxEstado.Location = new System.Drawing.Point(9, 197);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxEstado.TabIndex = 4;
+            this.comboBoxEstado.TabIndex = 5;
             // 
             // labelInfo
             // 
@@ -373,13 +297,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 458);
+            this.ClientSize = new System.Drawing.Size(484, 396);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.paneTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(500, 497);
-            this.MinimumSize = new System.Drawing.Size(500, 497);
+            this.MaximumSize = new System.Drawing.Size(500, 435);
+            this.MinimumSize = new System.Drawing.Size(500, 435);
             this.Name = "mdDetalleCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle cliente";
@@ -409,12 +333,6 @@
         private System.Windows.Forms.Label labelEstado;
         private System.Windows.Forms.ComboBox comboBoxEstado;
         private System.Windows.Forms.Label labelInfo;
-        private System.Windows.Forms.Label labelLocalidad;
-        private System.Windows.Forms.TextBox textBoxLocalidad;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label labelDireccion;
-        private System.Windows.Forms.TextBox textBoxDireccion;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelTelefono;
         private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label label2;
