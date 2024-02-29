@@ -1,6 +1,7 @@
 ﻿using CapaControladora;
 using CapaEntidad;
 using CapaPresentacion.Utilidades;
+using DocumentFormat.OpenXml.Spreadsheet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace CapaPresentacion.Modales
     public partial class mdListaClientes : Form
     {
         public Cliente _Cliente { get; set; }
+        public int _idCliente { get; set; }
 
         public mdListaClientes()
         {
@@ -35,10 +37,14 @@ namespace CapaPresentacion.Modales
             comboBoxBusqueda.ValueMember = "Valor";
             comboBoxBusqueda.SelectedIndex = 0;
 
-            List<Cliente> lista = new CC_Cliente().ListarClientes();
+            List<Cliente> lista = new CC_Cliente().ListarClientes().Where(c => c.Estado).ToList();
             foreach (Cliente item in lista)
             {
-                dataGridViewData.Rows.Add(new object[] { item.IdCliente, item.Documento, item.NombreCompleto });
+                dataGridViewData.Rows.Add(new object[] { 
+                    item.IdCliente, 
+                    item.Documento, 
+                    item.NombreCompleto
+                });
             }
         }
 
@@ -87,6 +93,30 @@ namespace CapaPresentacion.Modales
             foreach (DataGridViewRow row in dataGridViewData.Rows)
             {
                 row.Visible = true;
+            }
+        }
+
+        private void buttonAgregarCliente_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdDetalleCliente("Agregar", 0))
+            {
+                var resultado = modal.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    _idCliente = modal.idCliente;
+
+                    Cliente oCliente = new CC_Cliente().ListarClientes().Where(c => c.IdCliente == _idCliente).FirstOrDefault();
+
+                    _Cliente = new Cliente()
+                    {
+                        IdCliente = oCliente.IdCliente,
+                        Documento = oCliente.Documento,
+                        NombreCompleto = oCliente.NombreCompleto,
+                    };
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
         }
     }

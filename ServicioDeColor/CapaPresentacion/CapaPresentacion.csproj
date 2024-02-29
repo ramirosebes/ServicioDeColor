@@ -535,5 +535,8 @@
   <ItemGroup>
     <None Include="Multimedia\Volver.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\AgregarCliente-Proveedor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

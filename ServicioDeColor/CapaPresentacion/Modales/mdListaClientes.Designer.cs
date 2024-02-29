@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdListaClientes));
             this.panelCliente = new System.Windows.Forms.Panel();
+            this.buttonAgregarCliente = new System.Windows.Forms.Button();
             this.buttonLimpiarBuscardor = new System.Windows.Forms.Button();
             this.labelBuscarPor = new System.Windows.Forms.Label();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -50,6 +51,7 @@
             // panelCliente
             // 
             this.panelCliente.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelCliente.Controls.Add(this.buttonAgregarCliente);
             this.panelCliente.Controls.Add(this.buttonLimpiarBuscardor);
             this.panelCliente.Controls.Add(this.labelBuscarPor);
             this.panelCliente.Controls.Add(this.buttonBuscar);
@@ -60,6 +62,24 @@
             this.panelCliente.Name = "panelCliente";
             this.panelCliente.Size = new System.Drawing.Size(543, 97);
             this.panelCliente.TabIndex = 55;
+            // 
+            // buttonAgregarCliente
+            // 
+            this.buttonAgregarCliente.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonAgregarCliente.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonAgregarCliente.FlatAppearance.BorderSize = 0;
+            this.buttonAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAgregarCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregarCliente.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAgregarCliente.Image = global::CapaPresentacion.Properties.Resources.AgregarCliente_Proveedor1;
+            this.buttonAgregarCliente.Location = new System.Drawing.Point(412, 15);
+            this.buttonAgregarCliente.Name = "buttonAgregarCliente";
+            this.buttonAgregarCliente.Size = new System.Drawing.Size(115, 30);
+            this.buttonAgregarCliente.TabIndex = 57;
+            this.buttonAgregarCliente.Text = "Agregar cliente";
+            this.buttonAgregarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAgregarCliente.UseVisualStyleBackColor = false;
+            this.buttonAgregarCliente.Click += new System.EventHandler(this.buttonAgregarCliente_Click);
             // 
             // buttonLimpiarBuscardor
             // 
@@ -238,5 +258,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCompleto;
+        private System.Windows.Forms.Button buttonAgregarCliente;
     }
 }

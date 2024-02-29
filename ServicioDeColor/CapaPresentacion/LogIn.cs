@@ -86,5 +86,10 @@ namespace CapaPresentacion
                 e.Handled = true;
             }
         }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

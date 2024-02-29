@@ -16,6 +16,7 @@ namespace CapaPresentacion.Modales
     public partial class mdListaProveedores : Form
     {
         public Proveedor _Proveedor { get; set; }
+        public int _idProveedor { get; set; }
 
         public mdListaProveedores()
         {
@@ -35,10 +36,14 @@ namespace CapaPresentacion.Modales
             comboBoxBusqueda.ValueMember = "Valor";
             comboBoxBusqueda.SelectedIndex = 0;
 
-            List<Proveedor> lista = new CC_Proveedor().ListarProveedores();
+            List<Proveedor> lista = new CC_Proveedor().ListarProveedores().Where(p => p.Estado).ToList();
             foreach (Proveedor item in lista)
             {
-                dataGridViewData.Rows.Add(new object[] { item.IdProveedor, item.CUIT, item.RazonSocial });
+                dataGridViewData.Rows.Add(new object[] { 
+                    item.IdProveedor, 
+                    item.CUIT, 
+                    item.RazonSocial
+                });
             }
         }
 
@@ -87,6 +92,30 @@ namespace CapaPresentacion.Modales
             foreach (DataGridViewRow row in dataGridViewData.Rows)
             {
                 row.Visible = true;
+            }
+        }
+
+        private void buttonAgregarProveedor_Click(object sender, EventArgs e)
+        {
+            using (var modal = new mdDetalleProveedor("Agregar", 0))
+            {
+                var resultado = modal.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    _idProveedor = modal.idProveedor;
+
+                    Proveedor oProveedor = new CC_Proveedor().ListarProveedores().Where(c => c.IdProveedor == _idProveedor).FirstOrDefault();
+
+                    _Proveedor = new Proveedor()
+                    {
+                        IdProveedor = oProveedor.IdProveedor,
+                        CUIT = oProveedor.CUIT,
+                        RazonSocial = oProveedor.RazonSocial,
+                    };
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
         }
     }

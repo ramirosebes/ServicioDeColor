@@ -43,6 +43,7 @@
             this.idProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonAgregarProveedor = new System.Windows.Forms.Button();
             this.panelProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // panelProveedor
             // 
             this.panelProveedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelProveedor.Controls.Add(this.buttonAgregarProveedor);
             this.panelProveedor.Controls.Add(this.labelTitulo);
             this.panelProveedor.Controls.Add(this.buttonLimpiarBuscardor);
             this.panelProveedor.Controls.Add(this.textBoxBusqueda);
@@ -201,6 +203,24 @@
             this.RazonSocial.ReadOnly = true;
             this.RazonSocial.Width = 250;
             // 
+            // buttonAgregarProveedor
+            // 
+            this.buttonAgregarProveedor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonAgregarProveedor.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonAgregarProveedor.FlatAppearance.BorderSize = 0;
+            this.buttonAgregarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAgregarProveedor.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAgregarProveedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonAgregarProveedor.Image = global::CapaPresentacion.Properties.Resources.AgregarCliente_Proveedor1;
+            this.buttonAgregarProveedor.Location = new System.Drawing.Point(397, 15);
+            this.buttonAgregarProveedor.Name = "buttonAgregarProveedor";
+            this.buttonAgregarProveedor.Size = new System.Drawing.Size(130, 30);
+            this.buttonAgregarProveedor.TabIndex = 58;
+            this.buttonAgregarProveedor.Text = "Agregar proveedor";
+            this.buttonAgregarProveedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAgregarProveedor.UseVisualStyleBackColor = false;
+            this.buttonAgregarProveedor.Click += new System.EventHandler(this.buttonAgregarProveedor_Click);
+            // 
             // mdListaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,5 +257,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idProveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn cuit;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
+        private System.Windows.Forms.Button buttonAgregarProveedor;
     }
 }
