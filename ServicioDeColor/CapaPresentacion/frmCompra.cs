@@ -115,7 +115,7 @@ namespace CapaPresentacion
                 {
                     string mensaje = string.Empty;
 
-                    bool eliminado = oCC_Compra.EliminarCompra(Convert.ToInt32(textBoxId.Text), out mensaje);
+                    bool eliminado = oCC_Compra.EliminarCompra(Convert.ToInt32(textBoxId.Text), _usuarioActual.IdUsuario, out mensaje);
 
                     if (eliminado)
                     {

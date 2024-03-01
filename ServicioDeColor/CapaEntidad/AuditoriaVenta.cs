@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CapaEntidad
+{
+    public class AuditoriaVenta
+    {
+        #region Variables Privadas
+        private int idAuditoriaVenta;
+        private Usuario usuarioAuditoria;
+        private string descripcionAuditoria;
+        private string fechaAuditoria;
+        private int idVenta;
+        private Usuario usuarioVenta;
+        private Cliente cliente;
+        private string tipoDocumento;
+        private string numeroDocumento;
+        private decimal montoPago;
+        private decimal montoCambio;
+        private decimal subTotal;
+        private decimal montoTotal;
+        private string tipoDescuento;
+        private decimal montoDescuento;
+        private List<AuditoriaDetalleVenta> auditoriaDetalleVenta;
+        private string fechaRegistro;
+        #endregion
+
+        #region Propiedades
+        public int IdAuditoriaVenta { get { return idAuditoriaVenta; } set { idAuditoriaVenta = value; } }
+        public Usuario oUsuarioAuditoria { get { return usuarioAuditoria; } set { usuarioAuditoria = value; } }
+        public string DescripcionAuditoria { get { return descripcionAuditoria; } set { descripcionAuditoria = value; } }
+        public string FechaAuditoria { get { return fechaAuditoria; } set { fechaAuditoria = value; } }
+        public int IdVenta { get { return idVenta; } set { idVenta = value; } }
+        public Usuario oUsuarioVenta { get { return usuarioVenta; } set { usuarioVenta = value; } }
+        public Cliente oCliente { get { return cliente; } set { cliente = value; } }
+        public string TipoDocumento { get { return tipoDocumento; } set { tipoDocumento = value; } }
+        public string NumeroDocumento { get { return numeroDocumento; } set { numeroDocumento = value; } }
+        public decimal MontoPago { get { return montoPago; } set { montoPago = value; } }
+        public decimal MontoCambio { get { return montoCambio; } set { montoCambio = value; } }
+        public decimal SubTotal { get { return subTotal; } set { subTotal = value; } }
+        public decimal MontoTotal { get { return montoTotal; } set { montoTotal = value; } }
+        public string TipoDescuento { get { return tipoDescuento; } set { tipoDescuento = value; } }
+        public decimal MontoDescuento { get { return montoDescuento; } set { montoDescuento = value; } }
+        public List<AuditoriaDetalleVenta> oAuditoriaDetalleVenta { get { return auditoriaDetalleVenta; } set { auditoriaDetalleVenta = value; } }
+        public string FechaRegistro { get { return fechaRegistro; } set { fechaRegistro = value; } }
+        #endregion
+    }
+}

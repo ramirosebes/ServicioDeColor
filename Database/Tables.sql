@@ -146,7 +146,8 @@ create table Venta (
 	TipoDocumento nvarchar(50),
 	NumeroDocumento nvarchar(50),
 	TipoDescuento nvarchar(50),
-	Descuento decimal(10, 2),
+	MontoDescuento decimal(10, 2),
+	SubTotal decimal(10, 2),
 	MontoPago decimal(10,2),
 	MontoCambio decimal (10,2),
 	MontoTotal decimal (10,2),
@@ -173,3 +174,79 @@ create table Negocio (
 	Direccion nvarchar(50),
 	Logo varbinary(max) NULL,
 );
+
+go
+
+/*-------- AUDITORIA --------*/
+--TABLA AUDITORIA COMPRA--
+create table AuditoriaCompra (
+	--Datos Auditoria--
+	IdAuditoriaCompra int primary key identity,
+	IdUsuarioAuditoria int,
+	DescripcionAuditoria nvarchar(100),
+	FechaAuditoria datetime default getdate(),
+	--Fin datos audtoria--
+	IdCompra int,
+	IdUsuario int,
+	IdProveedor int,
+	TipoDocumento nvarchar(50),
+	NumeroDocumento nvarchar(50),
+	MontoTotal decimal (10,2),
+	FechaRegistro datetime,
+);
+
+go
+
+--TABLA AUDITORIA DETALLE COMPRA--
+create table AuditoriaDetalleCompra (
+	IdAuditoriaDetalleCompra int primary key identity,
+	IdAuditoriaCompra int references AuditoriaCompra(IdAuditoriaCompra),
+	DescripcionAuditoria nvarchar(100),
+	IdProducto int references Producto(idProducto),
+	PrecioCompra decimal(10,2) default 0,
+	PrecioVenta decimal(10,2) default 0,
+	Cantidad int,
+	MontoTotal decimal(10,2),
+	FechaRegistro datetime,
+	FechaAuditoria datetime default getdate(),
+);
+
+go
+
+--TABLA AUDITORIA VENTA--
+create table AuditoriaVenta (
+	--Datos Auditoria--
+	IdAuditoriaVenta int primary key identity,
+	IdUsuarioAuditoria int,
+	DescripcionAuditoria nvarchar(100),
+	FechaAuditoria datetime default getdate(),
+	--Fin datos audtoria--
+	IdVenta int,
+	IdUsuario int,
+	IdCliente int,
+	TipoDocumento nvarchar(50),
+	NumeroDocumento nvarchar(50),
+	TipoDescuento nvarchar(50),
+	MontoDescuento decimal(10, 2),
+	SubTotal decimal(10, 2),
+	MontoPago decimal(10,2),
+	MontoCambio decimal (10,2),
+	MontoTotal decimal (10,2),
+	FechaRegistro datetime,
+);
+
+go
+
+--TABLA AUDITORIA DETALLE VENTA--
+create table AuditoriaDetalleVenta (
+	IdAuditoriaDetalleVenta int primary key identity,
+	IdAuditoriaVenta int references AuditoriaVenta(IdAuditoriaVenta),
+	DescripcionAuditoria nvarchar(100),
+	IdProducto int references Producto(idProducto),
+	PrecioVenta decimal(10,2) default 0,
+	Cantidad int,
+	SubTotal decimal(10,2),
+	FechaRegistro datetime,
+	FechaAuditoria datetime default getdate(),
+);
+/*-------- FIN AUDITORIA --------*/

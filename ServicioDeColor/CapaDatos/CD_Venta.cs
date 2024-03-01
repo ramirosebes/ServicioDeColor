@@ -302,7 +302,7 @@ namespace CapaDatos
             return oListaDetalleVenta;
         }
 
-        public bool EliminarVenta(int idVenta, out string mensaje)
+        public bool EliminarVenta(int idVenta, int idUsuario, out string mensaje)
         {
             bool ventaEliminada = false;
             mensaje = string.Empty;
@@ -317,6 +317,7 @@ namespace CapaDatos
 
                     //PARAMETROS DE ENTRADA
                     cmd.Parameters.AddWithValue("IdVenta", idVenta);
+                    cmd.Parameters.AddWithValue("IdUsuarioAuditoria", idUsuario);
                     //PARAMETRO DE SALIDA
                     cmd.Parameters.Add("Mensaje", SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;

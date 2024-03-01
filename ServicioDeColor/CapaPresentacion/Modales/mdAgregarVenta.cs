@@ -58,17 +58,12 @@ namespace CapaPresentacion.Modales
             {
                 var result = modal.ShowDialog();
 
-                if (result == DialogResult.OK && modal._Cliente.Estado == true)
+                if (result == DialogResult.OK)
                 {
                     textBoxIdCliente.Text = modal._Cliente.IdCliente.ToString();
                     textBoxDocumentoCliente.Text = modal._Cliente.Documento;
                     textBoxNombreCompleto.Text = modal._Cliente.NombreCompleto; //textBoxNombreCliente
                     textBoxCodigoProducto.Select();
-                }
-                else if (result == DialogResult.OK && modal._Cliente.Estado == false)
-                {
-                    MessageBox.Show("El cliente seleccionado se encuentra inavilitado", "Mensaje",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    textBoxDocumentoCliente.Select();
                 }
                 else
                 {

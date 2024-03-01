@@ -1108,51 +1108,6 @@ end
 
 go
 
---PROCEDURE REGISTRAR VENTA v2--
-create procedure SP_RegistrarVenta (
-	@IdUsuario int,
-	@IdCliente int,
-	@TipoDocumento nvarchar(50),
-	@NumeroDocumento nvarchar(50),
-	@TipoDescuento nvarchar(50),
-	@MontoDescuento decimal (10,2),
-	@MontoPago decimal(10,2),
-	@MontoCambio decimal(10,2),
-	@SubTotal decimal (10,2),
-	@MontoTotal decimal(10,2),
-	@DetalleVenta [EDetalleVenta] readonly,
-	@Resultado bit output,
-	@Mensaje nvarchar(500) output
-)
-as
-begin
-	begin try
-		declare @IdVenta int = 0
-		set @Resultado = 1
-		set @Mensaje = ''
-
-		begin transaction registro
-
-			insert into Venta(IdUsuario, IdCliente,TipoDocumento, NumeroDocumento, MontoPago, MontoCambio, SubTotal, MontoTotal, TipoDescuento, MontoDescuento)
-			values (@IdUsuario, @IdCliente, @TipoDocumento, @NumeroDocumento, @MontoPago, @MontoCambio, @SubTotal, @MontoTotal, @TipoDescuento, @MontoDescuento)
-
-			set @IdVenta = SCOPE_IDENTITY()
-
-			insert into DetalleVenta(IdVenta, IdProducto, PrecioVenta, Cantidad, SubTotal)
-			select @IdVenta, IdProducto, PrecioVenta, Cantidad, SubTotal from @DetalleVenta
-
-		commit transaction registro
-		
-	end try
-	begin catch
-			set @Resultado = 0
-			set @Mensaje = ERROR_MESSAGE()
-			rollback transaction registro
-	end catch
-end
-
-go
-
 --PROCEDURE ELIMINAR VENTA--
 create procedure SP_EliminarVenta (
     @IdVenta int,

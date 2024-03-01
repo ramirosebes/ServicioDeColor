@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CC_AuditoriaCompra.cs" />
     <Compile Include="CC_Categoria.cs" />
     <Compile Include="CC_Cliente.cs" />
     <Compile Include="CC_Compra.cs" />

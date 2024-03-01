@@ -91,11 +91,11 @@ namespace CapaControladora
             }
         }
 
-        public bool EliminarVenta(int idVenta, out string mensaje)
+        public bool EliminarVenta(int idVenta, int idUsuario, out string mensaje)
         {
             try
             {
-                return oCD_Venta.EliminarVenta(idVenta, out mensaje);
+                return oCD_Venta.EliminarVenta(idVenta, idUsuario, out mensaje);
             }
             catch (Exception ex)
             {

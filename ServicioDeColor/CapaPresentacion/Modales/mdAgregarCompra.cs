@@ -44,16 +44,11 @@ namespace CapaPresentacion.Modales
             {
                 var result = modal.ShowDialog();
 
-                if (result == DialogResult.OK && modal._Proveedor.Estado == true)
+                if (result == DialogResult.OK)
                 {
                     textBoxIdProveedor.Text = modal._Proveedor.IdProveedor.ToString();
                     textBoxCUIT.Text = modal._Proveedor.CUIT;
                     textBoxRazonSocial.Text = modal._Proveedor.RazonSocial;
-                }
-                else if (result == DialogResult.OK && modal._Proveedor.Estado == false)
-                {
-                    MessageBox.Show("El proveedor seleccionado se encuentra inavilitado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    textBoxCUIT.Select();
                 }
                 else
                 {

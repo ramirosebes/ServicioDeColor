@@ -68,11 +68,11 @@ namespace CapaControladora
             }
         }
 
-        public bool EliminarCompra(int idCompra, out string mensaje)
+        public bool EliminarCompra(int idCompra, int idUsuario,out string mensaje)
         {
             try
             {
-                return oCD_Compra.EliminarCompra(idCompra, out mensaje);
+                return oCD_Compra.EliminarCompra(idCompra, idUsuario, out mensaje);
             }
             catch (Exception ex)
             {

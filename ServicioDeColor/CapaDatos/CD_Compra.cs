@@ -29,7 +29,7 @@ namespace CapaDatos
                     query.AppendLine("INNER JOIN Persona ps ON u.IdPersona = ps.IdPersona");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
-                    cmd.CommandType = System.Data.CommandType.Text;
+                    cmd.CommandType = CommandType.Text;
 
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
@@ -271,7 +271,7 @@ namespace CapaDatos
             return listaDetallesCompras;
         }
 
-        public bool EliminarCompra (int idCompra, out string mensaje)
+        public bool EliminarCompra (int idCompra, int idUsuario,out string mensaje)
         {
             bool compraEliminada = false;
             mensaje = string.Empty;
@@ -286,6 +286,7 @@ namespace CapaDatos
 
                     //PARAMETROS DE ENTRADA
                     cmd.Parameters.AddWithValue("IdCompra", idCompra);
+                    cmd.Parameters.AddWithValue("IdUsuarioAuditoria", idUsuario);
                     //PARAMETRO DE SALIDA
                     cmd.Parameters.Add("Mensaje", System.Data.SqlDbType.NVarChar, 500).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Resultado", System.Data.SqlDbType.Int).Direction = ParameterDirection.Output;

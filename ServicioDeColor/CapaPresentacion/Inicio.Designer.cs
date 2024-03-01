@@ -55,6 +55,8 @@
             this.menuConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDatosNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
+            this.menuAuditoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAuditoriaCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,7 +145,8 @@
             this.menuSeguridad.BackColor = System.Drawing.SystemColors.Window;
             this.menuSeguridad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuUsuarios,
-            this.menuPermisos});
+            this.menuPermisos,
+            this.menuAuditoria});
             this.menuSeguridad.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuSeguridad.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuSeguridad.Name = "menuSeguridad";
@@ -154,7 +157,7 @@
             // menuUsuarios
             // 
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(137, 28);
+            this.menuUsuarios.Size = new System.Drawing.Size(180, 28);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -165,7 +168,7 @@
             this.menuGruposPermisos,
             this.menuPermisosUsuarios});
             this.menuPermisos.Name = "menuPermisos";
-            this.menuPermisos.Size = new System.Drawing.Size(137, 28);
+            this.menuPermisos.Size = new System.Drawing.Size(180, 28);
             this.menuPermisos.Text = "Permisos";
             // 
             // menuPermisosSimples
@@ -316,6 +319,21 @@
             this.menuTitulo.TabIndex = 85;
             this.menuTitulo.Text = "menuStrip2";
             // 
+            // menuAuditoria
+            // 
+            this.menuAuditoria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAuditoriaCompras});
+            this.menuAuditoria.Name = "menuAuditoria";
+            this.menuAuditoria.Size = new System.Drawing.Size(180, 28);
+            this.menuAuditoria.Text = "Auditoria";
+            // 
+            // menuAuditoriaCompras
+            // 
+            this.menuAuditoriaCompras.Name = "menuAuditoriaCompras";
+            this.menuAuditoriaCompras.Size = new System.Drawing.Size(197, 28);
+            this.menuAuditoriaCompras.Text = "Auditoria compras";
+            this.menuAuditoriaCompras.Click += new System.EventHandler(this.menuAuditoriaCompras_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,6 +387,8 @@
         private System.Windows.Forms.ToolStripMenuItem menuPedidosVentas;
         private System.Windows.Forms.ToolStripMenuItem menuReportesCompras;
         private System.Windows.Forms.ToolStripMenuItem menuReportesVentas;
+        private System.Windows.Forms.ToolStripMenuItem menuAuditoria;
+        private System.Windows.Forms.ToolStripMenuItem menuAuditoriaCompras;
     }
 }
 

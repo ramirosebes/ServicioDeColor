@@ -63,20 +63,20 @@ namespace CapaPresentacion
                 }
             }
 
-            //Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
-            foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
-            {
-                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+            ////Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
+            //foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
+            //{
+            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
 
-                if (encontrado)
-                {
-                    menu.Visible = true;
-                }
-                else
-                {
-                    menu.Visible = false;
-                }
-            }
+            //    if (encontrado)
+            //    {
+            //        menu.Visible = true;
+            //    }
+            //    else
+            //    {
+            //        menu.Visible = false;
+            //    }
+            //}
 
             //Recorre todo el menu Permisos ocultado o mostrando los menues dependiendo los permisos que tenga
             foreach (ToolStripMenuItem menu in menuPermisos.DropDownItems)
@@ -202,6 +202,10 @@ namespace CapaPresentacion
         private void menuPermisosUsuarios_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuSeguridad, new frmPermisoUsuario(_usuarioActual));
+        }
+        private void menuAuditoriaCompras_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuSeguridad, new frmAuditoriaCompra(_usuarioActual));
         }
 
         private void menuClientes_Click(object sender, EventArgs e)
