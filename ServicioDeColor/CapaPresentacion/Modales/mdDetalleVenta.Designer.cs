@@ -100,7 +100,7 @@
             this.panelDetalleVenta.Controls.Add(this.labelDetalleVenta);
             this.panelDetalleVenta.Location = new System.Drawing.Point(12, 12);
             this.panelDetalleVenta.Name = "panelDetalleVenta";
-            this.panelDetalleVenta.Size = new System.Drawing.Size(835, 609);
+            this.panelDetalleVenta.Size = new System.Drawing.Size(835, 607);
             this.panelDetalleVenta.TabIndex = 2;
             // 
             // textBoxTipoDescuento
@@ -121,7 +121,7 @@
             this.buttonDescargarPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDescargarPDF.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDescargarPDF.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonDescargarPDF.Location = new System.Drawing.Point(667, 533);
+            this.buttonDescargarPDF.Location = new System.Drawing.Point(667, 566);
             this.buttonDescargarPDF.Name = "buttonDescargarPDF";
             this.buttonDescargarPDF.Size = new System.Drawing.Size(150, 30);
             this.buttonDescargarPDF.TabIndex = 12;
@@ -185,7 +185,7 @@
             // 
             this.textBoxMontoCambio.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxMontoCambio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMontoCambio.Location = new System.Drawing.Point(466, 566);
+            this.textBoxMontoCambio.Location = new System.Drawing.Point(296, 566);
             this.textBoxMontoCambio.Name = "textBoxMontoCambio";
             this.textBoxMontoCambio.ReadOnly = true;
             this.textBoxMontoCambio.Size = new System.Drawing.Size(75, 27);
@@ -196,7 +196,7 @@
             // 
             this.labelMontoCambio.AutoSize = true;
             this.labelMontoCambio.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMontoCambio.Location = new System.Drawing.Point(359, 566);
+            this.labelMontoCambio.Location = new System.Drawing.Point(189, 566);
             this.labelMontoCambio.Name = "labelMontoCambio";
             this.labelMontoCambio.Size = new System.Drawing.Size(101, 23);
             this.labelMontoCambio.TabIndex = 88;
@@ -206,7 +206,7 @@
             // 
             this.textBoxMontoPago.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxMontoPago.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMontoPago.Location = new System.Drawing.Point(278, 566);
+            this.textBoxMontoPago.Location = new System.Drawing.Point(107, 566);
             this.textBoxMontoPago.Name = "textBoxMontoPago";
             this.textBoxMontoPago.ReadOnly = true;
             this.textBoxMontoPago.Size = new System.Drawing.Size(75, 27);
@@ -217,7 +217,7 @@
             // 
             this.labelMontoPago.AutoSize = true;
             this.labelMontoPago.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMontoPago.Location = new System.Drawing.Point(186, 566);
+            this.labelMontoPago.Location = new System.Drawing.Point(15, 566);
             this.labelMontoPago.Name = "labelMontoPago";
             this.labelMontoPago.Size = new System.Drawing.Size(86, 23);
             this.labelMontoPago.TabIndex = 86;
@@ -227,12 +227,13 @@
             // 
             this.textBoxMontoTotal.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBoxMontoTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMontoTotal.Location = new System.Drawing.Point(105, 566);
+            this.textBoxMontoTotal.Location = new System.Drawing.Point(623, 533);
             this.textBoxMontoTotal.Name = "textBoxMontoTotal";
             this.textBoxMontoTotal.ReadOnly = true;
             this.textBoxMontoTotal.Size = new System.Drawing.Size(75, 27);
             this.textBoxMontoTotal.TabIndex = 9;
             this.textBoxMontoTotal.Text = "0.00";
+            this.textBoxMontoTotal.TextChanged += new System.EventHandler(this.textBoxMontoTotal_TextChanged);
             // 
             // dataGridViewData
             // 
@@ -298,7 +299,7 @@
             // 
             this.labelMontoTotal.AutoSize = true;
             this.labelMontoTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMontoTotal.Location = new System.Drawing.Point(15, 566);
+            this.labelMontoTotal.Location = new System.Drawing.Point(533, 533);
             this.labelMontoTotal.Name = "labelMontoTotal";
             this.labelMontoTotal.Size = new System.Drawing.Size(84, 23);
             this.labelMontoTotal.TabIndex = 8;
@@ -502,12 +503,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(860, 634);
+            this.ClientSize = new System.Drawing.Size(859, 631);
             this.Controls.Add(this.panelDetalleVenta);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(876, 673);
-            this.MinimumSize = new System.Drawing.Size(876, 673);
+            this.MaximumSize = new System.Drawing.Size(875, 670);
+            this.MinimumSize = new System.Drawing.Size(875, 670);
             this.Name = "mdDetalleVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle venta";

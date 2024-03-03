@@ -149,6 +149,12 @@
     <Compile Include="frmAuditoriaCompra.Designer.cs">
       <DependentUpon>frmAuditoriaCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAuditoriaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditoriaVenta.Designer.cs">
+      <DependentUpon>frmAuditoriaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,12 @@
     </Compile>
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modales\mdDetalleAuditoriaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdDetalleAuditoriaVenta.Designer.cs">
+      <DependentUpon>mdDetalleAuditoriaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Modales\mdAgregarComponenteAGrupo.cs">
       <SubType>Form</SubType>
@@ -366,6 +378,9 @@
     <EmbeddedResource Include="frmAuditoriaCompra.resx">
       <DependentUpon>frmAuditoriaCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAuditoriaVenta.resx">
+      <DependentUpon>frmAuditoriaVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -410,6 +425,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdDetalleAuditoriaVenta.resx">
+      <DependentUpon>mdDetalleAuditoriaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdAgregarComponenteAGrupo.resx">
       <DependentUpon>mdAgregarComponenteAGrupo.cs</DependentUpon>
@@ -558,6 +576,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Multimedia\PlantillaAuditoriaCompra.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\PlantillaAuditoriaVenta.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

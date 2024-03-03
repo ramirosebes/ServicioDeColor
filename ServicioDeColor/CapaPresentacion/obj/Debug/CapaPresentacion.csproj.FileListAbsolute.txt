@@ -166,3 +166,5 @@ C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPr
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmAuditoriaCompra.resources
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleAuditoriaCompra.resources
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmAuditoriaVenta.resources
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleAuditoriaVenta.resources

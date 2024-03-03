@@ -208,6 +208,11 @@ namespace CapaPresentacion
             abrirFormulario(menuSeguridad, new frmAuditoriaCompra(_usuarioActual));
         }
 
+        private void auditoriaVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuSeguridad, new frmAuditoriaVenta(_usuarioActual));
+        }
+
         private void menuClientes_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuVentas, new frmCliente(_usuarioActual));

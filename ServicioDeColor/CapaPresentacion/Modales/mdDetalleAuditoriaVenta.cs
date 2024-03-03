@@ -16,45 +16,45 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion.Modales
 {
-    public partial class mdDetalleVenta : Form
+    public partial class mdDetalleAuditoriaVenta : Form
     {
-        public string _numeroDocumento;
-
-        public mdDetalleVenta(string numeroDocumento)
+        public int _idAuditoriaVenta;
+        public mdDetalleAuditoriaVenta(int idAuditoriaVenta)
         {
-            _numeroDocumento = numeroDocumento;
+            _idAuditoriaVenta = idAuditoriaVenta;
             InitializeComponent();
         }
-
-        private void mdDetalleVenta_Load(object sender, EventArgs e)
+        private void frmDetalleAuditoriaVenta_Load(object sender, EventArgs e)
         {
-            textBoxBusqueda.Text = _numeroDocumento;
-            Venta oVenta = new CC_Venta().ObtenerVenta(textBoxBusqueda.Text);
+            AuditoriaVenta oAuditoriaVenta = new CC_AuditoriaVenta().ObtenerAuditoriaVenta(_idAuditoriaVenta);
 
-            if (oVenta.IdVenta != 0)
+            if (oAuditoriaVenta.IdAuditoriaVenta != 0)
             {
-                textBoxNumeroDocumento.Text = oVenta.NumeroDocumento;
-
-                textBoxFecha.Text = oVenta.FechaRegistro;
-                textBoxTipoDocumento.Text = oVenta.TipoDocumento;
-                textBoxUsuario.Text = oVenta.oUsuario.NombreCompleto;
-
-                textBoxDocumentoCliente.Text = oVenta.oCliente.Documento;
-                textBoxNombreCliente.Text = oVenta.oCliente.NombreCompleto;
+                //Informacion Auditoria
+                textBoxFechaAuditoria.Text = oAuditoriaVenta.FechaAuditoria;
+                textBoxUltimoUsuario.Text = oAuditoriaVenta.oUsuarioAuditoria.NombreCompleto;
+                textBoxDescripcion.Text = oAuditoriaVenta.DescripcionAuditoria;
+                //Informacion Venta
+                textBoxIdVenta.Text = oAuditoriaVenta.IdVenta.ToString();
+                textBoxFecha.Text = oAuditoriaVenta.FechaRegistro;
+                textBoxTipoDocumento.Text = oAuditoriaVenta.TipoDocumento;
+                textBoxNombreCompletoUsuario.Text = oAuditoriaVenta.oUsuarioVenta.NombreCompleto;
+                //Informacion Proveedor
+                textBoxDocumentoCliente.Text = oAuditoriaVenta.oCliente.Documento;
+                textBoxNombreCompletoCliente.Text = oAuditoriaVenta.oCliente.NombreCompleto;
 
                 dataGridViewData.Rows.Clear();
-
-                foreach (DetalleVenta dv in oVenta.oDetalleVenta)
+                foreach (AuditoriaDetalleVenta adc in oAuditoriaVenta.oAuditoriaDetalleVenta)
                 {
-                    dataGridViewData.Rows.Add(new object[] { dv.oProducto.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal });
+                    dataGridViewData.Rows.Add(new object[] { adc.oProducto.Nombre, adc.PrecioVenta, adc.Cantidad, adc.SubTotal });
                 }
 
-                textBoxTipoDescuento.Text = oVenta.TipoDescuento;
-                textBoxMontoDescuento.Text = oVenta.MontoDescuento.ToString("0.00");
-                textBoxSubTotal.Text = oVenta.SubTotal.ToString("0.00");
-                textBoxMontoTotal.Text = oVenta.MontoTotal.ToString("0.00");
-                textBoxMontoPago.Text = oVenta.MontoPago.ToString("0.00");
-                textBoxMontoCambio.Text = oVenta.MontoCambio.ToString("0.00");
+                textBoxSubTotal.Text = oAuditoriaVenta.SubTotal.ToString("0.00");
+                textBoxTipoDescuento.Text = oAuditoriaVenta.TipoDescuento;
+                textBoxMontoDescuento.Text = oAuditoriaVenta.MontoDescuento.ToString("0.00");
+                textBoxMontoTotal.Text = oAuditoriaVenta.MontoTotal.ToString("0.00");
+                textBoxMontoPago.Text = oAuditoriaVenta.MontoPago.ToString("0.00");
+                textBoxMontoCambio.Text = oAuditoriaVenta.MontoCambio.ToString("0.00");
             }
         }
 
@@ -66,20 +66,24 @@ namespace CapaPresentacion.Modales
                 return;
             }
 
-            string textoHTML = Properties.Resources.PlantillaVenta.ToString();
+            string textoHTML = Properties.Resources.PlantillaAuditoriaVenta.ToString();
             Negocio oDatos = new CC_Negocio().ObtenerDatos();
 
             textoHTML = textoHTML.Replace("@nombrenegocio", oDatos.Nombre.ToUpper());
             textoHTML = textoHTML.Replace("@cuitnegocio", oDatos.CUIT);
             textoHTML = textoHTML.Replace("@direcnegocio", oDatos.Direccion);
 
-            textoHTML = textoHTML.Replace("@tipodocumento", textBoxTipoDocumento.Text.ToUpper());
-            textoHTML = textoHTML.Replace("@numerodocumento", textBoxNumeroDocumento.Text);
+            //textoHTML = textoHTML.Replace("@tipodocumento", textBoxTipoDocumento.Text.ToUpper());
+            //textoHTML = textoHTML.Replace("@numerodocumento", textBoxNumeroDocumento.Text);
+            textoHTML = textoHTML.Replace("@idVenta", textBoxIdVenta.Text);
 
+            textoHTML = textoHTML.Replace("@fechaAuditoria", textBoxFechaAuditoria.Text);
+            textoHTML = textoHTML.Replace("@usuarioAuditoria", textBoxUltimoUsuario.Text);
+            textoHTML = textoHTML.Replace("@descripcionAuditoria", textBoxDescripcion.Text);
             textoHTML = textoHTML.Replace("@doccliente", textBoxDocumentoCliente.Text);
-            textoHTML = textoHTML.Replace("@nombrecliente", textBoxNombreCliente.Text);
+            textoHTML = textoHTML.Replace("@nombrecliente", textBoxNombreCompletoCliente.Text);
             textoHTML = textoHTML.Replace("@fecharegistro", textBoxFecha.Text);
-            textoHTML = textoHTML.Replace("@usuarioregistro", textBoxUsuario.Text);
+            textoHTML = textoHTML.Replace("@usuarioregistro", textBoxNombreCompletoUsuario.Text);
 
             string filas = string.Empty;
 
@@ -101,7 +105,7 @@ namespace CapaPresentacion.Modales
             textoHTML = textoHTML.Replace("@cambio", textBoxMontoCambio.Text);
 
             SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.FileName = string.Format("Venta_{0}.pdf", textBoxNumeroDocumento.Text);
+            saveFile.FileName = string.Format("Venta_{0}.pdf", textBoxIdVenta.Text);
             saveFile.Filter = "Pdf Files|*.pdf";
 
             if (saveFile.ShowDialog() == DialogResult.OK)
@@ -135,11 +139,6 @@ namespace CapaPresentacion.Modales
                     MessageBox.Show("Documento generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-        }
-
-        private void textBoxMontoTotal_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

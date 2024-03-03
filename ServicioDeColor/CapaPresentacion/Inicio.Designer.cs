@@ -41,6 +41,8 @@
             this.menuPermisosSimples = new System.Windows.Forms.ToolStripMenuItem();
             this.menuGruposPermisos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPermisosUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAuditoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAuditoriaCompras = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPedidosVentas = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,8 +57,7 @@
             this.menuConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDatosNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.menuAuditoria = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAuditoriaCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.auditoriaVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,6 +193,22 @@
             this.menuPermisosUsuarios.Text = "Permisos de usuarios";
             this.menuPermisosUsuarios.Click += new System.EventHandler(this.menuPermisosUsuarios_Click);
             // 
+            // menuAuditoria
+            // 
+            this.menuAuditoria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAuditoriaCompras,
+            this.auditoriaVentasToolStripMenuItem});
+            this.menuAuditoria.Name = "menuAuditoria";
+            this.menuAuditoria.Size = new System.Drawing.Size(180, 28);
+            this.menuAuditoria.Text = "Auditoria";
+            // 
+            // menuAuditoriaCompras
+            // 
+            this.menuAuditoriaCompras.Name = "menuAuditoriaCompras";
+            this.menuAuditoriaCompras.Size = new System.Drawing.Size(197, 28);
+            this.menuAuditoriaCompras.Text = "Auditoria compras";
+            this.menuAuditoriaCompras.Click += new System.EventHandler(this.menuAuditoriaCompras_Click);
+            // 
             // menuVentas
             // 
             this.menuVentas.BackColor = System.Drawing.SystemColors.Window;
@@ -319,20 +336,12 @@
             this.menuTitulo.TabIndex = 85;
             this.menuTitulo.Text = "menuStrip2";
             // 
-            // menuAuditoria
+            // auditoriaVentasToolStripMenuItem
             // 
-            this.menuAuditoria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuAuditoriaCompras});
-            this.menuAuditoria.Name = "menuAuditoria";
-            this.menuAuditoria.Size = new System.Drawing.Size(180, 28);
-            this.menuAuditoria.Text = "Auditoria";
-            // 
-            // menuAuditoriaCompras
-            // 
-            this.menuAuditoriaCompras.Name = "menuAuditoriaCompras";
-            this.menuAuditoriaCompras.Size = new System.Drawing.Size(197, 28);
-            this.menuAuditoriaCompras.Text = "Auditoria compras";
-            this.menuAuditoriaCompras.Click += new System.EventHandler(this.menuAuditoriaCompras_Click);
+            this.auditoriaVentasToolStripMenuItem.Name = "auditoriaVentasToolStripMenuItem";
+            this.auditoriaVentasToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
+            this.auditoriaVentasToolStripMenuItem.Text = "Auditoria ventas";
+            this.auditoriaVentasToolStripMenuItem.Click += new System.EventHandler(this.auditoriaVentasToolStripMenuItem_Click);
             // 
             // Inicio
             // 
@@ -389,6 +398,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuReportesVentas;
         private System.Windows.Forms.ToolStripMenuItem menuAuditoria;
         private System.Windows.Forms.ToolStripMenuItem menuAuditoriaCompras;
+        private System.Windows.Forms.ToolStripMenuItem auditoriaVentasToolStripMenuItem;
     }
 }
 

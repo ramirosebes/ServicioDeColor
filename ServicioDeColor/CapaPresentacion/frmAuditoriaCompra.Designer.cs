@@ -460,7 +460,7 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.dataGridView);
             this.Name = "frmAuditoriaCompra";
-            this.Text = "frmAuditoriaCompra";
+            this.Text = "Auditoria compra";
             this.Load += new System.EventHandler(this.frmAuditoriaCompra_Load);
             this.panelLista.ResumeLayout(false);
             this.panelLista.PerformLayout();

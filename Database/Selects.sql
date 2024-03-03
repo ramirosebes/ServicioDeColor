@@ -89,10 +89,13 @@ ac.IdProveedor, pv.RazonSocial, pv.CUIT, pv.Correo,
 DescripcionAuditoria, FechaAuditoria, IdCompra, TipoDocumento, NumeroDocumento, MontoTotal, FechaRegistro,
 ac.IdUsuario, uc.IdPersona[IdPersonaUsuarioCompra], pc.NombreCompleto[NombreCompletoUsuarioCompra], pc.Documento[DocumentoUsuarioCompra]
 from AuditoriaCompra ac
+--Usuario Auditoria ua--
 inner join Usuario ua on ac.IdUsuarioAuditoria = ua.IdUsuario
 inner join Persona pa on ua.IdUsuario = pa.IdPersona
+--Usuario Compra uc--
 inner join Usuario uc on ac.IdUsuario = uc.IdUsuario
 inner join Persona pc on uc.IdPersona = pc.IdPersona
+--Proveedor pv--
 inner join Proveedor pv on ac.IdProveedor = pv.IdProveedor
 
 --SELECT OBTENER AUDITORIA COMPRA--
@@ -118,3 +121,52 @@ adc.PrecioCompra, adc.Cantidad, adc.MontoTotal
 from AuditoriaDetalleCompra adc
 inner join Producto p on p.IdProducto = adc.IdProducto
 where adc.IdAuditoriaCompra = @idAuditoriaCompra
+
+--SELECT LISTAR AUDITORIA VENTAS--
+select
+av.IdAuditoriaVenta,
+av.IdUsuarioAuditoria, ua.IdPersona[IdPersonaUsuarioAuditoria], pa.NombreCompleto[NombreCompletoUsuarioAuditoria], pa.Documento[DocumentoUsuarioAuditoria],
+av.DescripcionAuditoria, av.FechaAuditoria,
+av.IdVenta,
+av.IdUsuario, uv.IdPersona[IdPersonaUsuarioVenta], pv.NombreCompleto[NombreCompletoUsuarioVenta], pv.Documento[DocumentoUsuarioVenta],
+av.IdCliente, pc.IdPersona[IdPersonaClienteVenta], pc.NombreCompleto[NombreCompletoClienteVenta], pc.Documento[DocumentoClienteVenta],
+TipoDocumento, NumeroDocumento, TipoDescuento, MontoDescuento, SubTotal, MontoPago, MontoCambio, MontoTotal, FechaRegistro
+from AuditoriaVenta av
+--Usuario Auditoria ua--
+inner join Usuario ua on av.IdUsuarioAuditoria = ua.IdUsuario
+inner join Persona pa on ua.IdUsuario = pa.IdPersona
+--Usuario Venta uv--
+inner join Usuario uv on av.IdUsuario = uv.IdUsuario
+inner join Persona pv on uv.IdPersona = pv.IdPersona
+--Cliente Venta cv--
+inner join Cliente cv on av.IdCliente = cv.IdCliente
+inner join Persona pc on cv.IdPersona = pc.IdPersona
+
+--SELECT OBTENER AUDTIROA VENTA--
+select
+av.IdAuditoriaVenta,
+av.IdUsuarioAuditoria, ua.IdPersona[IdPersonaUsuarioAuditoria], pa.NombreCompleto[NombreCompletoUsuarioAuditoria], pa.Documento[DocumentoUsuarioAuditoria],
+av.DescripcionAuditoria, av.FechaAuditoria,
+av.IdVenta,
+av.IdUsuario, uv.IdPersona[IdPersonaUsuarioVenta], pv.NombreCompleto[NombreCompletoUsuarioVenta], pv.Documento[DocumentoUsuarioVenta],
+av.IdCliente, pc.IdPersona[IdPersonaClienteVenta], pc.NombreCompleto[NombreCompletoClienteVenta], pc.Documento[DocumentoClienteVenta],
+TipoDocumento, NumeroDocumento, TipoDescuento, MontoDescuento, SubTotal, MontoPago, MontoCambio, MontoTotal, FechaRegistro
+from AuditoriaVenta av
+--Usuario Auditoria ua--
+inner join Usuario ua on av.IdUsuarioAuditoria = ua.IdUsuario
+inner join Persona pa on ua.IdUsuario = pa.IdPersona
+--Usuario Venta uv--
+inner join Usuario uv on av.IdUsuario = uv.IdUsuario
+inner join Persona pv on uv.IdPersona = pv.IdPersona
+--Cliente Venta cv--
+inner join Cliente cv on av.IdCliente = cv.IdCliente
+inner join Persona pc on cv.IdPersona = pc.IdPersona
+where av.IdAuditoriaVenta = @idAuditoriaVenta
+
+--SELECT OBTENER AUDITORIA DETALLE VENTA--
+select p.Nombre,
+adv.DescripcionAuditoria, adv.FechaAuditoria,
+adv.PrecioVenta, adv.Cantidad, adv.SubTotal
+from AuditoriaDetalleVenta adv
+inner join Producto p on p.IdProducto = adv.IdProducto
+where adv.IdAuditoriaVenta = @idAuditoriaVenta
