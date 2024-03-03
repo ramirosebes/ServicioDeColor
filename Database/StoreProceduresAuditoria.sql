@@ -432,3 +432,29 @@ begin
         rollback transaction eliminar_venta;
     end catch
 end;
+
+--PROCEDURE REGISTRAR SESION--
+create procedure SP_RegistrarSesion (
+	@IdUsuario int,
+	@DescripcionAuditoria nvarchar(100),
+	@Mensaje nvarchar(500) output,
+	@Resultado bit output
+)
+as
+begin
+	begin try
+		set @Resultado = 0;
+        set @Mensaje = '';	
+		begin transaction registro
+			begin
+				insert into AuditoriaSesion (IdUsuario, DescripcionAuditoria)
+					values (@IdUsuario, @DescripcionAuditoria);
+				set @Resultado = 1;
+			end
+			commit transaction registro
+		end try
+	begin catch
+		set @Mensaje = ERROR_MESSAGE()
+		rollback transaction registro
+	end catch
+end

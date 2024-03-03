@@ -249,4 +249,12 @@ create table AuditoriaDetalleVenta (
 	FechaRegistro datetime,
 	FechaAuditoria datetime default getdate(),
 );
+
+--TABLA AUDITORIA SESION--
+create table AuditoriaSesion (
+	IdAuditoriaSesion int primary key identity,
+	IdUsuario int,
+	DescripcionAuditoria nvarchar(100),
+	FechaAuditoria datetime default getdate()
+);
 /*-------- FIN AUDITORIA --------*/

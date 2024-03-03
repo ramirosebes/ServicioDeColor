@@ -116,6 +116,7 @@
     <Compile Include="AuditoriaCompra.cs" />
     <Compile Include="AuditoriaDetalleCompra.cs" />
     <Compile Include="AuditoriaDetalleVenta.cs" />
+    <Compile Include="AuditoriaSesion.cs" />
     <Compile Include="AuditoriaVenta.cs" />
     <Compile Include="CalculadorDescuento.cs" />
     <Compile Include="Categoria.cs" />

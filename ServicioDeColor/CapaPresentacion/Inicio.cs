@@ -35,7 +35,6 @@ namespace CapaPresentacion
             //Para ingresar logueandose
             _usuarioActual = oUsuario;
             _usuarioActual.SetPermisos(new CC_Permiso().ListarPermisosPorId(_usuarioActual.IdUsuario));
-            ////_usuarioActual.SetPermisos(new CC_Permiso().ListarPermisos(_usuarioActual.IdUsuario)); //Esta no
 
             InitializeComponent();
         }
@@ -63,23 +62,37 @@ namespace CapaPresentacion
                 }
             }
 
-            ////Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
-            //foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
-            //{
-            //    bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+            //Recorre todo el menu Seguridad ocultado o mostrando los menues dependiendo los permisos que tenga
+            foreach (ToolStripMenuItem menu in menuSeguridad.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
 
-            //    if (encontrado)
-            //    {
-            //        menu.Visible = true;
-            //    }
-            //    else
-            //    {
-            //        menu.Visible = false;
-            //    }
-            //}
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
 
             //Recorre todo el menu Permisos ocultado o mostrando los menues dependiendo los permisos que tenga
             foreach (ToolStripMenuItem menu in menuPermisos.DropDownItems)
+            {
+                bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
+
+                if (encontrado)
+                {
+                    menu.Visible = true;
+                }
+                else
+                {
+                    menu.Visible = false;
+                }
+            }
+
+            foreach (ToolStripMenuItem menu in menuAuditorias.DropDownItems)
             {
                 bool encontrado = listaPermisos.Any(p => p.NombreMenu == menu.Name);
 
@@ -213,6 +226,11 @@ namespace CapaPresentacion
             abrirFormulario(menuSeguridad, new frmAuditoriaVenta(_usuarioActual));
         }
 
+        private void auditoriaSesionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrirFormulario(menuSeguridad, new frmAuditoriaSesion(_usuarioActual));
+        }
+
         private void menuClientes_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuVentas, new frmCliente(_usuarioActual));
@@ -258,6 +276,32 @@ namespace CapaPresentacion
         private void menuReportesVentas_Click(object sender, EventArgs e)
         {
             abrirFormulario(menuReportes, new frmReporteVentas(_usuarioActual));
+        }
+
+        private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            CierreSesion();
+        }
+
+        private void CierreSesion()
+        {
+            AuditoriaSesion auditoriaSesion = new AuditoriaSesion()
+            {
+                oUsuario = _usuarioActual,
+                DescripcionAuditoria = "Cierre de sesión",
+            };
+
+            bool auditoriaSesionRegistrada = new CC_AuditoriaSesion().RegistrarAuditoriaSesion(auditoriaSesion, out string mensaje);
+
+            ////PRUEBA
+            //if (auditoriaSesionRegistrada)
+            //{
+            //    MessageBox.Show("Inicio de sesion auditado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //else
+            //{
+            //    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
     }
 }

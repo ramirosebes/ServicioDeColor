@@ -63,6 +63,27 @@ namespace CapaPresentacion
 
                     Inicio inicio = new Inicio(oUsuario);
 
+                    #region Auditoria sesion
+                    AuditoriaSesion auditoriaSesion = new AuditoriaSesion()
+                    {
+                        oUsuario = oUsuario,
+                        DescripcionAuditoria = "Inicio de sesión",
+                    };
+
+                    bool auditoriaSesionRegistrada = new CC_AuditoriaSesion().RegistrarAuditoriaSesion(auditoriaSesion, out string mensaje);
+
+                    ////PRUEBA
+                    //if (auditoriaSesionRegistrada)
+                    //{
+                    //    MessageBox.Show("Inicio de sesion auditado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
+
+                    #endregion
+
                     inicio.Show();
                     this.Hide();
 

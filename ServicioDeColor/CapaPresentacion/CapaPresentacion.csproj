@@ -149,6 +149,12 @@
     <Compile Include="frmAuditoriaCompra.Designer.cs">
       <DependentUpon>frmAuditoriaCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAuditoriaSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditoriaSesion.Designer.cs">
+      <DependentUpon>frmAuditoriaSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAuditoriaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -329,6 +335,12 @@
     <Compile Include="Modales\mdDetalleProveedor.Designer.cs">
       <DependentUpon>mdDetalleProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modales\mdDetalleAuditoriaSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modales\mdDetalleAuditoriaSesion.Designer.cs">
+      <DependentUpon>mdDetalleAuditoriaSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modales\mdDetalleUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -378,6 +390,9 @@
     <EmbeddedResource Include="frmAuditoriaCompra.resx">
       <DependentUpon>frmAuditoriaCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAuditoriaSesion.resx">
+      <DependentUpon>frmAuditoriaSesion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAuditoriaVenta.resx">
       <DependentUpon>frmAuditoriaVenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,6 +440,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modales\mdDetalleAuditoriaSesion.resx">
+      <DependentUpon>mdDetalleAuditoriaSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetalleAuditoriaVenta.resx">
       <DependentUpon>mdDetalleAuditoriaVenta.cs</DependentUpon>

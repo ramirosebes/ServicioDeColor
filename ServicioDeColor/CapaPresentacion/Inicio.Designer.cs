@@ -41,8 +41,10 @@
             this.menuPermisosSimples = new System.Windows.Forms.ToolStripMenuItem();
             this.menuGruposPermisos = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPermisosUsuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAuditoria = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAuditorias = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAuditoriaSesiones = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAuditoriaCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAuditoriaVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuClientes = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPedidosVentas = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +59,6 @@
             this.menuConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDatosNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.auditoriaVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,7 +148,7 @@
             this.menuSeguridad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuUsuarios,
             this.menuPermisos,
-            this.menuAuditoria});
+            this.menuAuditorias});
             this.menuSeguridad.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuSeguridad.ForeColor = System.Drawing.SystemColors.ControlText;
             this.menuSeguridad.Name = "menuSeguridad";
@@ -193,14 +194,22 @@
             this.menuPermisosUsuarios.Text = "Permisos de usuarios";
             this.menuPermisosUsuarios.Click += new System.EventHandler(this.menuPermisosUsuarios_Click);
             // 
-            // menuAuditoria
+            // menuAuditorias
             // 
-            this.menuAuditoria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAuditorias.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAuditoriaSesiones,
             this.menuAuditoriaCompras,
-            this.auditoriaVentasToolStripMenuItem});
-            this.menuAuditoria.Name = "menuAuditoria";
-            this.menuAuditoria.Size = new System.Drawing.Size(180, 28);
-            this.menuAuditoria.Text = "Auditoria";
+            this.menuAuditoriaVentas});
+            this.menuAuditorias.Name = "menuAuditorias";
+            this.menuAuditorias.Size = new System.Drawing.Size(180, 28);
+            this.menuAuditorias.Text = "Auditoria";
+            // 
+            // menuAuditoriaSesiones
+            // 
+            this.menuAuditoriaSesiones.Name = "menuAuditoriaSesiones";
+            this.menuAuditoriaSesiones.Size = new System.Drawing.Size(197, 28);
+            this.menuAuditoriaSesiones.Text = "Auditoria sesiones";
+            this.menuAuditoriaSesiones.Click += new System.EventHandler(this.auditoriaSesionesToolStripMenuItem_Click);
             // 
             // menuAuditoriaCompras
             // 
@@ -208,6 +217,13 @@
             this.menuAuditoriaCompras.Size = new System.Drawing.Size(197, 28);
             this.menuAuditoriaCompras.Text = "Auditoria compras";
             this.menuAuditoriaCompras.Click += new System.EventHandler(this.menuAuditoriaCompras_Click);
+            // 
+            // menuAuditoriaVentas
+            // 
+            this.menuAuditoriaVentas.Name = "menuAuditoriaVentas";
+            this.menuAuditoriaVentas.Size = new System.Drawing.Size(197, 28);
+            this.menuAuditoriaVentas.Text = "Auditoria ventas";
+            this.menuAuditoriaVentas.Click += new System.EventHandler(this.auditoriaVentasToolStripMenuItem_Click);
             // 
             // menuVentas
             // 
@@ -336,13 +352,6 @@
             this.menuTitulo.TabIndex = 85;
             this.menuTitulo.Text = "menuStrip2";
             // 
-            // auditoriaVentasToolStripMenuItem
-            // 
-            this.auditoriaVentasToolStripMenuItem.Name = "auditoriaVentasToolStripMenuItem";
-            this.auditoriaVentasToolStripMenuItem.Size = new System.Drawing.Size(197, 28);
-            this.auditoriaVentasToolStripMenuItem.Text = "Auditoria ventas";
-            this.auditoriaVentasToolStripMenuItem.Click += new System.EventHandler(this.auditoriaVentasToolStripMenuItem_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -360,6 +369,7 @@
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Inicio_FormClosed);
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
@@ -396,9 +406,10 @@
         private System.Windows.Forms.ToolStripMenuItem menuPedidosVentas;
         private System.Windows.Forms.ToolStripMenuItem menuReportesCompras;
         private System.Windows.Forms.ToolStripMenuItem menuReportesVentas;
-        private System.Windows.Forms.ToolStripMenuItem menuAuditoria;
+        private System.Windows.Forms.ToolStripMenuItem menuAuditorias;
         private System.Windows.Forms.ToolStripMenuItem menuAuditoriaCompras;
-        private System.Windows.Forms.ToolStripMenuItem auditoriaVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuAuditoriaVentas;
+        private System.Windows.Forms.ToolStripMenuItem menuAuditoriaSesiones;
     }
 }
 

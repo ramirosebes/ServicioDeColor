@@ -170,3 +170,12 @@ adv.PrecioVenta, adv.Cantidad, adv.SubTotal
 from AuditoriaDetalleVenta adv
 inner join Producto p on p.IdProducto = adv.IdProducto
 where adv.IdAuditoriaVenta = @idAuditoriaVenta
+
+--SELECT LISTAR AUDITORIA SESION--
+select 
+sa.IdAuditoriaSesion,
+sa.IdUsuario, u.Estado, p.IdPersona, p.NombreCompleto, p.Documento, p.Correo,
+sa.DescripcionAuditoria, sa.FechaAuditoria
+from AuditoriaSesion sa
+inner join Usuario u on sa.IdUsuario = u.IdUsuario
+inner join Persona p on u.IdPersona = p.IdPersona
