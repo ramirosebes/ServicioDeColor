@@ -45,5 +45,33 @@ namespace CapaPresentacion.Modales
         {
             this.Close();
         }
+
+        private void textBoxNombrePermiso_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 100
+            if (textBox.Text.Length > 100)
+            {
+                // Si es mayor, truncamos el texto a 100 caracteres
+                textBox.Text = textBox.Text.Substring(0, 100);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void textBoxNombreMenu_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 100
+            if (textBox.Text.Length > 100)
+            {
+                // Si es mayor, truncamos el texto a 100 caracteres
+                textBox.Text = textBox.Text.Substring(0, 100);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
     }
 }

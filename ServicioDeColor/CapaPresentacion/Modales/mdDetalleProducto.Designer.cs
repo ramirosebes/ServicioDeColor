@@ -32,6 +32,7 @@
             this.paneTitulo = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.richTextBoxDescripcion = new System.Windows.Forms.RichTextBox();
             this.labelCategoria = new System.Windows.Forms.Label();
             this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,8 +49,6 @@
             this.textBoxStock = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.labelDescripcion = new System.Windows.Forms.Label();
-            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
-            this.labelLineCorreo = new System.Windows.Forms.Label();
             this.labelNombre = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.labelLineNombreCompleto = new System.Windows.Forms.Label();
@@ -85,6 +84,7 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelContenedor.Controls.Add(this.richTextBoxDescripcion);
             this.panelContenedor.Controls.Add(this.labelCategoria);
             this.panelContenedor.Controls.Add(this.comboBoxCategoria);
             this.panelContenedor.Controls.Add(this.label3);
@@ -101,8 +101,6 @@
             this.panelContenedor.Controls.Add(this.textBoxStock);
             this.panelContenedor.Controls.Add(this.label2);
             this.panelContenedor.Controls.Add(this.labelDescripcion);
-            this.panelContenedor.Controls.Add(this.textBoxDescripcion);
-            this.panelContenedor.Controls.Add(this.labelLineCorreo);
             this.panelContenedor.Controls.Add(this.labelNombre);
             this.panelContenedor.Controls.Add(this.textBoxNombre);
             this.panelContenedor.Controls.Add(this.labelLineNombreCompleto);
@@ -114,8 +112,18 @@
             this.panelContenedor.Controls.Add(this.labelInfo);
             this.panelContenedor.Location = new System.Drawing.Point(12, 68);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(430, 372);
+            this.panelContenedor.Size = new System.Drawing.Size(431, 448);
             this.panelContenedor.TabIndex = 3;
+            // 
+            // richTextBoxDescripcion
+            // 
+            this.richTextBoxDescripcion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBoxDescripcion.Location = new System.Drawing.Point(13, 205);
+            this.richTextBoxDescripcion.Name = "richTextBoxDescripcion";
+            this.richTextBoxDescripcion.Size = new System.Drawing.Size(196, 147);
+            this.richTextBoxDescripcion.TabIndex = 3;
+            this.richTextBoxDescripcion.Text = "";
+            this.richTextBoxDescripcion.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // labelCategoria
             // 
@@ -138,7 +146,7 @@
             this.comboBoxCategoria.Location = new System.Drawing.Point(222, 263);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxCategoria.TabIndex = 8;
+            this.comboBoxCategoria.TabIndex = 7;
             // 
             // label3
             // 
@@ -171,7 +179,7 @@
             this.buttonVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolver.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVolver.Location = new System.Drawing.Point(175, 332);
+            this.buttonVolver.Location = new System.Drawing.Point(175, 405);
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.Size = new System.Drawing.Size(80, 30);
             this.buttonVolver.TabIndex = 10;
@@ -187,7 +195,7 @@
             this.buttonConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfirmar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonConfirmar.Location = new System.Drawing.Point(140, 296);
+            this.buttonConfirmar.Location = new System.Drawing.Point(140, 369);
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.Size = new System.Drawing.Size(150, 30);
             this.buttonConfirmar.TabIndex = 9;
@@ -215,7 +223,7 @@
             this.textBoxPrecioVenta.Location = new System.Drawing.Point(244, 203);
             this.textBoxPrecioVenta.Name = "textBoxPrecioVenta";
             this.textBoxPrecioVenta.Size = new System.Drawing.Size(178, 20);
-            this.textBoxPrecioVenta.TabIndex = 7;
+            this.textBoxPrecioVenta.TabIndex = 6;
             this.textBoxPrecioVenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPrecioVenta_KeyDown);
             this.textBoxPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioVenta_KeyPress);
             // 
@@ -249,7 +257,7 @@
             this.textBoxPrecioCompra.Location = new System.Drawing.Point(244, 138);
             this.textBoxPrecioCompra.Name = "textBoxPrecioCompra";
             this.textBoxPrecioCompra.Size = new System.Drawing.Size(178, 20);
-            this.textBoxPrecioCompra.TabIndex = 6;
+            this.textBoxPrecioCompra.TabIndex = 5;
             this.textBoxPrecioCompra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPrecioCompra_KeyDown);
             this.textBoxPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioCompra_KeyPress);
             // 
@@ -283,7 +291,7 @@
             this.textBoxStock.Location = new System.Drawing.Point(222, 74);
             this.textBoxStock.Name = "textBoxStock";
             this.textBoxStock.Size = new System.Drawing.Size(200, 20);
-            this.textBoxStock.TabIndex = 5;
+            this.textBoxStock.TabIndex = 4;
             this.textBoxStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxStock_KeyDown);
             this.textBoxStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStock_KeyPress);
             // 
@@ -309,26 +317,6 @@
             this.labelDescripcion.TabIndex = 46;
             this.labelDescripcion.Text = "Descripción:";
             // 
-            // textBoxDescripcion
-            // 
-            this.textBoxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDescripcion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxDescripcion.Location = new System.Drawing.Point(9, 204);
-            this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(200, 20);
-            this.textBoxDescripcion.TabIndex = 3;
-            // 
-            // labelLineCorreo
-            // 
-            this.labelLineCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineCorreo.Location = new System.Drawing.Point(9, 227);
-            this.labelLineCorreo.Name = "labelLineCorreo";
-            this.labelLineCorreo.Size = new System.Drawing.Size(200, 1);
-            this.labelLineCorreo.TabIndex = 45;
-            this.labelLineCorreo.Text = "label2";
-            // 
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
@@ -350,6 +338,7 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombre.TabIndex = 2;
+            this.textBoxNombre.TextChanged += new System.EventHandler(this.textBoxNombre_TextChanged);
             // 
             // labelLineNombreCompleto
             // 
@@ -382,6 +371,7 @@
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(200, 20);
             this.textBoxCodigo.TabIndex = 1;
+            this.textBoxCodigo.TextChanged += new System.EventHandler(this.textBoxCodigo_TextChanged);
             // 
             // labelLineDocumento
             // 
@@ -398,7 +388,7 @@
             this.labelEstado.AutoSize = true;
             this.labelEstado.BackColor = System.Drawing.SystemColors.Window;
             this.labelEstado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEstado.Location = new System.Drawing.Point(9, 241);
+            this.labelEstado.Location = new System.Drawing.Point(222, 303);
             this.labelEstado.Name = "labelEstado";
             this.labelEstado.Size = new System.Drawing.Size(47, 19);
             this.labelEstado.TabIndex = 40;
@@ -411,10 +401,10 @@
             this.comboBoxEstado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxEstado.FormattingEnabled = true;
             this.comboBoxEstado.ItemHeight = 19;
-            this.comboBoxEstado.Location = new System.Drawing.Point(9, 263);
+            this.comboBoxEstado.Location = new System.Drawing.Point(222, 325);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(200, 27);
-            this.comboBoxEstado.TabIndex = 4;
+            this.comboBoxEstado.TabIndex = 8;
             // 
             // labelInfo
             // 
@@ -430,13 +420,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 451);
+            this.ClientSize = new System.Drawing.Size(454, 526);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.paneTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(470, 490);
-            this.MinimumSize = new System.Drawing.Size(470, 490);
+            this.MaximumSize = new System.Drawing.Size(470, 565);
+            this.MinimumSize = new System.Drawing.Size(470, 565);
             this.Name = "mdDetalleProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalle producto";
@@ -466,8 +456,6 @@
         private System.Windows.Forms.TextBox textBoxStock;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelDescripcion;
-        private System.Windows.Forms.TextBox textBoxDescripcion;
-        private System.Windows.Forms.Label labelLineCorreo;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.Label labelLineNombreCompleto;
@@ -481,5 +469,6 @@
         private System.Windows.Forms.ComboBox comboBoxCategoria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox richTextBoxDescripcion;
     }
 }

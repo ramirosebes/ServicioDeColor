@@ -149,6 +149,7 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefono.TabIndex = 4;
+            this.textBoxTelefono.TextChanged += new System.EventHandler(this.textBoxTelefono_TextChanged);
             this.textBoxTelefono.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTelefono_KeyDown);
             this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             // 
@@ -183,6 +184,7 @@
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
             this.textBoxCorreo.TabIndex = 3;
+            this.textBoxCorreo.TextChanged += new System.EventHandler(this.textBoxCorreo_TextChanged);
             this.textBoxCorreo.Leave += new System.EventHandler(this.textBoxCorreo_Leave);
             // 
             // labelLineCorreo
@@ -216,6 +218,7 @@
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
             this.textBoxNombreCompleto.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombreCompleto.TabIndex = 2;
+            this.textBoxNombreCompleto.TextChanged += new System.EventHandler(this.textBoxNombreCompleto_TextChanged);
             this.textBoxNombreCompleto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombreCompleto_KeyDown);
             this.textBoxNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombreCompleto_KeyPress);
             // 
@@ -250,6 +253,7 @@
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.Size = new System.Drawing.Size(200, 20);
             this.textBoxDocumento.TabIndex = 1;
+            this.textBoxDocumento.TextChanged += new System.EventHandler(this.textBoxDocumento_TextChanged);
             this.textBoxDocumento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDocumento_KeyDown);
             this.textBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDocumento_KeyPress);
             this.textBoxDocumento.Leave += new System.EventHandler(this.textBoxDocumento_Leave);

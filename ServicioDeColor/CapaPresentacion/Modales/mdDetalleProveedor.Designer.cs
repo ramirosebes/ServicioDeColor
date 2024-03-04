@@ -149,6 +149,7 @@
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
             this.textBoxCorreo.TabIndex = 3;
+            this.textBoxCorreo.TextChanged += new System.EventHandler(this.textBoxCorreo_TextChanged);
             this.textBoxCorreo.Leave += new System.EventHandler(this.textBoxCorreo_Leave);
             // 
             // label2
@@ -182,6 +183,7 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefono.TabIndex = 4;
+            this.textBoxTelefono.TextChanged += new System.EventHandler(this.textBoxTelefono_TextChanged);
             this.textBoxTelefono.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTelefono_KeyDown);
             this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             // 
@@ -216,6 +218,7 @@
             this.textBoxRazonSocial.Name = "textBoxRazonSocial";
             this.textBoxRazonSocial.Size = new System.Drawing.Size(200, 20);
             this.textBoxRazonSocial.TabIndex = 2;
+            this.textBoxRazonSocial.TextChanged += new System.EventHandler(this.textBoxRazonSocial_TextChanged);
             // 
             // labelLineNombreCompleto
             // 
@@ -248,6 +251,7 @@
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(200, 20);
             this.textBoxCUIT.TabIndex = 1;
+            this.textBoxCUIT.TextChanged += new System.EventHandler(this.textBoxCUIT_TextChanged);
             this.textBoxCUIT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCUIT_KeyDown);
             this.textBoxCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCUIT_KeyPress);
             this.textBoxCUIT.Leave += new System.EventHandler(this.textBoxCUIT_Leave);

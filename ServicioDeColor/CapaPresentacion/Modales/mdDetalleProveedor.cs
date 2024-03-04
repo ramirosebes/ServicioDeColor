@@ -249,5 +249,61 @@ namespace CapaPresentacion.Modales
                 e.SuppressKeyPress = true;
             }
         }
+
+        private void textBoxCUIT_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 50
+            if (textBox.Text.Length > 50)
+            {
+                // Si es mayor, truncamos el texto a 50 caracteres
+                textBox.Text = textBox.Text.Substring(0, 50);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void textBoxCorreo_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 50
+            if (textBox.Text.Length > 50)
+            {
+                // Si es mayor, truncamos el texto a 50 caracteres
+                textBox.Text = textBox.Text.Substring(0, 50);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void textBoxRazonSocial_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 50
+            if (textBox.Text.Length > 50)
+            {
+                // Si es mayor, truncamos el texto a 50 caracteres
+                textBox.Text = textBox.Text.Substring(0, 50);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void textBoxTelefono_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 50
+            if (textBox.Text.Length > 50)
+            {
+                // Si es mayor, truncamos el texto a 50 caracteres
+                textBox.Text = textBox.Text.Substring(0, 50);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
     }
 }

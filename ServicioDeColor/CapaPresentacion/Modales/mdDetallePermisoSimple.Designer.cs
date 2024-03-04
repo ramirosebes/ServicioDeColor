@@ -119,6 +119,7 @@
             this.textBoxNombreMenu.Name = "textBoxNombreMenu";
             this.textBoxNombreMenu.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombreMenu.TabIndex = 2;
+            this.textBoxNombreMenu.TextChanged += new System.EventHandler(this.textBoxNombreMenu_TextChanged);
             // 
             // labelLineNombreMenu
             // 
@@ -151,6 +152,7 @@
             this.textBoxNombrePermiso.Name = "textBoxNombrePermiso";
             this.textBoxNombrePermiso.Size = new System.Drawing.Size(200, 20);
             this.textBoxNombrePermiso.TabIndex = 1;
+            this.textBoxNombrePermiso.TextChanged += new System.EventHandler(this.textBoxNombrePermiso_TextChanged);
             // 
             // labelLineNombre
             // 

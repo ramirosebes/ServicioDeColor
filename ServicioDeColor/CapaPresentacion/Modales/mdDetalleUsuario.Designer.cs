@@ -133,6 +133,7 @@
             resources.ApplyResources(this.textBoxConfirmarClave, "textBoxConfirmarClave");
             this.textBoxConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxConfirmarClave.Name = "textBoxConfirmarClave";
+            this.textBoxConfirmarClave.TextChanged += new System.EventHandler(this.textBoxConfirmarClave_TextChanged);
             // 
             // textBoxClave
             // 
@@ -140,6 +141,7 @@
             resources.ApplyResources(this.textBoxClave, "textBoxClave");
             this.textBoxClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxClave.Name = "textBoxClave";
+            this.textBoxClave.TextChanged += new System.EventHandler(this.textBoxClave_TextChanged);
             // 
             // labelClave
             // 
@@ -208,6 +210,7 @@
             resources.ApplyResources(this.textBoxDocumento, "textBoxDocumento");
             this.textBoxDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxDocumento.Name = "textBoxDocumento";
+            this.textBoxDocumento.TextChanged += new System.EventHandler(this.textBoxDocumento_TextChanged);
             this.textBoxDocumento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDocumento_KeyDown);
             this.textBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDocumento_KeyPress);
             this.textBoxDocumento.Leave += new System.EventHandler(this.textBoxDocumento_Leave);
@@ -232,6 +235,7 @@
             resources.ApplyResources(this.textBoxNombreCompleto, "textBoxNombreCompleto");
             this.textBoxNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
+            this.textBoxNombreCompleto.TextChanged += new System.EventHandler(this.textBoxNombreCompleto_TextChanged);
             this.textBoxNombreCompleto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombreCompleto_KeyDown);
             this.textBoxNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombreCompleto_KeyPress);
             // 
@@ -255,6 +259,7 @@
             resources.ApplyResources(this.textBoxCorreo, "textBoxCorreo");
             this.textBoxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxCorreo.Name = "textBoxCorreo";
+            this.textBoxCorreo.TextChanged += new System.EventHandler(this.textBoxCorreo_TextChanged);
             this.textBoxCorreo.Leave += new System.EventHandler(this.textBoxCorreo_Leave);
             // 
             // labelCorreo

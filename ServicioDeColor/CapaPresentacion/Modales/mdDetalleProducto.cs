@@ -60,7 +60,7 @@ namespace CapaPresentacion.Modales
             {
                 Codigo = textBoxCodigo.Text.Trim(),
                 Nombre = textBoxNombre.Text.Trim(),
-                Descripcion = textBoxDescripcion.Text.Trim(),
+                Descripcion = richTextBoxDescripcion.Text.Trim(),
                 oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(((OpcionCombo)comboBoxCategoria.SelectedItem).Valor) },
                 Stock = Convert.ToInt32(textBoxStock.Text.Trim()),
                 PrecioCompra = Convert.ToDecimal(textBoxPrecioCompra.Text.Trim()),
@@ -90,7 +90,7 @@ namespace CapaPresentacion.Modales
                 IdProducto = _idProducto,
                 Codigo = textBoxCodigo.Text.Trim(),
                 Nombre = textBoxNombre.Text.Trim(),
-                Descripcion = textBoxDescripcion.Text.Trim(),
+                Descripcion = richTextBoxDescripcion.Text.Trim(),
                 oCategoria = new Categoria() { IdCategoria = Convert.ToInt32(((OpcionCombo)comboBoxCategoria.SelectedItem).Valor) },
                 Stock = Convert.ToInt32(textBoxStock.Text.Trim()),
                 PrecioCompra = Convert.ToDecimal(textBoxPrecioCompra.Text.Trim()),
@@ -150,7 +150,7 @@ namespace CapaPresentacion.Modales
             this.Text = "Ver Detalle";
             textBoxCodigo.Enabled = false;
             textBoxNombre.Enabled = false;
-            textBoxDescripcion.Enabled = false;
+            richTextBoxDescripcion.Enabled = false;
             textBoxStock.Enabled = false;
             textBoxPrecioCompra.Enabled = false;
             textBoxPrecioVenta.Enabled = false;
@@ -160,7 +160,7 @@ namespace CapaPresentacion.Modales
             
             textBoxCodigo.Text = _oProducto.Codigo.ToString();
             textBoxNombre.Text = _oProducto.Nombre.ToString();
-            textBoxDescripcion.Text = _oProducto.Descripcion.ToString();
+            richTextBoxDescripcion.Text = _oProducto.Descripcion.ToString();
             textBoxStock.Text = _oProducto.Stock.ToString();
             textBoxPrecioCompra.Text = _oProducto.PrecioCompra.ToString();
             textBoxPrecioVenta.Text = _oProducto.PrecioVenta.ToString();
@@ -201,7 +201,7 @@ namespace CapaPresentacion.Modales
 
             textBoxCodigo.Text = _oProducto.Codigo.ToString();
             textBoxNombre.Text = _oProducto.Nombre.ToString();
-            textBoxDescripcion.Text = _oProducto.Descripcion.ToString();
+            richTextBoxDescripcion.Text = _oProducto.Descripcion.ToString();
             textBoxStock.Text = _oProducto.Stock.ToString();
             textBoxPrecioCompra.Text = _oProducto.PrecioCompra.ToString();
             textBoxPrecioVenta.Text = _oProducto.PrecioVenta.ToString();
@@ -322,6 +322,48 @@ namespace CapaPresentacion.Modales
             {
                 // Suprime la pulsación de tecla Ctrl+V
                 e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBoxCodigo_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 50
+            if (textBox.Text.Length > 50)
+            {
+                // Si es mayor, truncamos el texto a 50 caracteres
+                textBox.Text = textBox.Text.Substring(0, 50);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void textBoxNombre_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 50
+            if (textBox.Text.Length > 50)
+            {
+                // Si es mayor, truncamos el texto a 50 caracteres
+                textBox.Text = textBox.Text.Substring(0, 50);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            RichTextBox richTextBox = (RichTextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 50
+            if (richTextBox.Text.Length > 50)
+            {
+                // Si es mayor, truncamos el texto a 100 caracteres
+                richTextBox.Text = richTextBox.Text.Substring(0, 50);
+                // Establecemos el cursor al final del texto
+                richTextBox.SelectionStart = richTextBox.Text.Length;
             }
         }
     }

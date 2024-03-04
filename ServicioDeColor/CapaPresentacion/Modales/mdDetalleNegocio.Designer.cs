@@ -121,6 +121,7 @@
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.Size = new System.Drawing.Size(425, 20);
             this.textBoxDireccion.TabIndex = 4;
+            this.textBoxDireccion.TextChanged += new System.EventHandler(this.textBoxDireccion_TextChanged);
             // 
             // labelLineDireccion
             // 
@@ -153,6 +154,7 @@
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(425, 20);
             this.textBoxCUIT.TabIndex = 3;
+            this.textBoxCUIT.TextChanged += new System.EventHandler(this.textBoxCUIT_TextChanged);
             this.textBoxCUIT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCUIT_KeyDown);
             this.textBoxCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCUIT_KeyPress);
             this.textBoxCUIT.Leave += new System.EventHandler(this.textBoxCUIT_Leave);
@@ -188,6 +190,7 @@
             this.textBoxNombreNegocio.Name = "textBoxNombreNegocio";
             this.textBoxNombreNegocio.Size = new System.Drawing.Size(425, 20);
             this.textBoxNombreNegocio.TabIndex = 2;
+            this.textBoxNombreNegocio.TextChanged += new System.EventHandler(this.textBoxNombreNegocio_TextChanged);
             // 
             // labelLineNombre
             // 

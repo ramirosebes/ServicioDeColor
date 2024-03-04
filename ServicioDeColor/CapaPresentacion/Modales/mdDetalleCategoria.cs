@@ -57,7 +57,7 @@ namespace CapaPresentacion.Modales
         {
             Categoria categoria = new Categoria()
             {
-                Descripcion = textBoxDescripcion.Text.Trim(),
+                Descripcion = richTextBoxDescripcion.Text.Trim(),
                 Estado = Convert.ToInt32(((OpcionCombo)comboBoxEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
@@ -81,7 +81,7 @@ namespace CapaPresentacion.Modales
             bool categoriaEditada = oCC_Categoria.EditarCategoria(new Categoria()
             {
                 IdCategoria = _idCategoria,
-                Descripcion = textBoxDescripcion.Text.Trim(),
+                Descripcion = richTextBoxDescripcion.Text.Trim(),
                 Estado = Convert.ToInt32(((OpcionCombo)comboBoxEstado.SelectedItem).Valor) == 1 ? true : false
             }, out string mensaje);
 
@@ -122,7 +122,7 @@ namespace CapaPresentacion.Modales
         private void ConfigurarVerDetalle()
         {
             this.Text = "Ver Detalle";
-            textBoxDescripcion.Enabled = false;
+            richTextBoxDescripcion.Enabled = false;
             comboBoxEstado.Enabled = false;
             buttonConfirmar.Visible = false;
 
@@ -136,7 +136,7 @@ namespace CapaPresentacion.Modales
                 }
             }
 
-            textBoxDescripcion.Text = _oCategoria.Descripcion.ToString();
+            richTextBoxDescripcion.Text = _oCategoria.Descripcion.ToString();
         }
 
         private void ConfigurarAgregar()
@@ -152,7 +152,7 @@ namespace CapaPresentacion.Modales
             labelSubTitulo.Text = "Editar categoria";
             buttonConfirmar.Text = "Editar";
 
-            textBoxDescripcion.Text = _oCategoria.Descripcion.ToString();
+            richTextBoxDescripcion.Text = _oCategoria.Descripcion.ToString();
 
             foreach (OpcionCombo opcion in comboBoxEstado.Items)
             {
@@ -170,6 +170,40 @@ namespace CapaPresentacion.Modales
             if (MessageBox.Show("¿Está seguro que desea salir?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void richTextBoxDescripcion_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 100
+            if (textBox.Text.Length > 100)
+            {
+                // Si es mayor, truncamos el texto a 100 caracteres
+                textBox.Text = textBox.Text.Substring(0, 100);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void richTextBoxDescripcion_TextChanged_1(object sender, EventArgs e)
+        {
+            //TextBox textBox = (TextBox)sender;
+            RichTextBox richTextBox = (RichTextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 100
+            if (richTextBox.Text.Length > 100)
+            {
+                // Si es mayor, truncamos el texto a 100 caracteres
+                richTextBox.Text = richTextBox.Text.Substring(0, 100);
+                // Establecemos el cursor al final del texto
+                richTextBox.SelectionStart = richTextBox.Text.Length;
             }
         }
     }
