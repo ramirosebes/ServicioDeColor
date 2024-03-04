@@ -17,10 +17,14 @@ namespace CapaPresentacion.Modales
     {
         private List<Proveedor> _listaProveedores;
         private CC_Compra oCC_Compra = new CC_Compra();
+        string _fechaInicio;
+        string _fechaFin;
 
-        public mdGraficoCompra(List<Proveedor> listaProveedores)
+        public mdGraficoCompra(string fechaInicio, string fechaFin, List<Proveedor> listaProveedores)
         {
             _listaProveedores = listaProveedores;
+            _fechaInicio = fechaInicio;
+            _fechaFin = fechaFin;
             InitializeComponent();
         }
 
@@ -31,9 +35,16 @@ namespace CapaPresentacion.Modales
 
             for (int i = 0; i < _listaProveedores.Count; i++)
             {
+                //Metodo viejo
+                //Proveedor proveedorActual = _listaProveedores[i];
+                //int comprasProveedor = oCC_Compra.ListarCompras().Count(c => c.oProveedor.IdProveedor == proveedorActual.IdProveedor);
+                //compras[i] = comprasProveedor;
+
+                //Metodo nuevo
                 Proveedor proveedorActual = _listaProveedores[i];
-                int comprasProveedor = oCC_Compra.ListarCompras().Count(c => c.oProveedor.IdProveedor == proveedorActual.IdProveedor);
-                compras[i] = comprasProveedor;
+                List<Compra> comprasProveedor = oCC_Compra.ListarComprasPorFechaYId(_fechaInicio, _fechaFin, proveedorActual.IdProveedor);
+                int numeroCompras = comprasProveedor.Count();
+                compras[i] = numeroCompras;
             }
 
             chartCompra.Titles.Add("Compras");

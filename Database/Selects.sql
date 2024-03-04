@@ -179,3 +179,78 @@ sa.DescripcionAuditoria, sa.FechaAuditoria
 from AuditoriaSesion sa
 inner join Usuario u on sa.IdUsuario = u.IdUsuario
 inner join Persona p on u.IdPersona = p.IdPersona
+/*---------- FIN AUDITORIA ----------*/
+
+/*---------- GRAFICOS ----------*/
+/*-----COMPRAS-----*/
+
+--LISTAR COMPRAS POR FECHA--
+set dateformat dmy;
+SELECT c.IdCompra, 
+c.IdUsuario, u.IdPersona, ps.NombreCompleto, 
+c.IdProveedor, p.RazonSocial, p.CUIT,
+TipoDocumento, NumeroDocumento, MontoTotal, FechaRegistro 
+FROM Compra c
+INNER JOIN Usuario u ON c.IdUsuario = u.IdUsuario
+INNER JOIN Proveedor p ON c.IdProveedor = p.IdProveedor
+INNER JOIN Persona ps ON u.IdPersona = ps.IdPersona
+where convert(date, c.FechaRegistro, 103) between @fechaInicio and @fechaFin
+set dateformat mdy;
+
+--LISTAR COMPRAS POR FECHA Y ID--
+set dateformat dmy;
+SELECT c.IdCompra, 
+c.IdUsuario, u.IdPersona, ps.NombreCompleto, 
+c.IdProveedor, p.RazonSocial, p.CUIT,
+TipoDocumento, NumeroDocumento, MontoTotal, FechaRegistro 
+FROM Compra c
+INNER JOIN Usuario u ON c.IdUsuario = u.IdUsuario
+INNER JOIN Proveedor p ON c.IdProveedor = p.IdProveedor
+INNER JOIN Persona ps ON u.IdPersona = ps.IdPersona
+where convert(date, c.FechaRegistro, 103) between @fechaInicio and @fechaFin and c.IdProveedor = @idProveedor
+set dateformat mdy;
+
+--LISTAR COMPRAS POR FECHA Y ID - EJEMPLO--
+set dateformat dmy;
+SELECT c.IdCompra, 
+c.IdUsuario, u.IdPersona, ps.NombreCompleto, 
+c.IdProveedor, p.RazonSocial, p.CUIT,
+TipoDocumento, NumeroDocumento, MontoTotal, FechaRegistro 
+FROM Compra c
+INNER JOIN Usuario u ON c.IdUsuario = u.IdUsuario
+INNER JOIN Proveedor p ON c.IdProveedor = p.IdProveedor
+INNER JOIN Persona ps ON u.IdPersona = ps.IdPersona
+where convert(date, c.FechaRegistro, 103) between '03/03/2024' and '04/03/2024' and c.IdProveedor = 10
+set dateformat mdy;
+
+/*-----VENTAS-----*/
+
+--LISTAR VENTAS POR FECHA Y ID--
+set dateformat dmy;
+select v.IdVenta,
+u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario], pu.IdPersona[IdPersonaUsuario],
+c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente], pc.IdPersona[IdPersonaCliente],
+v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.SubTotal, v.MontoTotal, v.TipoDescuento, v.MontoDescuento, convert(char(10),v.FechaRegistro,103)[FechaRegistro]
+from Venta v
+inner join Usuario u on u.IdUsuario = v.IdUsuario
+inner join Persona pu on pu.IdPersona = u.IdPersona
+inner join Cliente c on c.IdCliente = v.IdCliente
+inner join Persona pc on pc.IdPersona = c.IdPersona
+where convert(date, v.FechaRegistro, 103) between @fechaInicio and @fechaFin and v.IdCliente = @idCliente
+set dateformat mdy;
+
+--LISTAR VENTAS POR FECHA Y ID - EJEMPLO--
+set dateformat dmy;
+select v.IdVenta,
+u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario], pu.IdPersona[IdPersonaUsuario],
+c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente], pc.IdPersona[IdPersonaCliente],
+v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.SubTotal, v.MontoTotal, v.TipoDescuento, v.MontoDescuento, convert(char(10),v.FechaRegistro,103)[FechaRegistro]
+from Venta v
+inner join Usuario u on u.IdUsuario = v.IdUsuario
+inner join Persona pu on pu.IdPersona = u.IdPersona
+inner join Cliente c on c.IdCliente = v.IdCliente
+inner join Persona pc on pc.IdPersona = c.IdPersona
+where convert(date, v.FechaRegistro, 103) between '03/03/2024' and '04/03/2024' and v.IdCliente = 1008
+set dateformat mdy;
+
+/*---------- FIN GRAFICOS ----------*/

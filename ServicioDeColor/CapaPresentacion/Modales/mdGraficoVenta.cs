@@ -17,10 +17,14 @@ namespace CapaPresentacion.Modales
     {
         private List<Cliente> _listaClientes;
         private CC_Venta oCC_Venta = new CC_Venta();
+        string _fechaInicio;
+        string _fechaFin;
 
-        public mdGraficoVenta(List<Cliente> listaClientes)
+        public mdGraficoVenta(string fechaInicio, string fechaFin, List<Cliente> listaClientes)
         {
             _listaClientes = listaClientes;
+            _fechaInicio = fechaInicio;
+            _fechaFin = fechaFin;
             InitializeComponent();
         }
 
@@ -31,9 +35,16 @@ namespace CapaPresentacion.Modales
 
             for (int i = 0; i < _listaClientes.Count; i++)
             {
+                //Metodo viejo
+                //Cliente clienteActual = _listaClientes[i];
+                //int ventasCliente = oCC_Venta.ListarVentas().Count(v => v.oCliente.IdCliente == clienteActual.IdCliente);
+                //ventas[i] = ventasCliente;
+
+                //Metodo nuevo
                 Cliente clienteActual = _listaClientes[i];
-                int ventasCliente = oCC_Venta.ListarVentas().Count(v => v.oCliente.IdCliente == clienteActual.IdCliente);
-                ventas[i] = ventasCliente;
+                List<Venta> ventasCliente = oCC_Venta.ListarVentasPorFechaYId(_fechaInicio, _fechaFin, clienteActual.IdCliente);
+                int numeroVentas = ventasCliente.Count();
+                ventas[i] = numeroVentas;
             }
 
             chartVenta.Titles.Add("Ventas");

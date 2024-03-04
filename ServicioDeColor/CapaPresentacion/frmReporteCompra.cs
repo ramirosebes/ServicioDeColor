@@ -241,6 +241,9 @@ namespace CapaPresentacion
 
         private void buttonGrafico_Click(object sender, EventArgs e)
         {
+            string fechaInicio = dateTimePickerFechaInicio.Value.ToString("dd/MM/yyyy");
+            string fechaFin = dateTimePickerFechaFin.Value.ToString("dd/MM/yyyy");
+
             List<Compra> listaCompras = oCC_Compra.ListarCompras();
 
             if (listaCompras.Count != 0)
@@ -258,7 +261,7 @@ namespace CapaPresentacion
                     listaProveedores = new List<Proveedor>() { proveedor };
                 }
 
-                using (var modal = new mdGraficoCompra(listaProveedores))
+                using (var modal = new mdGraficoCompra(fechaInicio, fechaFin, listaProveedores))
                 {
                     var resultado = modal.ShowDialog();
                 }

@@ -64,6 +64,66 @@ namespace CapaDatos
                 return oListaVentas;
             }
         }
+
+        public List<Venta> ListarVentasPorFechaYId(string fechaInicio, string fechaFin, int idCliente)
+        {
+            List<Venta> oListaVentasPorFechaYId = new List<Venta>();
+
+            using (SqlConnection conexion = CD_Conexion.ObtenerConexion())
+            {
+                CD_Conexion.ObtenerConexion();
+
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("set dateformat dmy;");
+                    query.AppendLine("select v.IdVenta,");
+                    query.AppendLine("u.IdUsuario, pu.NombreCompleto[NombreCompletoUsuario], pu.Documento[DocumentoUsuario], pu.IdPersona[IdPersonaUsuario],");
+                    query.AppendLine("c.IdCliente, pc.NombreCompleto[NombreCompletoCliente], pc.Documento[DocumentoCliente], pc.IdPersona[IdPersonaCliente],");
+                    query.AppendLine("v.TipoDocumento, v.NumeroDocumento, v.MontoPago, v.MontoCambio, v.SubTotal, v.MontoTotal, v.TipoDescuento, v.MontoDescuento, convert(char(10),v.FechaRegistro,103)[FechaRegistro]");
+                    query.AppendLine("from Venta v");
+                    query.AppendLine("inner join Usuario u on u.IdUsuario = v.IdUsuario");
+                    query.AppendLine("inner join Persona pu on pu.IdPersona = u.IdPersona");
+                    query.AppendLine("inner join Cliente c on c.IdCliente = v.IdCliente");
+                    query.AppendLine("inner join Persona pc on pc.IdPersona = c.IdPersona");
+                    query.AppendLine("where convert(date, v.FechaRegistro, 103) between @fechaInicio and @fechaFin and v.IdCliente = @idCliente");
+                    query.AppendLine("set dateformat mdy;");
+
+                    SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
+                    cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+                    cmd.Parameters.AddWithValue("@fechaFin", fechaFin);
+                    cmd.Parameters.AddWithValue("@idCliente", idCliente);
+                    cmd.CommandType = CommandType.Text;
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        Venta oVenta = new Venta();
+                        oVenta.IdVenta = int.Parse(dr["IdVenta"].ToString());
+                        oVenta.oUsuario = new Usuario() { IdUsuario = Convert.ToInt32(dr["IdUsuario"]), NombreCompleto = dr["NombreCompletoUsuario"].ToString(), IdPersona = Convert.ToInt32(dr["IdPersonaUsuario"]), Documento = dr["DocumentoUsuario"].ToString() };
+                        oVenta.oCliente = new Cliente() { IdCliente = Convert.ToInt32(dr["IdCliente"]), NombreCompleto = dr["NombreCompletoCliente"].ToString(), IdPersona = Convert.ToInt32(dr["IdPersonaCliente"]), Documento = dr["DocumentoCliente"].ToString() };
+                        oVenta.TipoDocumento = dr["TipoDocumento"].ToString();
+                        oVenta.NumeroDocumento = dr["NumeroDocumento"].ToString();
+                        oVenta.MontoPago = Convert.ToDecimal(dr["MontoPago"].ToString());
+                        oVenta.MontoCambio = Convert.ToDecimal(dr["MontoCambio"].ToString());
+                        oVenta.SubTotal = Convert.ToDecimal(dr["SubTotal"].ToString());
+                        oVenta.MontoTotal = Convert.ToDecimal(dr["MontoTotal"].ToString());
+                        oVenta.TipoDescuento = dr["TipoDescuento"].ToString();
+                        oVenta.MontoDescuento = Convert.ToDecimal(dr["MontoDescuento"].ToString());
+                        oVenta.FechaRegistro = dr["FechaRegistro"].ToString();
+
+                        oListaVentasPorFechaYId.Add(oVenta);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+
+                CD_Conexion.CerrarConexion();
+                return oListaVentasPorFechaYId;
+            }
+        }
         #endregion
 
         public int ObtenerCorrelativo()

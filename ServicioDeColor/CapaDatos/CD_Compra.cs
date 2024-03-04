@@ -60,6 +60,61 @@ namespace CapaDatos
             return oListaCompras;
         }
 
+        public List<Compra> ListarComprasPorFechaYId(string fechaInicio, string fechaFin, int idProveedor)
+        {
+            List<Compra> oListaComprasPorFechaYId = new List<Compra>();
+
+            using (SqlConnection conexion = CD_Conexion.ObtenerConexion())
+            {
+                CD_Conexion.ObtenerConexion();
+
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+
+                    query.AppendLine("set dateformat dmy;");
+                    query.AppendLine("SELECT c.IdCompra, ");
+                    query.AppendLine("c.IdUsuario, u.IdPersona, ps.NombreCompleto, ");
+                    query.AppendLine("c.IdProveedor, p.RazonSocial, p.CUIT,");
+                    query.AppendLine("TipoDocumento, NumeroDocumento, MontoTotal, FechaRegistro ");
+                    query.AppendLine("FROM Compra c");
+                    query.AppendLine("INNER JOIN Usuario u ON c.IdUsuario = u.IdUsuario");
+                    query.AppendLine("INNER JOIN Proveedor p ON c.IdProveedor = p.IdProveedor");
+                    query.AppendLine("INNER JOIN Persona ps ON u.IdPersona = ps.IdPersona");
+                    query.AppendLine("where convert(date, c.FechaRegistro, 103) between @fechaInicio and @fechaFin and c.IdProveedor = @idProveedor");
+                    query.AppendLine("set dateformat mdy;");
+
+                    SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
+                    cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
+                    cmd.Parameters.AddWithValue("@fechaFin", fechaFin);
+                    cmd.Parameters.AddWithValue("@idProveedor", idProveedor);
+                    cmd.CommandType = CommandType.Text;
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        Compra oCompra = new Compra();
+                        oCompra.IdCompra = Convert.ToInt32(dr["IdCompra"]);
+                        oCompra.oUsuario = new Usuario() { IdUsuario = Convert.ToInt32(dr["IdUsuario"]), IdPersona = Convert.ToInt32(dr["IdPersona"]), NombreCompleto = dr["NombreCompleto"].ToString() };
+                        oCompra.oProveedor = new Proveedor() { IdProveedor = Convert.ToInt32(dr["IdProveedor"]), RazonSocial = dr["RazonSocial"].ToString(), CUIT = dr["CUIT"].ToString() };
+                        oCompra.TipoDocumento = dr["TipoDocumento"].ToString();
+                        oCompra.NumeroDocumento = dr["NumeroDocumento"].ToString();
+                        oCompra.MontoTotal = Convert.ToDecimal(dr["MontoTotal"]);
+                        oCompra.FechaRegistro = dr["FechaRegistro"].ToString();
+
+                        oListaComprasPorFechaYId.Add(oCompra);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+
+            CD_Conexion.CerrarConexion();
+            return oListaComprasPorFechaYId;
+        }
+
         private List<DetalleCompra> ListarDetallesCompras(SqlConnection conexion, int idCompra) //ObtenerDetalleCompra
         {
             List<DetalleCompra> detallesCompra = new List<DetalleCompra>();

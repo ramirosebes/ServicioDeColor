@@ -24,6 +24,19 @@ namespace CapaControladora
                 throw new Exception(ex.Message);
             }
         }
+
+        public List<Venta> ListarVentasPorFechaYId(string fechaInicio, string fechaFin, int idCliente)
+        {
+            try
+            {
+                return oCD_Venta.ListarVentasPorFechaYId(fechaInicio, fechaFin, idCliente);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public int ObtenerCorrelativo()
         {
             try

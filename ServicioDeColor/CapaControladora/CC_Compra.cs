@@ -25,6 +25,18 @@ namespace CapaControladora
             }
         }
 
+        public List<Compra> ListarComprasPorFechaYId(string fechaInicio, string fechaFin, int idProveedor)
+        {
+            try
+            {
+                return oCD_Compra.ListarComprasPorFechaYId(fechaInicio, fechaFin, idProveedor);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public int ObtenerCorrelativo()
         {
             try
