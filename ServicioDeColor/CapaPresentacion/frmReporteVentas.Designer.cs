@@ -43,6 +43,11 @@
             this.panelReporteCompras = new System.Windows.Forms.Panel();
             this.labelBuscarPor = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxColumna = new System.Windows.Forms.ComboBox();
+            this.buttonFiltrarMonto = new System.Windows.Forms.Button();
+            this.comboBoxMonto = new System.Windows.Forms.ComboBox();
+            this.textBoxMonto = new System.Windows.Forms.TextBox();
             this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonBuscar = new System.Windows.Forms.Button();
@@ -50,7 +55,6 @@
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.buttonDescarcarExcel = new System.Windows.Forms.Button();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
-            this.buttonGrafico = new System.Windows.Forms.Button();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +70,7 @@
             this.montoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonGrafico = new System.Windows.Forms.Button();
             this.panelReporteCompras.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
@@ -94,12 +99,14 @@
             // 
             this.comboBoxCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCliente.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCliente.FormattingEnabled = true;
             this.comboBoxCliente.Location = new System.Drawing.Point(1095, 32);
             this.comboBoxCliente.Name = "comboBoxCliente";
             this.comboBoxCliente.Size = new System.Drawing.Size(200, 27);
             this.comboBoxCliente.TabIndex = 3;
+            this.comboBoxCliente.SelectedIndexChanged += new System.EventHandler(this.comboBoxCliente_SelectedIndexChanged);
             // 
             // labelTitulo
             // 
@@ -138,6 +145,7 @@
             this.dateTimePickerFechaFin.Name = "dateTimePickerFechaFin";
             this.dateTimePickerFechaFin.Size = new System.Drawing.Size(100, 27);
             this.dateTimePickerFechaFin.TabIndex = 2;
+            this.dateTimePickerFechaFin.ValueChanged += new System.EventHandler(this.dateTimePickerFechaFin_ValueChanged);
             // 
             // labelFechaFin
             // 
@@ -164,6 +172,7 @@
             this.dateTimePickerFechaInicio.Name = "dateTimePickerFechaInicio";
             this.dateTimePickerFechaInicio.Size = new System.Drawing.Size(100, 27);
             this.dateTimePickerFechaInicio.TabIndex = 1;
+            this.dateTimePickerFechaInicio.ValueChanged += new System.EventHandler(this.dateTimePickerFechaInicio_ValueChanged);
             // 
             // buttonBuscarResultado
             // 
@@ -236,6 +245,11 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.comboBoxColumna);
+            this.panel1.Controls.Add(this.buttonFiltrarMonto);
+            this.panel1.Controls.Add(this.comboBoxMonto);
+            this.panel1.Controls.Add(this.textBoxMonto);
             this.panel1.Controls.Add(this.comboBoxBusqueda);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.buttonBuscar);
@@ -247,10 +261,87 @@
             this.panel1.Size = new System.Drawing.Size(1460, 86);
             this.panel1.TabIndex = 94;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label1.Location = new System.Drawing.Point(980, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 19);
+            this.label1.TabIndex = 99;
+            this.label1.Text = "Filtrar por:";
+            // 
+            // comboBoxColumna
+            // 
+            this.comboBoxColumna.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxColumna.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxColumna.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxColumna.FormattingEnabled = true;
+            this.comboBoxColumna.Location = new System.Drawing.Point(1051, 44);
+            this.comboBoxColumna.Name = "comboBoxColumna";
+            this.comboBoxColumna.Size = new System.Drawing.Size(107, 27);
+            this.comboBoxColumna.TabIndex = 98;
+            this.comboBoxColumna.SelectedIndexChanged += new System.EventHandler(this.comboBoxColumna_SelectedIndexChanged);
+            // 
+            // buttonFiltrarMonto
+            // 
+            this.buttonFiltrarMonto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonFiltrarMonto.AutoSize = true;
+            this.buttonFiltrarMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonFiltrarMonto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonFiltrarMonto.FlatAppearance.BorderSize = 0;
+            this.buttonFiltrarMonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFiltrarMonto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFiltrarMonto.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonFiltrarMonto.Image = global::CapaPresentacion.Properties.Resources.Filtro;
+            this.buttonFiltrarMonto.Location = new System.Drawing.Point(1382, 44);
+            this.buttonFiltrarMonto.Name = "buttonFiltrarMonto";
+            this.buttonFiltrarMonto.Size = new System.Drawing.Size(75, 29);
+            this.buttonFiltrarMonto.TabIndex = 97;
+            this.buttonFiltrarMonto.Text = "Filtrar";
+            this.buttonFiltrarMonto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonFiltrarMonto.UseVisualStyleBackColor = false;
+            this.buttonFiltrarMonto.Click += new System.EventHandler(this.buttonFiltrarMonto_Click);
+            // 
+            // comboBoxMonto
+            // 
+            this.comboBoxMonto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxMonto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMonto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMonto.FormattingEnabled = true;
+            this.comboBoxMonto.Location = new System.Drawing.Point(1164, 44);
+            this.comboBoxMonto.Name = "comboBoxMonto";
+            this.comboBoxMonto.Size = new System.Drawing.Size(107, 27);
+            this.comboBoxMonto.TabIndex = 95;
+            this.comboBoxMonto.SelectedIndexChanged += new System.EventHandler(this.comboBoxMonto_SelectedIndexChanged);
+            // 
+            // textBoxMonto
+            // 
+            this.textBoxMonto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMonto.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMonto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxMonto.Location = new System.Drawing.Point(1277, 44);
+            this.textBoxMonto.Name = "textBoxMonto";
+            this.textBoxMonto.Size = new System.Drawing.Size(99, 27);
+            this.textBoxMonto.TabIndex = 96;
+            this.textBoxMonto.TextChanged += new System.EventHandler(this.textBoxMonto_TextChanged);
+            this.textBoxMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMonto_KeyPress);
+            // 
             // comboBoxBusqueda
             // 
             this.comboBoxBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBoxBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxBusqueda.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxBusqueda.FormattingEnabled = true;
             this.comboBoxBusqueda.ItemHeight = 19;
@@ -258,6 +349,7 @@
             this.comboBoxBusqueda.Name = "comboBoxBusqueda";
             this.comboBoxBusqueda.Size = new System.Drawing.Size(200, 27);
             this.comboBoxBusqueda.TabIndex = 90;
+            this.comboBoxBusqueda.SelectedIndexChanged += new System.EventHandler(this.comboBoxBusqueda_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -321,6 +413,7 @@
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(200, 27);
             this.textBoxBusqueda.TabIndex = 7;
+            this.textBoxBusqueda.TextChanged += new System.EventHandler(this.textBoxBusqueda_TextChanged);
             // 
             // buttonDescarcarExcel
             // 
@@ -384,22 +477,6 @@
             this.dataGridViewData.ReadOnly = true;
             this.dataGridViewData.Size = new System.Drawing.Size(1460, 423);
             this.dataGridViewData.TabIndex = 96;
-            // 
-            // buttonGrafico
-            // 
-            this.buttonGrafico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGrafico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.buttonGrafico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.buttonGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGrafico.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGrafico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonGrafico.Location = new System.Drawing.Point(1241, 619);
-            this.buttonGrafico.Name = "buttonGrafico";
-            this.buttonGrafico.Size = new System.Drawing.Size(75, 30);
-            this.buttonGrafico.TabIndex = 97;
-            this.buttonGrafico.Text = "Gráfico";
-            this.buttonGrafico.UseVisualStyleBackColor = false;
-            this.buttonGrafico.Click += new System.EventHandler(this.buttonGrafico_Click);
             // 
             // FechaRegistro
             // 
@@ -491,6 +568,22 @@
             this.MontoTotal.Name = "MontoTotal";
             this.MontoTotal.ReadOnly = true;
             // 
+            // buttonGrafico
+            // 
+            this.buttonGrafico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGrafico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.buttonGrafico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.buttonGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGrafico.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGrafico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonGrafico.Location = new System.Drawing.Point(1241, 619);
+            this.buttonGrafico.Name = "buttonGrafico";
+            this.buttonGrafico.Size = new System.Drawing.Size(75, 30);
+            this.buttonGrafico.TabIndex = 97;
+            this.buttonGrafico.Text = "Gráfico";
+            this.buttonGrafico.UseVisualStyleBackColor = false;
+            this.buttonGrafico.Click += new System.EventHandler(this.buttonGrafico_Click);
+            // 
             // frmReporteVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -551,5 +644,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn montoDescuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoTotal;
+        private System.Windows.Forms.ComboBox comboBoxColumna;
+        private System.Windows.Forms.Button buttonFiltrarMonto;
+        private System.Windows.Forms.ComboBox comboBoxMonto;
+        private System.Windows.Forms.TextBox textBoxMonto;
+        private System.Windows.Forms.Label label1;
     }
 }

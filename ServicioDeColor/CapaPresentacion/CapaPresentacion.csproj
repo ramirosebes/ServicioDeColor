@@ -598,5 +598,8 @@
   <ItemGroup>
     <None Include="Multimedia\PlantillaAuditoriaVenta.html" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Multimedia\Filtro.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

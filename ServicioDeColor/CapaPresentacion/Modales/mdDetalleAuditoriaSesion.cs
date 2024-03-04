@@ -32,7 +32,7 @@ namespace CapaPresentacion.Modales
                 textBoxDescripcionAuditoria.Text = oAuditoriaSesion.DescripcionAuditoria;
                 textBoxFechaAuditoria.Text = oAuditoriaSesion.FechaAuditoria;
                 textBoxIdUsuario.Text = oAuditoriaSesion.oUsuario.IdUsuario.ToString();
-                textBoxIdUsuario.Text = oAuditoriaSesion.oUsuario.IdPersona.ToString();
+                textBoxIdPersona.Text = oAuditoriaSesion.oUsuario.IdPersona.ToString();
                 textBoxNombreCompleto.Text = oAuditoriaSesion.oUsuario.NombreCompleto;
                 textBoxDocumento.Text = oAuditoriaSesion.oUsuario.Documento;
                 textBoxCorreo.Text = oAuditoriaSesion.oUsuario.Correo;

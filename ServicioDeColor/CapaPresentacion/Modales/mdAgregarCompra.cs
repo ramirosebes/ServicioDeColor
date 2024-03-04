@@ -26,8 +26,8 @@ namespace CapaPresentacion.Modales
         private void mdDetalleCompra_Load(object sender, EventArgs e)
         {
             //CONFIGURACION DEL OPCION COMBO TIPO DOCUMENTO -- SE PUEDEN AGREGAR MAS COMO "CHEQUE"
-            comboBoxTipoDocumento.Items.Add(new OpcionCombo() { Valor = "Boleta", Texto = "Boleta" });
             comboBoxTipoDocumento.Items.Add(new OpcionCombo() { Valor = "Factura", Texto = "Factura" });
+            comboBoxTipoDocumento.Items.Add(new OpcionCombo() { Valor = "Boleta", Texto = "Boleta" });
             comboBoxTipoDocumento.DisplayMember = "Texto";
             comboBoxTipoDocumento.ValueMember = "Valor";
             comboBoxTipoDocumento.SelectedIndex = 0;

@@ -28,6 +28,7 @@ namespace CapaPresentacion
 
         private void frmReporteVentas_Load(object sender, EventArgs e)
         {
+            //ComboBox Clientes
             List<Cliente> oListaCliente = new CC_Cliente().ListarClientes();
 
             comboBoxCliente.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Todos" });
@@ -40,6 +41,7 @@ namespace CapaPresentacion
             comboBoxCliente.ValueMember = "Valor";
             comboBoxCliente.SelectedIndex = 0;
 
+            //ComboBox Busqueda
             foreach (DataGridViewColumn columna in dataGridViewData.Columns)
             {
                 comboBoxBusqueda.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
@@ -47,6 +49,25 @@ namespace CapaPresentacion
             comboBoxBusqueda.DisplayMember = "Texto";
             comboBoxBusqueda.ValueMember = "Valor";
             comboBoxBusqueda.SelectedIndex = 0;
+
+            //ComboBox Filtro
+            comboBoxColumna.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Precio venta" });
+            comboBoxColumna.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Cantidad" });
+            comboBoxColumna.Items.Add(new OpcionCombo() { Valor = 2, Texto = "Monto descuento" });
+            comboBoxColumna.Items.Add(new OpcionCombo() { Valor = 3, Texto = "Subtotal" });
+            comboBoxColumna.Items.Add(new OpcionCombo() { Valor = 4, Texto = "Monto total" });
+            comboBoxColumna.DisplayMember = "Texto";
+            comboBoxColumna.ValueMember = "Valor";
+            comboBoxColumna.SelectedIndex = 0;
+
+            comboBoxMonto.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Mayor" });
+            comboBoxMonto.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Mayor igual" });
+            comboBoxMonto.Items.Add(new OpcionCombo() { Valor = 2, Texto = "Igual" });
+            comboBoxMonto.Items.Add(new OpcionCombo() { Valor = 3, Texto = "Menor igual" });
+            comboBoxMonto.Items.Add(new OpcionCombo() { Valor = 4, Texto = "Menor" });
+            comboBoxMonto.DisplayMember = "Texto";
+            comboBoxMonto.ValueMember = "Valor";
+            comboBoxMonto.SelectedIndex = 0;
         }
 
         private void buttonBuscarResultado_Click(object sender, EventArgs e)
@@ -84,6 +105,9 @@ namespace CapaPresentacion
                     rv.MontoTotal
                 });
             }
+
+            textBoxBusqueda.Clear();
+            textBoxMonto.Clear();
         }
 
         private void buttonDescarcarExcel_Click(object sender, EventArgs e)
@@ -163,6 +187,8 @@ namespace CapaPresentacion
                     }
                 }
             }
+
+            textBoxMonto.Clear();
         }
 
         private void buttonLimpiarBuscador_Click(object sender, EventArgs e)
@@ -240,6 +266,180 @@ namespace CapaPresentacion
                 MessageBox.Show("No hay ventas registradas", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+        }
+
+        private void buttonFiltrarMonto_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewData.Rows.Count > 0 && textBoxMonto.Text != "")
+            {
+                switch (comboBoxColumna.SelectedIndex)
+                {
+                    case 0:
+                        CalcularMonto("PrecioVenta");
+                        break;
+                    case 1:
+                        CalcularMonto("Cantidad");
+                        break;
+                    case 2:
+                        CalcularMonto("montoDescuento");
+                        break;
+                    case 3:
+                        CalcularMonto("SubTotal");
+                        break;
+                    case 4:
+                        CalcularMonto("MontoTotal");
+                        break;
+                }
+            }
+            else if (dataGridViewData.Rows.Count == 0 && textBoxMonto.Text == "")
+            {
+                //MessageBox.Show("Ingrese un monto para filtrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //buttonBuscarResultado_Click(sender, e);
+                buttonBuscar_Click(sender, e);
+            }
+        }
+
+        private void CalcularMonto(string columnaFiltro)
+        {
+            if (dataGridViewData.Rows.Count > 0)
+            {
+                switch (comboBoxMonto.SelectedIndex)
+                {
+                    case 0:
+                        foreach (DataGridViewRow row in dataGridViewData.Rows)
+                        {
+                            if (row.Visible && Convert.ToDecimal(row.Cells[columnaFiltro].Value) > Convert.ToDecimal(textBoxMonto.Text))
+                            {
+                                row.Visible = true;
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                        break;
+                    case 1:
+                        foreach (DataGridViewRow row in dataGridViewData.Rows)
+                        {
+                            if (row.Visible && Convert.ToDecimal(row.Cells[columnaFiltro].Value) >= Convert.ToDecimal(textBoxMonto.Text))
+                            {
+                                row.Visible = true;
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                        break;
+                    case 2:
+                        foreach (DataGridViewRow row in dataGridViewData.Rows)
+                        {
+                            if (row.Visible && Convert.ToDecimal(row.Cells[columnaFiltro].Value) == Convert.ToDecimal(textBoxMonto.Text))
+                            {
+                                row.Visible = true;
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                        break;
+                    case 3:
+                        foreach (DataGridViewRow row in dataGridViewData.Rows)
+                        {
+                            if (row.Visible && Convert.ToDecimal(row.Cells[columnaFiltro].Value) <= Convert.ToDecimal(textBoxMonto.Text))
+                            {
+                                row.Visible = true;
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                        break;
+                    case 4:
+                        foreach (DataGridViewRow row in dataGridViewData.Rows)
+                        {
+                            if (row.Visible && Convert.ToDecimal(row.Cells[columnaFiltro].Value) < Convert.ToDecimal(textBoxMonto.Text))
+                            {
+                                row.Visible = true;
+                            }
+                            else
+                            {
+                                row.Visible = false;
+                            }
+                        }
+                        break;
+                }
+            }
+        }
+
+        private void textBoxMonto_TextChanged(object sender, EventArgs e)
+        {
+            buttonFiltrarMonto_Click(sender, e);
+            if (textBoxMonto.Text.Trim() == "")
+            {
+                buttonBuscar_Click(sender, e);
+            }
+        }
+
+        private void textBoxMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                // Permitir dígitos
+                e.Handled = false;
+            }
+            else if (e.KeyChar == '.' && textBoxMonto.Text.Length > 0 && !textBoxMonto.Text.Contains("."))
+            {
+                // Permitir un punto si hay al menos un número y no hay punto previamente
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                // Permitir teclas de control como retroceso
+                e.Handled = false;
+            }
+            else
+            {
+                // Bloquear cualquier otro carácter
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            buttonBuscar_Click(sender, e);
+        }
+
+        private void comboBoxColumna_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonFiltrarMonto_Click(sender, e);
+        }
+
+        private void comboBoxMonto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonFiltrarMonto_Click(sender, e);
+        }
+
+        private void comboBoxBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonBuscar_Click(sender, e);
+        }
+
+        private void comboBoxCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            buttonBuscarResultado_Click(sender, e);
+        }
+
+        private void dateTimePickerFechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+            buttonBuscarResultado_Click(sender, e);
+        }
+
+        private void dateTimePickerFechaFin_ValueChanged(object sender, EventArgs e)
+        {
+            buttonBuscarResultado_Click(sender, e);
         }
     }
 }

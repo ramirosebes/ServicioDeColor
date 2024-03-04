@@ -1,12 +1,90 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\ramir\\desktop\\final ing.software\\serviciodecolor\\serviciodecolor\\capapresentacion\\frmreporteventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmreporteventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\ramir\\desktop\\final ing.software\\serviciodecolor\\serviciodecolor\\capapresentacion\\frmreporteventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmreporteventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\ramir\\desktop\\final ing.software\\serviciodecolor\\serviciodecolor\\capapresentacion\\frmreportecompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmreportecompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|c:\\users\\ramir\\desktop\\final ing.software\\serviciodecolor\\serviciodecolor\\capapresentacion\\frmreportecompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FC83DD6B-8E79-43BB-9E82-E33F5860DDE9}|CapaPresentacion\\CapaPresentacion.csproj|solutionrelative:capapresentacion\\frmreportecompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmReporteCompra.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\frmReporteCompra.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmReporteCompra.cs",
+              "ToolTip": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\frmReporteCompra.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\frmReporteCompra.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T00:39:23.68Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmReporteCompra.cs",
+              "DocumentMoniker": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\frmReporteCompra.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmReporteCompra.cs",
+              "ToolTip": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\frmReporteCompra.cs",
+              "RelativeToolTip": "CapaPresentacion\\frmReporteCompra.cs",
+              "ViewState": "AQIAAKUBAAAAAAAAAAAhwLsBAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T02:28:16.018Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmReporteVentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\frmReporteVentas.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmReporteVentas.cs",
+              "ToolTip": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\frmReporteVentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CapaPresentacion\\frmReporteVentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T03:12:19.757Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmReporteVentas.cs",
+              "DocumentMoniker": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\frmReporteVentas.cs",
+              "RelativeDocumentMoniker": "CapaPresentacion\\frmReporteVentas.cs",
+              "ToolTip": "C:\\Users\\ramir\\Desktop\\Final Ing.Software\\ServicioDeColor\\ServicioDeColor\\CapaPresentacion\\frmReporteVentas.cs",
+              "RelativeToolTip": "CapaPresentacion\\frmReporteVentas.cs",
+              "ViewState": "AQIAAKMBAAAAAAAAAAAhwKkBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T03:12:21.376Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
