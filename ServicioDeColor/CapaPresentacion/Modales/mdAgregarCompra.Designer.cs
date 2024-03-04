@@ -347,6 +347,7 @@
             // 
             this.textBoxProducto.Location = new System.Drawing.Point(207, 45);
             this.textBoxProducto.Name = "textBoxProducto";
+            this.textBoxProducto.ReadOnly = true;
             this.textBoxProducto.Size = new System.Drawing.Size(200, 27);
             this.textBoxProducto.TabIndex = 8;
             // 
@@ -375,7 +376,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 19);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Codigo del producto:";
+            this.label2.Text = "Código del producto:";
             // 
             // groupBoxInformacionProveedor
             // 
@@ -405,6 +406,7 @@
             // 
             this.textBoxRazonSocial.Location = new System.Drawing.Point(207, 45);
             this.textBoxRazonSocial.Name = "textBoxRazonSocial";
+            this.textBoxRazonSocial.ReadOnly = true;
             this.textBoxRazonSocial.Size = new System.Drawing.Size(200, 27);
             this.textBoxRazonSocial.TabIndex = 5;
             // 
@@ -440,7 +442,7 @@
             this.labelRazonSocial.Name = "labelRazonSocial";
             this.labelRazonSocial.Size = new System.Drawing.Size(80, 19);
             this.labelRazonSocial.TabIndex = 1;
-            this.labelRazonSocial.Text = "Razon social:";
+            this.labelRazonSocial.Text = "Razón social:";
             // 
             // labelCUIT
             // 

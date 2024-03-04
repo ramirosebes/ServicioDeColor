@@ -196,6 +196,7 @@
             // 
             // comboBoxDescuento
             // 
+            this.comboBoxDescuento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDescuento.FormattingEnabled = true;
             this.comboBoxDescuento.Location = new System.Drawing.Point(688, 308);
@@ -509,7 +510,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 19);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Codigo del producto:";
+            this.label2.Text = "Código del producto:";
             // 
             // groupBoxInformacionProveedor
             // 
@@ -585,7 +586,7 @@
             this.labelNumeroDocumento.Name = "labelNumeroDocumento";
             this.labelNumeroDocumento.Size = new System.Drawing.Size(126, 19);
             this.labelNumeroDocumento.TabIndex = 0;
-            this.labelNumeroDocumento.Text = "Numero de documento";
+            this.labelNumeroDocumento.Text = "Número de documento";
             // 
             // groupBoxInformacionCompra
             // 
@@ -604,6 +605,7 @@
             // comboBoxTipoDocumento
             // 
             this.comboBoxTipoDocumento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboBoxTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipoDocumento.FormattingEnabled = true;
             this.comboBoxTipoDocumento.Location = new System.Drawing.Point(166, 45);
             this.comboBoxTipoDocumento.Name = "comboBoxTipoDocumento";

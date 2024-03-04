@@ -106,9 +106,9 @@
             this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSubTitulo.Location = new System.Drawing.Point(10, 20);
             this.labelSubTitulo.Name = "labelSubTitulo";
-            this.labelSubTitulo.Size = new System.Drawing.Size(242, 39);
+            this.labelSubTitulo.Size = new System.Drawing.Size(248, 39);
             this.labelSubTitulo.TabIndex = 50;
-            this.labelSubTitulo.Text = "Auditoria de compras";
+            this.labelSubTitulo.Text = "Auditoriía de compras";
             // 
             // comboBoxBusqueda
             // 
@@ -335,7 +335,7 @@
             // 
             // NombreCompletoUsuarioAuditoria
             // 
-            this.NombreCompletoUsuarioAuditoria.HeaderText = "Ultimo usuario";
+            this.NombreCompletoUsuarioAuditoria.HeaderText = "Último usuario";
             this.NombreCompletoUsuarioAuditoria.Name = "NombreCompletoUsuarioAuditoria";
             this.NombreCompletoUsuarioAuditoria.ReadOnly = true;
             this.NombreCompletoUsuarioAuditoria.Width = 120;
@@ -349,14 +349,14 @@
             // 
             // DescripcionAuditoria
             // 
-            this.DescripcionAuditoria.HeaderText = "Descripcion";
+            this.DescripcionAuditoria.HeaderText = "Descripción";
             this.DescripcionAuditoria.Name = "DescripcionAuditoria";
             this.DescripcionAuditoria.ReadOnly = true;
             this.DescripcionAuditoria.Width = 150;
             // 
             // FechaAuditoria
             // 
-            this.FechaAuditoria.HeaderText = "Fecha de auditoria";
+            this.FechaAuditoria.HeaderText = "Fecha de auditoría";
             this.FechaAuditoria.Name = "FechaAuditoria";
             this.FechaAuditoria.ReadOnly = true;
             this.FechaAuditoria.Width = 150;

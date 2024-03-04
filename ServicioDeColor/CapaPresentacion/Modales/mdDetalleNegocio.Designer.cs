@@ -153,6 +153,7 @@
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(425, 20);
             this.textBoxCUIT.TabIndex = 3;
+            this.textBoxCUIT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCUIT_KeyDown);
             this.textBoxCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCUIT_KeyPress);
             this.textBoxCUIT.Leave += new System.EventHandler(this.textBoxCUIT_Leave);
             // 

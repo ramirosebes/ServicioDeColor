@@ -96,7 +96,7 @@
             this.labelSubTitulo.Name = "labelSubTitulo";
             this.labelSubTitulo.Size = new System.Drawing.Size(218, 39);
             this.labelSubTitulo.TabIndex = 50;
-            this.labelSubTitulo.Text = "Lista de categorias";
+            this.labelSubTitulo.Text = "Lista de categorías";
             // 
             // comboBoxBusqueda
             // 
@@ -363,7 +363,7 @@
             this.Controls.Add(this.menu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCategoria";
-            this.Text = "Categorias";
+            this.Text = "Categorías";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
             this.panelLista.ResumeLayout(false);
             this.panelLista.PerformLayout();

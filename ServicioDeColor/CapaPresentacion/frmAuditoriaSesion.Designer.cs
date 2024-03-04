@@ -44,6 +44,7 @@
             this.menuVerDetalleAuditoriaSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.panelLista = new System.Windows.Forms.Panel();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdAuditoriaSesion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescripcionAuditoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +55,6 @@
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelLista = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panelLista.SuspendLayout();
@@ -98,7 +98,7 @@
             this.labelSubTitulo.Name = "labelSubTitulo";
             this.labelSubTitulo.Size = new System.Drawing.Size(243, 39);
             this.labelSubTitulo.TabIndex = 50;
-            this.labelSubTitulo.Text = "Auditoria de sesiones";
+            this.labelSubTitulo.Text = "Auditoría de sesiones";
             // 
             // comboBoxBusqueda
             // 
@@ -267,6 +267,23 @@
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView_CellPainting);
             // 
+            // panelLista
+            // 
+            this.panelLista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelLista.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelLista.Controls.Add(this.buttonActualizar);
+            this.panelLista.Controls.Add(this.labelSubTitulo);
+            this.panelLista.Controls.Add(this.comboBoxBusqueda);
+            this.panelLista.Controls.Add(this.labelBuscarPor);
+            this.panelLista.Controls.Add(this.buttonLimpiar);
+            this.panelLista.Controls.Add(this.textBoxBusqueda);
+            this.panelLista.Controls.Add(this.buttonBuscar);
+            this.panelLista.Location = new System.Drawing.Point(12, 37);
+            this.panelLista.Name = "panelLista";
+            this.panelLista.Size = new System.Drawing.Size(1460, 80);
+            this.panelLista.TabIndex = 108;
+            // 
             // buttonSeleccionar
             // 
             this.buttonSeleccionar.HeaderText = "";
@@ -284,14 +301,14 @@
             // 
             // DescripcionAuditoria
             // 
-            this.DescripcionAuditoria.HeaderText = "Descripcion";
+            this.DescripcionAuditoria.HeaderText = "Descripción";
             this.DescripcionAuditoria.Name = "DescripcionAuditoria";
             this.DescripcionAuditoria.ReadOnly = true;
             this.DescripcionAuditoria.Width = 150;
             // 
             // FechaAuditoria
             // 
-            this.FechaAuditoria.HeaderText = "Fecha de auditoria";
+            this.FechaAuditoria.HeaderText = "Fecha de auditoría";
             this.FechaAuditoria.Name = "FechaAuditoria";
             this.FechaAuditoria.ReadOnly = true;
             this.FechaAuditoria.Width = 130;
@@ -334,23 +351,6 @@
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
-            // 
-            // panelLista
-            // 
-            this.panelLista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelLista.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panelLista.Controls.Add(this.buttonActualizar);
-            this.panelLista.Controls.Add(this.labelSubTitulo);
-            this.panelLista.Controls.Add(this.comboBoxBusqueda);
-            this.panelLista.Controls.Add(this.labelBuscarPor);
-            this.panelLista.Controls.Add(this.buttonLimpiar);
-            this.panelLista.Controls.Add(this.textBoxBusqueda);
-            this.panelLista.Controls.Add(this.buttonBuscar);
-            this.panelLista.Location = new System.Drawing.Point(12, 37);
-            this.panelLista.Name = "panelLista";
-            this.panelLista.Size = new System.Drawing.Size(1460, 80);
-            this.panelLista.TabIndex = 108;
             // 
             // frmAuditoriaSesion
             // 

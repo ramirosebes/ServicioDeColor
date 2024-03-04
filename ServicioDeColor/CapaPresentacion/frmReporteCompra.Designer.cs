@@ -45,6 +45,17 @@
             this.textBoxMonto = new System.Windows.Forms.TextBox();
             this.labelBuscarPor = new System.Windows.Forms.Label();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
+            this.comboBoxProveedor = new System.Windows.Forms.ComboBox();
+            this.buttonBuscarResultado = new System.Windows.Forms.Button();
+            this.labelProveedor = new System.Windows.Forms.Label();
+            this.labelFechaFin = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.labelFechaInicio = new System.Windows.Forms.Label();
+            this.labelTitulo = new System.Windows.Forms.Label();
+            this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
+            this.panelReporteCompras = new System.Windows.Forms.Panel();
+            this.buttonLimpiarProveedor = new System.Windows.Forms.Button();
+            this.buttonGrafico = new System.Windows.Forms.Button();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,17 +70,6 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comboBoxProveedor = new System.Windows.Forms.ComboBox();
-            this.buttonBuscarResultado = new System.Windows.Forms.Button();
-            this.labelProveedor = new System.Windows.Forms.Label();
-            this.labelFechaFin = new System.Windows.Forms.Label();
-            this.dateTimePickerFechaFin = new System.Windows.Forms.DateTimePicker();
-            this.labelFechaInicio = new System.Windows.Forms.Label();
-            this.labelTitulo = new System.Windows.Forms.Label();
-            this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.panelReporteCompras = new System.Windows.Forms.Panel();
-            this.buttonLimpiarProveedor = new System.Windows.Forms.Button();
-            this.buttonGrafico = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.panelReporteCompras.SuspendLayout();
@@ -113,7 +113,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 25);
             this.label2.TabIndex = 86;
-            this.label2.Text = "Opciones de busqueda";
+            this.label2.Text = "Opciones de búsqueda";
             // 
             // buttonLimpiarBuscador
             // 
@@ -262,6 +262,7 @@
             this.textBoxMonto.Size = new System.Drawing.Size(99, 27);
             this.textBoxMonto.TabIndex = 91;
             this.textBoxMonto.TextChanged += new System.EventHandler(this.textBoxMonto_TextChanged);
+            this.textBoxMonto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxMonto_KeyDown);
             this.textBoxMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMonto_KeyPress);
             // 
             // labelBuscarPor
@@ -322,90 +323,6 @@
             this.dataGridViewData.ReadOnly = true;
             this.dataGridViewData.Size = new System.Drawing.Size(1460, 423);
             this.dataGridViewData.TabIndex = 1;
-            // 
-            // FechaRegistro
-            // 
-            this.FechaRegistro.HeaderText = "Fecha Registro";
-            this.FechaRegistro.Name = "FechaRegistro";
-            this.FechaRegistro.ReadOnly = true;
-            // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.HeaderText = "Tipo Documento";
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.ReadOnly = true;
-            // 
-            // NumeroDocumento
-            // 
-            this.NumeroDocumento.HeaderText = "Numero Documento";
-            this.NumeroDocumento.Name = "NumeroDocumento";
-            this.NumeroDocumento.ReadOnly = true;
-            // 
-            // UsuarioRegistro
-            // 
-            this.UsuarioRegistro.HeaderText = "Usuario";
-            this.UsuarioRegistro.Name = "UsuarioRegistro";
-            this.UsuarioRegistro.ReadOnly = true;
-            // 
-            // DocumentoProveedor
-            // 
-            this.DocumentoProveedor.HeaderText = "CUIT Proveedor";
-            this.DocumentoProveedor.Name = "DocumentoProveedor";
-            this.DocumentoProveedor.ReadOnly = true;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.HeaderText = "Razon Social";
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            // 
-            // CodigoProducto
-            // 
-            this.CodigoProducto.HeaderText = "Codigo Producto";
-            this.CodigoProducto.Name = "CodigoProducto";
-            this.CodigoProducto.ReadOnly = true;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "Precio Compra";
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "Sub Total";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            // 
-            // MontoTotal
-            // 
-            this.MontoTotal.HeaderText = "Monto Total";
-            this.MontoTotal.Name = "MontoTotal";
-            this.MontoTotal.ReadOnly = true;
             // 
             // comboBoxProveedor
             // 
@@ -573,6 +490,90 @@
             this.buttonGrafico.UseVisualStyleBackColor = false;
             this.buttonGrafico.Click += new System.EventHandler(this.buttonGrafico_Click);
             // 
+            // FechaRegistro
+            // 
+            this.FechaRegistro.HeaderText = "Fecha Registro";
+            this.FechaRegistro.Name = "FechaRegistro";
+            this.FechaRegistro.ReadOnly = true;
+            // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.HeaderText = "Tipo Documento";
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.ReadOnly = true;
+            // 
+            // NumeroDocumento
+            // 
+            this.NumeroDocumento.HeaderText = "Número Documento";
+            this.NumeroDocumento.Name = "NumeroDocumento";
+            this.NumeroDocumento.ReadOnly = true;
+            // 
+            // UsuarioRegistro
+            // 
+            this.UsuarioRegistro.HeaderText = "Usuario";
+            this.UsuarioRegistro.Name = "UsuarioRegistro";
+            this.UsuarioRegistro.ReadOnly = true;
+            // 
+            // DocumentoProveedor
+            // 
+            this.DocumentoProveedor.HeaderText = "CUIT Proveedor";
+            this.DocumentoProveedor.Name = "DocumentoProveedor";
+            this.DocumentoProveedor.ReadOnly = true;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.HeaderText = "Razón Social";
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            // 
+            // CodigoProducto
+            // 
+            this.CodigoProducto.HeaderText = "Código Producto";
+            this.CodigoProducto.Name = "CodigoProducto";
+            this.CodigoProducto.ReadOnly = true;
+            // 
+            // NombreProducto
+            // 
+            this.NombreProducto.HeaderText = "Nombre Producto";
+            this.NombreProducto.Name = "NombreProducto";
+            this.NombreProducto.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.HeaderText = "Categoía";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // PrecioCompra
+            // 
+            this.PrecioCompra.HeaderText = "Precio Compra";
+            this.PrecioCompra.Name = "PrecioCompra";
+            this.PrecioCompra.ReadOnly = true;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "Precio Venta";
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "Sub Total";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            // 
+            // MontoTotal
+            // 
+            this.MontoTotal.HeaderText = "Monto Total";
+            this.MontoTotal.Name = "MontoTotal";
+            this.MontoTotal.ReadOnly = true;
+            // 
             // frmReporteCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -619,6 +620,11 @@
         private System.Windows.Forms.Panel panelReporteCompras;
         private System.Windows.Forms.Button buttonLimpiarProveedor;
         private System.Windows.Forms.Button buttonGrafico;
+        private System.Windows.Forms.ComboBox comboBoxMonto;
+        private System.Windows.Forms.TextBox textBoxMonto;
+        private System.Windows.Forms.Button buttonFiltrarMonto;
+        private System.Windows.Forms.ComboBox comboBoxColumna;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroDocumento;
@@ -633,10 +639,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoTotal;
-        private System.Windows.Forms.ComboBox comboBoxMonto;
-        private System.Windows.Forms.TextBox textBoxMonto;
-        private System.Windows.Forms.Button buttonFiltrarMonto;
-        private System.Windows.Forms.ComboBox comboBoxColumna;
-        private System.Windows.Forms.Label label1;
     }
 }

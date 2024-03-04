@@ -43,6 +43,10 @@
             this.panelLista = new System.Windows.Forms.Panel();
             this.buttonBuscar = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.menuEliminarPedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAgregarPedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuVerDetallePedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu = new System.Windows.Forms.MenuStrip();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,10 +66,6 @@
             this.montoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuEliminarPedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAgregarPedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuVerDetallePedidoVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu = new System.Windows.Forms.MenuStrip();
             this.panelLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.menu.SuspendLayout();
@@ -281,6 +281,55 @@
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView_CellPainting);
             // 
+            // menuEliminarPedidoVenta
+            // 
+            this.menuEliminarPedidoVenta.AutoSize = false;
+            this.menuEliminarPedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuEliminarPedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuEliminarPedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuEliminarPedidoVenta.Name = "menuEliminarPedidoVenta";
+            this.menuEliminarPedidoVenta.Size = new System.Drawing.Size(75, 30);
+            this.menuEliminarPedidoVenta.Text = "Eliminar";
+            this.menuEliminarPedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuEliminarPedidoVenta.Click += new System.EventHandler(this.menuEliminarVenta_Click);
+            // 
+            // menuAgregarPedidoVenta
+            // 
+            this.menuAgregarPedidoVenta.AutoSize = false;
+            this.menuAgregarPedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuAgregarPedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuAgregarPedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuAgregarPedidoVenta.Name = "menuAgregarPedidoVenta";
+            this.menuAgregarPedidoVenta.Size = new System.Drawing.Size(73, 30);
+            this.menuAgregarPedidoVenta.Text = "Agregar";
+            this.menuAgregarPedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuAgregarPedidoVenta.Click += new System.EventHandler(this.menuAgregarVenta_Click);
+            // 
+            // menuVerDetallePedidoVenta
+            // 
+            this.menuVerDetallePedidoVenta.AutoSize = false;
+            this.menuVerDetallePedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menuVerDetallePedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuVerDetallePedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuVerDetallePedidoVenta.Name = "menuVerDetallePedidoVenta";
+            this.menuVerDetallePedidoVenta.Size = new System.Drawing.Size(88, 30);
+            this.menuVerDetallePedidoVenta.Text = "Ver detalle";
+            this.menuVerDetallePedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuVerDetallePedidoVenta.Click += new System.EventHandler(this.menuVerDetalleVenta_Click);
+            // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuVerDetallePedidoVenta,
+            this.menuAgregarPedidoVenta,
+            this.menuEliminarPedidoVenta});
+            this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(1484, 34);
+            this.menu.TabIndex = 102;
+            this.menu.Text = "menuStrip1";
+            // 
             // buttonSeleccionar
             // 
             this.buttonSeleccionar.HeaderText = "";
@@ -358,7 +407,7 @@
             // 
             // numeroDocumento
             // 
-            this.numeroDocumento.HeaderText = "Numero del documento";
+            this.numeroDocumento.HeaderText = "Número del documento";
             this.numeroDocumento.Name = "numeroDocumento";
             this.numeroDocumento.ReadOnly = true;
             this.numeroDocumento.Width = 125;
@@ -410,55 +459,6 @@
             this.fechaRegistro.HeaderText = "Fecha de registro";
             this.fechaRegistro.Name = "fechaRegistro";
             this.fechaRegistro.ReadOnly = true;
-            // 
-            // menuEliminarPedidoVenta
-            // 
-            this.menuEliminarPedidoVenta.AutoSize = false;
-            this.menuEliminarPedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuEliminarPedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuEliminarPedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuEliminarPedidoVenta.Name = "menuEliminarPedidoVenta";
-            this.menuEliminarPedidoVenta.Size = new System.Drawing.Size(75, 30);
-            this.menuEliminarPedidoVenta.Text = "Eliminar";
-            this.menuEliminarPedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuEliminarPedidoVenta.Click += new System.EventHandler(this.menuEliminarVenta_Click);
-            // 
-            // menuAgregarPedidoVenta
-            // 
-            this.menuAgregarPedidoVenta.AutoSize = false;
-            this.menuAgregarPedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuAgregarPedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuAgregarPedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuAgregarPedidoVenta.Name = "menuAgregarPedidoVenta";
-            this.menuAgregarPedidoVenta.Size = new System.Drawing.Size(73, 30);
-            this.menuAgregarPedidoVenta.Text = "Agregar";
-            this.menuAgregarPedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuAgregarPedidoVenta.Click += new System.EventHandler(this.menuAgregarVenta_Click);
-            // 
-            // menuVerDetallePedidoVenta
-            // 
-            this.menuVerDetallePedidoVenta.AutoSize = false;
-            this.menuVerDetallePedidoVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menuVerDetallePedidoVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuVerDetallePedidoVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuVerDetallePedidoVenta.Name = "menuVerDetallePedidoVenta";
-            this.menuVerDetallePedidoVenta.Size = new System.Drawing.Size(88, 30);
-            this.menuVerDetallePedidoVenta.Text = "Ver detalle";
-            this.menuVerDetallePedidoVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuVerDetallePedidoVenta.Click += new System.EventHandler(this.menuVerDetalleVenta_Click);
-            // 
-            // menu
-            // 
-            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuVerDetallePedidoVenta,
-            this.menuAgregarPedidoVenta,
-            this.menuEliminarPedidoVenta});
-            this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1484, 34);
-            this.menu.TabIndex = 102;
-            this.menu.Text = "menuStrip1";
             // 
             // frmVenta
             // 

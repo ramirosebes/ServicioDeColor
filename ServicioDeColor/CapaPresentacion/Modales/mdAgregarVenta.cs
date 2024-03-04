@@ -26,8 +26,8 @@ namespace CapaPresentacion.Modales
         private void mdAgregarVenta_Load(object sender, EventArgs e)
         {
             //CONFIGURACION DEL OPCION COMBO TIPO DOCUMENTO -- SE PUEDEN AGREGAR MAS COMO "CHEQUE"
-            comboBoxTipoDocumento.Items.Add(new OpcionCombo() { Valor = "Boleta", Texto = "Boleta" });
             comboBoxTipoDocumento.Items.Add(new OpcionCombo() { Valor = "Factura", Texto = "Factura" });
+            comboBoxTipoDocumento.Items.Add(new OpcionCombo() { Valor = "Boleta", Texto = "Boleta" });
             comboBoxTipoDocumento.DisplayMember = "Texto";
             comboBoxTipoDocumento.ValueMember = "Valor";
             comboBoxTipoDocumento.SelectedIndex = 0;
@@ -119,6 +119,13 @@ namespace CapaPresentacion.Modales
                     textBoxStock.Text = "";
                     numericUpDownCantidad.Value = 1;
                 }
+            }
+
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
             }
         }
 
@@ -407,6 +414,13 @@ namespace CapaPresentacion.Modales
             {
                 calcularCambio();
             }
+
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
         }
 
         private void textBoxPagaCon_TextChanged(object sender, EventArgs e)
@@ -553,6 +567,13 @@ namespace CapaPresentacion.Modales
             {
                 CalcularDescuento();
             }
+
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
         }
 
         private void textBoxDocumentoCliente_KeyPress(object sender, KeyPressEventArgs e)
@@ -662,6 +683,13 @@ namespace CapaPresentacion.Modales
                     textBoxIdCliente.Text = "0";
                     textBoxNombreCompleto.Text = "";
                 }
+            }
+
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
             }
         }
     }

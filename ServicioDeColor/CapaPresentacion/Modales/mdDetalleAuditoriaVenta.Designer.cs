@@ -105,7 +105,7 @@
             this.groupBoxInformacionVenta.Size = new System.Drawing.Size(798, 84);
             this.groupBoxInformacionVenta.TabIndex = 58;
             this.groupBoxInformacionVenta.TabStop = false;
-            this.groupBoxInformacionVenta.Text = "Informacion de la venta";
+            this.groupBoxInformacionVenta.Text = "Información de la venta";
             // 
             // labelIdVenta
             // 
@@ -187,7 +187,7 @@
             this.groupBoxInformacionCliente.Size = new System.Drawing.Size(798, 84);
             this.groupBoxInformacionCliente.TabIndex = 59;
             this.groupBoxInformacionCliente.TabStop = false;
-            this.groupBoxInformacionCliente.Text = "Informacion del cliente";
+            this.groupBoxInformacionCliente.Text = "Información del cliente";
             // 
             // textBoxNombreCompletoCliente
             // 
@@ -221,7 +221,7 @@
             this.labelDocumentoCliente.Name = "labelDocumentoCliente";
             this.labelDocumentoCliente.Size = new System.Drawing.Size(129, 19);
             this.labelDocumentoCliente.TabIndex = 2;
-            this.labelDocumentoCliente.Text = "Numero de documento:";
+            this.labelDocumentoCliente.Text = "Número de documento:";
             // 
             // labelMontoTotal
             // 
@@ -464,7 +464,7 @@
             this.groupBoxAuditoria.Size = new System.Drawing.Size(798, 84);
             this.groupBoxAuditoria.TabIndex = 95;
             this.groupBoxAuditoria.TabStop = false;
-            this.groupBoxAuditoria.Text = "Informacion de la auditoria";
+            this.groupBoxAuditoria.Text = "Información de la auditoria";
             // 
             // textBoxDescripcion
             // 
@@ -481,7 +481,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Descipcion";
+            this.label1.Text = "Descipción";
             // 
             // textBoxUltimoUsuario
             // 
@@ -498,7 +498,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Ultimo usuario:";
+            this.label2.Text = "Último usuario:";
             // 
             // textBoxFechaAuditoria
             // 
@@ -515,7 +515,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Fecha auditoria:";
+            this.label3.Text = "Fecha auditoría:";
             // 
             // mdDetalleAuditoriaVenta
             // 
@@ -528,7 +528,7 @@
             this.MinimumSize = new System.Drawing.Size(875, 754);
             this.Name = "mdDetalleAuditoriaVenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detalle auditoria venta";
+            this.Text = "Detalle auditoría venta";
             this.Load += new System.EventHandler(this.frmDetalleAuditoriaVenta_Load);
             this.groupBoxInformacionVenta.ResumeLayout(false);
             this.groupBoxInformacionVenta.PerformLayout();

@@ -34,6 +34,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAuditoriaVenta));
             this.textBoxNumeroDocumento = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.labelSubTitulo = new System.Windows.Forms.Label();
+            this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
+            this.labelBuscarPor = new System.Windows.Forms.Label();
+            this.buttonLimpiar = new System.Windows.Forms.Button();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.panelLista = new System.Windows.Forms.Panel();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.menuVerDetalleAuditoriaVenta = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.textBoxId = new System.Windows.Forms.TextBox();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdAuditoriaVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdUsuarioAuditoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,17 +71,6 @@
             this.TipoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonActualizar = new System.Windows.Forms.Button();
-            this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
-            this.labelBuscarPor = new System.Windows.Forms.Label();
-            this.buttonLimpiar = new System.Windows.Forms.Button();
-            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
-            this.panelLista = new System.Windows.Forms.Panel();
-            this.buttonBuscar = new System.Windows.Forms.Button();
-            this.menuVerDetalleAuditoriaVenta = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu = new System.Windows.Forms.MenuStrip();
-            this.textBoxId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panelLista.SuspendLayout();
             this.menu.SuspendLayout();
@@ -155,183 +155,6 @@
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView_CellPainting);
             // 
-            // buttonSeleccionar
-            // 
-            this.buttonSeleccionar.HeaderText = "";
-            this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.ReadOnly = true;
-            this.buttonSeleccionar.Width = 30;
-            // 
-            // IdAuditoriaVenta
-            // 
-            this.IdAuditoriaVenta.HeaderText = "IdAuditoriaVenta";
-            this.IdAuditoriaVenta.Name = "IdAuditoriaVenta";
-            this.IdAuditoriaVenta.ReadOnly = true;
-            this.IdAuditoriaVenta.Visible = false;
-            // 
-            // IdUsuarioAuditoria
-            // 
-            this.IdUsuarioAuditoria.HeaderText = "IdUsuarioAuditoria";
-            this.IdUsuarioAuditoria.Name = "IdUsuarioAuditoria";
-            this.IdUsuarioAuditoria.ReadOnly = true;
-            this.IdUsuarioAuditoria.Visible = false;
-            // 
-            // IdPersonaUsuarioAuditoria
-            // 
-            this.IdPersonaUsuarioAuditoria.HeaderText = "IdPersonaUsuarioAuditoria";
-            this.IdPersonaUsuarioAuditoria.Name = "IdPersonaUsuarioAuditoria";
-            this.IdPersonaUsuarioAuditoria.ReadOnly = true;
-            this.IdPersonaUsuarioAuditoria.Visible = false;
-            // 
-            // NombreCompletoUsuarioAuditoria
-            // 
-            this.NombreCompletoUsuarioAuditoria.HeaderText = "Ultimo usuario";
-            this.NombreCompletoUsuarioAuditoria.Name = "NombreCompletoUsuarioAuditoria";
-            this.NombreCompletoUsuarioAuditoria.ReadOnly = true;
-            // 
-            // DocumentoUsuarioAuditoria
-            // 
-            this.DocumentoUsuarioAuditoria.HeaderText = "DocumentoUsuarioAuditoria";
-            this.DocumentoUsuarioAuditoria.Name = "DocumentoUsuarioAuditoria";
-            this.DocumentoUsuarioAuditoria.ReadOnly = true;
-            this.DocumentoUsuarioAuditoria.Visible = false;
-            // 
-            // DescripcionAuditoria
-            // 
-            this.DescripcionAuditoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DescripcionAuditoria.HeaderText = "Descripcion";
-            this.DescripcionAuditoria.Name = "DescripcionAuditoria";
-            this.DescripcionAuditoria.ReadOnly = true;
-            // 
-            // FechaAuditoria
-            // 
-            this.FechaAuditoria.HeaderText = "Fecha de auditoria";
-            this.FechaAuditoria.Name = "FechaAuditoria";
-            this.FechaAuditoria.ReadOnly = true;
-            this.FechaAuditoria.Width = 110;
-            // 
-            // IdVenta
-            // 
-            this.IdVenta.HeaderText = "IdVenta";
-            this.IdVenta.Name = "IdVenta";
-            this.IdVenta.ReadOnly = true;
-            this.IdVenta.Width = 60;
-            // 
-            // IdUsuarioVenta
-            // 
-            this.IdUsuarioVenta.HeaderText = "IdUsuarioVenta";
-            this.IdUsuarioVenta.Name = "IdUsuarioVenta";
-            this.IdUsuarioVenta.ReadOnly = true;
-            this.IdUsuarioVenta.Visible = false;
-            // 
-            // IdPersonaUsuarioVenta
-            // 
-            this.IdPersonaUsuarioVenta.HeaderText = "IdPersonaUsuarioVenta";
-            this.IdPersonaUsuarioVenta.Name = "IdPersonaUsuarioVenta";
-            this.IdPersonaUsuarioVenta.ReadOnly = true;
-            this.IdPersonaUsuarioVenta.Visible = false;
-            // 
-            // NombreCompletoUsuarioVenta
-            // 
-            this.NombreCompletoUsuarioVenta.HeaderText = "Usuario registro";
-            this.NombreCompletoUsuarioVenta.Name = "NombreCompletoUsuarioVenta";
-            this.NombreCompletoUsuarioVenta.ReadOnly = true;
-            // 
-            // DocumentoUsuarioVenta
-            // 
-            this.DocumentoUsuarioVenta.HeaderText = "DocumentoUsuarioVenta";
-            this.DocumentoUsuarioVenta.Name = "DocumentoUsuarioVenta";
-            this.DocumentoUsuarioVenta.ReadOnly = true;
-            this.DocumentoUsuarioVenta.Visible = false;
-            // 
-            // IdCliente
-            // 
-            this.IdCliente.HeaderText = "IdCliente";
-            this.IdCliente.Name = "IdCliente";
-            this.IdCliente.ReadOnly = true;
-            this.IdCliente.Visible = false;
-            // 
-            // IdPersonaClienteVenta
-            // 
-            this.IdPersonaClienteVenta.HeaderText = "IdPersonaClienteVenta";
-            this.IdPersonaClienteVenta.Name = "IdPersonaClienteVenta";
-            this.IdPersonaClienteVenta.ReadOnly = true;
-            this.IdPersonaClienteVenta.Visible = false;
-            // 
-            // NombreCompletoClienteVenta
-            // 
-            this.NombreCompletoClienteVenta.HeaderText = "Cliente";
-            this.NombreCompletoClienteVenta.Name = "NombreCompletoClienteVenta";
-            this.NombreCompletoClienteVenta.ReadOnly = true;
-            // 
-            // DocumentoClienteVenta
-            // 
-            this.DocumentoClienteVenta.HeaderText = "DocumentoClienteVenta";
-            this.DocumentoClienteVenta.Name = "DocumentoClienteVenta";
-            this.DocumentoClienteVenta.ReadOnly = true;
-            this.DocumentoClienteVenta.Visible = false;
-            // 
-            // TipoDocumento
-            // 
-            this.TipoDocumento.HeaderText = "Tipo de documento";
-            this.TipoDocumento.Name = "TipoDocumento";
-            this.TipoDocumento.ReadOnly = true;
-            // 
-            // NumeroDocumento
-            // 
-            this.NumeroDocumento.HeaderText = "NumeroDocumento";
-            this.NumeroDocumento.Name = "NumeroDocumento";
-            this.NumeroDocumento.ReadOnly = true;
-            this.NumeroDocumento.Visible = false;
-            // 
-            // MontoPago
-            // 
-            this.MontoPago.HeaderText = "Monto pago";
-            this.MontoPago.Name = "MontoPago";
-            this.MontoPago.ReadOnly = true;
-            this.MontoPago.Width = 90;
-            // 
-            // MontoCambio
-            // 
-            this.MontoCambio.HeaderText = "Monto cambio";
-            this.MontoCambio.Name = "MontoCambio";
-            this.MontoCambio.ReadOnly = true;
-            this.MontoCambio.Width = 90;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "Subtotal";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 90;
-            // 
-            // MontoTotal
-            // 
-            this.MontoTotal.HeaderText = "Monto total";
-            this.MontoTotal.Name = "MontoTotal";
-            this.MontoTotal.ReadOnly = true;
-            this.MontoTotal.Width = 90;
-            // 
-            // TipoDescuento
-            // 
-            this.TipoDescuento.HeaderText = "Tipo de descuento";
-            this.TipoDescuento.Name = "TipoDescuento";
-            this.TipoDescuento.ReadOnly = true;
-            // 
-            // MontoDescuento
-            // 
-            this.MontoDescuento.HeaderText = "Monto del descuento";
-            this.MontoDescuento.Name = "MontoDescuento";
-            this.MontoDescuento.ReadOnly = true;
-            this.MontoDescuento.Width = 90;
-            // 
-            // FechaRegistro
-            // 
-            this.FechaRegistro.HeaderText = "Fecha de registro";
-            this.FechaRegistro.Name = "FechaRegistro";
-            this.FechaRegistro.ReadOnly = true;
-            this.FechaRegistro.Width = 110;
-            // 
             // buttonActualizar
             // 
             this.buttonActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -362,7 +185,7 @@
             this.labelSubTitulo.Name = "labelSubTitulo";
             this.labelSubTitulo.Size = new System.Drawing.Size(221, 39);
             this.labelSubTitulo.TabIndex = 50;
-            this.labelSubTitulo.Text = "Auditoria de ventas";
+            this.labelSubTitulo.Text = "Auditoría de ventas";
             // 
             // comboBoxBusqueda
             // 
@@ -492,6 +315,183 @@
             this.textBoxId.Size = new System.Drawing.Size(100, 20);
             this.textBoxId.TabIndex = 110;
             this.textBoxId.Visible = false;
+            // 
+            // buttonSeleccionar
+            // 
+            this.buttonSeleccionar.HeaderText = "";
+            this.buttonSeleccionar.Name = "buttonSeleccionar";
+            this.buttonSeleccionar.ReadOnly = true;
+            this.buttonSeleccionar.Width = 30;
+            // 
+            // IdAuditoriaVenta
+            // 
+            this.IdAuditoriaVenta.HeaderText = "IdAuditoriaVenta";
+            this.IdAuditoriaVenta.Name = "IdAuditoriaVenta";
+            this.IdAuditoriaVenta.ReadOnly = true;
+            this.IdAuditoriaVenta.Visible = false;
+            // 
+            // IdUsuarioAuditoria
+            // 
+            this.IdUsuarioAuditoria.HeaderText = "IdUsuarioAuditoria";
+            this.IdUsuarioAuditoria.Name = "IdUsuarioAuditoria";
+            this.IdUsuarioAuditoria.ReadOnly = true;
+            this.IdUsuarioAuditoria.Visible = false;
+            // 
+            // IdPersonaUsuarioAuditoria
+            // 
+            this.IdPersonaUsuarioAuditoria.HeaderText = "IdPersonaUsuarioAuditoria";
+            this.IdPersonaUsuarioAuditoria.Name = "IdPersonaUsuarioAuditoria";
+            this.IdPersonaUsuarioAuditoria.ReadOnly = true;
+            this.IdPersonaUsuarioAuditoria.Visible = false;
+            // 
+            // NombreCompletoUsuarioAuditoria
+            // 
+            this.NombreCompletoUsuarioAuditoria.HeaderText = "Último usuario";
+            this.NombreCompletoUsuarioAuditoria.Name = "NombreCompletoUsuarioAuditoria";
+            this.NombreCompletoUsuarioAuditoria.ReadOnly = true;
+            // 
+            // DocumentoUsuarioAuditoria
+            // 
+            this.DocumentoUsuarioAuditoria.HeaderText = "DocumentoUsuarioAuditoria";
+            this.DocumentoUsuarioAuditoria.Name = "DocumentoUsuarioAuditoria";
+            this.DocumentoUsuarioAuditoria.ReadOnly = true;
+            this.DocumentoUsuarioAuditoria.Visible = false;
+            // 
+            // DescripcionAuditoria
+            // 
+            this.DescripcionAuditoria.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DescripcionAuditoria.HeaderText = "Descripción";
+            this.DescripcionAuditoria.Name = "DescripcionAuditoria";
+            this.DescripcionAuditoria.ReadOnly = true;
+            // 
+            // FechaAuditoria
+            // 
+            this.FechaAuditoria.HeaderText = "Fecha de auditoría";
+            this.FechaAuditoria.Name = "FechaAuditoria";
+            this.FechaAuditoria.ReadOnly = true;
+            this.FechaAuditoria.Width = 110;
+            // 
+            // IdVenta
+            // 
+            this.IdVenta.HeaderText = "IdVenta";
+            this.IdVenta.Name = "IdVenta";
+            this.IdVenta.ReadOnly = true;
+            this.IdVenta.Width = 60;
+            // 
+            // IdUsuarioVenta
+            // 
+            this.IdUsuarioVenta.HeaderText = "IdUsuarioVenta";
+            this.IdUsuarioVenta.Name = "IdUsuarioVenta";
+            this.IdUsuarioVenta.ReadOnly = true;
+            this.IdUsuarioVenta.Visible = false;
+            // 
+            // IdPersonaUsuarioVenta
+            // 
+            this.IdPersonaUsuarioVenta.HeaderText = "IdPersonaUsuarioVenta";
+            this.IdPersonaUsuarioVenta.Name = "IdPersonaUsuarioVenta";
+            this.IdPersonaUsuarioVenta.ReadOnly = true;
+            this.IdPersonaUsuarioVenta.Visible = false;
+            // 
+            // NombreCompletoUsuarioVenta
+            // 
+            this.NombreCompletoUsuarioVenta.HeaderText = "Usuario registro";
+            this.NombreCompletoUsuarioVenta.Name = "NombreCompletoUsuarioVenta";
+            this.NombreCompletoUsuarioVenta.ReadOnly = true;
+            // 
+            // DocumentoUsuarioVenta
+            // 
+            this.DocumentoUsuarioVenta.HeaderText = "DocumentoUsuarioVenta";
+            this.DocumentoUsuarioVenta.Name = "DocumentoUsuarioVenta";
+            this.DocumentoUsuarioVenta.ReadOnly = true;
+            this.DocumentoUsuarioVenta.Visible = false;
+            // 
+            // IdCliente
+            // 
+            this.IdCliente.HeaderText = "IdCliente";
+            this.IdCliente.Name = "IdCliente";
+            this.IdCliente.ReadOnly = true;
+            this.IdCliente.Visible = false;
+            // 
+            // IdPersonaClienteVenta
+            // 
+            this.IdPersonaClienteVenta.HeaderText = "IdPersonaClienteVenta";
+            this.IdPersonaClienteVenta.Name = "IdPersonaClienteVenta";
+            this.IdPersonaClienteVenta.ReadOnly = true;
+            this.IdPersonaClienteVenta.Visible = false;
+            // 
+            // NombreCompletoClienteVenta
+            // 
+            this.NombreCompletoClienteVenta.HeaderText = "Cliente";
+            this.NombreCompletoClienteVenta.Name = "NombreCompletoClienteVenta";
+            this.NombreCompletoClienteVenta.ReadOnly = true;
+            // 
+            // DocumentoClienteVenta
+            // 
+            this.DocumentoClienteVenta.HeaderText = "DocumentoClienteVenta";
+            this.DocumentoClienteVenta.Name = "DocumentoClienteVenta";
+            this.DocumentoClienteVenta.ReadOnly = true;
+            this.DocumentoClienteVenta.Visible = false;
+            // 
+            // TipoDocumento
+            // 
+            this.TipoDocumento.HeaderText = "Tipo de documento";
+            this.TipoDocumento.Name = "TipoDocumento";
+            this.TipoDocumento.ReadOnly = true;
+            // 
+            // NumeroDocumento
+            // 
+            this.NumeroDocumento.HeaderText = "NumeroDocumento";
+            this.NumeroDocumento.Name = "NumeroDocumento";
+            this.NumeroDocumento.ReadOnly = true;
+            this.NumeroDocumento.Visible = false;
+            // 
+            // MontoPago
+            // 
+            this.MontoPago.HeaderText = "Monto pago";
+            this.MontoPago.Name = "MontoPago";
+            this.MontoPago.ReadOnly = true;
+            this.MontoPago.Width = 90;
+            // 
+            // MontoCambio
+            // 
+            this.MontoCambio.HeaderText = "Monto cambio";
+            this.MontoCambio.Name = "MontoCambio";
+            this.MontoCambio.ReadOnly = true;
+            this.MontoCambio.Width = 90;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "Subtotal";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            this.SubTotal.Width = 90;
+            // 
+            // MontoTotal
+            // 
+            this.MontoTotal.HeaderText = "Monto total";
+            this.MontoTotal.Name = "MontoTotal";
+            this.MontoTotal.ReadOnly = true;
+            this.MontoTotal.Width = 90;
+            // 
+            // TipoDescuento
+            // 
+            this.TipoDescuento.HeaderText = "Tipo de descuento";
+            this.TipoDescuento.Name = "TipoDescuento";
+            this.TipoDescuento.ReadOnly = true;
+            // 
+            // MontoDescuento
+            // 
+            this.MontoDescuento.HeaderText = "Monto del descuento";
+            this.MontoDescuento.Name = "MontoDescuento";
+            this.MontoDescuento.ReadOnly = true;
+            this.MontoDescuento.Width = 90;
+            // 
+            // FechaRegistro
+            // 
+            this.FechaRegistro.HeaderText = "Fecha de registro";
+            this.FechaRegistro.Name = "FechaRegistro";
+            this.FechaRegistro.ReadOnly = true;
+            this.FechaRegistro.Width = 110;
             // 
             // frmAuditoriaVenta
             // 

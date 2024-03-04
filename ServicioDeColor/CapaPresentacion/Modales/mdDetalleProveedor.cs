@@ -229,5 +229,25 @@ namespace CapaPresentacion.Modales
                 textBoxCorreo.SelectAll(); // Seleccionar todo el texto para facilitar la corrección
             }
         }
+
+        private void textBoxCUIT_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBoxTelefono_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

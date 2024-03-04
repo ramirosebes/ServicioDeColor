@@ -318,7 +318,7 @@
             this.groupBoxInformacionCliente.Size = new System.Drawing.Size(798, 84);
             this.groupBoxInformacionCliente.TabIndex = 59;
             this.groupBoxInformacionCliente.TabStop = false;
-            this.groupBoxInformacionCliente.Text = "Informacion del cliente";
+            this.groupBoxInformacionCliente.Text = "Información del cliente";
             // 
             // textBoxNumeroDocumento
             // 
@@ -360,7 +360,7 @@
             this.labelDocumentoCliente.Name = "labelDocumentoCliente";
             this.labelDocumentoCliente.Size = new System.Drawing.Size(129, 19);
             this.labelDocumentoCliente.TabIndex = 2;
-            this.labelDocumentoCliente.Text = "Numero de documento:";
+            this.labelDocumentoCliente.Text = "Número de documento:";
             // 
             // groupBoxInformacionVenta
             // 
@@ -376,7 +376,7 @@
             this.groupBoxInformacionVenta.Size = new System.Drawing.Size(798, 84);
             this.groupBoxInformacionVenta.TabIndex = 58;
             this.groupBoxInformacionVenta.TabStop = false;
-            this.groupBoxInformacionVenta.Text = "Informacion de la venta";
+            this.groupBoxInformacionVenta.Text = "Información de la venta";
             // 
             // textBoxUsuario
             // 

@@ -294,5 +294,35 @@ namespace CapaPresentacion.Modales
                 e.Handled = true;
             }
         }
+
+        private void textBoxStock_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBoxPrecioCompra_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBoxPrecioVenta_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

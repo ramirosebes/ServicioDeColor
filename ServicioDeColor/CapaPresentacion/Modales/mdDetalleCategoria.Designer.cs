@@ -61,7 +61,7 @@
             this.labelSubTitulo.Name = "labelSubTitulo";
             this.labelSubTitulo.Size = new System.Drawing.Size(217, 33);
             this.labelSubTitulo.TabIndex = 1;
-            this.labelSubTitulo.Text = "Detalle de la categoria";
+            this.labelSubTitulo.Text = "Detalle de la categoría";
             // 
             // panelContenedor
             // 
@@ -173,7 +173,7 @@
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(185, 23);
             this.labelInfo.TabIndex = 0;
-            this.labelInfo.Text = "Informacion de la categoria";
+            this.labelInfo.Text = "Información de la categoria";
             // 
             // mdDetalleCategoria
             // 
@@ -188,7 +188,7 @@
             this.MinimumSize = new System.Drawing.Size(500, 308);
             this.Name = "mdDetalleCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detalle categoria";
+            this.Text = "Detalle categoría";
             this.Load += new System.EventHandler(this.mdDetalleCategoria_Load);
             this.paneTitulo.ResumeLayout(false);
             this.paneTitulo.PerformLayout();

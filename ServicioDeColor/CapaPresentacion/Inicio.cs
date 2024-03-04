@@ -41,7 +41,6 @@ namespace CapaPresentacion
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-
             //MODULO DE SEGURIDAD - VISIBILIDAD DE LOS MENUES
             List<Permiso> listaPermisos = _usuarioActual.GetPermisos();
 

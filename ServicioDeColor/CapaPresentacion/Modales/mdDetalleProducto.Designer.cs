@@ -126,7 +126,7 @@
             this.labelCategoria.Name = "labelCategoria";
             this.labelCategoria.Size = new System.Drawing.Size(63, 19);
             this.labelCategoria.TabIndex = 61;
-            this.labelCategoria.Text = "Categoria:";
+            this.labelCategoria.Text = "Categoría:";
             // 
             // comboBoxCategoria
             // 
@@ -216,6 +216,7 @@
             this.textBoxPrecioVenta.Name = "textBoxPrecioVenta";
             this.textBoxPrecioVenta.Size = new System.Drawing.Size(178, 20);
             this.textBoxPrecioVenta.TabIndex = 7;
+            this.textBoxPrecioVenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPrecioVenta_KeyDown);
             this.textBoxPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioVenta_KeyPress);
             // 
             // label6
@@ -249,6 +250,7 @@
             this.textBoxPrecioCompra.Name = "textBoxPrecioCompra";
             this.textBoxPrecioCompra.Size = new System.Drawing.Size(178, 20);
             this.textBoxPrecioCompra.TabIndex = 6;
+            this.textBoxPrecioCompra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPrecioCompra_KeyDown);
             this.textBoxPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioCompra_KeyPress);
             // 
             // label4
@@ -282,6 +284,7 @@
             this.textBoxStock.Name = "textBoxStock";
             this.textBoxStock.Size = new System.Drawing.Size(200, 20);
             this.textBoxStock.TabIndex = 5;
+            this.textBoxStock.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxStock_KeyDown);
             this.textBoxStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxStock_KeyPress);
             // 
             // label2
@@ -421,7 +424,7 @@
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(169, 23);
             this.labelInfo.TabIndex = 0;
-            this.labelInfo.Text = "Informacion del producto";
+            this.labelInfo.Text = "Información del producto";
             // 
             // mdDetalleProducto
             // 

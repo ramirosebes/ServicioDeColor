@@ -201,7 +201,7 @@
             this.groupBoxInformacionProveedor.Size = new System.Drawing.Size(798, 84);
             this.groupBoxInformacionProveedor.TabIndex = 59;
             this.groupBoxInformacionProveedor.TabStop = false;
-            this.groupBoxInformacionProveedor.Text = "Informacion del proveedor";
+            this.groupBoxInformacionProveedor.Text = "Información del proveedor";
             // 
             // textBoxNumeroDocumento
             // 
@@ -226,7 +226,7 @@
             this.labelRazonSocial.Name = "labelRazonSocial";
             this.labelRazonSocial.Size = new System.Drawing.Size(80, 19);
             this.labelRazonSocial.TabIndex = 4;
-            this.labelRazonSocial.Text = "Razon social:";
+            this.labelRazonSocial.Text = "Razón social:";
             // 
             // textBoxCUIT
             // 
@@ -259,7 +259,7 @@
             this.groupBoxInformacionCompra.Size = new System.Drawing.Size(798, 84);
             this.groupBoxInformacionCompra.TabIndex = 58;
             this.groupBoxInformacionCompra.TabStop = false;
-            this.groupBoxInformacionCompra.Text = "Informacion de la compra";
+            this.groupBoxInformacionCompra.Text = "Información de la compra";
             // 
             // textBoxUsuario
             // 

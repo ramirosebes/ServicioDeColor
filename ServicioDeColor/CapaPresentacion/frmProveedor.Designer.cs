@@ -329,7 +329,7 @@
             // 
             // razonSocial
             // 
-            this.razonSocial.HeaderText = "Razon social";
+            this.razonSocial.HeaderText = "Razón social";
             this.razonSocial.Name = "razonSocial";
             this.razonSocial.ReadOnly = true;
             this.razonSocial.Width = 250;

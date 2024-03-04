@@ -99,6 +99,13 @@ namespace CapaPresentacion.Modales
                     textBoxProducto.Text = "";
                 }
             }
+
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
         }
 
         private void buttonAgregar_Click(object sender, EventArgs e)
@@ -539,6 +546,13 @@ namespace CapaPresentacion.Modales
                     textBoxIdProveedor.Text = "0";
                     textBoxRazonSocial.Text = "";
                 }
+            }
+
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
             }
         }
 

@@ -211,7 +211,7 @@
             // 
             // Categoria
             // 
-            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.HeaderText = "Categoría";
             this.Categoria.Name = "Categoria";
             this.Categoria.ReadOnly = true;
             this.Categoria.Width = 150;

@@ -37,6 +37,16 @@
             this.menuAgregarOrdenCompra = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEliminarOrdenCompra = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.panelLista = new System.Windows.Forms.Panel();
+            this.buttonActualizar = new System.Windows.Forms.Button();
+            this.labelSubTitulo = new System.Windows.Forms.Label();
+            this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
+            this.labelBuscarPor = new System.Windows.Forms.Label();
+            this.buttonLimpiar = new System.Windows.Forms.Button();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.textBoxNumeroDocumento = new System.Windows.Forms.TextBox();
             this.buttonSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,16 +58,6 @@
             this.numeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.montoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxId = new System.Windows.Forms.TextBox();
-            this.panelLista = new System.Windows.Forms.Panel();
-            this.buttonActualizar = new System.Windows.Forms.Button();
-            this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
-            this.labelBuscarPor = new System.Windows.Forms.Label();
-            this.buttonLimpiar = new System.Windows.Forms.Button();
-            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
-            this.buttonBuscar = new System.Windows.Forms.Button();
-            this.textBoxNumeroDocumento = new System.Windows.Forms.TextBox();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panelLista.SuspendLayout();
@@ -167,83 +167,6 @@
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView_CellPainting);
-            // 
-            // buttonSeleccionar
-            // 
-            this.buttonSeleccionar.HeaderText = "";
-            this.buttonSeleccionar.Name = "buttonSeleccionar";
-            this.buttonSeleccionar.ReadOnly = true;
-            this.buttonSeleccionar.Width = 30;
-            // 
-            // idCompra
-            // 
-            this.idCompra.HeaderText = "IdCompra";
-            this.idCompra.Name = "idCompra";
-            this.idCompra.ReadOnly = true;
-            this.idCompra.Visible = false;
-            // 
-            // idUsuario
-            // 
-            this.idUsuario.HeaderText = "IdUsuario";
-            this.idUsuario.Name = "idUsuario";
-            this.idUsuario.ReadOnly = true;
-            this.idUsuario.Visible = false;
-            // 
-            // idPersona
-            // 
-            this.idPersona.HeaderText = "IdPersona";
-            this.idPersona.Name = "idPersona";
-            this.idPersona.ReadOnly = true;
-            this.idPersona.Visible = false;
-            // 
-            // nombreCompletoUsuario
-            // 
-            this.nombreCompletoUsuario.HeaderText = "Usuario";
-            this.nombreCompletoUsuario.Name = "nombreCompletoUsuario";
-            this.nombreCompletoUsuario.ReadOnly = true;
-            this.nombreCompletoUsuario.Width = 200;
-            // 
-            // idProveedor
-            // 
-            this.idProveedor.HeaderText = "IdProveedor";
-            this.idProveedor.Name = "idProveedor";
-            this.idProveedor.ReadOnly = true;
-            this.idProveedor.Visible = false;
-            // 
-            // razonSocial
-            // 
-            this.razonSocial.HeaderText = "Proveedor";
-            this.razonSocial.Name = "razonSocial";
-            this.razonSocial.ReadOnly = true;
-            this.razonSocial.Width = 200;
-            // 
-            // tipoDocumento
-            // 
-            this.tipoDocumento.HeaderText = "Tip de documento";
-            this.tipoDocumento.Name = "tipoDocumento";
-            this.tipoDocumento.ReadOnly = true;
-            this.tipoDocumento.Width = 200;
-            // 
-            // numeroDocumento
-            // 
-            this.numeroDocumento.HeaderText = "Numero de documento";
-            this.numeroDocumento.Name = "numeroDocumento";
-            this.numeroDocumento.ReadOnly = true;
-            this.numeroDocumento.Width = 200;
-            // 
-            // montoTotal
-            // 
-            this.montoTotal.HeaderText = "Monto total";
-            this.montoTotal.Name = "montoTotal";
-            this.montoTotal.ReadOnly = true;
-            this.montoTotal.Width = 150;
-            // 
-            // fechaRegistro
-            // 
-            this.fechaRegistro.HeaderText = "Fecha de registro";
-            this.fechaRegistro.Name = "fechaRegistro";
-            this.fechaRegistro.ReadOnly = true;
-            this.fechaRegistro.Width = 150;
             // 
             // textBoxId
             // 
@@ -390,6 +313,83 @@
             this.textBoxNumeroDocumento.Size = new System.Drawing.Size(100, 20);
             this.textBoxNumeroDocumento.TabIndex = 101;
             this.textBoxNumeroDocumento.Visible = false;
+            // 
+            // buttonSeleccionar
+            // 
+            this.buttonSeleccionar.HeaderText = "";
+            this.buttonSeleccionar.Name = "buttonSeleccionar";
+            this.buttonSeleccionar.ReadOnly = true;
+            this.buttonSeleccionar.Width = 30;
+            // 
+            // idCompra
+            // 
+            this.idCompra.HeaderText = "IdCompra";
+            this.idCompra.Name = "idCompra";
+            this.idCompra.ReadOnly = true;
+            this.idCompra.Visible = false;
+            // 
+            // idUsuario
+            // 
+            this.idUsuario.HeaderText = "IdUsuario";
+            this.idUsuario.Name = "idUsuario";
+            this.idUsuario.ReadOnly = true;
+            this.idUsuario.Visible = false;
+            // 
+            // idPersona
+            // 
+            this.idPersona.HeaderText = "IdPersona";
+            this.idPersona.Name = "idPersona";
+            this.idPersona.ReadOnly = true;
+            this.idPersona.Visible = false;
+            // 
+            // nombreCompletoUsuario
+            // 
+            this.nombreCompletoUsuario.HeaderText = "Usuario";
+            this.nombreCompletoUsuario.Name = "nombreCompletoUsuario";
+            this.nombreCompletoUsuario.ReadOnly = true;
+            this.nombreCompletoUsuario.Width = 200;
+            // 
+            // idProveedor
+            // 
+            this.idProveedor.HeaderText = "IdProveedor";
+            this.idProveedor.Name = "idProveedor";
+            this.idProveedor.ReadOnly = true;
+            this.idProveedor.Visible = false;
+            // 
+            // razonSocial
+            // 
+            this.razonSocial.HeaderText = "Proveedor";
+            this.razonSocial.Name = "razonSocial";
+            this.razonSocial.ReadOnly = true;
+            this.razonSocial.Width = 200;
+            // 
+            // tipoDocumento
+            // 
+            this.tipoDocumento.HeaderText = "Tipo de documento";
+            this.tipoDocumento.Name = "tipoDocumento";
+            this.tipoDocumento.ReadOnly = true;
+            this.tipoDocumento.Width = 200;
+            // 
+            // numeroDocumento
+            // 
+            this.numeroDocumento.HeaderText = "Número de documento";
+            this.numeroDocumento.Name = "numeroDocumento";
+            this.numeroDocumento.ReadOnly = true;
+            this.numeroDocumento.Width = 200;
+            // 
+            // montoTotal
+            // 
+            this.montoTotal.HeaderText = "Monto total";
+            this.montoTotal.Name = "montoTotal";
+            this.montoTotal.ReadOnly = true;
+            this.montoTotal.Width = 150;
+            // 
+            // fechaRegistro
+            // 
+            this.fechaRegistro.HeaderText = "Fecha de registro";
+            this.fechaRegistro.Name = "fechaRegistro";
+            this.fechaRegistro.ReadOnly = true;
+            this.fechaRegistro.Width = 150;
             // 
             // frmCompra
             // 

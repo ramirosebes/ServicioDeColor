@@ -154,7 +154,7 @@
             this.labelRazonSocial.Name = "labelRazonSocial";
             this.labelRazonSocial.Size = new System.Drawing.Size(80, 19);
             this.labelRazonSocial.TabIndex = 4;
-            this.labelRazonSocial.Text = "Razon social:";
+            this.labelRazonSocial.Text = "Razón social:";
             // 
             // groupBoxInformacionCompra
             // 
@@ -172,7 +172,7 @@
             this.groupBoxInformacionCompra.Size = new System.Drawing.Size(798, 84);
             this.groupBoxInformacionCompra.TabIndex = 58;
             this.groupBoxInformacionCompra.TabStop = false;
-            this.groupBoxInformacionCompra.Text = "Informacion de la compra";
+            this.groupBoxInformacionCompra.Text = "Información de la compra";
             // 
             // labelIdCompra
             // 
@@ -213,7 +213,7 @@
             this.groupBoxInformacionProveedor.Size = new System.Drawing.Size(798, 84);
             this.groupBoxInformacionProveedor.TabIndex = 59;
             this.groupBoxInformacionProveedor.TabStop = false;
-            this.groupBoxInformacionProveedor.Text = "Informacion del proveedor";
+            this.groupBoxInformacionProveedor.Text = "Información del proveedor";
             // 
             // labelCUIT
             // 
@@ -348,7 +348,7 @@
             this.groupBoxAuditoria.Size = new System.Drawing.Size(798, 84);
             this.groupBoxAuditoria.TabIndex = 61;
             this.groupBoxAuditoria.TabStop = false;
-            this.groupBoxAuditoria.Text = "Informacion de la auditoria";
+            this.groupBoxAuditoria.Text = "Información de la auditoría";
             // 
             // textBoxDescripcion
             // 
@@ -365,7 +365,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Descipcion";
+            this.label1.Text = "Descipción";
             // 
             // textBoxUltimoUsuario
             // 
@@ -382,7 +382,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 19);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Ultimo usuario:";
+            this.label2.Text = "Último usuario:";
             // 
             // textBoxFechaAuditoria
             // 
@@ -399,7 +399,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 19);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Fecha auditoria:";
+            this.label3.Text = "Fecha auditoría:";
             // 
             // mdDetalleAuditoriaCompra
             // 
@@ -412,7 +412,7 @@
             this.MinimumSize = new System.Drawing.Size(875, 725);
             this.Name = "mdDetalleAuditoriaCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detalle auditoria compra";
+            this.Text = "Detalle auditoría compra";
             this.Load += new System.EventHandler(this.mdDetalleAuditoriaCompra_Load);
             this.groupBoxInformacionCompra.ResumeLayout(false);
             this.groupBoxInformacionCompra.PerformLayout();

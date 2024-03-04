@@ -202,27 +202,27 @@
             this.menuAuditoriaVentas});
             this.menuAuditorias.Name = "menuAuditorias";
             this.menuAuditorias.Size = new System.Drawing.Size(180, 28);
-            this.menuAuditorias.Text = "Auditoria";
+            this.menuAuditorias.Text = "Auditoría";
             // 
             // menuAuditoriaSesiones
             // 
             this.menuAuditoriaSesiones.Name = "menuAuditoriaSesiones";
             this.menuAuditoriaSesiones.Size = new System.Drawing.Size(197, 28);
-            this.menuAuditoriaSesiones.Text = "Auditoria sesiones";
+            this.menuAuditoriaSesiones.Text = "Auditoría sesiones";
             this.menuAuditoriaSesiones.Click += new System.EventHandler(this.auditoriaSesionesToolStripMenuItem_Click);
             // 
             // menuAuditoriaCompras
             // 
             this.menuAuditoriaCompras.Name = "menuAuditoriaCompras";
             this.menuAuditoriaCompras.Size = new System.Drawing.Size(197, 28);
-            this.menuAuditoriaCompras.Text = "Auditoria compras";
+            this.menuAuditoriaCompras.Text = "Auditoría compras";
             this.menuAuditoriaCompras.Click += new System.EventHandler(this.menuAuditoriaCompras_Click);
             // 
             // menuAuditoriaVentas
             // 
             this.menuAuditoriaVentas.Name = "menuAuditoriaVentas";
             this.menuAuditoriaVentas.Size = new System.Drawing.Size(197, 28);
-            this.menuAuditoriaVentas.Text = "Auditoria ventas";
+            this.menuAuditoriaVentas.Text = "Auditoría ventas";
             this.menuAuditoriaVentas.Click += new System.EventHandler(this.auditoriaVentasToolStripMenuItem_Click);
             // 
             // menuVentas
@@ -271,7 +271,7 @@
             // 
             this.menuCategorias.Name = "menuCategorias";
             this.menuCategorias.Size = new System.Drawing.Size(210, 28);
-            this.menuCategorias.Text = "Categorias";
+            this.menuCategorias.Text = "Categorías";
             this.menuCategorias.Click += new System.EventHandler(this.menuCategorias_Click);
             // 
             // menuProductos
@@ -292,7 +292,7 @@
             // 
             this.menuOrdenesCompras.Name = "menuOrdenesCompras";
             this.menuOrdenesCompras.Size = new System.Drawing.Size(210, 28);
-            this.menuOrdenesCompras.Text = "Ordenes de compras";
+            this.menuOrdenesCompras.Text = "Órdenes de compras";
             this.menuOrdenesCompras.Click += new System.EventHandler(this.ordenesDeComprasToolStripMenuItem_Click);
             // 
             // menuReportes

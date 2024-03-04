@@ -39,16 +39,6 @@
             this.textBoxDocumento = new System.Windows.Forms.TextBox();
             this.labelLineDocumento = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.labelCorreo = new System.Windows.Forms.Label();
-            this.labelSubTitulo = new System.Windows.Forms.Label();
-            this.paneTitulo = new System.Windows.Forms.Panel();
-            this.labelIdUsuario = new System.Windows.Forms.Label();
-            this.textBoxIdUsuario = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.labelIdPersona = new System.Windows.Forms.Label();
-            this.textBoxIdPersona = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxInformacionAuditoria = new System.Windows.Forms.GroupBox();
             this.labelDescripcion = new System.Windows.Forms.Label();
             this.labelFechaAuditoria = new System.Windows.Forms.Label();
@@ -56,13 +46,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxDescripcionAuditoria = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelEstado = new System.Windows.Forms.Label();
             this.textBoxEstado = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.labelIdUsuario = new System.Windows.Forms.Label();
+            this.labelIdPersona = new System.Windows.Forms.Label();
+            this.textBoxIdPersona = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxIdUsuario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelCorreo = new System.Windows.Forms.Label();
+            this.labelSubTitulo = new System.Windows.Forms.Label();
+            this.paneTitulo = new System.Windows.Forms.Panel();
             this.panelContenedor.SuspendLayout();
-            this.paneTitulo.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBoxInformacionAuditoria.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.paneTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBoxCorreo
@@ -182,135 +182,6 @@
             this.panelContenedor.Size = new System.Drawing.Size(460, 392);
             this.panelContenedor.TabIndex = 51;
             // 
-            // labelCorreo
-            // 
-            this.labelCorreo.AutoSize = true;
-            this.labelCorreo.BackColor = System.Drawing.SystemColors.Window;
-            this.labelCorreo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold);
-            this.labelCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelCorreo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelCorreo.Location = new System.Drawing.Point(6, 154);
-            this.labelCorreo.Name = "labelCorreo";
-            this.labelCorreo.Size = new System.Drawing.Size(47, 19);
-            this.labelCorreo.TabIndex = 46;
-            this.labelCorreo.Text = "Correo:";
-            // 
-            // labelSubTitulo
-            // 
-            this.labelSubTitulo.AutoSize = true;
-            this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F);
-            this.labelSubTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelSubTitulo.Location = new System.Drawing.Point(4, 9);
-            this.labelSubTitulo.Name = "labelSubTitulo";
-            this.labelSubTitulo.Size = new System.Drawing.Size(190, 33);
-            this.labelSubTitulo.TabIndex = 1;
-            this.labelSubTitulo.Text = "Detalle de la sesión";
-            // 
-            // paneTitulo
-            // 
-            this.paneTitulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.paneTitulo.Controls.Add(this.labelSubTitulo);
-            this.paneTitulo.Location = new System.Drawing.Point(12, 12);
-            this.paneTitulo.Name = "paneTitulo";
-            this.paneTitulo.Size = new System.Drawing.Size(460, 50);
-            this.paneTitulo.TabIndex = 50;
-            // 
-            // labelIdUsuario
-            // 
-            this.labelIdUsuario.AutoSize = true;
-            this.labelIdUsuario.BackColor = System.Drawing.SystemColors.Window;
-            this.labelIdUsuario.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold);
-            this.labelIdUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelIdUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelIdUsuario.Location = new System.Drawing.Point(6, 26);
-            this.labelIdUsuario.Name = "labelIdUsuario";
-            this.labelIdUsuario.Size = new System.Drawing.Size(66, 19);
-            this.labelIdUsuario.TabIndex = 49;
-            this.labelIdUsuario.Text = "ID Usuario:";
-            // 
-            // textBoxIdUsuario
-            // 
-            this.textBoxIdUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxIdUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.textBoxIdUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxIdUsuario.Location = new System.Drawing.Point(6, 54);
-            this.textBoxIdUsuario.Name = "textBoxIdUsuario";
-            this.textBoxIdUsuario.Size = new System.Drawing.Size(200, 20);
-            this.textBoxIdUsuario.TabIndex = 47;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(6, 77);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 1);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "label2";
-            // 
-            // labelIdPersona
-            // 
-            this.labelIdPersona.AutoSize = true;
-            this.labelIdPersona.BackColor = System.Drawing.SystemColors.Window;
-            this.labelIdPersona.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold);
-            this.labelIdPersona.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelIdPersona.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelIdPersona.Location = new System.Drawing.Point(229, 26);
-            this.labelIdPersona.Name = "labelIdPersona";
-            this.labelIdPersona.Size = new System.Drawing.Size(68, 19);
-            this.labelIdPersona.TabIndex = 52;
-            this.labelIdPersona.Text = "ID Persona:";
-            // 
-            // textBoxIdPersona
-            // 
-            this.textBoxIdPersona.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxIdPersona.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
-            this.textBoxIdPersona.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxIdPersona.Location = new System.Drawing.Point(229, 54);
-            this.textBoxIdPersona.Name = "textBoxIdPersona";
-            this.textBoxIdPersona.Size = new System.Drawing.Size(200, 20);
-            this.textBoxIdPersona.TabIndex = 50;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(229, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 1);
-            this.label3.TabIndex = 51;
-            this.label3.Text = "label3";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.labelEstado);
-            this.groupBox1.Controls.Add(this.textBoxEstado);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.labelIdUsuario);
-            this.groupBox1.Controls.Add(this.labelIdPersona);
-            this.groupBox1.Controls.Add(this.textBoxIdPersona);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.labelLineDocumento);
-            this.groupBox1.Controls.Add(this.textBoxDocumento);
-            this.groupBox1.Controls.Add(this.textBoxIdUsuario);
-            this.groupBox1.Controls.Add(this.labelDocumento);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.labelLineNombreCompleto);
-            this.groupBox1.Controls.Add(this.labelCorreo);
-            this.groupBox1.Controls.Add(this.textBoxNombreCompleto);
-            this.groupBox1.Controls.Add(this.textBoxCorreo);
-            this.groupBox1.Controls.Add(this.labelNombreCompleto);
-            this.groupBox1.Controls.Add(this.labelLineCorreo);
-            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 107);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(441, 223);
-            this.groupBox1.TabIndex = 53;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informacion del usuario:";
-            // 
             // groupBoxInformacionAuditoria
             // 
             this.groupBoxInformacionAuditoria.Controls.Add(this.labelDescripcion);
@@ -325,7 +196,7 @@
             this.groupBoxInformacionAuditoria.Size = new System.Drawing.Size(441, 98);
             this.groupBoxInformacionAuditoria.TabIndex = 54;
             this.groupBoxInformacionAuditoria.TabStop = false;
-            this.groupBoxInformacionAuditoria.Text = "Informacion de la auditoria";
+            this.groupBoxInformacionAuditoria.Text = "Información de la auditoría";
             // 
             // labelDescripcion
             // 
@@ -351,7 +222,7 @@
             this.labelFechaAuditoria.Name = "labelFechaAuditoria";
             this.labelFechaAuditoria.Size = new System.Drawing.Size(110, 19);
             this.labelFechaAuditoria.TabIndex = 52;
-            this.labelFechaAuditoria.Text = "Fecha de auditoria:";
+            this.labelFechaAuditoria.Text = "Fecha de auditoría:";
             // 
             // textBoxFechaAuditoria
             // 
@@ -395,6 +266,34 @@
             this.label9.TabIndex = 48;
             this.label9.Text = "label9";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelEstado);
+            this.groupBox1.Controls.Add(this.textBoxEstado);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.labelIdUsuario);
+            this.groupBox1.Controls.Add(this.labelIdPersona);
+            this.groupBox1.Controls.Add(this.textBoxIdPersona);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.labelLineDocumento);
+            this.groupBox1.Controls.Add(this.textBoxDocumento);
+            this.groupBox1.Controls.Add(this.textBoxIdUsuario);
+            this.groupBox1.Controls.Add(this.labelDocumento);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.labelLineNombreCompleto);
+            this.groupBox1.Controls.Add(this.labelCorreo);
+            this.groupBox1.Controls.Add(this.textBoxNombreCompleto);
+            this.groupBox1.Controls.Add(this.textBoxCorreo);
+            this.groupBox1.Controls.Add(this.labelNombreCompleto);
+            this.groupBox1.Controls.Add(this.labelLineCorreo);
+            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(10, 107);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(441, 223);
+            this.groupBox1.TabIndex = 53;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Información del usuario:";
+            // 
             // labelEstado
             // 
             this.labelEstado.AutoSize = true;
@@ -429,6 +328,107 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "label2";
             // 
+            // labelIdUsuario
+            // 
+            this.labelIdUsuario.AutoSize = true;
+            this.labelIdUsuario.BackColor = System.Drawing.SystemColors.Window;
+            this.labelIdUsuario.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold);
+            this.labelIdUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelIdUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelIdUsuario.Location = new System.Drawing.Point(6, 26);
+            this.labelIdUsuario.Name = "labelIdUsuario";
+            this.labelIdUsuario.Size = new System.Drawing.Size(66, 19);
+            this.labelIdUsuario.TabIndex = 49;
+            this.labelIdUsuario.Text = "ID Usuario:";
+            // 
+            // labelIdPersona
+            // 
+            this.labelIdPersona.AutoSize = true;
+            this.labelIdPersona.BackColor = System.Drawing.SystemColors.Window;
+            this.labelIdPersona.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold);
+            this.labelIdPersona.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelIdPersona.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelIdPersona.Location = new System.Drawing.Point(229, 26);
+            this.labelIdPersona.Name = "labelIdPersona";
+            this.labelIdPersona.Size = new System.Drawing.Size(68, 19);
+            this.labelIdPersona.TabIndex = 52;
+            this.labelIdPersona.Text = "ID Persona:";
+            // 
+            // textBoxIdPersona
+            // 
+            this.textBoxIdPersona.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxIdPersona.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
+            this.textBoxIdPersona.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxIdPersona.Location = new System.Drawing.Point(229, 54);
+            this.textBoxIdPersona.Name = "textBoxIdPersona";
+            this.textBoxIdPersona.Size = new System.Drawing.Size(200, 20);
+            this.textBoxIdPersona.TabIndex = 50;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label3.Location = new System.Drawing.Point(229, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 1);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "label3";
+            // 
+            // textBoxIdUsuario
+            // 
+            this.textBoxIdUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxIdUsuario.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F);
+            this.textBoxIdUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxIdUsuario.Location = new System.Drawing.Point(6, 54);
+            this.textBoxIdUsuario.Name = "textBoxIdUsuario";
+            this.textBoxIdUsuario.Size = new System.Drawing.Size(200, 20);
+            this.textBoxIdUsuario.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(6, 77);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(200, 1);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "label2";
+            // 
+            // labelCorreo
+            // 
+            this.labelCorreo.AutoSize = true;
+            this.labelCorreo.BackColor = System.Drawing.SystemColors.Window;
+            this.labelCorreo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold);
+            this.labelCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelCorreo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelCorreo.Location = new System.Drawing.Point(6, 154);
+            this.labelCorreo.Name = "labelCorreo";
+            this.labelCorreo.Size = new System.Drawing.Size(47, 19);
+            this.labelCorreo.TabIndex = 46;
+            this.labelCorreo.Text = "Correo:";
+            // 
+            // labelSubTitulo
+            // 
+            this.labelSubTitulo.AutoSize = true;
+            this.labelSubTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 20.25F);
+            this.labelSubTitulo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelSubTitulo.Location = new System.Drawing.Point(4, 9);
+            this.labelSubTitulo.Name = "labelSubTitulo";
+            this.labelSubTitulo.Size = new System.Drawing.Size(190, 33);
+            this.labelSubTitulo.TabIndex = 1;
+            this.labelSubTitulo.Text = "Detalle de la sesión";
+            // 
+            // paneTitulo
+            // 
+            this.paneTitulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.paneTitulo.Controls.Add(this.labelSubTitulo);
+            this.paneTitulo.Location = new System.Drawing.Point(12, 12);
+            this.paneTitulo.Name = "paneTitulo";
+            this.paneTitulo.Size = new System.Drawing.Size(460, 50);
+            this.paneTitulo.TabIndex = 50;
+            // 
             // mdDetalleAuditoriaSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -439,15 +439,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mdDetalleAuditoriaSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Detalle auditoria sesion";
+            this.Text = "Detalle auditoría sesion";
             this.Load += new System.EventHandler(this.mdDetalleAuditoriaSesion_Load);
             this.panelContenedor.ResumeLayout(false);
-            this.paneTitulo.ResumeLayout(false);
-            this.paneTitulo.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBoxInformacionAuditoria.ResumeLayout(false);
             this.groupBoxInformacionAuditoria.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.paneTitulo.ResumeLayout(false);
+            this.paneTitulo.PerformLayout();
             this.ResumeLayout(false);
 
         }

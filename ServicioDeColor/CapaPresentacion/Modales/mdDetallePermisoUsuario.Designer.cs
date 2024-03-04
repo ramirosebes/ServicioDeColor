@@ -282,7 +282,7 @@
             this.labelInfoPermiso.Name = "labelInfoPermiso";
             this.labelInfoPermiso.Size = new System.Drawing.Size(209, 29);
             this.labelInfoPermiso.TabIndex = 1;
-            this.labelInfoPermiso.Text = "Informacion del permiso";
+            this.labelInfoPermiso.Text = "Información del permiso";
             // 
             // labelSubTitulo
             // 

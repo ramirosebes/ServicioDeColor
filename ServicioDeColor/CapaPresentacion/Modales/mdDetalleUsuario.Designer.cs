@@ -65,9 +65,9 @@
             // 
             // paneTitulo
             // 
-            resources.ApplyResources(this.paneTitulo, "paneTitulo");
             this.paneTitulo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.paneTitulo.Controls.Add(this.labelSubTitulo);
+            resources.ApplyResources(this.paneTitulo, "paneTitulo");
             this.paneTitulo.Name = "paneTitulo";
             // 
             // labelSubTitulo
@@ -77,9 +77,9 @@
             // 
             // buttonVolver
             // 
-            resources.ApplyResources(this.buttonVolver, "buttonVolver");
             this.buttonVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.buttonVolver.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.buttonVolver, "buttonVolver");
             this.buttonVolver.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonVolver.Name = "buttonVolver";
             this.buttonVolver.UseVisualStyleBackColor = false;
@@ -87,17 +87,17 @@
             // 
             // panelButtons
             // 
-            resources.ApplyResources(this.panelButtons, "panelButtons");
             this.panelButtons.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelButtons.Controls.Add(this.buttonConfirmar);
             this.panelButtons.Controls.Add(this.buttonVolver);
+            resources.ApplyResources(this.panelButtons, "panelButtons");
             this.panelButtons.Name = "panelButtons";
             // 
             // buttonConfirmar
             // 
-            resources.ApplyResources(this.buttonConfirmar, "buttonConfirmar");
             this.buttonConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
             this.buttonConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.buttonConfirmar, "buttonConfirmar");
             this.buttonConfirmar.ForeColor = System.Drawing.SystemColors.Window;
             this.buttonConfirmar.Name = "buttonConfirmar";
             this.buttonConfirmar.UseVisualStyleBackColor = false;
@@ -105,7 +105,6 @@
             // 
             // panelClave
             // 
-            resources.ApplyResources(this.panelClave, "panelClave");
             this.panelClave.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelClave.Controls.Add(this.buttonVerClave);
             this.panelClave.Controls.Add(this.textBoxConfirmarClave);
@@ -114,13 +113,14 @@
             this.panelClave.Controls.Add(this.labelConfirmarClave);
             this.panelClave.Controls.Add(this.labelLineClave);
             this.panelClave.Controls.Add(this.labelLineConfirmarClave);
+            resources.ApplyResources(this.panelClave, "panelClave");
             this.panelClave.Name = "panelClave";
             // 
             // buttonVerClave
             // 
-            resources.ApplyResources(this.buttonVerClave, "buttonVerClave");
             this.buttonVerClave.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonVerClave.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.buttonVerClave, "buttonVerClave");
             this.buttonVerClave.Image = global::CapaPresentacion.Properties.Resources.OjoContrasena1;
             this.buttonVerClave.Name = "buttonVerClave";
             this.buttonVerClave.UseVisualStyleBackColor = false;
@@ -129,15 +129,15 @@
             // 
             // textBoxConfirmarClave
             // 
-            resources.ApplyResources(this.textBoxConfirmarClave, "textBoxConfirmarClave");
             this.textBoxConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textBoxConfirmarClave, "textBoxConfirmarClave");
             this.textBoxConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxConfirmarClave.Name = "textBoxConfirmarClave";
             // 
             // textBoxClave
             // 
-            resources.ApplyResources(this.textBoxClave, "textBoxClave");
             this.textBoxClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textBoxClave, "textBoxClave");
             this.textBoxClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxClave.Name = "textBoxClave";
             // 
@@ -157,23 +157,23 @@
             // 
             // labelLineClave
             // 
-            resources.ApplyResources(this.labelLineClave, "labelLineClave");
             this.labelLineClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            resources.ApplyResources(this.labelLineClave, "labelLineClave");
             this.labelLineClave.Name = "labelLineClave";
             // 
             // labelLineConfirmarClave
             // 
-            resources.ApplyResources(this.labelLineConfirmarClave, "labelLineConfirmarClave");
             this.labelLineConfirmarClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            resources.ApplyResources(this.labelLineConfirmarClave, "labelLineConfirmarClave");
             this.labelLineConfirmarClave.Name = "labelLineConfirmarClave";
             // 
             // panelInfoUsuario
             // 
-            resources.ApplyResources(this.panelInfoUsuario, "panelInfoUsuario");
             this.panelInfoUsuario.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelInfoUsuario.Controls.Add(this.labelInfo);
+            resources.ApplyResources(this.panelInfoUsuario, "panelInfoUsuario");
             this.panelInfoUsuario.Name = "panelInfoUsuario";
             // 
             // labelInfo
@@ -183,9 +183,9 @@
             // 
             // comboBoxEstado
             // 
-            resources.ApplyResources(this.comboBoxEstado, "comboBoxEstado");
             this.comboBoxEstado.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboBoxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            resources.ApplyResources(this.comboBoxEstado, "comboBoxEstado");
             this.comboBoxEstado.FormattingEnabled = true;
             this.comboBoxEstado.Name = "comboBoxEstado";
             // 
@@ -197,17 +197,18 @@
             // 
             // labelLineDocumento
             // 
-            resources.ApplyResources(this.labelLineDocumento, "labelLineDocumento");
             this.labelLineDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            resources.ApplyResources(this.labelLineDocumento, "labelLineDocumento");
             this.labelLineDocumento.Name = "labelLineDocumento";
             // 
             // textBoxDocumento
             // 
-            resources.ApplyResources(this.textBoxDocumento, "textBoxDocumento");
             this.textBoxDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textBoxDocumento, "textBoxDocumento");
             this.textBoxDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxDocumento.Name = "textBoxDocumento";
+            this.textBoxDocumento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDocumento_KeyDown);
             this.textBoxDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDocumento_KeyPress);
             this.textBoxDocumento.Leave += new System.EventHandler(this.textBoxDocumento_Leave);
             // 
@@ -220,17 +221,18 @@
             // 
             // labelLineNombreCompleto
             // 
-            resources.ApplyResources(this.labelLineNombreCompleto, "labelLineNombreCompleto");
             this.labelLineNombreCompleto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            resources.ApplyResources(this.labelLineNombreCompleto, "labelLineNombreCompleto");
             this.labelLineNombreCompleto.Name = "labelLineNombreCompleto";
             // 
             // textBoxNombreCompleto
             // 
-            resources.ApplyResources(this.textBoxNombreCompleto, "textBoxNombreCompleto");
             this.textBoxNombreCompleto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textBoxNombreCompleto, "textBoxNombreCompleto");
             this.textBoxNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
+            this.textBoxNombreCompleto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombreCompleto_KeyDown);
             this.textBoxNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombreCompleto_KeyPress);
             // 
             // labelNombreCompleto
@@ -242,15 +244,15 @@
             // 
             // labelLineCorreo
             // 
-            resources.ApplyResources(this.labelLineCorreo, "labelLineCorreo");
             this.labelLineCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            resources.ApplyResources(this.labelLineCorreo, "labelLineCorreo");
             this.labelLineCorreo.Name = "labelLineCorreo";
             // 
             // textBoxCorreo
             // 
-            resources.ApplyResources(this.textBoxCorreo, "textBoxCorreo");
             this.textBoxCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textBoxCorreo, "textBoxCorreo");
             this.textBoxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Leave += new System.EventHandler(this.textBoxCorreo_Leave);
@@ -264,7 +266,6 @@
             // 
             // panelContenedor
             // 
-            resources.ApplyResources(this.panelContenedor, "panelContenedor");
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelContenedor.Controls.Add(this.labelCorreo);
             this.panelContenedor.Controls.Add(this.textBoxCorreo);
@@ -277,6 +278,7 @@
             this.panelContenedor.Controls.Add(this.labelLineDocumento);
             this.panelContenedor.Controls.Add(this.labelEstado);
             this.panelContenedor.Controls.Add(this.comboBoxEstado);
+            resources.ApplyResources(this.panelContenedor, "panelContenedor");
             this.panelContenedor.Name = "panelContenedor";
             // 
             // mdDetalleUsuario

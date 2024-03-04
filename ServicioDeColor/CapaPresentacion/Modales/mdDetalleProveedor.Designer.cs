@@ -182,6 +182,7 @@
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
             this.textBoxTelefono.TabIndex = 4;
+            this.textBoxTelefono.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxTelefono_KeyDown);
             this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             // 
             // labelLineCorreo
@@ -247,6 +248,7 @@
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(200, 20);
             this.textBoxCUIT.TabIndex = 1;
+            this.textBoxCUIT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCUIT_KeyDown);
             this.textBoxCUIT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCUIT_KeyPress);
             this.textBoxCUIT.Leave += new System.EventHandler(this.textBoxCUIT_Leave);
             // 
@@ -291,7 +293,7 @@
             this.labelInfo.Name = "labelInfo";
             this.labelInfo.Size = new System.Drawing.Size(176, 23);
             this.labelInfo.TabIndex = 0;
-            this.labelInfo.Text = "Informacion del proveedor";
+            this.labelInfo.Text = "Información del proveedor";
             // 
             // mdDetalleProveedor
             // 

@@ -102,6 +102,7 @@ namespace CapaPresentacion
 
         private void textBoxDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //Solo permite ingresar numeros
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
@@ -111,6 +112,16 @@ namespace CapaPresentacion
         private void LogIn_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBoxDocumento_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

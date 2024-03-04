@@ -117,554 +117,845 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="buttonVerClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>26, 23</value>
-  </data>
-  <data name="&gt;&gt;labelClave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 78</value>
-  </data>
-  <data name="&gt;&gt;labelLineConfirmarClave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panelClave.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;buttonVolver.Parent" xml:space="preserve">
-    <value>panelButtons</value>
-  </data>
-  <data name="&gt;&gt;labelLineDocumento.Name" xml:space="preserve">
-    <value>labelLineDocumento</value>
-  </data>
-  <data name="labelLineClave.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;labelLineCorreo.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="textBoxClave.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;labelLineClave.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="textBoxCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 41</value>
-  </data>
-  <data name="labelLineClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 1</value>
-  </data>
-  <data name="labelSubTitulo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 33</value>
-  </data>
-  <data name="buttonVolver.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 12pt</value>
-  </data>
-  <data name="&gt;&gt;labelNombreCompleto.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
-  </data>
-  <data name="&gt;&gt;panelInfoUsuario.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="panelButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 92</value>
-  </data>
-  <data name="labelNombreCompleto.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelConfirmarClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 9</value>
-  </data>
-  <data name="comboBoxEstado.ItemHeight" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="textBoxClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
-  </data>
-  <data name="&gt;&gt;textBoxClave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxConfirmarClave.Parent" xml:space="preserve">
-    <value>panelClave</value>
-  </data>
-  <data name="&gt;&gt;panelInfoUsuario.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="textBoxClave.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;labelSubTitulo.Parent" xml:space="preserve">
-    <value>paneTitulo</value>
-  </data>
   <data name="&gt;&gt;labelSubTitulo.Name" xml:space="preserve">
     <value>labelSubTitulo</value>
-  </data>
-  <data name="textBoxNombreCompleto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 106</value>
-  </data>
-  <data name="textBoxDocumento.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labelConfirmarClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 19</value>
-  </data>
-  <data name="&gt;&gt;comboBoxEstado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelEstado.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="&gt;&gt;buttonVerClave.Parent" xml:space="preserve">
-    <value>panelClave</value>
-  </data>
-  <data name="buttonVerClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>419, 34</value>
-  </data>
-  <data name="labelCorreo.Text" xml:space="preserve">
-    <value>Correo:</value>
-  </data>
-  <data name="buttonConfirmar.Text" xml:space="preserve">
-    <value>Confirmar</value>
-  </data>
-  <data name="buttonVolver.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 49</value>
-  </data>
-  <data name="textBoxCorreo.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="labelInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labelLineNombreCompleto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 1</value>
-  </data>
-  <data name="&gt;&gt;labelInfo.Name" xml:space="preserve">
-    <value>labelInfo</value>
-  </data>
-  <data name="labelInfo.Text" xml:space="preserve">
-    <value>Informacion del usuario</value>
-  </data>
-  <data name="&gt;&gt;labelLineCorreo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelInfo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelNombreCompleto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 78</value>
-  </data>
-  <data name="labelEstado.Text" xml:space="preserve">
-    <value>Estado:</value>
-  </data>
-  <data name="&gt;&gt;textBoxDocumento.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="labelNombreCompleto.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
-  </data>
-  <data name="textBoxClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 37</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 485</value>
-  </data>
-  <data name="&gt;&gt;comboBoxEstado.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
-  </data>
-  <data name="labelConfirmarClave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonVolver.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="comboBoxEstado.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="labelClave.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="&gt;&gt;textBoxClave.Name" xml:space="preserve">
-    <value>textBoxClave</value>
-  </data>
-  <data name="buttonConfirmar.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="buttonVolver.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageBeforeText</value>
-  </data>
-  <data name="labelCorreo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelConfirmarClave.Name" xml:space="preserve">
-    <value>labelConfirmarClave</value>
-  </data>
-  <data name="buttonConfirmar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 12pt</value>
-  </data>
-  <data name="&gt;&gt;paneTitulo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonVerClave.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelLineNombreCompleto.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
-  </data>
-  <data name="labelClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 9</value>
-  </data>
-  <data name="labelLineConfirmarClave.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="&gt;&gt;panelClave.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="panelButtons.TabIndex" type="System.Int32, mscorlib">
-    <value>48</value>
   </data>
   <data name="&gt;&gt;labelSubTitulo.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterScreen</value>
-  </data>
-  <data name="panelClave.TabIndex" type="System.Int32, mscorlib">
-    <value>47</value>
-  </data>
-  <data name="&gt;&gt;labelCorreo.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
-  </data>
-  <data name="&gt;&gt;labelClave.Parent" xml:space="preserve">
-    <value>panelClave</value>
-  </data>
-  <data name="textBoxConfirmarClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 20</value>
-  </data>
-  <data name="&gt;&gt;textBoxNombreCompleto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="comboBoxEstado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 27</value>
-  </data>
-  <data name="&gt;&gt;labelConfirmarClave.Parent" xml:space="preserve">
-    <value>panelClave</value>
-  </data>
-  <data name="&gt;&gt;panelContenedor.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>484, 446</value>
-  </data>
-  <data name="&gt;&gt;panelContenedor.Name" xml:space="preserve">
-    <value>panelContenedor</value>
-  </data>
-  <data name="&gt;&gt;textBoxCorreo.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelDocumento.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;panelClave.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>mdDetalleUsuario</value>
-  </data>
-  <data name="&gt;&gt;labelEstado.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="buttonConfirmar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 30</value>
-  </data>
-  <data name="textBoxConfirmarClave.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="paneTitulo.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelClave.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;labelLineConfirmarClave.Parent" xml:space="preserve">
-    <value>panelClave</value>
-  </data>
-  <data name="labelLineClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 60</value>
-  </data>
-  <data name="&gt;&gt;labelLineConfirmarClave.Name" xml:space="preserve">
-    <value>labelLineConfirmarClave</value>
-  </data>
-  <data name="textBoxDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
-  </data>
-  <data name="&gt;&gt;labelDocumento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelClave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelConfirmarClave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelEstado.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 12pt</value>
-  </data>
-  <data name="buttonVerClave.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Detalle usuario</value>
-  </data>
-  <data name="&gt;&gt;labelLineDocumento.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="buttonVerClave.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
-  </data>
-  <data name="labelNombreCompleto.Text" xml:space="preserve">
-    <value>Nombre completo:</value>
-  </data>
-  <data name="panelClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 259</value>
-  </data>
-  <data name="&gt;&gt;labelInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 23</value>
-  </data>
-  <data name="&gt;&gt;panelButtons.Name" xml:space="preserve">
-    <value>panelButtons</value>
-  </data>
-  <data name="&gt;&gt;labelConfirmarClave.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;labelInfo.Parent" xml:space="preserve">
-    <value>panelInfoUsuario</value>
-  </data>
-  <data name="buttonVolver.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;textBoxConfirmarClave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>500, 485</value>
-  </data>
-  <data name="labelLineConfirmarClave.Text" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;panelInfoUsuario.Name" xml:space="preserve">
-    <value>panelInfoUsuario</value>
-  </data>
-  <data name="textBoxCorreo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
-  </data>
-  <data name="labelLineDocumento.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;panelClave.Name" xml:space="preserve">
-    <value>panelClave</value>
-  </data>
-  <data name="labelNombreCompleto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 19</value>
-  </data>
-  <data name="&gt;&gt;buttonConfirmar.Parent" xml:space="preserve">
-    <value>panelButtons</value>
-  </data>
-  <data name="panelInfoUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 33</value>
-  </data>
-  <data name="labelLineNombreCompleto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 129</value>
-  </data>
-  <data name="buttonVolver.Text" xml:space="preserve">
-    <value>Volver</value>
-  </data>
-  <data name="comboBoxEstado.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 12pt</value>
-  </data>
-  <data name="&gt;&gt;labelLineClave.Parent" xml:space="preserve">
-    <value>panelClave</value>
-  </data>
-  <data name="labelDocumento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;labelLineDocumento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;labelSubTitulo.Parent" xml:space="preserve">
+    <value>paneTitulo</value>
   </data>
   <data name="&gt;&gt;labelSubTitulo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="paneTitulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="paneTitulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 50</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="paneTitulo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;paneTitulo.Name" xml:space="preserve">
     <value>paneTitulo</value>
   </data>
-  <data name="&gt;&gt;labelLineNombreCompleto.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
-  </data>
-  <data name="&gt;&gt;labelClave.Name" xml:space="preserve">
-    <value>labelClave</value>
-  </data>
-  <data name="labelLineConfirmarClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 60</value>
-  </data>
-  <data name="&gt;&gt;buttonConfirmar.Name" xml:space="preserve">
-    <value>buttonConfirmar</value>
-  </data>
-  <data name="labelSubTitulo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 20.25pt</value>
-  </data>
-  <data name="panelInfoUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 68</value>
-  </data>
-  <data name="textBoxNombreCompleto.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;panelContenedor.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="labelLineCorreo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 1</value>
-  </data>
-  <data name="&gt;&gt;textBoxDocumento.Name" xml:space="preserve">
-    <value>textBoxDocumento</value>
-  </data>
-  <data name="labelDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>129, 19</value>
-  </data>
-  <data name="&gt;&gt;labelLineClave.Name" xml:space="preserve">
-    <value>labelLineClave</value>
-  </data>
-  <data name="labelLineCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 64</value>
-  </data>
-  <data name="labelEstado.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelLineDocumento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 64</value>
-  </data>
-  <data name="buttonVolver.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="textBoxCorreo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 12pt</value>
-  </data>
-  <data name="labelCorreo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 19</value>
-  </data>
-  <data name="&gt;&gt;labelLineNombreCompleto.Name" xml:space="preserve">
-    <value>labelLineNombreCompleto</value>
-  </data>
-  <data name="textBoxDocumento.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 41</value>
-  </data>
-  <data name="panelClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 76</value>
-  </data>
-  <data name="&gt;&gt;buttonConfirmar.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelEstado.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 19</value>
-  </data>
-  <data name="&gt;&gt;labelLineNombreCompleto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;paneTitulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;paneTitulo.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="textBoxNombreCompleto.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="&gt;&gt;paneTitulo.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelSubTitulo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelSubTitulo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 20.25pt</value>
+  </data>
+  <data name="labelSubTitulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 9</value>
+  </data>
+  <data name="labelSubTitulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 33</value>
+  </data>
+  <data name="labelSubTitulo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelSubTitulo.Text" xml:space="preserve">
+    <value>Detalle del usuario</value>
+  </data>
+  <data name="&gt;&gt;labelSubTitulo.Name" xml:space="preserve">
+    <value>labelSubTitulo</value>
+  </data>
+  <data name="&gt;&gt;labelSubTitulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelSubTitulo.Parent" xml:space="preserve">
+    <value>paneTitulo</value>
+  </data>
+  <data name="&gt;&gt;labelSubTitulo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonVolver.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonVolver.Font" type="System.Drawing.Font, System.Drawing">
     <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="buttonVolver.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 49</value>
+  </data>
+  <data name="buttonVolver.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 30</value>
+  </data>
+  <data name="buttonVolver.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="buttonVolver.Text" xml:space="preserve">
+    <value>Volver</value>
+  </data>
+  <data name="buttonVolver.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;buttonVolver.Name" xml:space="preserve">
+    <value>buttonVolver</value>
+  </data>
+  <data name="&gt;&gt;buttonVolver.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonVolver.Parent" xml:space="preserve">
+    <value>panelButtons</value>
+  </data>
+  <data name="&gt;&gt;buttonVolver.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmar.Name" xml:space="preserve">
+    <value>buttonConfirmar</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmar.Parent" xml:space="preserve">
+    <value>panelButtons</value>
+  </data>
+  <data name="&gt;&gt;buttonConfirmar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 341</value>
+  </data>
+  <data name="panelButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 92</value>
+  </data>
+  <data name="panelButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;panelButtons.Name" xml:space="preserve">
+    <value>panelButtons</value>
+  </data>
+  <data name="&gt;&gt;panelButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelButtons.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;panelButtons.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;textBoxClave.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="buttonConfirmar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
   </data>
-  <data name="labelLineCorreo.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
+  <data name="buttonConfirmar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
   </data>
-  <data name="&gt;&gt;textBoxNombreCompleto.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="buttonConfirmar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 13</value>
   </data>
-  <data name="&gt;&gt;labelLineClave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buttonConfirmar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 30</value>
   </data>
-  <data name="labelLineClave.Text" xml:space="preserve">
-    <value>label2</value>
+  <data name="buttonConfirmar.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="labelLineNombreCompleto.Text" xml:space="preserve">
-    <value>label2</value>
+  <data name="buttonConfirmar.Text" xml:space="preserve">
+    <value>Confirmar</value>
   </data>
-  <data name="&gt;&gt;comboBoxEstado.Name" xml:space="preserve">
-    <value>comboBoxEstado</value>
+  <data name="&gt;&gt;buttonConfirmar.Name" xml:space="preserve">
+    <value>buttonConfirmar</value>
   </data>
-  <data name="panelInfoUsuario.TabIndex" type="System.Int32, mscorlib">
-    <value>49</value>
+  <data name="&gt;&gt;buttonConfirmar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelLineDocumento.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
+  <data name="&gt;&gt;buttonConfirmar.Parent" xml:space="preserve">
+    <value>panelButtons</value>
   </data>
-  <data name="&gt;&gt;labelCorreo.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonConfirmar.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;buttonVerClave.Name" xml:space="preserve">
     <value>buttonVerClave</value>
   </data>
-  <data name="buttonConfirmar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 13</value>
+  <data name="&gt;&gt;buttonVerClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBoxNombreCompleto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 20</value>
+  <data name="&gt;&gt;buttonVerClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
   </data>
-  <data name="&gt;&gt;labelLineCorreo.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
+  <data name="&gt;&gt;buttonVerClave.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="labelCorreo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 13</value>
+  <data name="&gt;&gt;textBoxConfirmarClave.Name" xml:space="preserve">
+    <value>textBoxConfirmarClave</value>
   </data>
-  <data name="labelDocumento.Text" xml:space="preserve">
-    <value>Número de documento:</value>
+  <data name="&gt;&gt;textBoxConfirmarClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBoxDocumento.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 12pt</value>
+  <data name="&gt;&gt;textBoxConfirmarClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
   </data>
-  <data name="textBoxConfirmarClave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 12pt</value>
+  <data name="&gt;&gt;textBoxConfirmarClave.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;textBoxNombreCompleto.Name" xml:space="preserve">
-    <value>textBoxNombreCompleto</value>
+  <data name="&gt;&gt;textBoxClave.Name" xml:space="preserve">
+    <value>textBoxClave</value>
   </data>
-  <data name="&gt;&gt;labelEstado.Name" xml:space="preserve">
-    <value>labelEstado</value>
+  <data name="&gt;&gt;textBoxClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxClave.Parent" xml:space="preserve">
     <value>panelClave</value>
   </data>
-  <data name="&gt;&gt;textBoxDocumento.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
+  <data name="&gt;&gt;textBoxClave.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelClave.Name" xml:space="preserve">
+    <value>labelClave</value>
+  </data>
+  <data name="&gt;&gt;labelClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;labelClave.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelConfirmarClave.Name" xml:space="preserve">
+    <value>labelConfirmarClave</value>
+  </data>
+  <data name="&gt;&gt;labelConfirmarClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelConfirmarClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;labelConfirmarClave.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;labelLineClave.Name" xml:space="preserve">
+    <value>labelLineClave</value>
+  </data>
+  <data name="&gt;&gt;labelLineClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLineClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;labelLineClave.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;labelLineConfirmarClave.Name" xml:space="preserve">
+    <value>labelLineConfirmarClave</value>
+  </data>
+  <data name="&gt;&gt;labelLineConfirmarClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLineConfirmarClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;labelLineConfirmarClave.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="panelClave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 259</value>
+  </data>
+  <data name="panelClave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 76</value>
+  </data>
+  <data name="panelClave.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="panelClave.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelClave.Name" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;panelClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelClave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelClave.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="buttonVerClave.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonVerClave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>419, 34</value>
+  </data>
+  <data name="buttonVerClave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="buttonVerClave.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;buttonVerClave.Name" xml:space="preserve">
+    <value>buttonVerClave</value>
   </data>
   <data name="&gt;&gt;buttonVerClave.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelCorreo.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonVerClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;buttonVerClave.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxConfirmarClave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="textBoxConfirmarClave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 37</value>
+  </data>
+  <data name="textBoxConfirmarClave.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="textBoxConfirmarClave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 20</value>
+  </data>
+  <data name="textBoxConfirmarClave.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;textBoxConfirmarClave.Name" xml:space="preserve">
+    <value>textBoxConfirmarClave</value>
+  </data>
+  <data name="&gt;&gt;textBoxConfirmarClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxConfirmarClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;textBoxConfirmarClave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxClave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="textBoxClave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 37</value>
+  </data>
+  <data name="textBoxClave.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="textBoxClave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="textBoxClave.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textBoxClave.Name" xml:space="preserve">
+    <value>textBoxClave</value>
+  </data>
+  <data name="&gt;&gt;textBoxClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;textBoxClave.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelClave.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelClave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
+  </data>
+  <data name="labelClave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 9</value>
+  </data>
+  <data name="labelClave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 19</value>
+  </data>
+  <data name="labelClave.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="labelClave.Text" xml:space="preserve">
+    <value>Clave:</value>
+  </data>
+  <data name="&gt;&gt;labelClave.Name" xml:space="preserve">
+    <value>labelClave</value>
+  </data>
+  <data name="&gt;&gt;labelClave.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;labelClave.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelConfirmarClave.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelConfirmarClave.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
+  </data>
+  <data name="labelConfirmarClave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 9</value>
+  </data>
+  <data name="labelConfirmarClave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 19</value>
+  </data>
+  <data name="labelConfirmarClave.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="labelConfirmarClave.Text" xml:space="preserve">
+    <value>Confirmar clave:</value>
+  </data>
+  <data name="&gt;&gt;labelConfirmarClave.Name" xml:space="preserve">
+    <value>labelConfirmarClave</value>
+  </data>
+  <data name="&gt;&gt;labelConfirmarClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelConfirmarClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;labelConfirmarClave.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelLineClave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 60</value>
+  </data>
+  <data name="labelLineClave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 1</value>
+  </data>
+  <data name="labelLineClave.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="labelLineClave.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;labelLineClave.Name" xml:space="preserve">
+    <value>labelLineClave</value>
+  </data>
+  <data name="&gt;&gt;labelLineClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLineClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;labelLineClave.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelLineConfirmarClave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>245, 60</value>
+  </data>
+  <data name="labelLineConfirmarClave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 1</value>
+  </data>
+  <data name="labelLineConfirmarClave.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="labelLineConfirmarClave.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;labelLineConfirmarClave.Name" xml:space="preserve">
+    <value>labelLineConfirmarClave</value>
+  </data>
+  <data name="&gt;&gt;labelLineConfirmarClave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLineConfirmarClave.Parent" xml:space="preserve">
+    <value>panelClave</value>
+  </data>
+  <data name="&gt;&gt;labelLineConfirmarClave.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Name" xml:space="preserve">
+    <value>labelInfo</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Parent" xml:space="preserve">
+    <value>panelInfoUsuario</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelInfoUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 68</value>
+  </data>
+  <data name="panelInfoUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 33</value>
+  </data>
+  <data name="panelInfoUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;panelInfoUsuario.Name" xml:space="preserve">
+    <value>panelInfoUsuario</value>
+  </data>
+  <data name="&gt;&gt;panelInfoUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelInfoUsuario.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelInfoUsuario.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 14.25pt</value>
+  </data>
+  <data name="labelInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 5</value>
+  </data>
+  <data name="labelInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 23</value>
+  </data>
+  <data name="labelInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelInfo.Text" xml:space="preserve">
+    <value>Información del usuario</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Name" xml:space="preserve">
+    <value>labelInfo</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.Parent" xml:space="preserve">
+    <value>panelInfoUsuario</value>
+  </data>
+  <data name="&gt;&gt;labelInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="comboBoxEstado.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="comboBoxEstado.ItemHeight" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="comboBoxEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 100</value>
+  </data>
+  <data name="comboBoxEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 27</value>
+  </data>
+  <data name="comboBoxEstado.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEstado.Name" xml:space="preserve">
+    <value>comboBoxEstado</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEstado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEstado.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;comboBoxEstado.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelEstado.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelEstado.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="labelEstado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 78</value>
+  </data>
+  <data name="labelEstado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 19</value>
+  </data>
+  <data name="labelEstado.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="labelEstado.Text" xml:space="preserve">
+    <value>Estado:</value>
+  </data>
+  <data name="&gt;&gt;labelEstado.Name" xml:space="preserve">
+    <value>labelEstado</value>
+  </data>
+  <data name="&gt;&gt;labelEstado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelEstado.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;labelEstado.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="labelLineDocumento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 64</value>
+  </data>
+  <data name="labelLineDocumento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 1</value>
+  </data>
+  <data name="labelLineDocumento.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="labelLineDocumento.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;labelLineDocumento.Name" xml:space="preserve">
+    <value>labelLineDocumento</value>
+  </data>
+  <data name="&gt;&gt;labelLineDocumento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLineDocumento.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;labelLineDocumento.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="textBoxDocumento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="textBoxDocumento.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 41</value>
+  </data>
+  <data name="textBoxDocumento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="textBoxDocumento.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBoxDocumento.Name" xml:space="preserve">
+    <value>textBoxDocumento</value>
+  </data>
+  <data name="&gt;&gt;textBoxDocumento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxDocumento.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;textBoxDocumento.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="labelDocumento.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelDocumento.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
   </data>
   <data name="labelDocumento.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 13</value>
+  </data>
+  <data name="labelDocumento.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 19</value>
+  </data>
+  <data name="labelDocumento.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="labelDocumento.Text" xml:space="preserve">
+    <value>Número de documento:</value>
+  </data>
+  <data name="&gt;&gt;labelDocumento.Name" xml:space="preserve">
+    <value>labelDocumento</value>
+  </data>
+  <data name="&gt;&gt;labelDocumento.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelDocumento.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;labelDocumento.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelLineNombreCompleto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 129</value>
+  </data>
+  <data name="labelLineNombreCompleto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 1</value>
+  </data>
+  <data name="labelLineNombreCompleto.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="labelLineNombreCompleto.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;labelLineNombreCompleto.Name" xml:space="preserve">
+    <value>labelLineNombreCompleto</value>
+  </data>
+  <data name="&gt;&gt;labelLineNombreCompleto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLineNombreCompleto.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;labelLineNombreCompleto.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="textBoxNombreCompleto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="textBoxNombreCompleto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 106</value>
+  </data>
+  <data name="textBoxNombreCompleto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="textBoxNombreCompleto.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBoxNombreCompleto.Name" xml:space="preserve">
+    <value>textBoxNombreCompleto</value>
+  </data>
+  <data name="&gt;&gt;textBoxNombreCompleto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxNombreCompleto.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;textBoxNombreCompleto.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelNombreCompleto.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelNombreCompleto.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
+  </data>
+  <data name="labelNombreCompleto.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 78</value>
+  </data>
+  <data name="labelNombreCompleto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 19</value>
+  </data>
+  <data name="labelNombreCompleto.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="labelNombreCompleto.Text" xml:space="preserve">
+    <value>Nombre completo:</value>
+  </data>
+  <data name="&gt;&gt;labelNombreCompleto.Name" xml:space="preserve">
+    <value>labelNombreCompleto</value>
+  </data>
+  <data name="&gt;&gt;labelNombreCompleto.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelNombreCompleto.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;labelNombreCompleto.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelLineCorreo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 64</value>
+  </data>
+  <data name="labelLineCorreo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 1</value>
+  </data>
+  <data name="labelLineCorreo.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="labelLineCorreo.Text" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;labelLineCorreo.Name" xml:space="preserve">
+    <value>labelLineCorreo</value>
+  </data>
+  <data name="&gt;&gt;labelLineCorreo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelLineCorreo.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;labelLineCorreo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBoxCorreo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="textBoxCorreo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 41</value>
+  </data>
+  <data name="textBoxCorreo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 20</value>
+  </data>
+  <data name="textBoxCorreo.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBoxCorreo.Name" xml:space="preserve">
+    <value>textBoxCorreo</value>
+  </data>
+  <data name="&gt;&gt;textBoxCorreo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxCorreo.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;textBoxCorreo.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelCorreo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelCorreo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
+  </data>
+  <data name="labelCorreo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 13</value>
+  </data>
+  <data name="labelCorreo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 19</value>
+  </data>
+  <data name="labelCorreo.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="labelCorreo.Text" xml:space="preserve">
+    <value>Correo:</value>
+  </data>
+  <data name="&gt;&gt;labelCorreo.Name" xml:space="preserve">
+    <value>labelCorreo</value>
+  </data>
+  <data name="&gt;&gt;labelCorreo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelCorreo.Parent" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;labelCorreo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelContenedor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 107</value>
+  </data>
+  <data name="panelContenedor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>460, 146</value>
+  </data>
+  <data name="panelContenedor.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelContenedor.Name" xml:space="preserve">
+    <value>panelContenedor</value>
+  </data>
+  <data name="&gt;&gt;panelContenedor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelContenedor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelContenedor.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>484, 446</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -809,193 +1100,22 @@
         QqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQKBSKXxD/BZ2Um08w7H7pAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="labelNombreCompleto.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 485</value>
   </data>
-  <data name="&gt;&gt;buttonConfirmar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>500, 485</value>
   </data>
-  <data name="&gt;&gt;labelDocumento.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;textBoxDocumento.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Detalle usuario</value>
   </data>
-  <data name="labelLineConfirmarClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 1</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>mdDetalleUsuario</value>
   </data>
-  <data name="paneTitulo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 50</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="paneTitulo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
-  </data>
-  <data name="&gt;&gt;labelLineCorreo.Name" xml:space="preserve">
-    <value>labelLineCorreo</value>
-  </data>
-  <data name="panelContenedor.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;textBoxCorreo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="labelConfirmarClave.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;labelEstado.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="labelDocumento.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="labelLineDocumento.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 1</value>
-  </data>
-  <data name="&gt;&gt;textBoxCorreo.Name" xml:space="preserve">
-    <value>textBoxCorreo</value>
-  </data>
-  <data name="&gt;&gt;panelButtons.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBoxConfirmarClave.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelClave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
-  </data>
-  <data name="labelLineDocumento.Text" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;paneTitulo.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;textBoxCorreo.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
-  </data>
-  <data name="comboBoxEstado.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 100</value>
-  </data>
-  <data name="labelClave.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelDocumento.Name" xml:space="preserve">
-    <value>labelDocumento</value>
-  </data>
-  <data name="labelDocumento.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelInfo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 14.25pt</value>
-  </data>
-  <data name="&gt;&gt;buttonVolver.Name" xml:space="preserve">
-    <value>buttonVolver</value>
-  </data>
-  <data name="&gt;&gt;panelButtons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelContenedor.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelInfoUsuario.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxEstado.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="buttonVolver.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 30</value>
-  </data>
-  <data name="&gt;&gt;labelLineNombreCompleto.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;textBoxConfirmarClave.Name" xml:space="preserve">
-    <value>textBoxConfirmarClave</value>
-  </data>
-  <data name="&gt;&gt;labelNombreCompleto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxClave.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 12pt</value>
-  </data>
-  <data name="labelSubTitulo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelEstado.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
-  </data>
-  <data name="&gt;&gt;textBoxNombreCompleto.Parent" xml:space="preserve">
-    <value>panelContenedor</value>
-  </data>
-  <data name="buttonConfirmar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="labelConfirmarClave.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;labelNombreCompleto.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="textBoxConfirmarClave.PasswordChar" type="System.Char, mscorlib" xml:space="preserve">
-    <value>*</value>
-  </data>
-  <data name="&gt;&gt;labelNombreCompleto.Name" xml:space="preserve">
-    <value>labelNombreCompleto</value>
-  </data>
-  <data name="labelInfo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="panelContenedor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 107</value>
-  </data>
-  <data name="labelInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
-  </data>
-  <data name="panelButtons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 341</value>
-  </data>
-  <data name="labelClave.Text" xml:space="preserve">
-    <value>Clave:</value>
-  </data>
-  <data name="labelSubTitulo.Text" xml:space="preserve">
-    <value>Detalle del usuario</value>
-  </data>
-  <data name="&gt;&gt;labelCorreo.Name" xml:space="preserve">
-    <value>labelCorreo</value>
-  </data>
-  <data name="&gt;&gt;labelLineConfirmarClave.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="labelSubTitulo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labelSubTitulo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 9</value>
-  </data>
-  <data name="labelCorreo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift SemiBold Condensed, 12pt, style=Bold</value>
-  </data>
-  <data name="labelLineCorreo.Text" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="panelContenedor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 146</value>
-  </data>
-  <data name="labelClave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 19</value>
-  </data>
-  <data name="labelConfirmarClave.Text" xml:space="preserve">
-    <value>Confirmar clave:</value>
-  </data>
-  <data name="textBoxConfirmarClave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>245, 37</value>
-  </data>
-  <data name="&gt;&gt;buttonVolver.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelCorreo.TabIndex" type="System.Int32, mscorlib">
-    <value>46</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

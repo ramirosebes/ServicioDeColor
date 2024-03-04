@@ -108,7 +108,7 @@
             this.labelNombreMenu.Name = "labelNombreMenu";
             this.labelNombreMenu.Size = new System.Drawing.Size(104, 19);
             this.labelNombreMenu.TabIndex = 44;
-            this.labelNombreMenu.Text = "Nombre del menu:";
+            this.labelNombreMenu.Text = "Nombre del menú:";
             // 
             // textBoxNombreMenu
             // 
@@ -195,7 +195,7 @@
             this.labelInfoPermiso.Name = "labelInfoPermiso";
             this.labelInfoPermiso.Size = new System.Drawing.Size(164, 23);
             this.labelInfoPermiso.TabIndex = 0;
-            this.labelInfoPermiso.Text = "Informacion del permiso";
+            this.labelInfoPermiso.Text = "Información del permiso";
             // 
             // mdDetallePermisoSimple
             // 

@@ -239,5 +239,43 @@ namespace CapaPresentacion.Modales
                 textBox.SelectAll(); // Seleccionar todo el texto para facilitar la corrección
             }
         }
+
+        private void textBoxDocumento_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBoxNombreCompleto_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBoxTelefono_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Evita que se pegue texto
+            if (e.Control && e.KeyCode == Keys.V)
+            {
+                // Suprime la pulsación de tecla Ctrl+V
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void textBoxTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

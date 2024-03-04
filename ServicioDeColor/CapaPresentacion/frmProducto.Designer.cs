@@ -147,7 +147,7 @@
             this.panelLista.Controls.Add(this.buttonLimpiar);
             this.panelLista.Controls.Add(this.textBoxBusqueda);
             this.panelLista.Controls.Add(this.buttonBuscar);
-            this.panelLista.Location = new System.Drawing.Point(15, 37);
+            this.panelLista.Location = new System.Drawing.Point(12, 37);
             this.panelLista.Name = "panelLista";
             this.panelLista.Size = new System.Drawing.Size(1460, 80);
             this.panelLista.TabIndex = 98;
@@ -311,7 +311,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView.Location = new System.Drawing.Point(15, 123);
+            this.dataGridView.Location = new System.Drawing.Point(12, 123);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
@@ -346,7 +346,7 @@
             // 
             // codigo
             // 
-            this.codigo.HeaderText = "Codigo";
+            this.codigo.HeaderText = "Código";
             this.codigo.Name = "codigo";
             this.codigo.ReadOnly = true;
             // 
@@ -373,7 +373,7 @@
             // 
             // categoria
             // 
-            this.categoria.HeaderText = "Categoria";
+            this.categoria.HeaderText = "Categoía";
             this.categoria.Name = "categoria";
             this.categoria.ReadOnly = true;
             this.categoria.Width = 200;
