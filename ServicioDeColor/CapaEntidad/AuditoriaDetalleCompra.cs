@@ -13,7 +13,7 @@ namespace CapaEntidad
         //private int idAuditoriaCompra;
         private string descripcionAuditoria;
         private string fechaAuditoria;
-        private Producto Producto;
+        private Producto producto;
         private decimal precioCompra;
         private decimal precioVenta;
         private int cantidad;
@@ -26,7 +26,7 @@ namespace CapaEntidad
         //public int IdAuditoriaCompra { get { return idAuditoriaCompra; } set { idAuditoriaCompra = value; } }
         public string DescripcionAuditoria { get { return descripcionAuditoria; } set { descripcionAuditoria = value; } }
         public string FechaAuditoria { get { return fechaAuditoria; } set { fechaAuditoria = value; } }
-        public Producto oProducto { get { return Producto; } set { Producto = value; } }
+        public Producto oProducto { get { return producto; } set { producto = value; } }
         public decimal PrecioCompra { get { return precioCompra; } set { precioCompra = value; } }
         public decimal PrecioVenta { get { return precioVenta; } set { precioVenta = value; } }
         public int Cantidad { get { return cantidad; } set { cantidad = value; } }

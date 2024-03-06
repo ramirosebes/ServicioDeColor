@@ -448,11 +448,11 @@ namespace CapaPresentacion
         private void textBoxMonto_KeyDown(object sender, KeyEventArgs e)
         {
             // Evita que se pegue texto
-            if (e.Control && e.KeyCode == Keys.V)
-            {
-                // Suprime la pulsación de tecla Ctrl+V
-                e.SuppressKeyPress = true;
-            }
+            //if (e.Control && e.KeyCode == Keys.V)
+            //{
+            //    // Suprime la pulsación de tecla Ctrl+V
+            //    e.SuppressKeyPress = true;
+            //}
         }
     }
 }

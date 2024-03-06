@@ -134,7 +134,6 @@ C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPr
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuario.resources
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmVenta.resources
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
-C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.LogIn.resources
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdAgregarComponenteAGrupo.resources
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdAgregarVenta.resources
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleCategoria.resources
@@ -170,3 +169,4 @@ C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPr
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleAuditoriaVenta.resources
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.frmAuditoriaSesion.resources
 C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.Modales.mdDetalleAuditoriaSesion.resources
+C:\Users\ramir\Desktop\Final Ing.Software\ServicioDeColor\ServicioDeColor\CapaPresentacion\obj\Debug\CapaPresentacion.InicioDeSesion.resources

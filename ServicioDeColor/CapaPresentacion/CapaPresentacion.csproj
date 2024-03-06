@@ -245,11 +245,11 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogIn.cs">
+    <Compile Include="InicioDeSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LogIn.Designer.cs">
-      <DependentUpon>LogIn.cs</DependentUpon>
+    <Compile Include="InicioDeSesion.Designer.cs">
+      <DependentUpon>InicioDeSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Modales\mdDetalleAuditoriaVenta.cs">
       <SubType>Form</SubType>
@@ -438,8 +438,8 @@
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogIn.resx">
-      <DependentUpon>LogIn.cs</DependentUpon>
+    <EmbeddedResource Include="InicioDeSesion.resx">
+      <DependentUpon>InicioDeSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modales\mdDetalleAuditoriaSesion.resx">
       <DependentUpon>mdDetalleAuditoriaSesion.cs</DependentUpon>

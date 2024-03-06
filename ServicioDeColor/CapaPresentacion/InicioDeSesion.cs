@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class LogIn : Form
+    public partial class InicioDeSesion : Form
     {
-        public LogIn()
+        public InicioDeSesion()
         {
             InitializeComponent();
         }
@@ -121,6 +121,11 @@ namespace CapaPresentacion
             {
                 // Suprime la pulsación de tecla Ctrl+V
                 e.SuppressKeyPress = true;
+            }
+
+            if (e.KeyData == Keys.Enter)
+            {
+                textBoxClave.Select();
             }
         }
     }
