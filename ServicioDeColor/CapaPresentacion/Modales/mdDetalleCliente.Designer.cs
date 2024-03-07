@@ -138,7 +138,7 @@
             this.labelTelefono.Name = "labelTelefono";
             this.labelTelefono.Size = new System.Drawing.Size(56, 19);
             this.labelTelefono.TabIndex = 49;
-            this.labelTelefono.Text = "Telefono:";
+            this.labelTelefono.Text = "Teléfono:";
             // 
             // textBoxTelefono
             // 

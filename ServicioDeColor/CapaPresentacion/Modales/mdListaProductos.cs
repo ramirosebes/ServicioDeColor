@@ -101,5 +101,14 @@ namespace CapaPresentacion.Modales
                 row.Visible = true;
             }
         }
+
+        private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            buttonBuscar_Click(sender, e);
+            if (textBoxBusqueda.Text.Trim() == "")
+            {
+                buttonLimpiarBuscardor_Click(sender, e);
+            }
+        }
     }
 }

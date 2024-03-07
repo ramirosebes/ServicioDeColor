@@ -363,6 +363,7 @@
             this.nombreCompletoUsuario.HeaderText = "Usuario";
             this.nombreCompletoUsuario.Name = "nombreCompletoUsuario";
             this.nombreCompletoUsuario.ReadOnly = true;
+            this.nombreCompletoUsuario.Width = 140;
             // 
             // documentoUsuario
             // 
@@ -390,6 +391,7 @@
             this.nombreCompletoCliente.HeaderText = "Cliente";
             this.nombreCompletoCliente.Name = "nombreCompletoCliente";
             this.nombreCompletoCliente.ReadOnly = true;
+            this.nombreCompletoCliente.Width = 140;
             // 
             // documentoCliente
             // 

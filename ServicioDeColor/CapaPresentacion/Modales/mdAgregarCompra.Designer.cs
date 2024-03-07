@@ -276,6 +276,7 @@
             0,
             0,
             0});
+            this.numericUpDownCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numericUpDownCantidad_KeyDown);
             // 
             // labelCantidad
             // 
@@ -292,6 +293,7 @@
             this.textBoxPrecioVenta.Name = "textBoxPrecioVenta";
             this.textBoxPrecioVenta.Size = new System.Drawing.Size(100, 27);
             this.textBoxPrecioVenta.TabIndex = 10;
+            this.textBoxPrecioVenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPrecioVenta_KeyDown);
             this.textBoxPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioVenta_KeyPress);
             // 
             // labelPrecioVenta
@@ -309,6 +311,7 @@
             this.textBoxPrecioCompra.Name = "textBoxPrecioCompra";
             this.textBoxPrecioCompra.Size = new System.Drawing.Size(100, 27);
             this.textBoxPrecioCompra.TabIndex = 9;
+            this.textBoxPrecioCompra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPrecioCompra_KeyDown);
             this.textBoxPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioCompra_KeyPress);
             // 
             // labelPrecioCompra

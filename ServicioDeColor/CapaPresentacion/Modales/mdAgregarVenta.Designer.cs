@@ -153,6 +153,7 @@
             this.textBoxDescuento.Text = "0.00";
             this.textBoxDescuento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDescuento_KeyDown);
             this.textBoxDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDescuento_KeyPress);
+            this.textBoxDescuento.Leave += new System.EventHandler(this.textBoxDescuento_Leave);
             // 
             // label1
             // 
@@ -409,6 +410,7 @@
             0,
             0,
             0});
+            this.numericUpDownCantidad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numericUpDownCantidad_KeyDown);
             // 
             // labelCantidad
             // 

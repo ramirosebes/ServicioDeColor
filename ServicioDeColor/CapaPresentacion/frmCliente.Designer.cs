@@ -369,7 +369,7 @@
             // 
             // Telefono
             // 
-            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.HeaderText = "Teléfono";
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.Width = 200;

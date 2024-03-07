@@ -392,7 +392,7 @@ namespace CapaPresentacion.Modales
         {
             if (dataGridViewData.Rows.Count < 1)
             {
-                MessageBox.Show("Debe ingresar productos en la compra", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe ingresar al menos un producto en la compra", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
             return true;
@@ -562,6 +562,24 @@ namespace CapaPresentacion.Modales
             {
                 e.Handled = true;
             }
+        }
+
+        private void numericUpDownCantidad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                buttonAgregar_Click(sender, e);
+            }
+        }
+
+        private void textBoxPrecioCompra_KeyDown(object sender, KeyEventArgs e)
+        {
+            textBoxPrecioVenta.Select();
+        }
+
+        private void textBoxPrecioVenta_KeyDown(object sender, KeyEventArgs e)
+        {
+            numericUpDownCantidad.Select();
         }
     }
 }

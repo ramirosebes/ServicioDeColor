@@ -110,33 +110,40 @@ namespace CapaPresentacion.Modales
 
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                using (FileStream stream = new FileStream(saveFile.FileName, FileMode.Create))
+                try
                 {
-                    Document pdfDocumento = new Document(PageSize.A4, 25, 25, 25, 25);
-
-                    PdfWriter writer = PdfWriter.GetInstance(pdfDocumento, stream);
-                    pdfDocumento.Open();
-
-                    bool obtenido = true;
-                    byte[] byteImage = new CC_Negocio().ObtenerLogo(out obtenido);
-
-                    if (obtenido)
+                    using (FileStream stream = new FileStream(saveFile.FileName, FileMode.Create))
                     {
-                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(byteImage);
-                        img.ScaleToFit(60, 60);
-                        img.Alignment = iTextSharp.text.Image.UNDERLYING;
-                        img.SetAbsolutePosition(pdfDocumento.Left, pdfDocumento.GetTop(51));
-                        pdfDocumento.Add(img);
-                    }
+                        Document pdfDocumento = new Document(PageSize.A4, 25, 25, 25, 25);
 
-                    using (StringReader sr = new StringReader(textoHTML))
-                    {
-                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDocumento, sr);
-                    }
+                        PdfWriter writer = PdfWriter.GetInstance(pdfDocumento, stream);
+                        pdfDocumento.Open();
 
-                    pdfDocumento.Close();
-                    stream.Close();
-                    MessageBox.Show("Documento generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        bool obtenido = true;
+                        byte[] byteImage = new CC_Negocio().ObtenerLogo(out obtenido);
+
+                        if (obtenido)
+                        {
+                            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(byteImage);
+                            img.ScaleToFit(60, 60);
+                            img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                            img.SetAbsolutePosition(pdfDocumento.Left, pdfDocumento.GetTop(51));
+                            pdfDocumento.Add(img);
+                        }
+
+                        using (StringReader sr = new StringReader(textoHTML))
+                        {
+                            XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDocumento, sr);
+                        }
+
+                        pdfDocumento.Close();
+                        stream.Close();
+                        MessageBox.Show("Documento generado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al generar el archivo PDF: " + ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

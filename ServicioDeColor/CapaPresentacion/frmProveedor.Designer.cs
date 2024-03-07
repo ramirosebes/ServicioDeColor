@@ -350,7 +350,7 @@
             // 
             // telefono
             // 
-            this.telefono.HeaderText = "Telefono";
+            this.telefono.HeaderText = "Teléfono";
             this.telefono.Name = "telefono";
             this.telefono.ReadOnly = true;
             this.telefono.Width = 200;

@@ -86,7 +86,7 @@ namespace CapaPresentacion.Modales
                     textBoxPrecio.Text = modal._Producto.PrecioVenta.ToString("0.00");
                     textBoxStock.Text = modal._Producto.Stock.ToString();
                     numericUpDownCantidad.Select();
-                    textBoxCodigoProducto.BackColor = Color.FromArgb(255, 255, 255);
+                    textBoxCodigoProducto.BackColor = Color.FromArgb(45, 204, 112);
                 }
                 else
                 {
@@ -413,6 +413,7 @@ namespace CapaPresentacion.Modales
             if (e.KeyData == Keys.Enter)
             {
                 calcularCambio();
+                buttonRegistrar.Select();
             }
 
             // Evita que se pegue texto
@@ -438,7 +439,7 @@ namespace CapaPresentacion.Modales
 
             if (textBoxDocumentoCliente.Text == "")
             {
-                MessageBox.Show("Debe ingresar el documento del cliente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Debe seleccionar un cliente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -463,6 +464,12 @@ namespace CapaPresentacion.Modales
             if (dataGridViewData.Rows.Count < 1)
             {
                 MessageBox.Show("Debe ingresar al menos un producto a la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (dataGridViewData.Rows.Count < 1)
+            {
+                MessageBox.Show("Debe ingresar al menos un producto en la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -552,8 +559,10 @@ namespace CapaPresentacion.Modales
             else
             {
                 textBoxDescuento.Enabled = false;
-                textBoxDescuento.Text = "0.00";
             }
+
+            textBoxDescuento.Text = "0.00";
+            CalcularDescuento();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -566,13 +575,6 @@ namespace CapaPresentacion.Modales
             if (e.KeyData == Keys.Enter)
             {
                 CalcularDescuento();
-            }
-
-            // Evita que se pegue texto
-            if (e.Control && e.KeyCode == Keys.V)
-            {
-                // Suprime la pulsación de tecla Ctrl+V
-                e.SuppressKeyPress = true;
             }
         }
 
@@ -691,6 +693,19 @@ namespace CapaPresentacion.Modales
                 // Suprime la pulsación de tecla Ctrl+V
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void numericUpDownCantidad_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                buttonAgregar_Click(sender, e);
+            }
+        }
+
+        private void textBoxDescuento_Leave(object sender, EventArgs e)
+        {
+            CalcularDescuento();
         }
     }
 }
