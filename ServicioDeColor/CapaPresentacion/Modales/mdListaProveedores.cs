@@ -42,7 +42,8 @@ namespace CapaPresentacion.Modales
                 dataGridViewData.Rows.Add(new object[] { 
                     item.IdProveedor, 
                     item.CUIT, 
-                    item.RazonSocial
+                    item.RazonSocial,
+                    item.Correo
                 });
             }
         }
@@ -58,7 +59,8 @@ namespace CapaPresentacion.Modales
                 {
                     IdProveedor = Convert.ToInt32(dataGridViewData.Rows[iRow].Cells["idProveedor"].Value.ToString()),
                     CUIT = dataGridViewData.Rows[iRow].Cells["cuit"].Value.ToString(),
-                    RazonSocial = dataGridViewData.Rows[iRow].Cells["RazonSocial"].Value.ToString()
+                    RazonSocial = dataGridViewData.Rows[iRow].Cells["RazonSocial"].Value.ToString(),
+                    Correo = dataGridViewData.Rows[iRow].Cells["Correo"].Value.ToString()
                 };
 
                 this.DialogResult = DialogResult.OK;
@@ -112,6 +114,7 @@ namespace CapaPresentacion.Modales
                         IdProveedor = oProveedor.IdProveedor,
                         CUIT = oProveedor.CUIT,
                         RazonSocial = oProveedor.RazonSocial,
+                        Correo = oProveedor.Correo
                     };
                     this.DialogResult = DialogResult.OK;
                     this.Close();

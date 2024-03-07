@@ -601,5 +601,9 @@
   <ItemGroup>
     <None Include="Multimedia\Filtro.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Comprobantes\" />
+    <Folder Include="Credenciales\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

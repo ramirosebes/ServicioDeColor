@@ -44,6 +44,7 @@
             this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.SuspendLayout();
@@ -173,7 +174,8 @@
             this.dataGridViewData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCliente,
             this.documento,
-            this.nombreCompleto});
+            this.nombreCompleto,
+            this.Correo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Condensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,14 +216,20 @@
             this.documento.HeaderText = "Documento";
             this.documento.Name = "documento";
             this.documento.ReadOnly = true;
-            this.documento.Width = 150;
             // 
             // nombreCompleto
             // 
             this.nombreCompleto.HeaderText = "Nombre completo";
             this.nombreCompleto.Name = "nombreCompleto";
             this.nombreCompleto.ReadOnly = true;
-            this.nombreCompleto.Width = 250;
+            this.nombreCompleto.Width = 200;
+            // 
+            // Correo
+            // 
+            this.Correo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Correo.HeaderText = "Correo";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
             // 
             // mdListaClientes
             // 
@@ -256,9 +264,10 @@
         private System.Windows.Forms.Label labelTitulo;
         private System.Windows.Forms.ComboBox comboBoxBusqueda;
         private System.Windows.Forms.DataGridView dataGridViewData;
+        private System.Windows.Forms.Button buttonAgregarCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn documento;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCompleto;
-        private System.Windows.Forms.Button buttonAgregarCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
     }
 }

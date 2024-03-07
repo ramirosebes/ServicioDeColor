@@ -1,15 +1,21 @@
 ﻿using CapaControladora;
 using CapaEntidad;
 using CapaPresentacion.Utilidades;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
 
 namespace CapaPresentacion.Modales
 {
@@ -62,7 +68,8 @@ namespace CapaPresentacion.Modales
                 {
                     textBoxIdCliente.Text = modal._Cliente.IdCliente.ToString();
                     textBoxDocumentoCliente.Text = modal._Cliente.Documento;
-                    textBoxNombreCompleto.Text = modal._Cliente.NombreCompleto; //textBoxNombreCliente
+                    textBoxNombreCompleto.Text = modal._Cliente.NombreCompleto;
+                    textBoxCorreo.Text = modal._Cliente.Correo;
                     textBoxCodigoProducto.Select();
                 }
                 else
@@ -85,7 +92,8 @@ namespace CapaPresentacion.Modales
                     textBoxProducto.Text = modal._Producto.Nombre;
                     textBoxPrecio.Text = modal._Producto.PrecioVenta.ToString("0.00");
                     textBoxStock.Text = modal._Producto.Stock.ToString();
-                    numericUpDownCantidad.Select();
+                    numericUpDownCantidad.Focus();
+                    numericUpDownCantidad.Select(0, numericUpDownCantidad.Text.Length);
                     textBoxCodigoProducto.BackColor = Color.FromArgb(45, 204, 112);
                 }
                 else
@@ -108,7 +116,8 @@ namespace CapaPresentacion.Modales
                     textBoxProducto.Text = oProducto.Nombre;
                     textBoxPrecio.Text = oProducto.PrecioVenta.ToString("0.00");
                     textBoxStock.Text = oProducto.Stock.ToString();
-                    numericUpDownCantidad.Select();
+                    numericUpDownCantidad.Focus();
+                    numericUpDownCantidad.Select(0, numericUpDownCantidad.Text.Length);
                 }
                 else
                 {
@@ -276,7 +285,7 @@ namespace CapaPresentacion.Modales
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
                 var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
-                e.Graphics.DrawImage(Properties.Resources.Papelera, new Rectangle(x, y, w, h));
+                e.Graphics.DrawImage(Properties.Resources.Papelera, new System.Drawing.Rectangle(x, y, w, h));
                 e.Handled = true;
             }
         }
@@ -502,7 +511,7 @@ namespace CapaPresentacion.Modales
                 oUsuario = new Usuario() { IdUsuario = _usuarioActual.IdUsuario, Documento = _usuarioActual.Documento, IdPersona = _usuarioActual.IdPersona, NombreCompleto = _usuarioActual.NombreCompleto },
                 TipoDocumento = ((OpcionCombo)comboBoxTipoDocumento.SelectedItem).Texto,
                 NumeroDocumento = numeroDocumento,
-                oCliente = new Cliente() { IdCliente = Convert.ToInt32(textBoxIdCliente.Text), Documento = textBoxDocumentoCliente.Text, NombreCompleto = textBoxNombreCompleto.Text },
+                oCliente = new Cliente() { IdCliente = Convert.ToInt32(textBoxIdCliente.Text), Documento = textBoxDocumentoCliente.Text, NombreCompleto = textBoxNombreCompleto.Text, Correo = textBoxCorreo.Text },
                 MontoPago = Convert.ToDecimal(textBoxPagaCon.Text),
                 MontoCambio = Convert.ToDecimal(textBoxCambio.Text),
                 SubTotal = Convert.ToDecimal(textBoxSubTotal.Text),
@@ -513,6 +522,8 @@ namespace CapaPresentacion.Modales
 
             string mensaje = string.Empty;
             bool respuesta = new CC_Venta().AgregarVenta(oVenta, detalleVenta, out mensaje);
+
+            GenerarPDF(oVenta);
 
             if (respuesta)
             {
@@ -632,7 +643,8 @@ namespace CapaPresentacion.Modales
                 textBoxProducto.Text = oProducto.Nombre;
                 textBoxPrecio.Text = oProducto.PrecioVenta.ToString("0.00");
                 textBoxStock.Text = oProducto.Stock.ToString();
-                numericUpDownCantidad.Select();
+                numericUpDownCantidad.Focus();
+                numericUpDownCantidad.Select(0, numericUpDownCantidad.Text.Length);
             }
             else
             {
@@ -655,6 +667,7 @@ namespace CapaPresentacion.Modales
                 textBoxIdCliente.Text = oCliente.IdCliente.ToString();
                 textBoxDocumentoCliente.Text = oCliente.Documento;
                 textBoxNombreCompleto.Text = oCliente.NombreCompleto;
+                textBoxCorreo.Text = oCliente.Correo;
                 textBoxCodigoProducto.Select();
             }
             else
@@ -677,6 +690,7 @@ namespace CapaPresentacion.Modales
                     textBoxIdCliente.Text = oCliente.IdCliente.ToString();
                     textBoxDocumentoCliente.Text = oCliente.Documento;
                     textBoxNombreCompleto.Text = oCliente.NombreCompleto;
+                    textBoxCorreo.Text = oCliente.Correo;
                     textBoxCodigoProducto.Select();
                 }
                 else
@@ -706,6 +720,142 @@ namespace CapaPresentacion.Modales
         private void textBoxDescuento_Leave(object sender, EventArgs e)
         {
             CalcularDescuento();
+        }
+
+        private void GenerarPDF(Venta oVenta)
+        {
+            string textoHTML = Properties.Resources.PlantillaVenta.ToString();
+            Negocio oNegocio = new CC_Negocio().ObtenerDatos();
+
+            textoHTML = textoHTML.Replace("@nombrenegocio", oNegocio.Nombre.ToUpper()); //@nombreNegocio
+            textoHTML = textoHTML.Replace("@cuitnegocio", oNegocio.CUIT); //@documentoNegocio
+            textoHTML = textoHTML.Replace("@direcnegocio", oNegocio.Direccion); //direccionNegocio
+
+            textoHTML = textoHTML.Replace("@tipodocumento", oVenta.TipoDocumento);
+            textoHTML = textoHTML.Replace("@numerodocumento", oVenta.NumeroDocumento);
+
+            textoHTML = textoHTML.Replace("@doccliente", oVenta.oCliente.Documento);
+            textoHTML = textoHTML.Replace("@nombrecliente", oVenta.oCliente.NombreCompleto);
+            textoHTML = textoHTML.Replace("@fecharegistro", DateTime.Now.ToString("dd/MM/yyyy"));
+            textoHTML = textoHTML.Replace("@usuarioregistro", oVenta.oUsuario.NombreCompleto);
+
+            string filas = string.Empty;
+
+            foreach (DataGridViewRow row in dataGridViewData.Rows)
+            {
+                filas += "<tr>";
+                filas += "<td>" + row.Cells["Producto"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Precio"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["SubTotal"].Value.ToString() + "</td>";
+                filas += "</tr>";
+            }
+
+            textoHTML = textoHTML.Replace("@filas", filas);
+            textoHTML = textoHTML.Replace("@tipoDescuento", oVenta.TipoDescuento);
+            textoHTML = textoHTML.Replace("@montoDescuento", oVenta.MontoDescuento.ToString());
+            textoHTML = textoHTML.Replace("@montototal", oVenta.MontoTotal.ToString());
+            textoHTML = textoHTML.Replace("@pagocon", oVenta.MontoPago.ToString());
+            textoHTML = textoHTML.Replace("@cambio", oVenta.MontoCambio.ToString());
+
+            try
+            {
+                // Especifica la ubicación de descarga del archivo PDF
+                string nombreArchivo = string.Format("Venta_{0}.pdf", oVenta.NumeroDocumento);
+
+                // Obtener la ruta del directorio base del proyecto
+                string directorioBase = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+
+                // Construir la ruta completa para la carpeta "Comprobantes" dentro del proyecto
+                string rutaComprobantes = Path.Combine(directorioBase, "Comprobantes");
+                //string rutaComprobantes = @"../../Comprobantes"; --> No funcionaba
+
+                // Combinar la ruta de la carpeta "Comprobantes" con el nombre del archivo
+                string rutaDescarga = Path.Combine(rutaComprobantes, nombreArchivo);
+
+                // Crea el archivo PDF en la ubicación especificada
+                using (FileStream stream = new FileStream(rutaDescarga, FileMode.Create))
+                {
+                    Document pdfDocumento = new Document(PageSize.A4, 25, 25, 25, 25);
+
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDocumento, stream);
+                    pdfDocumento.Open();
+
+                    bool obtenido = true;
+                    byte[] byteImage = new CC_Negocio().ObtenerLogo(out obtenido);
+
+                    if (obtenido)
+                    {
+                        iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(byteImage);
+                        img.ScaleToFit(60, 60);
+                        img.Alignment = iTextSharp.text.Image.UNDERLYING;
+                        img.SetAbsolutePosition(pdfDocumento.Left, pdfDocumento.GetTop(51));
+                        pdfDocumento.Add(img);
+                    }
+
+                    using (StringReader sr = new StringReader(textoHTML))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDocumento, sr);
+                    }
+
+                    pdfDocumento.Close();
+                    stream.Close();
+                    //MessageBox.Show("Documento generado en " + rutaDescarga, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                // Luego de generar el PDF, aquí puedes implementar la lógica para enviarlo por correo electrónico al proveedor.
+                #region EnviarCorreo
+                EnviarCorreo(rutaDescarga, oVenta);
+                #endregion
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EnviarCorreo(string rutaDescarga, Venta oVenta)
+        {
+            try
+            {
+                // Crear un cliente SMTP para enviar el correo electrónico
+                SmtpClient client = new SmtpClient("smtp-mail.outlook.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential("serviciodecolortdp@outlook.com", "Ser01Vi02Cio03De04Co05Lor06."),
+                    EnableSsl = true,
+                };
+
+                // Crear el mensaje de correo electrónico
+                MailMessage mensaje = new MailMessage
+                {
+                    From = new MailAddress("serviciodecolortdp@outlook.com"),
+                    Subject = "Comprobante de venta",
+                    Body = "Adjunto encontrarás el comprobante de venta.",
+                };
+
+                // Agregar el archivo adjunto (el comprobante PDF)
+                Attachment adjunto = new Attachment(rutaDescarga);
+                mensaje.Attachments.Add(adjunto);
+
+                // Especificar el destinatario del correo electrónico
+                mensaje.To.Add(oVenta.oCliente.Correo);
+
+                // Enviar el mensaje de correo electrónico
+                client.Send(mensaje);
+
+                MessageBox.Show("El correo electrónico ha sido enviado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al enviar el correo electrónico: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void textBoxPagaCon_Leave(object sender, EventArgs e)
+        {
+            calcularCambio();
         }
     }
 }

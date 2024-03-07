@@ -59,6 +59,7 @@
             this.textBoxCodigoProducto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBoxInformacionProveedor = new System.Windows.Forms.GroupBox();
+            this.textBoxCorreo = new System.Windows.Forms.TextBox();
             this.textBoxIdProveedor = new System.Windows.Forms.TextBox();
             this.textBoxRazonSocial = new System.Windows.Forms.TextBox();
             this.buttonBuscarProveedor = new System.Windows.Forms.Button();
@@ -229,7 +230,7 @@
             // 
             // SubTotal
             // 
-            this.SubTotal.HeaderText = "Sub Total";
+            this.SubTotal.HeaderText = "Subtotal";
             this.SubTotal.Name = "SubTotal";
             this.SubTotal.ReadOnly = true;
             this.SubTotal.Width = 120;
@@ -383,6 +384,7 @@
             // 
             // groupBoxInformacionProveedor
             // 
+            this.groupBoxInformacionProveedor.Controls.Add(this.textBoxCorreo);
             this.groupBoxInformacionProveedor.Controls.Add(this.textBoxIdProveedor);
             this.groupBoxInformacionProveedor.Controls.Add(this.textBoxRazonSocial);
             this.groupBoxInformacionProveedor.Controls.Add(this.buttonBuscarProveedor);
@@ -396,6 +398,14 @@
             this.groupBoxInformacionProveedor.TabIndex = 4;
             this.groupBoxInformacionProveedor.TabStop = false;
             this.groupBoxInformacionProveedor.Text = "Información del proveedor";
+            // 
+            // textBoxCorreo
+            // 
+            this.textBoxCorreo.Location = new System.Drawing.Point(317, 15);
+            this.textBoxCorreo.Name = "textBoxCorreo";
+            this.textBoxCorreo.Size = new System.Drawing.Size(42, 27);
+            this.textBoxCorreo.TabIndex = 101;
+            this.textBoxCorreo.Visible = false;
             // 
             // textBoxIdProveedor
             // 
@@ -553,13 +563,6 @@
         private System.Windows.Forms.Label labelTotalAPagar;
         private System.Windows.Forms.Button buttonAgregar;
         private System.Windows.Forms.DataGridView dataGridViewData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
-        private System.Windows.Forms.DataGridViewButtonColumn buttonEliminar;
         private System.Windows.Forms.GroupBox groupBoxInformacionProducto;
         private System.Windows.Forms.NumericUpDown numericUpDownCantidad;
         private System.Windows.Forms.Label labelCantidad;
@@ -586,5 +589,13 @@
         private System.Windows.Forms.Label labelTipoDocumento;
         private System.Windows.Forms.Label labelFehca;
         private System.Windows.Forms.Label labelRegistrarCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
+        private System.Windows.Forms.DataGridViewButtonColumn buttonEliminar;
+        private System.Windows.Forms.TextBox textBoxCorreo;
     }
 }

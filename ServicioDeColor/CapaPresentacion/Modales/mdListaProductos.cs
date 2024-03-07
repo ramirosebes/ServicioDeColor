@@ -35,7 +35,7 @@ namespace CapaPresentacion.Modales
             comboBoxBusqueda.ValueMember = "Valor";
             comboBoxBusqueda.SelectedIndex = 0;
 
-            List<Producto> lista = new CC_Producto().ListarProductos();
+            List<Producto> lista = new CC_Producto().ListarProductos().Where(p => p.Estado).ToList();
 
             foreach (Producto item in lista)
             {

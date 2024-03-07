@@ -43,7 +43,8 @@ namespace CapaPresentacion.Modales
                 dataGridViewData.Rows.Add(new object[] { 
                     item.IdCliente, 
                     item.Documento, 
-                    item.NombreCompleto
+                    item.NombreCompleto,
+                    item.Correo
                 });
             }
         }
@@ -59,7 +60,8 @@ namespace CapaPresentacion.Modales
                 {
                     IdCliente = Convert.ToInt32(dataGridViewData.Rows[iRow].Cells["idCliente"].Value.ToString()),
                     Documento = dataGridViewData.Rows[iRow].Cells["documento"].Value.ToString(),
-                    NombreCompleto = dataGridViewData.Rows[iRow].Cells["nombreCompleto"].Value.ToString()
+                    NombreCompleto = dataGridViewData.Rows[iRow].Cells["nombreCompleto"].Value.ToString(),
+                    Correo = dataGridViewData.Rows[iRow].Cells["Correo"].Value.ToString()
                 };
 
                 this.DialogResult = DialogResult.OK;
@@ -113,6 +115,7 @@ namespace CapaPresentacion.Modales
                         IdCliente = oCliente.IdCliente,
                         Documento = oCliente.Documento,
                         NombreCompleto = oCliente.NombreCompleto,
+                        Correo = oCliente.Correo
                     };
                     this.DialogResult = DialogResult.OK;
                     this.Close();
