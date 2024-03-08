@@ -34,6 +34,9 @@
             this.panelLista = new System.Windows.Forms.Panel();
             this.labelSubTitulo = new System.Windows.Forms.Label();
             this.panelContenido = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxCorreo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.buttonActualizar = new System.Windows.Forms.Button();
             this.labelDireccion = new System.Windows.Forms.Label();
             this.textBoxDireccion = new System.Windows.Forms.TextBox();
@@ -104,22 +107,58 @@
             this.panelContenido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelContenido.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelContenido.Controls.Add(this.label1);
             this.panelContenido.Controls.Add(this.buttonActualizar);
-            this.panelContenido.Controls.Add(this.labelDireccion);
-            this.panelContenido.Controls.Add(this.textBoxDireccion);
-            this.panelContenido.Controls.Add(this.labelLineDireccion);
-            this.panelContenido.Controls.Add(this.labelCUIT);
-            this.panelContenido.Controls.Add(this.textBoxCUIT);
-            this.panelContenido.Controls.Add(this.labelLineRUC);
+            this.panelContenido.Controls.Add(this.textBoxCorreo);
             this.panelContenido.Controls.Add(this.labelNombre);
             this.panelContenido.Controls.Add(this.textBoxNombreNegocio);
+            this.panelContenido.Controls.Add(this.label2);
             this.panelContenido.Controls.Add(this.labelLineNombre);
             this.panelContenido.Controls.Add(this.pictureBoxLogo);
             this.panelContenido.Controls.Add(this.labelLogo);
+            this.panelContenido.Controls.Add(this.labelDireccion);
+            this.panelContenido.Controls.Add(this.textBoxDireccion);
+            this.panelContenido.Controls.Add(this.labelCUIT);
+            this.panelContenido.Controls.Add(this.labelLineDireccion);
+            this.panelContenido.Controls.Add(this.textBoxCUIT);
+            this.panelContenido.Controls.Add(this.labelLineRUC);
             this.panelContenido.Location = new System.Drawing.Point(12, 123);
             this.panelContenido.Name = "panelContenido";
             this.panelContenido.Size = new System.Drawing.Size(336, 526);
             this.panelContenido.TabIndex = 95;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(13, 403);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 23);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Correo:";
+            // 
+            // textBoxCorreo
+            // 
+            this.textBoxCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCorreo.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxCorreo.Location = new System.Drawing.Point(17, 429);
+            this.textBoxCorreo.Name = "textBoxCorreo";
+            this.textBoxCorreo.ReadOnly = true;
+            this.textBoxCorreo.Size = new System.Drawing.Size(300, 23);
+            this.textBoxCorreo.TabIndex = 53;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label2.Location = new System.Drawing.Point(17, 455);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(300, 1);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "label2";
             // 
             // buttonActualizar
             // 
@@ -129,7 +168,7 @@
             this.buttonActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonActualizar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonActualizar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonActualizar.Location = new System.Drawing.Point(125, 445);
+            this.buttonActualizar.Location = new System.Drawing.Point(125, 473);
             this.buttonActualizar.Name = "buttonActualizar";
             this.buttonActualizar.Size = new System.Drawing.Size(87, 35);
             this.buttonActualizar.TabIndex = 52;
@@ -145,7 +184,7 @@
             this.labelDireccion.BackColor = System.Drawing.SystemColors.Window;
             this.labelDireccion.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDireccion.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.labelDireccion.Location = new System.Drawing.Point(16, 372);
+            this.labelDireccion.Location = new System.Drawing.Point(13, 338);
             this.labelDireccion.Name = "labelDireccion";
             this.labelDireccion.Size = new System.Drawing.Size(71, 23);
             this.labelDireccion.TabIndex = 44;
@@ -154,19 +193,19 @@
             // textBoxDireccion
             // 
             this.textBoxDireccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDireccion.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxDireccion.Location = new System.Drawing.Point(17, 408);
+            this.textBoxDireccion.Location = new System.Drawing.Point(17, 364);
             this.textBoxDireccion.Name = "textBoxDireccion";
             this.textBoxDireccion.ReadOnly = true;
-            this.textBoxDireccion.Size = new System.Drawing.Size(300, 20);
+            this.textBoxDireccion.Size = new System.Drawing.Size(300, 23);
             this.textBoxDireccion.TabIndex = 38;
             // 
             // labelLineDireccion
             // 
             this.labelLineDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineDireccion.Location = new System.Drawing.Point(17, 431);
+            this.labelLineDireccion.Location = new System.Drawing.Point(17, 390);
             this.labelLineDireccion.Name = "labelLineDireccion";
             this.labelLineDireccion.Size = new System.Drawing.Size(300, 1);
             this.labelLineDireccion.TabIndex = 43;
@@ -178,7 +217,7 @@
             this.labelCUIT.BackColor = System.Drawing.SystemColors.Window;
             this.labelCUIT.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCUIT.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.labelCUIT.Location = new System.Drawing.Point(13, 290);
+            this.labelCUIT.Location = new System.Drawing.Point(13, 273);
             this.labelCUIT.Name = "labelCUIT";
             this.labelCUIT.Size = new System.Drawing.Size(40, 23);
             this.labelCUIT.TabIndex = 42;
@@ -187,19 +226,19 @@
             // textBoxCUIT
             // 
             this.textBoxCUIT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCUIT.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCUIT.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCUIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxCUIT.Location = new System.Drawing.Point(17, 326);
+            this.textBoxCUIT.Location = new System.Drawing.Point(17, 299);
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.ReadOnly = true;
-            this.textBoxCUIT.Size = new System.Drawing.Size(300, 20);
+            this.textBoxCUIT.Size = new System.Drawing.Size(300, 23);
             this.textBoxCUIT.TabIndex = 37;
             // 
             // labelLineRUC
             // 
             this.labelLineRUC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineRUC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineRUC.Location = new System.Drawing.Point(17, 349);
+            this.labelLineRUC.Location = new System.Drawing.Point(17, 325);
             this.labelLineRUC.Name = "labelLineRUC";
             this.labelLineRUC.Size = new System.Drawing.Size(300, 1);
             this.labelLineRUC.TabIndex = 41;
@@ -211,7 +250,7 @@
             this.labelNombre.BackColor = System.Drawing.SystemColors.Window;
             this.labelNombre.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNombre.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.labelNombre.Location = new System.Drawing.Point(13, 213);
+            this.labelNombre.Location = new System.Drawing.Point(13, 208);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(136, 23);
             this.labelNombre.TabIndex = 40;
@@ -220,19 +259,19 @@
             // textBoxNombreNegocio
             // 
             this.textBoxNombreNegocio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNombreNegocio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombreNegocio.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombreNegocio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxNombreNegocio.Location = new System.Drawing.Point(17, 244);
+            this.textBoxNombreNegocio.Location = new System.Drawing.Point(17, 234);
             this.textBoxNombreNegocio.Name = "textBoxNombreNegocio";
             this.textBoxNombreNegocio.ReadOnly = true;
-            this.textBoxNombreNegocio.Size = new System.Drawing.Size(300, 20);
+            this.textBoxNombreNegocio.Size = new System.Drawing.Size(300, 23);
             this.textBoxNombreNegocio.TabIndex = 36;
             // 
             // labelLineNombre
             // 
             this.labelLineNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelLineNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.labelLineNombre.Location = new System.Drawing.Point(17, 267);
+            this.labelLineNombre.Location = new System.Drawing.Point(17, 260);
             this.labelLineNombre.Name = "labelLineNombre";
             this.labelLineNombre.Size = new System.Drawing.Size(300, 1);
             this.labelLineNombre.TabIndex = 39;
@@ -302,5 +341,8 @@
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.Label labelLogo;
         private System.Windows.Forms.Button buttonActualizar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxCorreo;
+        private System.Windows.Forms.Label label2;
     }
 }

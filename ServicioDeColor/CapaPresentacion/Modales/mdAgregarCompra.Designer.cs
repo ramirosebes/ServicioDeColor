@@ -72,6 +72,9 @@
             this.labelTipoDocumento = new System.Windows.Forms.Label();
             this.labelFehca = new System.Windows.Forms.Label();
             this.labelRegistrarCompra = new System.Windows.Forms.Label();
+            this.textBoxSimboloPrecioCompra = new System.Windows.Forms.TextBox();
+            this.textBoxSimboloPrecioVenta = new System.Windows.Forms.TextBox();
+            this.textBoxSimboloTotalAPagar = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.groupBoxInformacionProducto.SuspendLayout();
@@ -83,6 +86,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.textBoxSimboloTotalAPagar);
             this.panel1.Controls.Add(this.buttonRegistrar);
             this.panel1.Controls.Add(this.textBoxTotalAPagar);
             this.panel1.Controls.Add(this.labelTotalAPagar);
@@ -115,10 +119,10 @@
             // textBoxTotalAPagar
             // 
             this.textBoxTotalAPagar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTotalAPagar.Location = new System.Drawing.Point(688, 536);
+            this.textBoxTotalAPagar.Location = new System.Drawing.Point(707, 536);
             this.textBoxTotalAPagar.Name = "textBoxTotalAPagar";
             this.textBoxTotalAPagar.ReadOnly = true;
-            this.textBoxTotalAPagar.Size = new System.Drawing.Size(129, 27);
+            this.textBoxTotalAPagar.Size = new System.Drawing.Size(110, 27);
             this.textBoxTotalAPagar.TabIndex = 13;
             this.textBoxTotalAPagar.Text = "0";
             // 
@@ -246,6 +250,8 @@
             // 
             // groupBoxInformacionProducto
             // 
+            this.groupBoxInformacionProducto.Controls.Add(this.textBoxSimboloPrecioVenta);
+            this.groupBoxInformacionProducto.Controls.Add(this.textBoxSimboloPrecioCompra);
             this.groupBoxInformacionProducto.Controls.Add(this.numericUpDownCantidad);
             this.groupBoxInformacionProducto.Controls.Add(this.labelCantidad);
             this.groupBoxInformacionProducto.Controls.Add(this.textBoxPrecioVenta);
@@ -290,9 +296,9 @@
             // 
             // textBoxPrecioVenta
             // 
-            this.textBoxPrecioVenta.Location = new System.Drawing.Point(519, 45);
+            this.textBoxPrecioVenta.Location = new System.Drawing.Point(538, 45);
             this.textBoxPrecioVenta.Name = "textBoxPrecioVenta";
-            this.textBoxPrecioVenta.Size = new System.Drawing.Size(100, 27);
+            this.textBoxPrecioVenta.Size = new System.Drawing.Size(81, 27);
             this.textBoxPrecioVenta.TabIndex = 10;
             this.textBoxPrecioVenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPrecioVenta_KeyDown);
             this.textBoxPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioVenta_KeyPress);
@@ -308,9 +314,9 @@
             // 
             // textBoxPrecioCompra
             // 
-            this.textBoxPrecioCompra.Location = new System.Drawing.Point(413, 45);
+            this.textBoxPrecioCompra.Location = new System.Drawing.Point(432, 45);
             this.textBoxPrecioCompra.Name = "textBoxPrecioCompra";
-            this.textBoxPrecioCompra.Size = new System.Drawing.Size(100, 27);
+            this.textBoxPrecioCompra.Size = new System.Drawing.Size(81, 27);
             this.textBoxPrecioCompra.TabIndex = 9;
             this.textBoxPrecioCompra.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxPrecioCompra_KeyDown);
             this.textBoxPrecioCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecioCompra_KeyPress);
@@ -530,6 +536,34 @@
             this.labelRegistrarCompra.TabIndex = 0;
             this.labelRegistrarCompra.Text = "Registrar compra";
             // 
+            // textBoxSimboloPrecioCompra
+            // 
+            this.textBoxSimboloPrecioCompra.Location = new System.Drawing.Point(413, 45);
+            this.textBoxSimboloPrecioCompra.Name = "textBoxSimboloPrecioCompra";
+            this.textBoxSimboloPrecioCompra.ReadOnly = true;
+            this.textBoxSimboloPrecioCompra.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloPrecioCompra.TabIndex = 102;
+            this.textBoxSimboloPrecioCompra.Text = "$";
+            // 
+            // textBoxSimboloPrecioVenta
+            // 
+            this.textBoxSimboloPrecioVenta.Location = new System.Drawing.Point(519, 45);
+            this.textBoxSimboloPrecioVenta.Name = "textBoxSimboloPrecioVenta";
+            this.textBoxSimboloPrecioVenta.ReadOnly = true;
+            this.textBoxSimboloPrecioVenta.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloPrecioVenta.TabIndex = 103;
+            this.textBoxSimboloPrecioVenta.Text = "$";
+            // 
+            // textBoxSimboloTotalAPagar
+            // 
+            this.textBoxSimboloTotalAPagar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSimboloTotalAPagar.Location = new System.Drawing.Point(688, 536);
+            this.textBoxSimboloTotalAPagar.Name = "textBoxSimboloTotalAPagar";
+            this.textBoxSimboloTotalAPagar.ReadOnly = true;
+            this.textBoxSimboloTotalAPagar.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloTotalAPagar.TabIndex = 104;
+            this.textBoxSimboloTotalAPagar.Text = "$";
+            // 
             // mdAgregarCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,5 +635,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewButtonColumn buttonEliminar;
         private System.Windows.Forms.TextBox textBoxCorreo;
+        private System.Windows.Forms.TextBox textBoxSimboloPrecioCompra;
+        private System.Windows.Forms.TextBox textBoxSimboloTotalAPagar;
+        private System.Windows.Forms.TextBox textBoxSimboloPrecioVenta;
     }
 }

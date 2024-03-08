@@ -108,12 +108,13 @@
             // 
             // labelTitulo
             // 
+            this.labelTitulo.AutoSize = true;
             this.labelTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.ForeColor = System.Drawing.SystemColors.Window;
             this.labelTitulo.Location = new System.Drawing.Point(15, 15);
             this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(180, 30);
+            this.labelTitulo.Size = new System.Drawing.Size(164, 33);
             this.labelTitulo.TabIndex = 88;
             this.labelTitulo.Text = "Servicio De Color";
             // 
@@ -159,7 +160,7 @@
             // menuUsuarios
             // 
             this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(180, 28);
+            this.menuUsuarios.Size = new System.Drawing.Size(138, 28);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
@@ -170,7 +171,7 @@
             this.menuGruposPermisos,
             this.menuPermisosUsuarios});
             this.menuPermisos.Name = "menuPermisos";
-            this.menuPermisos.Size = new System.Drawing.Size(180, 28);
+            this.menuPermisos.Size = new System.Drawing.Size(138, 28);
             this.menuPermisos.Text = "Permisos";
             // 
             // menuPermisosSimples
@@ -201,7 +202,7 @@
             this.menuAuditoriaCompras,
             this.menuAuditoriaVentas});
             this.menuAuditorias.Name = "menuAuditorias";
-            this.menuAuditorias.Size = new System.Drawing.Size(180, 28);
+            this.menuAuditorias.Size = new System.Drawing.Size(138, 28);
             this.menuAuditorias.Text = "Auditoría";
             // 
             // menuAuditoriaSesiones

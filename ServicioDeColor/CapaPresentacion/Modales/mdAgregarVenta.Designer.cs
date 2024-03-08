@@ -33,6 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mdAgregarVenta));
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.textBoxSimboloCambio = new System.Windows.Forms.TextBox();
+            this.textBoxSimboloPagaCon = new System.Windows.Forms.TextBox();
+            this.textBoxSimboloTotal = new System.Windows.Forms.TextBox();
+            this.textBoxSimboloSubTotal = new System.Windows.Forms.TextBox();
+            this.textBoxSimboloMontoDescuento = new System.Windows.Forms.TextBox();
             this.buttonDescuento = new System.Windows.Forms.Button();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.textBoxDescuento = new System.Windows.Forms.TextBox();
@@ -56,6 +61,8 @@
             this.buttonEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.groupBoxInformacionProducto = new System.Windows.Forms.GroupBox();
+            this.textBoxSimboloStock = new System.Windows.Forms.TextBox();
+            this.textBoxSimboloPrecio = new System.Windows.Forms.TextBox();
             this.numericUpDownCantidad = new System.Windows.Forms.NumericUpDown();
             this.labelCantidad = new System.Windows.Forms.Label();
             this.textBoxStock = new System.Windows.Forms.TextBox();
@@ -93,6 +100,11 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelContenedor.Controls.Add(this.textBoxSimboloCambio);
+            this.panelContenedor.Controls.Add(this.textBoxSimboloPagaCon);
+            this.panelContenedor.Controls.Add(this.textBoxSimboloTotal);
+            this.panelContenedor.Controls.Add(this.textBoxSimboloSubTotal);
+            this.panelContenedor.Controls.Add(this.textBoxSimboloMontoDescuento);
             this.panelContenedor.Controls.Add(this.buttonDescuento);
             this.panelContenedor.Controls.Add(this.textBoxTotal);
             this.panelContenedor.Controls.Add(this.textBoxDescuento);
@@ -118,6 +130,61 @@
             this.panelContenedor.Size = new System.Drawing.Size(835, 629);
             this.panelContenedor.TabIndex = 1;
             // 
+            // textBoxSimboloCambio
+            // 
+            this.textBoxSimboloCambio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSimboloCambio.Location = new System.Drawing.Point(688, 551);
+            this.textBoxSimboloCambio.Name = "textBoxSimboloCambio";
+            this.textBoxSimboloCambio.ReadOnly = true;
+            this.textBoxSimboloCambio.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloCambio.TabIndex = 108;
+            this.textBoxSimboloCambio.Text = "$";
+            this.textBoxSimboloCambio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxSimboloPagaCon
+            // 
+            this.textBoxSimboloPagaCon.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSimboloPagaCon.Location = new System.Drawing.Point(688, 499);
+            this.textBoxSimboloPagaCon.Name = "textBoxSimboloPagaCon";
+            this.textBoxSimboloPagaCon.ReadOnly = true;
+            this.textBoxSimboloPagaCon.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloPagaCon.TabIndex = 107;
+            this.textBoxSimboloPagaCon.Text = "$";
+            this.textBoxSimboloPagaCon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxSimboloTotal
+            // 
+            this.textBoxSimboloTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSimboloTotal.Location = new System.Drawing.Point(688, 412);
+            this.textBoxSimboloTotal.Name = "textBoxSimboloTotal";
+            this.textBoxSimboloTotal.ReadOnly = true;
+            this.textBoxSimboloTotal.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloTotal.TabIndex = 106;
+            this.textBoxSimboloTotal.Text = "$";
+            this.textBoxSimboloTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxSimboloSubTotal
+            // 
+            this.textBoxSimboloSubTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSimboloSubTotal.Location = new System.Drawing.Point(688, 256);
+            this.textBoxSimboloSubTotal.Name = "textBoxSimboloSubTotal";
+            this.textBoxSimboloSubTotal.ReadOnly = true;
+            this.textBoxSimboloSubTotal.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloSubTotal.TabIndex = 105;
+            this.textBoxSimboloSubTotal.Text = "$";
+            this.textBoxSimboloSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxSimboloMontoDescuento
+            // 
+            this.textBoxSimboloMontoDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSimboloMontoDescuento.Location = new System.Drawing.Point(688, 360);
+            this.textBoxSimboloMontoDescuento.Name = "textBoxSimboloMontoDescuento";
+            this.textBoxSimboloMontoDescuento.ReadOnly = true;
+            this.textBoxSimboloMontoDescuento.Size = new System.Drawing.Size(15, 27);
+            this.textBoxSimboloMontoDescuento.TabIndex = 104;
+            this.textBoxSimboloMontoDescuento.Text = "-";
+            this.textBoxSimboloMontoDescuento.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // buttonDescuento
             // 
             this.buttonDescuento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(17)))));
@@ -137,19 +204,19 @@
             // textBoxTotal
             // 
             this.textBoxTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTotal.Location = new System.Drawing.Point(688, 412);
+            this.textBoxTotal.Location = new System.Drawing.Point(707, 412);
             this.textBoxTotal.Name = "textBoxTotal";
             this.textBoxTotal.ReadOnly = true;
-            this.textBoxTotal.Size = new System.Drawing.Size(129, 27);
+            this.textBoxTotal.Size = new System.Drawing.Size(110, 27);
             this.textBoxTotal.TabIndex = 16;
             this.textBoxTotal.Text = "0.00";
             // 
             // textBoxDescuento
             // 
             this.textBoxDescuento.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDescuento.Location = new System.Drawing.Point(688, 360);
+            this.textBoxDescuento.Location = new System.Drawing.Point(709, 360);
             this.textBoxDescuento.Name = "textBoxDescuento";
-            this.textBoxDescuento.Size = new System.Drawing.Size(129, 27);
+            this.textBoxDescuento.Size = new System.Drawing.Size(108, 27);
             this.textBoxDescuento.TabIndex = 15;
             this.textBoxDescuento.Text = "0.00";
             this.textBoxDescuento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDescuento_KeyDown);
@@ -189,10 +256,10 @@
             // textBoxSubTotal
             // 
             this.textBoxSubTotal.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSubTotal.Location = new System.Drawing.Point(688, 256);
+            this.textBoxSubTotal.Location = new System.Drawing.Point(707, 256);
             this.textBoxSubTotal.Name = "textBoxSubTotal";
             this.textBoxSubTotal.ReadOnly = true;
-            this.textBoxSubTotal.Size = new System.Drawing.Size(129, 27);
+            this.textBoxSubTotal.Size = new System.Drawing.Size(110, 27);
             this.textBoxSubTotal.TabIndex = 13;
             this.textBoxSubTotal.Text = "0.00";
             // 
@@ -220,9 +287,9 @@
             // textBoxPagaCon
             // 
             this.textBoxPagaCon.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPagaCon.Location = new System.Drawing.Point(688, 499);
+            this.textBoxPagaCon.Location = new System.Drawing.Point(707, 499);
             this.textBoxPagaCon.Name = "textBoxPagaCon";
-            this.textBoxPagaCon.Size = new System.Drawing.Size(129, 27);
+            this.textBoxPagaCon.Size = new System.Drawing.Size(110, 27);
             this.textBoxPagaCon.TabIndex = 18;
             this.textBoxPagaCon.Text = "0.00";
             this.textBoxPagaCon.TextChanged += new System.EventHandler(this.textBoxPagaCon_TextChanged);
@@ -258,10 +325,10 @@
             // textBoxCambio
             // 
             this.textBoxCambio.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCambio.Location = new System.Drawing.Point(688, 551);
+            this.textBoxCambio.Location = new System.Drawing.Point(709, 551);
             this.textBoxCambio.Name = "textBoxCambio";
             this.textBoxCambio.ReadOnly = true;
-            this.textBoxCambio.Size = new System.Drawing.Size(129, 27);
+            this.textBoxCambio.Size = new System.Drawing.Size(108, 27);
             this.textBoxCambio.TabIndex = 19;
             this.textBoxCambio.Text = "0.00";
             // 
@@ -381,6 +448,8 @@
             // 
             // groupBoxInformacionProducto
             // 
+            this.groupBoxInformacionProducto.Controls.Add(this.textBoxSimboloStock);
+            this.groupBoxInformacionProducto.Controls.Add(this.textBoxSimboloPrecio);
             this.groupBoxInformacionProducto.Controls.Add(this.numericUpDownCantidad);
             this.groupBoxInformacionProducto.Controls.Add(this.labelCantidad);
             this.groupBoxInformacionProducto.Controls.Add(this.textBoxStock);
@@ -400,6 +469,26 @@
             this.groupBoxInformacionProducto.TabIndex = 6;
             this.groupBoxInformacionProducto.TabStop = false;
             this.groupBoxInformacionProducto.Text = "Información del producto";
+            // 
+            // textBoxSimboloStock
+            // 
+            this.textBoxSimboloStock.Location = new System.Drawing.Point(519, 44);
+            this.textBoxSimboloStock.Name = "textBoxSimboloStock";
+            this.textBoxSimboloStock.ReadOnly = true;
+            this.textBoxSimboloStock.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloStock.TabIndex = 105;
+            this.textBoxSimboloStock.Text = "$";
+            this.textBoxSimboloStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxSimboloPrecio
+            // 
+            this.textBoxSimboloPrecio.Location = new System.Drawing.Point(413, 45);
+            this.textBoxSimboloPrecio.Name = "textBoxSimboloPrecio";
+            this.textBoxSimboloPrecio.ReadOnly = true;
+            this.textBoxSimboloPrecio.Size = new System.Drawing.Size(13, 27);
+            this.textBoxSimboloPrecio.TabIndex = 104;
+            this.textBoxSimboloPrecio.Text = "$";
+            this.textBoxSimboloPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDownCantidad
             // 
@@ -425,10 +514,10 @@
             // 
             // textBoxStock
             // 
-            this.textBoxStock.Location = new System.Drawing.Point(519, 45);
+            this.textBoxStock.Location = new System.Drawing.Point(538, 45);
             this.textBoxStock.Name = "textBoxStock";
             this.textBoxStock.ReadOnly = true;
-            this.textBoxStock.Size = new System.Drawing.Size(100, 27);
+            this.textBoxStock.Size = new System.Drawing.Size(81, 27);
             this.textBoxStock.TabIndex = 10;
             // 
             // labelStock
@@ -442,10 +531,10 @@
             // 
             // textBoxPrecio
             // 
-            this.textBoxPrecio.Location = new System.Drawing.Point(413, 45);
+            this.textBoxPrecio.Location = new System.Drawing.Point(432, 45);
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.ReadOnly = true;
-            this.textBoxPrecio.Size = new System.Drawing.Size(100, 27);
+            this.textBoxPrecio.Size = new System.Drawing.Size(81, 27);
             this.textBoxPrecio.TabIndex = 9;
             this.textBoxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecio_KeyPress);
             // 
@@ -746,5 +835,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewButtonColumn buttonEliminar;
+        private System.Windows.Forms.TextBox textBoxSimboloMontoDescuento;
+        private System.Windows.Forms.TextBox textBoxSimboloStock;
+        private System.Windows.Forms.TextBox textBoxSimboloPrecio;
+        private System.Windows.Forms.TextBox textBoxSimboloCambio;
+        private System.Windows.Forms.TextBox textBoxSimboloPagaCon;
+        private System.Windows.Forms.TextBox textBoxSimboloTotal;
+        private System.Windows.Forms.TextBox textBoxSimboloSubTotal;
     }
 }

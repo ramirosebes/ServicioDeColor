@@ -18,6 +18,8 @@ namespace CapaPresentacion.Modales
         private CC_Negocio oCC_Negocio = new CC_Negocio();
         public int idNegocio { get; set; }
 
+        private bool verCalve = false;
+
         public mdDetalleNegocio(int idNegocio)
         {
             InitializeComponent();
@@ -39,6 +41,8 @@ namespace CapaPresentacion.Modales
             textBoxNombreNegocio.Text = datos.Nombre;
             textBoxCUIT.Text = datos.CUIT;
             textBoxDireccion.Text = datos.Direccion;
+            textBoxCorreo.Text = datos.Correo;
+            textBoxClave.Text = datos.Clave;
         }
 
         public Image ByteToImage(byte[] imageBytes)
@@ -80,14 +84,16 @@ namespace CapaPresentacion.Modales
             {
                 Nombre = textBoxNombreNegocio.Text,
                 CUIT = textBoxCUIT.Text,
-                Direccion = textBoxDireccion.Text
+                Direccion = textBoxDireccion.Text,
+                Correo = textBoxCorreo.Text,
+                Clave = textBoxClave.Text
             };
 
             bool respuesta = new CC_Negocio().GuardarDatos(obj, out mensaje);
 
             if (respuesta)
             {
-                MessageBox.Show("Los cambios fueron guardados", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Los cambios fueron guardados" + "\n Los mostraran al reiniciar el programa", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
@@ -166,6 +172,59 @@ namespace CapaPresentacion.Modales
                 textBox.Text = textBox.Text.Substring(0, 50);
                 // Establecemos el cursor al final del texto
                 textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void buttonVerClave_MouseDown(object sender, MouseEventArgs e)
+        {
+            //textBoxClave.PasswordChar = '\0';
+        }
+
+        private void buttonVerClave_MouseUp(object sender, MouseEventArgs e)
+        {
+            //textBoxClave.PasswordChar = '*';
+        }
+
+        private void textBoxCorreo_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 100
+            if (textBox.Text.Length > 100)
+            {
+                // Si es mayor, truncamos el texto a 100 caracteres
+                textBox.Text = textBox.Text.Substring(0, 100);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void textBoxClave_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+
+            // Verifica si la longitud del texto es mayor que 50
+            if (textBox.Text.Length > 50)
+            {
+                // Si es mayor, truncamos el texto a 50 caracteres
+                textBox.Text = textBox.Text.Substring(0, 50);
+                // Establecemos el cursor al final del texto
+                textBox.SelectionStart = textBox.Text.Length;
+            }
+        }
+
+        private void buttonVerClave_Click(object sender, EventArgs e)
+        {
+
+            verCalve = !verCalve;
+
+            if (verCalve)
+            {
+                textBoxClave.PasswordChar = '\0';
+            }
+            else
+            {
+                textBoxClave.PasswordChar = '*';
             }
         }
     }

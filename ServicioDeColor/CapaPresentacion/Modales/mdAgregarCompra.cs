@@ -23,6 +23,7 @@ namespace CapaPresentacion.Modales
     public partial class mdAgregarCompra : Form
     {
         private Usuario _usuarioActual;
+        private CC_Negocio oCC_Negocio = new CC_Negocio();
 
         public mdAgregarCompra(Usuario oUsuario)
         {
@@ -662,18 +663,22 @@ namespace CapaPresentacion.Modales
         {
             try
             {
+                Negocio oNegocio = oCC_Negocio.ObtenerDatos();
+
                 // Crear un cliente SMTP para enviar el correo electrónico
                 SmtpClient client = new SmtpClient("smtp-mail.outlook.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("serviciodecolortdp@outlook.com", "Ser01Vi02Cio03De04Co05Lor06."),
+                    //Credentials = new NetworkCredential("serviciodecolortdp@outlook.com", "Ser01Vi02Cio03De04Co05Lor06."),
+                    Credentials = new NetworkCredential(oNegocio.Correo, oNegocio.Clave),
                     EnableSsl = true,
                 };
 
                 // Crear el mensaje de correo electrónico
                 MailMessage mensaje = new MailMessage
                 {
-                    From = new MailAddress("serviciodecolortdp@outlook.com"),
+                    //From = new MailAddress("serviciodecolortdp@outlook.com"),
+                    From = new MailAddress(oNegocio.Correo),
                     Subject = "Comprobante de compra",
                     Body = "Adjunto encontrarás el comprobante de compra.",
                 };

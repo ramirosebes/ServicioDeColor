@@ -14,6 +14,8 @@ namespace CapaPresentacion
 {
     public partial class InicioDeSesion : Form
     {
+        private CC_Negocio oCC_Negocio = new CC_Negocio();
+
         public InicioDeSesion()
         {
             InitializeComponent();
@@ -111,7 +113,8 @@ namespace CapaPresentacion
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-
+            Negocio oNegocio = oCC_Negocio.ObtenerDatos();
+            labelTitulo.Text = oNegocio.Nombre;
         }
 
         private void textBoxDocumento_KeyDown(object sender, KeyEventArgs e)
@@ -127,6 +130,16 @@ namespace CapaPresentacion
             {
                 textBoxClave.Select();
             }
+        }
+
+        private void labelTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelSubTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

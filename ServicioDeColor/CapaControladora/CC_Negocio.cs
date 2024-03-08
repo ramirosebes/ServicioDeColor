@@ -36,6 +36,16 @@ namespace CapaControladora
                 Mensaje += "Es necesario la direccion del negocio\n";
             }
 
+            if (obj.Correo == "")
+            {
+                Mensaje += "Es necesario el correo del negocio\n";
+            }
+
+            if (obj.Clave == "")
+            {
+                Mensaje += "Es necesario la clave del negocio\n";
+            }
+
             if (Mensaje != string.Empty)
             {
                 return false;

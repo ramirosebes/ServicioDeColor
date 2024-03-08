@@ -21,7 +21,7 @@ namespace CapaDatos
 
                 try
                 {
-                    string query = "select IdNegocio, Nombre, CUIT, Direccion from Negocio where IdNegocio = 1";
+                    string query = "select IdNegocio, Nombre, CUIT, Direccion, Correo, Clave from Negocio where IdNegocio = 1";
 
                     SqlCommand cmd = new SqlCommand(query, conexion);
                     cmd.CommandType = CommandType.Text;
@@ -33,6 +33,8 @@ namespace CapaDatos
                         negocio.Nombre = dr["Nombre"].ToString();
                         negocio.CUIT = dr["CUIT"].ToString();
                         negocio.Direccion = dr["Direccion"].ToString();
+                        negocio.Correo = dr["Correo"].ToString();
+                        negocio.Clave = dr["Clave"].ToString();
                     }   
                 }
                 catch (Exception ex)
@@ -59,13 +61,17 @@ namespace CapaDatos
                     StringBuilder query = new StringBuilder();
                     query.AppendLine("update Negocio set Nombre = @Nombre,");
                     query.AppendLine("CUIT = @CUIT,");
-                    query.AppendLine("Direccion = @Direccion");
+                    query.AppendLine("Direccion = @Direccion,");
+                    query.AppendLine("Correo = @Correo,");
+                    query.AppendLine("Clave = @Clave");
                     query.AppendLine("where IdNegocio = 1;");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
                     cmd.Parameters.AddWithValue("@Nombre", oNegocio.Nombre);
                     cmd.Parameters.AddWithValue("@CUIT", oNegocio.CUIT);
                     cmd.Parameters.AddWithValue("@Direccion", oNegocio.Direccion);
+                    cmd.Parameters.AddWithValue("@Correo", oNegocio.Correo);
+                    cmd.Parameters.AddWithValue("@Clave", oNegocio.Clave);
                     cmd.CommandType = CommandType.Text;
 
                     if (cmd.ExecuteNonQuery() < 1)

@@ -87,6 +87,7 @@ namespace CapaPresentacion
             textBoxNombreNegocio.Text = datos.Nombre;
             textBoxCUIT.Text = datos.CUIT;
             textBoxDireccion.Text = datos.Direccion;
+            textBoxCorreo.Text = datos.Correo;
         }
     }
 }

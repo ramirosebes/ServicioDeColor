@@ -18,6 +18,7 @@ namespace CapaPresentacion
         private static Usuario _usuarioActual;
         private static ToolStripMenuItem _menuActivo = null;
         private static Form _formularioActivo = null;
+        private CC_Negocio oCC_Negocio = new CC_Negocio();
 
         public Inicio(Usuario oUsuario = null)
         {
@@ -162,6 +163,9 @@ namespace CapaPresentacion
             }
 
             labelUsuario.Text = _usuarioActual.NombreCompleto;
+
+            Negocio oNegocio = oCC_Negocio.ObtenerDatos();
+            labelTitulo.Text = oNegocio.Nombre;
         }
 
         private void abrirFormulario(ToolStripMenuItem menu, Form formulario)
