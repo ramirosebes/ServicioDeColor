@@ -812,6 +812,7 @@ namespace CapaPresentacion.Modales
             {
                 MessageBox.Show(ex.Message, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void EnviarCorreo(string rutaDescarga, Venta oVenta)
@@ -844,13 +845,15 @@ namespace CapaPresentacion.Modales
                 // Enviar el mensaje de correo electrónico
                 client.Send(mensaje);
 
-                MessageBox.Show("El correo electrónico ha sido enviado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //// Borra el archivo después de enviar el correo electrónico
+                //File.Delete(rutaDescarga);
+
+                MessageBox.Show("Se ha enviado el comprobante de la venta por correo electronico a " + oVenta.oCliente.NombreCompleto + ".", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al enviar el correo electrónico: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void textBoxPagaCon_Leave(object sender, EventArgs e)

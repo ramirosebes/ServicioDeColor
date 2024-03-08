@@ -655,7 +655,10 @@ namespace CapaPresentacion.Modales
                 // Enviar el mensaje de correo electrónico
                 client.Send(mensaje);
 
-                MessageBox.Show("El correo electrónico ha sido enviado correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Borra el archivo después de enviar el correo electrónico
+                //File.Delete(rutaDescarga);
+
+                MessageBox.Show("Se ha enviado el comprobante de la compra por correo electronico a " + oCompra.oProveedor.RazonSocial + ".", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
