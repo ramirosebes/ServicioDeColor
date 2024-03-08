@@ -48,6 +48,12 @@
             this.textBoxCambio = new System.Windows.Forms.TextBox();
             this.labelCambio = new System.Windows.Forms.Label();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
+            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.buttonAgregar = new System.Windows.Forms.Button();
             this.groupBoxInformacionProducto = new System.Windows.Forms.GroupBox();
             this.numericUpDownCantidad = new System.Windows.Forms.NumericUpDown();
@@ -76,12 +82,6 @@
             this.labelTipoDocumento = new System.Windows.Forms.Label();
             this.labelFehca = new System.Windows.Forms.Label();
             this.labelRegistrarVentas = new System.Windows.Forms.Label();
-            this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
             this.groupBoxInformacionProducto.SuspendLayout();
@@ -319,6 +319,51 @@
             this.dataGridViewData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewData_CellContentClick);
             this.dataGridViewData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewData_CellPainting);
             // 
+            // IdProducto
+            // 
+            this.IdProducto.HeaderText = "IdProducto";
+            this.IdProducto.Name = "IdProducto";
+            this.IdProducto.ReadOnly = true;
+            this.IdProducto.Visible = false;
+            this.IdProducto.Width = 50;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            this.Producto.Width = 230;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            this.Precio.Width = 120;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 120;
+            // 
+            // SubTotal
+            // 
+            this.SubTotal.HeaderText = "Subtotal";
+            this.SubTotal.Name = "SubTotal";
+            this.SubTotal.ReadOnly = true;
+            this.SubTotal.Width = 120;
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.HeaderText = "";
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.ReadOnly = true;
+            this.buttonEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.buttonEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.buttonEliminar.Width = 30;
+            // 
             // buttonAgregar
             // 
             this.buttonAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(204)))), ((int)(((byte)(112)))));
@@ -455,6 +500,8 @@
             // 
             // textBoxCodigoProducto
             // 
+            this.textBoxCodigoProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBoxCodigoProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxCodigoProducto.Location = new System.Drawing.Point(10, 45);
             this.textBoxCodigoProducto.Name = "textBoxCodigoProducto";
             this.textBoxCodigoProducto.Size = new System.Drawing.Size(150, 27);
@@ -530,6 +577,8 @@
             // 
             // textBoxDocumentoCliente
             // 
+            this.textBoxDocumentoCliente.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBoxDocumentoCliente.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxDocumentoCliente.Location = new System.Drawing.Point(10, 45);
             this.textBoxDocumentoCliente.Name = "textBoxDocumentoCliente";
             this.textBoxDocumentoCliente.Size = new System.Drawing.Size(150, 27);
@@ -615,51 +664,6 @@
             this.labelRegistrarVentas.Size = new System.Drawing.Size(162, 33);
             this.labelRegistrarVentas.TabIndex = 1;
             this.labelRegistrarVentas.Text = "Registrar ventas";
-            // 
-            // IdProducto
-            // 
-            this.IdProducto.HeaderText = "IdProducto";
-            this.IdProducto.Name = "IdProducto";
-            this.IdProducto.ReadOnly = true;
-            this.IdProducto.Visible = false;
-            this.IdProducto.Width = 50;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 230;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Width = 120;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 120;
-            // 
-            // SubTotal
-            // 
-            this.SubTotal.HeaderText = "Subtotal";
-            this.SubTotal.Name = "SubTotal";
-            this.SubTotal.ReadOnly = true;
-            this.SubTotal.Width = 120;
-            // 
-            // buttonEliminar
-            // 
-            this.buttonEliminar.HeaderText = "";
-            this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.ReadOnly = true;
-            this.buttonEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.buttonEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.buttonEliminar.Width = 30;
             // 
             // mdAgregarVenta
             // 

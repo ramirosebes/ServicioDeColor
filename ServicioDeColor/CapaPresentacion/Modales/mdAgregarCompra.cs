@@ -43,6 +43,9 @@ namespace CapaPresentacion.Modales
 
             textBoxIdProveedor.Text = "0";
             textBoxIdProducto.Text = "0";
+
+            AutoCompletarCuitProveedor();
+            AutoCompletarCodigoProducto();
         }
 
         private void buttonBuscarProveedor_Click(object sender, EventArgs e)
@@ -441,7 +444,7 @@ namespace CapaPresentacion.Modales
                 textBoxCodigoProducto.BackColor = System.Drawing.Color.FromArgb(45, 204, 112);
                 textBoxIdProducto.Text = oProducto.IdProducto.ToString();
                 textBoxProducto.Text = oProducto.Nombre;
-                textBoxPrecioCompra.Select();
+                //.Select();
             }
             else
             {
@@ -449,6 +452,18 @@ namespace CapaPresentacion.Modales
                 textBoxIdProducto.Text = "0";
                 textBoxProducto.Text = "";
             }
+        }
+
+        void AutoCompletarCodigoProducto()
+        {
+            AutoCompleteStringCollection lista = new AutoCompleteStringCollection();
+
+            foreach (var item in new CC_Producto().ListarProductos().Where(p => p.Estado == true).Select(p => p.Codigo).ToArray())
+            {
+                lista.Add(item);
+            }
+
+            textBoxCodigoProducto.AutoCompleteCustomSource = lista;
         }
 
         private void textBoxCUIT_TextChanged(object sender, EventArgs e)
@@ -462,7 +477,7 @@ namespace CapaPresentacion.Modales
                 textBoxCUIT.Text = oProveedor.CUIT;
                 textBoxRazonSocial.Text = oProveedor.RazonSocial;
                 textBoxCorreo.Text = oProveedor.Correo;
-                textBoxCodigoProducto.Select();
+                //textBoxCodigoProducto.Select();
             }
             else
             {
@@ -470,6 +485,26 @@ namespace CapaPresentacion.Modales
                 textBoxIdProveedor.Text = "0";
                 textBoxRazonSocial.Text = "";
             }
+        }
+
+        void AutoCompletarCuitProveedor()
+        {
+            //DataTable datos = new DataTable();
+            AutoCompleteStringCollection listaCUIT = new AutoCompleteStringCollection();
+
+            //Metodo 1
+            //foreach (var item in new CC_Proveedor().ListarProveedores().Where(p => p.Estado == true).ToArray()) //.Select(p => p.CUIT)
+            //{
+            //    listaCUIT.Add(item.CUIT + " - " + item.RazonSocial);
+            //}
+
+            //Metodo 2
+            foreach (var item in new CC_Proveedor().ListarProveedores().Where(p => p.Estado == true).Select(p => p.CUIT).ToArray())
+            {
+                listaCUIT.Add(item);
+            }
+
+            textBoxCUIT.AutoCompleteCustomSource = listaCUIT;
         }
 
         private void textBoxCUIT_KeyDown(object sender, KeyEventArgs e)

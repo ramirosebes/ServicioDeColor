@@ -56,6 +56,9 @@ namespace CapaPresentacion.Modales
             textBoxPagaCon.Text = "0.00";
             textBoxCambio.Text = "0.00";
             textBoxSubTotal.Text = "0.00";
+
+            AutoCompletarDocumentoCliente();
+            AutoCompletarCodigoProducto();
         }
 
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
@@ -643,8 +646,8 @@ namespace CapaPresentacion.Modales
                 textBoxProducto.Text = oProducto.Nombre;
                 textBoxPrecio.Text = oProducto.PrecioVenta.ToString("0.00");
                 textBoxStock.Text = oProducto.Stock.ToString();
-                numericUpDownCantidad.Focus();
-                numericUpDownCantidad.Select(0, numericUpDownCantidad.Text.Length);
+                //numericUpDownCantidad.Focus();
+                //numericUpDownCantidad.Select(0, numericUpDownCantidad.Text.Length);
             }
             else
             {
@@ -655,6 +658,18 @@ namespace CapaPresentacion.Modales
                 textBoxStock.Text = "";
                 numericUpDownCantidad.Value = 1;
             }
+        }
+
+        void AutoCompletarCodigoProducto()
+        {
+            AutoCompleteStringCollection lista = new AutoCompleteStringCollection();
+
+            foreach (var item in new CC_Producto().ListarProductos().Where(p => p.Estado == true).Select(p => p.Codigo).ToArray())
+            {
+                lista.Add(item);
+            }
+
+            textBoxCodigoProducto.AutoCompleteCustomSource = lista;
         }
 
         private void textBoxDocumentoCliente_TextChanged(object sender, EventArgs e)
@@ -668,7 +683,7 @@ namespace CapaPresentacion.Modales
                 textBoxDocumentoCliente.Text = oCliente.Documento;
                 textBoxNombreCompleto.Text = oCliente.NombreCompleto;
                 textBoxCorreo.Text = oCliente.Correo;
-                textBoxCodigoProducto.Select();
+                //textBoxCodigoProducto.Select();
             }
             else
             {
@@ -676,6 +691,18 @@ namespace CapaPresentacion.Modales
                 textBoxIdCliente.Text = "0";
                 textBoxNombreCompleto.Text = "";
             }
+        }
+
+        void AutoCompletarDocumentoCliente()
+        {
+            AutoCompleteStringCollection lista = new AutoCompleteStringCollection();
+
+            foreach (var item in new CC_Cliente().ListarClientes().Where(p => p.Estado == true).Select(p => p.Documento).ToArray())
+            {
+                lista.Add(item);
+            }
+
+            textBoxDocumentoCliente.AutoCompleteCustomSource = lista;
         }
 
         private void textBoxDocumentoCliente_KeyDown(object sender, KeyEventArgs e)

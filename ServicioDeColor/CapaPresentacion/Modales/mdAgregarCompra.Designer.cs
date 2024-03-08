@@ -366,6 +366,8 @@
             // 
             // textBoxCodigoProducto
             // 
+            this.textBoxCodigoProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBoxCodigoProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxCodigoProducto.Location = new System.Drawing.Point(10, 45);
             this.textBoxCodigoProducto.Name = "textBoxCodigoProducto";
             this.textBoxCodigoProducto.Size = new System.Drawing.Size(150, 27);
@@ -440,6 +442,8 @@
             // 
             // textBoxCUIT
             // 
+            this.textBoxCUIT.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBoxCUIT.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxCUIT.Location = new System.Drawing.Point(10, 45);
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(150, 27);
