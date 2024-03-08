@@ -59,6 +59,8 @@ namespace CapaPresentacion.Modales
 
             AutoCompletarDocumentoCliente();
             AutoCompletarCodigoProducto();
+
+            EliminarComrpobantes();
         }
 
         private void buttonBuscarCliente_Click(object sender, EventArgs e)
@@ -880,6 +882,34 @@ namespace CapaPresentacion.Modales
             catch (Exception ex)
             {
                 MessageBox.Show("Error al enviar el correo electrónico: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EliminarComrpobantes()
+        {
+            try
+            {
+                // Obtener la ruta del directorio base del proyecto
+                string directorioBase = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+
+                // Construir la ruta completa para la carpeta "Comprobantes" dentro del proyecto
+                string rutaComprobantes = Path.Combine(directorioBase, "Comprobantes");
+
+                string[] archivos = Directory.GetFiles(rutaComprobantes);
+
+                // Eliminar cada archivo en el directorio de comprobantes
+                foreach (string archivo in archivos)
+                {
+                    File.Delete(archivo);
+                }
+
+                //MessageBox.Show("Se han eliminado todos los comprobantes correctamente.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Console.WriteLine("Se han eliminado todos los comprobantes correectamente");
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("Error al eliminar los comprobantes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("Error al eliminar los comprobantes: " + ex.Message);
             }
         }
 
