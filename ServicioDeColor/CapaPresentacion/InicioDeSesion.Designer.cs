@@ -139,7 +139,6 @@
             // 
             // labelTitulo
             // 
-            this.labelTitulo.AutoSize = true;
             this.labelTitulo.Font = new System.Drawing.Font("Bahnschrift Condensed", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.labelTitulo.Location = new System.Drawing.Point(30, 30);
@@ -147,6 +146,7 @@
             this.labelTitulo.Size = new System.Drawing.Size(226, 45);
             this.labelTitulo.TabIndex = 25;
             this.labelTitulo.Text = "Servicio De Color";
+            this.labelTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelTitulo.Click += new System.EventHandler(this.labelTitulo_Click);
             // 
             // labelSubTitulo

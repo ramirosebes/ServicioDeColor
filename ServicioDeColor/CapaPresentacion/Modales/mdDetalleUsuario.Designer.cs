@@ -131,7 +131,7 @@
             // 
             this.textBoxConfirmarClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxConfirmarClave, "textBoxConfirmarClave");
-            this.textBoxConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxConfirmarClave.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxConfirmarClave.Name = "textBoxConfirmarClave";
             this.textBoxConfirmarClave.TextChanged += new System.EventHandler(this.textBoxConfirmarClave_TextChanged);
             // 
@@ -139,7 +139,7 @@
             // 
             this.textBoxClave.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxClave, "textBoxClave");
-            this.textBoxClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxClave.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxClave.Name = "textBoxClave";
             this.textBoxClave.TextChanged += new System.EventHandler(this.textBoxClave_TextChanged);
             // 
@@ -147,14 +147,14 @@
             // 
             resources.ApplyResources(this.labelClave, "labelClave");
             this.labelClave.BackColor = System.Drawing.SystemColors.Window;
-            this.labelClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelClave.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelClave.Name = "labelClave";
             // 
             // labelConfirmarClave
             // 
             resources.ApplyResources(this.labelConfirmarClave, "labelConfirmarClave");
             this.labelConfirmarClave.BackColor = System.Drawing.SystemColors.Window;
-            this.labelConfirmarClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelConfirmarClave.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelConfirmarClave.Name = "labelConfirmarClave";
             // 
             // labelLineClave
@@ -208,7 +208,7 @@
             // 
             this.textBoxDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxDocumento, "textBoxDocumento");
-            this.textBoxDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxDocumento.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxDocumento.Name = "textBoxDocumento";
             this.textBoxDocumento.TextChanged += new System.EventHandler(this.textBoxDocumento_TextChanged);
             this.textBoxDocumento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxDocumento_KeyDown);
@@ -219,7 +219,7 @@
             // 
             resources.ApplyResources(this.labelDocumento, "labelDocumento");
             this.labelDocumento.BackColor = System.Drawing.SystemColors.Window;
-            this.labelDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelDocumento.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelDocumento.Name = "labelDocumento";
             // 
             // labelLineNombreCompleto
@@ -233,7 +233,7 @@
             // 
             this.textBoxNombreCompleto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxNombreCompleto, "textBoxNombreCompleto");
-            this.textBoxNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxNombreCompleto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxNombreCompleto.Name = "textBoxNombreCompleto";
             this.textBoxNombreCompleto.TextChanged += new System.EventHandler(this.textBoxNombreCompleto_TextChanged);
             this.textBoxNombreCompleto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxNombreCompleto_KeyDown);
@@ -243,7 +243,7 @@
             // 
             resources.ApplyResources(this.labelNombreCompleto, "labelNombreCompleto");
             this.labelNombreCompleto.BackColor = System.Drawing.SystemColors.Window;
-            this.labelNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelNombreCompleto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelNombreCompleto.Name = "labelNombreCompleto";
             // 
             // labelLineCorreo
@@ -257,7 +257,7 @@
             // 
             this.textBoxCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.textBoxCorreo, "textBoxCorreo");
-            this.textBoxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxCorreo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.TextChanged += new System.EventHandler(this.textBoxCorreo_TextChanged);
             this.textBoxCorreo.Leave += new System.EventHandler(this.textBoxCorreo_Leave);
@@ -266,7 +266,7 @@
             // 
             resources.ApplyResources(this.labelCorreo, "labelCorreo");
             this.labelCorreo.BackColor = System.Drawing.SystemColors.Window;
-            this.labelCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelCorreo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelCorreo.Name = "labelCorreo";
             // 
             // panelContenedor

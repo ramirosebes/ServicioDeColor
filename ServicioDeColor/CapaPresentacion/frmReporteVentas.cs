@@ -70,7 +70,14 @@ namespace CapaPresentacion
             comboBoxMonto.SelectedIndex = 0;
         }
 
-        private void buttonBuscarResultado_Click(object sender, EventArgs e)
+        private void buttonBuscar1_Click(object sender, EventArgs e)
+        {
+            Buscar1();
+            textBoxBusqueda.Clear();
+            textBoxMonto.Clear();
+        }
+
+        private void Buscar1()
         {
             int idCliente = Convert.ToInt32(((OpcionCombo)comboBoxCliente.SelectedItem).Valor.ToString());
 
@@ -105,9 +112,6 @@ namespace CapaPresentacion
                     rv.MontoTotal
                 });
             }
-
-            textBoxBusqueda.Clear();
-            textBoxMonto.Clear();
         }
 
         private void buttonDescarcarExcel_Click(object sender, EventArgs e)
@@ -169,7 +173,13 @@ namespace CapaPresentacion
             }
         }
 
-        private void buttonBuscar_Click(object sender, EventArgs e)
+        private void buttonBuscar2_Click(object sender, EventArgs e)
+        {
+            Buscar2();
+            textBoxMonto.Clear();
+        }
+
+        private void Buscar2()
         {
             string columnaFiltro = ((OpcionCombo)comboBoxBusqueda.SelectedItem).Valor.ToString();
 
@@ -188,7 +198,6 @@ namespace CapaPresentacion
                 }
             }
 
-            textBoxMonto.Clear();
         }
 
         private void buttonLimpiarBuscador_Click(object sender, EventArgs e)
@@ -271,7 +280,12 @@ namespace CapaPresentacion
             }
         }
 
-        private void buttonFiltrarMonto_Click(object sender, EventArgs e)
+        private void buttonBuscar3_Click(object sender, EventArgs e)
+        {
+            Buscar3();
+        }
+
+        private void Buscar3()
         {
             if (dataGridViewData.Rows.Count > 0 && textBoxMonto.Text != "")
             {
@@ -296,9 +310,7 @@ namespace CapaPresentacion
             }
             else if (dataGridViewData.Rows.Count == 0 && textBoxMonto.Text == "")
             {
-                //MessageBox.Show("Ingrese un monto para filtrar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                //buttonBuscarResultado_Click(sender, e);
-                buttonBuscar_Click(sender, e);
+                Buscar2();
             }
         }
 
@@ -379,10 +391,11 @@ namespace CapaPresentacion
 
         private void textBoxMonto_TextChanged(object sender, EventArgs e)
         {
-            buttonFiltrarMonto_Click(sender, e);
+            Buscar2();
+            Buscar3();
             if (textBoxMonto.Text.Trim() == "")
             {
-                buttonBuscar_Click(sender, e);
+                Buscar2();
             }
         }
 
@@ -412,47 +425,56 @@ namespace CapaPresentacion
 
         private void textBoxBusqueda_TextChanged(object sender, EventArgs e)
         {
-            buttonBuscar_Click(sender, e);
+            buttonBuscar2_Click(sender, e);
+            if (textBoxBusqueda.Text.Trim() == "")
+            {
+                buttonBuscar2_Click(sender, e);
+            }
         }
 
         private void comboBoxColumna_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonFiltrarMonto_Click(sender, e);
+            Buscar2();
+            Buscar3();
+            if (textBoxMonto.Text.Trim() == "")
+            {
+                Buscar2();
+            }
         }
 
         private void comboBoxMonto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonFiltrarMonto_Click(sender, e);
+            Buscar2();
+            Buscar3();
+            if (textBoxMonto.Text.Trim() == "")
+            {
+                Buscar2();
+            }
         }
 
         private void comboBoxBusqueda_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonBuscar_Click(sender, e);
+            buttonBuscar2_Click(sender, e);
         }
 
         private void comboBoxCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            buttonBuscarResultado_Click(sender, e);
+            buttonBuscar1_Click(sender, e);
         }
 
         private void dateTimePickerFechaInicio_ValueChanged(object sender, EventArgs e)
         {
-            buttonBuscarResultado_Click(sender, e);
+            buttonBuscar1_Click(sender, e);
         }
 
         private void dateTimePickerFechaFin_ValueChanged(object sender, EventArgs e)
         {
-            buttonBuscarResultado_Click(sender, e);
+            buttonBuscar1_Click(sender, e);
         }
 
-        private void textBoxMonto_KeyDown(object sender, KeyEventArgs e)
+        private void buttonLimpiar3_Click(object sender, EventArgs e)
         {
-            // Evita que se pegue texto
-            //if (e.Control && e.KeyCode == Keys.V)
-            //{
-            //    // Suprime la pulsación de tecla Ctrl+V
-            //    e.SuppressKeyPress = true;
-            //}
+            textBoxMonto.Clear();
         }
     }
 }

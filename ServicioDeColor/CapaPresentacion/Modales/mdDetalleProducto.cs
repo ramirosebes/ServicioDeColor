@@ -366,5 +366,15 @@ namespace CapaPresentacion.Modales
                 richTextBox.SelectionStart = richTextBox.Text.Length;
             }
         }
+
+        private void labelCodigo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelStock_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

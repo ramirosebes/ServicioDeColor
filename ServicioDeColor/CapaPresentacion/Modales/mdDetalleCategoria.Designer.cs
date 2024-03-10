@@ -149,7 +149,7 @@
             this.labelDescripcion.AutoSize = true;
             this.labelDescripcion.BackColor = System.Drawing.SystemColors.Window;
             this.labelDescripcion.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelDescripcion.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelDescripcion.Location = new System.Drawing.Point(9, 46);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(73, 19);

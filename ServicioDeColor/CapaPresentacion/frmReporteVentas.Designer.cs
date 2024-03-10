@@ -38,23 +38,24 @@
             this.dateTimePickerFechaFin = new System.Windows.Forms.DateTimePicker();
             this.labelFechaFin = new System.Windows.Forms.Label();
             this.dateTimePickerFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.buttonBuscarResultado = new System.Windows.Forms.Button();
+            this.buttonBuscar1 = new System.Windows.Forms.Button();
             this.labelFechaInicio = new System.Windows.Forms.Label();
             this.panelReporteCompras = new System.Windows.Forms.Panel();
             this.labelBuscarPor = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxColumna = new System.Windows.Forms.ComboBox();
-            this.buttonFiltrarMonto = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.comboBoxMonto = new System.Windows.Forms.ComboBox();
             this.textBoxMonto = new System.Windows.Forms.TextBox();
             this.comboBoxBusqueda = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.buttonBuscar = new System.Windows.Forms.Button();
+            this.buttonBuscar2 = new System.Windows.Forms.Button();
             this.buttonLimpiarBuscador = new System.Windows.Forms.Button();
             this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.buttonDescarcarExcel = new System.Windows.Forms.Button();
             this.dataGridViewData = new System.Windows.Forms.DataGridView();
+            this.buttonGrafico = new System.Windows.Forms.Button();
             this.FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumeroDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +71,7 @@
             this.montoDescuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MontoTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonGrafico = new System.Windows.Forms.Button();
+            this.buttonLimpiar3 = new System.Windows.Forms.Button();
             this.panelReporteCompras.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewData)).BeginInit();
@@ -174,24 +175,23 @@
             this.dateTimePickerFechaInicio.TabIndex = 1;
             this.dateTimePickerFechaInicio.ValueChanged += new System.EventHandler(this.dateTimePickerFechaInicio_ValueChanged);
             // 
-            // buttonBuscarResultado
+            // buttonBuscar1
             // 
-            this.buttonBuscarResultado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.buttonBuscar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonBuscarResultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.buttonBuscarResultado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBuscarResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscarResultado.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscarResultado.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscarResultado.Image = global::CapaPresentacion.Properties.Resources.Lupa;
-            this.buttonBuscarResultado.Location = new System.Drawing.Point(1301, 30);
-            this.buttonBuscarResultado.Name = "buttonBuscarResultado";
-            this.buttonBuscarResultado.Size = new System.Drawing.Size(75, 30);
-            this.buttonBuscarResultado.TabIndex = 4;
-            this.buttonBuscarResultado.Text = "Buscar";
-            this.buttonBuscarResultado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBuscarResultado.UseVisualStyleBackColor = false;
-            this.buttonBuscarResultado.Click += new System.EventHandler(this.buttonBuscarResultado_Click);
+            this.buttonBuscar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonBuscar1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBuscar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar1.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonBuscar1.Image = global::CapaPresentacion.Properties.Resources.Lupa;
+            this.buttonBuscar1.Location = new System.Drawing.Point(1301, 30);
+            this.buttonBuscar1.Name = "buttonBuscar1";
+            this.buttonBuscar1.Size = new System.Drawing.Size(75, 30);
+            this.buttonBuscar1.TabIndex = 4;
+            this.buttonBuscar1.Text = "Buscar";
+            this.buttonBuscar1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBuscar1.UseVisualStyleBackColor = false;
             // 
             // labelFechaInicio
             // 
@@ -219,7 +219,7 @@
             this.panelReporteCompras.Controls.Add(this.dateTimePickerFechaFin);
             this.panelReporteCompras.Controls.Add(this.labelFechaFin);
             this.panelReporteCompras.Controls.Add(this.dateTimePickerFechaInicio);
-            this.panelReporteCompras.Controls.Add(this.buttonBuscarResultado);
+            this.panelReporteCompras.Controls.Add(this.buttonBuscar1);
             this.panelReporteCompras.Controls.Add(this.labelFechaInicio);
             this.panelReporteCompras.Location = new System.Drawing.Point(12, 12);
             this.panelReporteCompras.Name = "panelReporteCompras";
@@ -245,14 +245,15 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.buttonLimpiar3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBoxColumna);
-            this.panel1.Controls.Add(this.buttonFiltrarMonto);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.comboBoxMonto);
             this.panel1.Controls.Add(this.textBoxMonto);
             this.panel1.Controls.Add(this.comboBoxBusqueda);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.buttonBuscar);
+            this.panel1.Controls.Add(this.buttonBuscar2);
             this.panel1.Controls.Add(this.buttonLimpiarBuscador);
             this.panel1.Controls.Add(this.labelBuscarPor);
             this.panel1.Controls.Add(this.textBoxBusqueda);
@@ -269,7 +270,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label1.Location = new System.Drawing.Point(972, 46);
+            this.label1.Location = new System.Drawing.Point(891, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 19);
             this.label1.TabIndex = 99;
@@ -282,32 +283,32 @@
             this.comboBoxColumna.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxColumna.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxColumna.FormattingEnabled = true;
-            this.comboBoxColumna.Location = new System.Drawing.Point(1043, 44);
+            this.comboBoxColumna.Location = new System.Drawing.Point(962, 43);
             this.comboBoxColumna.Name = "comboBoxColumna";
             this.comboBoxColumna.Size = new System.Drawing.Size(115, 27);
             this.comboBoxColumna.TabIndex = 98;
             this.comboBoxColumna.SelectedIndexChanged += new System.EventHandler(this.comboBoxColumna_SelectedIndexChanged);
             // 
-            // buttonFiltrarMonto
+            // button3
             // 
-            this.buttonFiltrarMonto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonFiltrarMonto.AutoSize = true;
-            this.buttonFiltrarMonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.buttonFiltrarMonto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonFiltrarMonto.FlatAppearance.BorderSize = 0;
-            this.buttonFiltrarMonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonFiltrarMonto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFiltrarMonto.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonFiltrarMonto.Image = global::CapaPresentacion.Properties.Resources.Filtro;
-            this.buttonFiltrarMonto.Location = new System.Drawing.Point(1382, 44);
-            this.buttonFiltrarMonto.Name = "buttonFiltrarMonto";
-            this.buttonFiltrarMonto.Size = new System.Drawing.Size(75, 29);
-            this.buttonFiltrarMonto.TabIndex = 97;
-            this.buttonFiltrarMonto.Text = "Filtrar";
-            this.buttonFiltrarMonto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonFiltrarMonto.UseVisualStyleBackColor = false;
-            this.buttonFiltrarMonto.Click += new System.EventHandler(this.buttonFiltrarMonto_Click);
+            this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Window;
+            this.button3.Image = global::CapaPresentacion.Properties.Resources.Filtro;
+            this.button3.Location = new System.Drawing.Point(1301, 43);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 29);
+            this.button3.TabIndex = 97;
+            this.button3.Text = "Filtrar";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.buttonBuscar3_Click);
             // 
             // comboBoxMonto
             // 
@@ -316,7 +317,7 @@
             this.comboBoxMonto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMonto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMonto.FormattingEnabled = true;
-            this.comboBoxMonto.Location = new System.Drawing.Point(1164, 44);
+            this.comboBoxMonto.Location = new System.Drawing.Point(1083, 43);
             this.comboBoxMonto.Name = "comboBoxMonto";
             this.comboBoxMonto.Size = new System.Drawing.Size(107, 27);
             this.comboBoxMonto.TabIndex = 95;
@@ -330,12 +331,11 @@
             this.textBoxMonto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxMonto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMonto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.textBoxMonto.Location = new System.Drawing.Point(1277, 44);
+            this.textBoxMonto.Location = new System.Drawing.Point(1196, 43);
             this.textBoxMonto.Name = "textBoxMonto";
             this.textBoxMonto.Size = new System.Drawing.Size(99, 27);
             this.textBoxMonto.TabIndex = 96;
             this.textBoxMonto.TextChanged += new System.EventHandler(this.textBoxMonto_TextChanged);
-            this.textBoxMonto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxMonto_KeyDown);
             this.textBoxMonto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxMonto_KeyPress);
             // 
             // comboBoxBusqueda
@@ -364,24 +364,24 @@
             this.label2.TabIndex = 86;
             this.label2.Text = "Opciones de búsqueda";
             // 
-            // buttonBuscar
+            // buttonBuscar2
             // 
-            this.buttonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.buttonBuscar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.buttonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBuscar.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuscar.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonBuscar.Image = global::CapaPresentacion.Properties.Resources.Lupa;
-            this.buttonBuscar.Location = new System.Drawing.Point(495, 43);
-            this.buttonBuscar.Name = "buttonBuscar";
-            this.buttonBuscar.Size = new System.Drawing.Size(75, 30);
-            this.buttonBuscar.TabIndex = 8;
-            this.buttonBuscar.Text = "Buscar";
-            this.buttonBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBuscar.UseVisualStyleBackColor = false;
-            this.buttonBuscar.Click += new System.EventHandler(this.buttonBuscar_Click);
+            this.buttonBuscar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.buttonBuscar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBuscar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBuscar2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuscar2.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonBuscar2.Image = global::CapaPresentacion.Properties.Resources.Lupa;
+            this.buttonBuscar2.Location = new System.Drawing.Point(495, 43);
+            this.buttonBuscar2.Name = "buttonBuscar2";
+            this.buttonBuscar2.Size = new System.Drawing.Size(75, 30);
+            this.buttonBuscar2.TabIndex = 8;
+            this.buttonBuscar2.Text = "Buscar";
+            this.buttonBuscar2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBuscar2.UseVisualStyleBackColor = false;
+            this.buttonBuscar2.Click += new System.EventHandler(this.buttonBuscar2_Click);
             // 
             // buttonLimpiarBuscador
             // 
@@ -479,6 +479,22 @@
             this.dataGridViewData.Size = new System.Drawing.Size(1460, 423);
             this.dataGridViewData.TabIndex = 96;
             // 
+            // buttonGrafico
+            // 
+            this.buttonGrafico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonGrafico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.buttonGrafico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
+            this.buttonGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGrafico.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonGrafico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonGrafico.Location = new System.Drawing.Point(1241, 619);
+            this.buttonGrafico.Name = "buttonGrafico";
+            this.buttonGrafico.Size = new System.Drawing.Size(75, 30);
+            this.buttonGrafico.TabIndex = 97;
+            this.buttonGrafico.Text = "Gráfico";
+            this.buttonGrafico.UseVisualStyleBackColor = false;
+            this.buttonGrafico.Click += new System.EventHandler(this.buttonGrafico_Click);
+            // 
             // FechaRegistro
             // 
             this.FechaRegistro.HeaderText = "Fecha Registro";
@@ -490,6 +506,7 @@
             this.TipoDocumento.HeaderText = "Tipo Documento";
             this.TipoDocumento.Name = "TipoDocumento";
             this.TipoDocumento.ReadOnly = true;
+            this.TipoDocumento.Width = 90;
             // 
             // NumeroDocumento
             // 
@@ -508,6 +525,7 @@
             this.DocumentoCliente.HeaderText = "Documento cliente";
             this.DocumentoCliente.Name = "DocumentoCliente";
             this.DocumentoCliente.ReadOnly = true;
+            this.DocumentoCliente.Width = 90;
             // 
             // NombreCliente
             // 
@@ -520,6 +538,7 @@
             this.CodigoProducto.HeaderText = "Código Producto";
             this.CodigoProducto.Name = "CodigoProducto";
             this.CodigoProducto.ReadOnly = true;
+            this.CodigoProducto.Width = 70;
             // 
             // NombreProducto
             // 
@@ -544,6 +563,7 @@
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 60;
             // 
             // tipoDescuento
             // 
@@ -569,21 +589,25 @@
             this.MontoTotal.Name = "MontoTotal";
             this.MontoTotal.ReadOnly = true;
             // 
-            // buttonGrafico
+            // buttonLimpiar3
             // 
-            this.buttonGrafico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGrafico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.buttonGrafico.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(169)))), ((int)(((byte)(255)))));
-            this.buttonGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGrafico.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGrafico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonGrafico.Location = new System.Drawing.Point(1241, 619);
-            this.buttonGrafico.Name = "buttonGrafico";
-            this.buttonGrafico.Size = new System.Drawing.Size(75, 30);
-            this.buttonGrafico.TabIndex = 97;
-            this.buttonGrafico.Text = "Gráfico";
-            this.buttonGrafico.UseVisualStyleBackColor = false;
-            this.buttonGrafico.Click += new System.EventHandler(this.buttonGrafico_Click);
+            this.buttonLimpiar3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonLimpiar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.buttonLimpiar3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLimpiar3.FlatAppearance.BorderSize = 0;
+            this.buttonLimpiar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLimpiar3.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLimpiar3.ForeColor = System.Drawing.SystemColors.Window;
+            this.buttonLimpiar3.Image = global::CapaPresentacion.Properties.Resources.Escoba;
+            this.buttonLimpiar3.Location = new System.Drawing.Point(1382, 43);
+            this.buttonLimpiar3.Name = "buttonLimpiar3";
+            this.buttonLimpiar3.Size = new System.Drawing.Size(75, 30);
+            this.buttonLimpiar3.TabIndex = 102;
+            this.buttonLimpiar3.Text = "Limpiar";
+            this.buttonLimpiar3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonLimpiar3.UseVisualStyleBackColor = false;
+            this.buttonLimpiar3.Click += new System.EventHandler(this.buttonLimpiar3_Click);
             // 
             // frmReporteVentas
             // 
@@ -617,21 +641,21 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaFin;
         private System.Windows.Forms.Label labelFechaFin;
         private System.Windows.Forms.DateTimePicker dateTimePickerFechaInicio;
-        private System.Windows.Forms.Button buttonBuscarResultado;
+        private System.Windows.Forms.Button buttonBuscar1;
         private System.Windows.Forms.Label labelFechaInicio;
         private System.Windows.Forms.Panel panelReporteCompras;
         private System.Windows.Forms.Label labelBuscarPor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox comboBoxBusqueda;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button buttonBuscar;
+        private System.Windows.Forms.Button buttonBuscar2;
         private System.Windows.Forms.Button buttonLimpiarBuscador;
         private System.Windows.Forms.TextBox textBoxBusqueda;
         private System.Windows.Forms.Button buttonDescarcarExcel;
         private System.Windows.Forms.DataGridView dataGridViewData;
         private System.Windows.Forms.Button buttonGrafico;
         private System.Windows.Forms.ComboBox comboBoxColumna;
-        private System.Windows.Forms.Button buttonFiltrarMonto;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBoxMonto;
         private System.Windows.Forms.TextBox textBoxMonto;
         private System.Windows.Forms.Label label1;
@@ -650,5 +674,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn montoDescuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn MontoTotal;
+        private System.Windows.Forms.Button buttonLimpiar3;
     }
 }

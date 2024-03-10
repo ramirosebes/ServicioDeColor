@@ -133,7 +133,7 @@
             this.labelCorreo.AutoSize = true;
             this.labelCorreo.BackColor = System.Drawing.SystemColors.Window;
             this.labelCorreo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelCorreo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelCorreo.Location = new System.Drawing.Point(249, 46);
             this.labelCorreo.Name = "labelCorreo";
             this.labelCorreo.Size = new System.Drawing.Size(47, 19);
@@ -144,7 +144,7 @@
             // 
             this.textBoxCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCorreo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxCorreo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxCorreo.Location = new System.Drawing.Point(249, 74);
             this.textBoxCorreo.Name = "textBoxCorreo";
             this.textBoxCorreo.Size = new System.Drawing.Size(200, 20);
@@ -167,7 +167,7 @@
             this.labelTelefono.AutoSize = true;
             this.labelTelefono.BackColor = System.Drawing.SystemColors.Window;
             this.labelTelefono.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelTelefono.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelTelefono.Location = new System.Drawing.Point(249, 111);
             this.labelTelefono.Name = "labelTelefono";
             this.labelTelefono.Size = new System.Drawing.Size(56, 19);
@@ -178,7 +178,7 @@
             // 
             this.textBoxTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTelefono.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxTelefono.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxTelefono.Location = new System.Drawing.Point(249, 139);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(200, 20);
@@ -202,7 +202,7 @@
             this.labelRazonSocial.AutoSize = true;
             this.labelRazonSocial.BackColor = System.Drawing.SystemColors.Window;
             this.labelRazonSocial.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRazonSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelRazonSocial.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelRazonSocial.Location = new System.Drawing.Point(9, 111);
             this.labelRazonSocial.Name = "labelRazonSocial";
             this.labelRazonSocial.Size = new System.Drawing.Size(80, 19);
@@ -213,7 +213,7 @@
             // 
             this.textBoxRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxRazonSocial.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRazonSocial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxRazonSocial.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxRazonSocial.Location = new System.Drawing.Point(9, 139);
             this.textBoxRazonSocial.Name = "textBoxRazonSocial";
             this.textBoxRazonSocial.Size = new System.Drawing.Size(200, 20);
@@ -235,7 +235,7 @@
             this.labelCUIT.AutoSize = true;
             this.labelCUIT.BackColor = System.Drawing.SystemColors.Window;
             this.labelCUIT.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCUIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelCUIT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelCUIT.Location = new System.Drawing.Point(9, 46);
             this.labelCUIT.Name = "labelCUIT";
             this.labelCUIT.Size = new System.Drawing.Size(35, 19);
@@ -246,7 +246,7 @@
             // 
             this.textBoxCUIT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCUIT.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCUIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxCUIT.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxCUIT.Location = new System.Drawing.Point(9, 74);
             this.textBoxCUIT.Name = "textBoxCUIT";
             this.textBoxCUIT.Size = new System.Drawing.Size(200, 20);

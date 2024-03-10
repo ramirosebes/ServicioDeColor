@@ -900,7 +900,7 @@ namespace CapaPresentacion.Modales
                 //// Borra el archivo después de enviar el correo electrónico
                 //File.Delete(rutaDescarga);
 
-                MessageBox.Show("Se ha enviado el comprobante de la venta por correo electronico a " + oVenta.oCliente.NombreCompleto + ".", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se ha enviado el comprobante de la venta por correo electrónico a " + oVenta.oCliente.NombreCompleto + ".", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

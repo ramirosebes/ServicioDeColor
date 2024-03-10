@@ -153,7 +153,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Window;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label3.Location = new System.Drawing.Point(222, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 19);
@@ -165,7 +165,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Window;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label1.Location = new System.Drawing.Point(222, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 19);
@@ -208,7 +208,7 @@
             this.labelPrecioVenta.AutoSize = true;
             this.labelPrecioVenta.BackColor = System.Drawing.SystemColors.Window;
             this.labelPrecioVenta.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecioVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelPrecioVenta.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelPrecioVenta.Location = new System.Drawing.Point(222, 175);
             this.labelPrecioVenta.Name = "labelPrecioVenta";
             this.labelPrecioVenta.Size = new System.Drawing.Size(93, 19);
@@ -219,7 +219,7 @@
             // 
             this.textBoxPrecioVenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPrecioVenta.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrecioVenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxPrecioVenta.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxPrecioVenta.Location = new System.Drawing.Point(244, 203);
             this.textBoxPrecioVenta.Name = "textBoxPrecioVenta";
             this.textBoxPrecioVenta.Size = new System.Drawing.Size(178, 20);
@@ -242,7 +242,7 @@
             this.labelPrecioCompra.AutoSize = true;
             this.labelPrecioCompra.BackColor = System.Drawing.SystemColors.Window;
             this.labelPrecioCompra.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrecioCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelPrecioCompra.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelPrecioCompra.Location = new System.Drawing.Point(222, 110);
             this.labelPrecioCompra.Name = "labelPrecioCompra";
             this.labelPrecioCompra.Size = new System.Drawing.Size(97, 19);
@@ -253,7 +253,7 @@
             // 
             this.textBoxPrecioCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPrecioCompra.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrecioCompra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxPrecioCompra.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxPrecioCompra.Location = new System.Drawing.Point(244, 138);
             this.textBoxPrecioCompra.Name = "textBoxPrecioCompra";
             this.textBoxPrecioCompra.Size = new System.Drawing.Size(178, 20);
@@ -276,18 +276,19 @@
             this.labelStock.AutoSize = true;
             this.labelStock.BackColor = System.Drawing.SystemColors.Window;
             this.labelStock.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelStock.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelStock.Location = new System.Drawing.Point(222, 46);
             this.labelStock.Name = "labelStock";
             this.labelStock.Size = new System.Drawing.Size(41, 19);
             this.labelStock.TabIndex = 49;
             this.labelStock.Text = "Stock:";
+            this.labelStock.Click += new System.EventHandler(this.labelStock_Click);
             // 
             // textBoxStock
             // 
             this.textBoxStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxStock.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxStock.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxStock.Location = new System.Drawing.Point(222, 74);
             this.textBoxStock.Name = "textBoxStock";
             this.textBoxStock.Size = new System.Drawing.Size(200, 20);
@@ -310,7 +311,7 @@
             this.labelDescripcion.AutoSize = true;
             this.labelDescripcion.BackColor = System.Drawing.SystemColors.Window;
             this.labelDescripcion.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelDescripcion.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelDescripcion.Location = new System.Drawing.Point(9, 176);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(73, 19);
@@ -322,7 +323,7 @@
             this.labelNombre.AutoSize = true;
             this.labelNombre.BackColor = System.Drawing.SystemColors.Window;
             this.labelNombre.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelNombre.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelNombre.Location = new System.Drawing.Point(9, 111);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(52, 19);
@@ -333,7 +334,7 @@
             // 
             this.textBoxNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNombre.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxNombre.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxNombre.Location = new System.Drawing.Point(9, 139);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(200, 20);
@@ -355,18 +356,19 @@
             this.labelCodigo.AutoSize = true;
             this.labelCodigo.BackColor = System.Drawing.SystemColors.Window;
             this.labelCodigo.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.labelCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.labelCodigo.Location = new System.Drawing.Point(9, 46);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(46, 19);
             this.labelCodigo.TabIndex = 42;
             this.labelCodigo.Text = "Codigo:";
+            this.labelCodigo.Click += new System.EventHandler(this.labelCodigo_Click);
             // 
             // textBoxCodigo
             // 
             this.textBoxCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCodigo.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.textBoxCodigo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.textBoxCodigo.Location = new System.Drawing.Point(9, 74);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(200, 20);
