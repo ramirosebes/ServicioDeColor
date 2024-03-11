@@ -45,6 +45,14 @@ Para los procedimientos de Alta, Baja y Modificacion se utilizaron Procedimiento
 4. Compila el proyecto y asegúrate de tener configurada la conexión a la base de datos.
 5. Ejecuta la aplicación y comienza a utilizarla.
 
+## Credenciales
+
+```sh
+**Administrador**
+Documento: 00000001
+Clave: 123
+```
+
 ## Autor
 
 | Nombre | Mail     | Github                | LinkedIn                |
