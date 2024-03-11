@@ -366,7 +366,7 @@
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1150, 500);
+            this.MinimumSize = new System.Drawing.Size(1300, 500);
             this.Name = "Inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
