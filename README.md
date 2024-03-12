@@ -47,8 +47,8 @@ Para los procedimientos de Alta, Baja y Modificacion se utilizaron Procedimiento
 
 ## Credenciales
 
-```sh
 **Administrador**
+```sh
 Documento: 00000001
 Clave: 123
 ```
